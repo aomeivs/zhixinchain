@@ -180,12 +180,17 @@ html,body{
         margin-left: 320px;
         height: 100%;
         .component-dashboard{
-          .dashboard-container{
-            @extend %component-dashboard;
-          }
+          @extend %component-dashboard;
+        }
+
+        .component-employ{
+          @extend %component-employ
         }
       }
+
+
     }
+
   }
 
 }

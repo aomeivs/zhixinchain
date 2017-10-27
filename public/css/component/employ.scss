@@ -1,0 +1,29 @@
+%component-employ{
+  .employ-container{
+    padding-top: 50px;
+    padding-left: 50px;
+
+    .employ-base{
+      .base-score{
+        &>span{
+          display: inline-block;
+          color: #fc5366;
+          vertical-align: middle;
+        }
+        .score-1{
+          font-size: 16px;
+        }
+        .score-2{
+          font-size: 60px;
+          font-weight: bold;
+          margin-left: 30px;
+        }
+        .score-3{
+          font-size: 20px;
+          margin-left: 8px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
