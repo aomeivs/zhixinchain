@@ -45,7 +45,9 @@ html .wrap .c-body .c-body-left .left-body-container .component-tree, body .wrap
       float: left;
       width: 50px; }
       html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-icon img, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-icon img {
-        margin-top: -4px; }
+        margin-top: -4px;
+        max-width: 28px;
+        max-height: 28px; }
     html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-content, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-content {
       float: left;
       padding-left: 0px; }
@@ -55,6 +57,11 @@ html .wrap .c-body .c-body-left .left-body-container .component-tree, body .wrap
       float: right;
       padding-right: 15px;
       font-size: 12px; }
+
+html .wrap .c-header .c-head-menu .head-menu-ul .head-message-badge, body .wrap .c-header .c-head-menu .head-menu-ul .head-message-badge {
+  border-radius: 6px;
+  display: inline-block;
+  background-color: transparent; }
 
 html, body {
   width: 100%;
@@ -103,7 +110,13 @@ html, body {
           html .wrap .c-header .c-head-menu .head-menu-ul li .c-head-user > div, body .wrap .c-header .c-head-menu .head-menu-ul li .c-head-user > div {
             float: left; }
           html .wrap .c-header .c-head-menu .head-menu-ul li .c-head-user .user-photo, body .wrap .c-header .c-head-menu .head-menu-ul li .c-head-user .user-photo {
-            margin-right: 84px; }
+            padding-right: 40px; }
+            html .wrap .c-header .c-head-menu .head-menu-ul li .c-head-user .user-photo img, body .wrap .c-header .c-head-menu .head-menu-ul li .c-head-user .user-photo img {
+              width: 39px;
+              height: 39px;
+              border-radius: 50%; }
+          html .wrap .c-header .c-head-menu .head-menu-ul li .c-head-user .user-logOut, body .wrap .c-header .c-head-menu .head-menu-ul li .c-head-user .user-logOut {
+            padding-left: 40px; }
     html .wrap .c-body, body .wrap .c-body {
       height: 100%; }
       html .wrap .c-body .c-body-left, body .wrap .c-body .c-body-left {
