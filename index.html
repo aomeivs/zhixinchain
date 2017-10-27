@@ -1,0 +1,530 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+
+
+<!--职信链，样式头为 c (chain小写) 例
+
+头部 c-header
+底部 c-footer
+组件 c-component-组件名（公用部分）
+
+无特别意义的逻辑结构以 相对有意义模块名 后，层级数字标识
+例： c-component-组件名 下
+
+组件名1>组件名1-1.
+
+或
+
+组件名-head>组件名-head-top>（组件名-head-top-1+组件名-head-top-2+组件名-head-top-3）
+
+ -->
+
+<div class="wrap" id="app">
+    <div class="c-header">
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu">
+            <ul class="head-menu-ul">
+                <li>
+                    <span>购买</span>
+                </li>
+                <li>
+                    <img src="public/images/head-search.png" width="26" alt="职信链搜索按钮">
+                </li>
+                <li>
+                    <div>
+                        <img src="public/images/head-mail.png" width="26" alt="消息(0)">
+                    </div>
+                </li>
+                <li>
+                    <div class="c-head-user">
+                        <div class="user-photo">
+                            <img src="public/images/head-photo.png" width="39" alt="用户头像">
+                            <span>董兴海</span>
+                        </div>
+                        <div>
+                            <img src="public/images/head-exit.png" width="26" alt="退出">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="c-body">
+        <div class="c-body-left left">
+            <div class="body-left-search">
+                <auto-complete
+                        v-model="value"
+                        icon="ios-search"
+                        :data="data"
+                        placeholder="搜索员工"
+                        @on-search="handleSearch"
+                        style="width:290px">
+                </auto-complete>
+            </div>
+            <div class="body-left-CName">
+                职信链科技有限公司
+            </div>
+            <div class="left-body-container">
+                <!--在职员工-->
+                <div class="tree-employ employ-on">
+                    <div class="employ-on-block">
+                        <img class="employ-icon" src="public/images/tree-employ.png" width="23" alt="在职员工">
+                        <span class="employ-title">
+                        在职员工
+                    </span>
+                        <span class="employ-count">
+                        (3)
+                    </span>
+                    </div>
+                </div>
+
+                <!--组件-树-->
+                <div class="component-tree">
+                    <component-tree v-bind:tree='treeData'></component-tree>
+                    <!--<div class="employ-group">
+                        <div class="box group-box member-box">
+                            <div class="box-icon">
+                                <img src="public/images/tree-group.png" width="19" alt="图标">
+                                <img src="public/images/tree-arrow.png" style="margin-left: 4px;" width="7" alt="">
+                            </div>
+                            <div class="box-content">
+                                <span>技术中心</span>
+                            </div>
+                            <div class="box-control">
+                                <dropdown placement="bottom-end">
+                                    <a href="javascript:void(0)">
+                                        添加
+                                        <icon type="arrow-down-b"></icon>
+                                    </a>
+                                    <dropdown-menu slot="list">
+                                        <dropdown-item>员工</dropdown-item>
+                                        <dropdown-item>部门</dropdown-item>
+                                    </dropdown-menu>
+                                </dropdown>
+                            </div>
+                        </div>
+                        <div>
+
+                            <div class="employ-group">
+                                <div class="box group-box member-box">
+                                    <div class="box-icon">
+                                        <img src="public/images/tree-photo1.png" width="28" alt="图标">
+                                        &lt;!&ndash;<img src="public/images/tree-arrow.png" style="margin-left: 4px;" width="7" alt="">&ndash;&gt;
+                                    </div>
+                                    <div class="box-content">
+                                        <span>老大</span>
+                                    </div>
+                                    &lt;!&ndash;<div class="box-control">
+                                        <span>添加</span>
+                                    </div>&ndash;&gt;
+                                </div>
+                                <div class="box group-box member-box">
+                                    <div class="box-icon">
+                                        <img src="public/images/tree-group.png" width="19" alt="图标">
+                                        <img src="public/images/tree-arrow.png" style="margin-left: 4px;" width="7" alt="">
+                                    </div>
+                                    <div class="box-content">
+                                        <span>PHP</span>
+                                    </div>
+                                    <div class="box-control">
+                                        <dropdown placement="bottom-end">
+                                            <a href="javascript:void(0)">
+                                                添加
+                                                <icon type="arrow-down-b"></icon>
+                                            </a>
+                                            <dropdown-menu slot="list">
+                                                <dropdown-item>员工</dropdown-item>
+                                                <dropdown-item>部门</dropdown-item>
+                                            </dropdown-menu>
+                                        </dropdown>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>-->
+                </div>
+
+                <!--添加部门-->
+                <div class="tree-addGroup">
+                    <icon type="plus-round"></icon><span>添加部门</span>
+                </div>
+
+                <!--系统设置-->
+                <div class="tree-setting">
+                    <icon type="gear-a"></icon><span>系统设置</span>
+                </div>
+
+                <!--离职员工-->
+                <div class="tree-employ employ-off">
+                    <div class="employ-on-block">
+                        <img class="employ-icon" src="public/images/tree-employ-off.png" width="23" height="23" alt="离职员工">
+                        <span class="employ-title">
+                        已离职员工
+                    </span>
+                        <span class="employ-count">
+                        (1)
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-body-container clearFix">
+
+            <!--登录后的仪表盘页面   组件部分  -->
+            <div class="component-dashboard">
+                <div class="dashboard-container">
+                    <img src="public/images/dashboard/icon-companyLogo.png" width="247" height="72" alt="">
+                    <div class="company-title">青岛职信链科技有限公司</div>
+                    <div class="line"></div>
+                    <div class="company-subTitle">
+                        在职员工上限数：20
+                    </div>
+
+                    <div class="employ-info">
+                        <div class="dashboard-box">
+                            <div class="employ-on">
+                                <img src="public/images/dashboard/icon-dashboardEmploy-on.png" width="78" alt="">
+                            </div>
+                            <div class="employ-count">
+                                16人
+                            </div>
+                            <div class="employ-count-desc">
+                                目前在职员工
+                            </div>
+                        </div>
+
+                        <div class="dashboard-box">
+                            <div class="employ-on">
+                                <img src="public/images/dashboard/icon-dashboardEmploy-off.png" width="79" alt="">
+                            </div>
+                            <div class="employ-count">
+                                1人
+                            </div>
+                            <div class="employ-count-desc">
+                                已离职员工
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--tree 模板-->
+<script type="html/x-template" id="component-tree">
+
+    <div class="employ-group">
+
+        <!--忽略根节点,输出目录-->
+        <div v-if="!tree.root" class="box group-box member-box">
+            <!--目录ico逻辑-->
+            <div class="box-icon" v-on:click="click" openValue="openValue">
+                <!--部门icon-->
+                <template v-if="openValue==='.'">
+                    <img v-bind:src="tree.photo" width="28" alt="图标">
+                </template>
+                <!--员工icon-->
+                <template v-else>
+                    <img src="public/images/tree-group.png" width="19" alt="图标">
+                    <img class="arrow-rotate-none" v-bind:class="{'arrow-rotate':open}" src="public/images/tree-arrow.png" style="margin-left: 4px;" width="7" alt="">
+                </template>
+            </div>
+            <!--部门和员工名称-->
+            <div v-if="!editStatus" v-on:click="edit" class="box-content">
+                <span>{{tree.title}}</span>
+            </div>
+            <!--编辑状态-->
+            <div v-else class="box-content"><i-input v-model="groupName" placeholder="请输入..." size="small" style="width: 100px;"></i-input><span v-on:click.stop="save(tree.id)"><img
+                    src="public/images/tree-group-edit.png" width="16" style="margin-left: 8px;margin-top: -2px;" alt=""></span></div>
+            <!--控制状态-->
+            <div v-if="tree.dataList && !tree.root && !editStatus" class="box-control">
+                <dropdown @on-click="dropDown" placement="bottom-end">
+                    <a href="javascript:void(0)">
+                        添加
+                        <icon type="arrow-down-b"></icon>
+                    </a>
+                    <dropdown-menu slot="list">
+                        <dropdown-item name="E">员工</dropdown-item>
+                        <dropdown-item name="G">部门</dropdown-item>
+                    </dropdown-menu>
+                </dropdown>
+            </div>
+        </div>
+        <!--递归树-->
+        <component-tree v-show="open" v-bind:tree="tree" v-for="tree in tree.dataList" key="tree.id"></component-tree>
+
+    </div>
+
+</script>
+
+<script>
+//    tree-item component
+
+/***
+ * 组件树
+ * @params
+ * open 展开当前树 <Boolean>
+ * groupName 添加/编辑，部门 <String>
+ * tempName 保存添加/编辑，部门的临时字段 <String>
+ * editStatus 编辑状态 <Boolean>
+ *
+ * @method
+ * 见名识意
+ */
+
+    Vue.component('component-tree', {
+        template:'#component-tree',
+        props:['tree'],
+        data:function(){
+            return {
+                // 展开当前树,节点类型
+                open:false,
+                // 添加/编辑，部门
+                groupName:'',
+                tempName:'',
+                // 编辑状态
+                editStatus:false,
+            }
+        },
+        computed:{
+            openValue:function(){
+                return !this.open&&this.tree.dataList?'+':(this.tree.dataList?'-':'.')
+            }
+        },
+        mounted:function(){
+
+            if(this.tree.open){
+                this.open=true
+            }else{
+                this.tree.root?this.open=true:this.open;
+            }
+
+        },
+        methods: {
+            click:function(){
+                this.open=!this.open
+            },
+            add:function(type){
+                if(this.tree.dataList){
+                    var isGroup= type=='G'?true:false;
+                    if(isGroup){
+                        var _this = this;
+                        this.$Modal.confirm({
+                            render:function(h){
+                                return h('Input',{
+                                    props:{
+                                        placeholder:'请输入部门名称'
+                                    },
+                                    on:{
+                                        'input':function(val){
+
+                                            _this.groupName = val
+                                        }
+                                    }
+                                })
+                            },
+                            onOk:function(){
+                                if(_this.groupName==''){
+                                    _this.$Message.info('添加失败，内容不能为空！')
+                                    return;
+                                }
+                                _this.tree.dataList.push({id:_.uniqueId('tree_'),title:_this.groupName,dataList:[]});
+                            },
+                            onCancel:function(){
+
+                            }
+                        });
+
+                    }else{
+                        var dataLists = _.filter(this.tree.dataList,function(item){
+                            if(item.dataList){
+                                return true;
+                            }
+                        })
+                        var listLength = dataLists.length;
+                        var oListLength = this.tree.dataList.length;
+                        this.tree.dataList.splice(oListLength-listLength,0,{id:_.uniqueId('tree_'),title:'员工'+_.uniqueId(),photo:'public/images/tree-photo-default.png'})
+                    }
+                    // 添加部门或员工时打开菜单
+                    this.open=true;
+                }
+            },
+            edit:function(){
+                if(!this.tree.dataList||this.tree.root) return;
+                this.groupName = this.tree.title;
+                this.tempName = this.tree.title;
+                this.editStatus=!this.editStatus;
+            },
+            remove:function(id){
+                prune(treeData.dataList,id)
+            },
+            // save && delete
+            save:function(id){
+                if(this.groupName===''){
+                    var _this = this;
+                    this.$Modal.confirm({
+                            title: '确认删除？',
+                            content: '<p>确认删除后，部门下成员将一并删除！</p>',
+                            onOk: () => {
+                            this.$Message.info('删除成功');
+                    prune(treeData.dataList,id)
+                },
+                    onCancel: () => {
+                        _this.tree.title =_this.tempName;
+                        this.$Message.info('取消操作');
+                    }
+                });
+                }
+                this.tree.title = this.groupName;
+                this.editStatus=false;
+            },
+            dropDown:function (v) {
+               this.add(v)
+            }
+        }
+    })
+
+
+    var treeData =
+        {
+            id:'0',
+            title:'青岛英网资讯股份有限公司',
+            root:true,
+            dataList:[
+                {
+                    id:'1',
+                    title:'总裁办',
+                    dataList:[
+                        {
+                            id:'11',
+                            title:'创始人-老总',
+                            photo:'public/images/tree-photo1.png'
+                        }
+                    ]
+                },
+                {
+                    id:'2',
+                    title:'技术中心',
+                    open:true,
+                    dataList:[
+                        {
+                            id:'3',
+                            title:'周蕾',
+                            photo:'public/images/tree-photo2.png'
+                        },
+                        {
+                            id:'4',
+                            title:'李文静',
+                            photo:'public/images/tree-photo3.png'
+                        },
+                        {
+                            id:'5',
+                            title:'PHP开发',
+                            dataList:[
+                                {
+                                    id:'6',
+                                    title:'王小笨',
+                                    photo:'public/images/tree-photo1.png'
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    id:'7',
+                    title:'产品部门',
+                    dataList:[
+                        {
+                            id:'10',
+                            title:'庞丁畅',
+                            photo:'public/images/tree-photo1.png'
+                        }
+                    ]
+                },
+                {
+                    id:'8',
+                    title:'行政部门',
+                    dataList:[
+                        {
+                            id:'9',
+                            title:'衣晶晶',
+                            photo:'public/images/tree-photo1.png'
+                        }
+                    ]
+                }
+            ]
+        }
+
+    // 树删除节点
+    function prune(array, id) {
+        for (var i = 0; i < array.length; ++i) {
+            var obj = array[i];
+            if (obj.id === id) {
+                array.splice(i, 1);
+                return true;
+            }
+            if (obj.dataList) {
+                if (prune(obj.dataList, id)) {
+                    if (obj.dataList.length === 0) {
+                        // delete obj.dataList;
+                        // array.splice(i, 1);
+                    }
+                    return true;
+                }
+            }
+        }
+    }
+/***
+ * 实例根vue，处理初始数据和vuex状态管理
+ * @params
+ * value 搜索员工 <String>
+ * data 搜索员工结果 <Array>
+ * treeData 组件树异步数据 <String>
+ *
+ * @method
+ * handleSearch 搜索员工事件
+ */
+    new Vue({
+        data: function () {
+            return {
+                value:'',
+                data:[],
+                treeData:treeData
+            }
+        },
+        mounted:function () {
+
+        },
+        methods: {
+            handleSearch : function(value) {
+                this.data = !value ? [] : [
+                    value,
+                    value + value,
+                    value + value + value
+                ];
+            }
+        }
+    }).$mount('#app')
+</script>
+
+</body>
+</html>

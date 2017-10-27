@@ -1,0 +1,62 @@
+%component-tree{
+  min-height: 260px;
+  max-height:360px;
+  overflow: auto;
+  margin-left: 10px;
+  .employ-group{
+    .arrow-rotate-none{
+      transform:rotate(0deg);
+      transition: all .15s linear;
+    }
+    .arrow-rotate{
+      transform:rotate(90deg);
+      transition: all .15s linear;
+    }
+
+    .employ-group{
+      & .employ-group{
+        padding-left: 40px;
+      }
+    }
+
+    .box{
+      font-size: 14px;
+      padding: 8px 0;
+      color: #000000;
+      min-width:200px;
+      &:after{
+        content: ' ';
+        display: block;
+        clear: both;
+      }
+      &.active{
+        border-right: 2px solid #1B7CE1;
+        color: #1B7CE1;
+      }
+      &>div{
+        vertical-align: middle;
+        height: 26px;
+        line-height: 26px;
+      }
+      .box-icon{
+        float: left;
+        width: 50px;
+        img{
+          margin-top: -4px;
+        }
+      }
+      .box-content{
+        float: left;
+        padding-left: 0px;
+        .ivu-input{
+          font-size: 14px;
+        }
+      }
+      .box-control{
+        float: right;
+        padding-right: 15px;
+        font-size: 12px;
+      }
+    }
+  }
+}
