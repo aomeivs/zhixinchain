@@ -58,6 +58,48 @@ html .wrap .c-body .c-body-left .left-body-container .component-tree, body .wrap
       padding-right: 15px;
       font-size: 12px; }
 
+html .wrap .c-body .c-body-container .component-dashboard .dashboard-container, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container {
+  padding-top: 100px;
+  text-align: center; }
+  html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .company-title, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .company-title {
+    font-size: 36px;
+    margin-top: 45px;
+    color: #000000; }
+  html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .line, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .line {
+    width: 240px;
+    height: 1px;
+    border-bottom: 1px solid #E8E8E8;
+    margin: 0 auto;
+    margin-top: 45px; }
+  html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .company-subTitle, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .company-subTitle {
+    font-size: 27px;
+    color: #4a4a4a;
+    margin-top: 45px; }
+  html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info {
+    margin-top: 90px; }
+    html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box {
+      display: inline-block;
+      background: #FFFFFF;
+      border: 1px solid #E5E5E5;
+      border-radius: 3px;
+      width: 180px;
+      height: 180px;
+      text-align: center;
+      margin-left: 60px; }
+      html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box:first-child, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box:first-child {
+        margin-left: 0; }
+      html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box .employ-on, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box .employ-on {
+        margin-top: -40px; }
+      html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box .employ-count, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box .employ-count {
+        color: #186ed2;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px; }
+      html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box .employ-count-desc, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box .employ-count-desc {
+        color: #4a4a4a;
+        font-size: 18px; }
+
 html .wrap .c-header .c-head-menu .head-menu-ul .head-message-badge, body .wrap .c-header .c-head-menu .head-menu-ul .head-message-badge {
   border-radius: 6px;
   display: inline-block;
@@ -176,46 +218,5 @@ html, body {
       html .wrap .c-body .c-body-container, body .wrap .c-body .c-body-container {
         margin-left: 320px;
         height: 100%; }
-        html .wrap .c-body .c-body-container .component-dashboard .dashboard-container, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container {
-          padding-top: 100px;
-          text-align: center; }
-          html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .company-title, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .company-title {
-            font-size: 36px;
-            margin-top: 45px;
-            color: #000000; }
-          html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .line, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .line {
-            width: 240px;
-            height: 1px;
-            border-bottom: 1px solid #E8E8E8;
-            margin: 0 auto;
-            margin-top: 45px; }
-          html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .company-subTitle, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .company-subTitle {
-            font-size: 27px;
-            color: #4a4a4a;
-            margin-top: 45px; }
-          html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info {
-            margin-top: 90px; }
-            html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box {
-              display: inline-block;
-              background: #FFFFFF;
-              border: 1px solid #E5E5E5;
-              border-radius: 3px;
-              width: 180px;
-              height: 180px;
-              text-align: center;
-              margin-left: 60px; }
-              html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box:first-child, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box:first-child {
-                margin-left: 0; }
-              html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box .employ-on, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box .employ-on {
-                margin-top: -40px; }
-              html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box .employ-count, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box .employ-count {
-                color: #186ed2;
-                font-size: 20px;
-                font-weight: bold;
-                margin-top: 20px;
-                margin-bottom: 20px; }
-              html .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box .employ-count-desc, body .wrap .c-body .c-body-container .component-dashboard .dashboard-container .employ-info .dashboard-box .employ-count-desc {
-                color: #4a4a4a;
-                font-size: 18px; }
 
 /*# sourceMappingURL=app.css.map */
