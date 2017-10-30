@@ -14,8 +14,6 @@
 
 html .wrap .c-body .c-body-left .left-body-container .component-tree, body .wrap .c-body .c-body-left .left-body-container .component-tree {
   min-height: 260px;
-  max-height: 360px;
-  overflow: auto;
   margin-left: 10px; }
   html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .arrow-rotate-none, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .arrow-rotate-none {
     transform: rotate(0deg);
@@ -103,25 +101,327 @@ html .wrap .c-body .c-body-container .component-dashboard .dashboard-container, 
 html .wrap .c-body .c-body-container .component-employ .employ-container, body .wrap .c-body .c-body-container .component-employ .employ-container {
   padding-top: 50px;
   padding-left: 50px; }
-  html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score > span, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score > span {
-    display: inline-block;
-    color: #fc5366;
-    vertical-align: middle; }
-  html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score .score-1, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score .score-1 {
-    font-size: 16px; }
-  html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score .score-2, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score .score-2 {
-    font-size: 60px;
-    font-weight: bold;
-    margin-left: 30px; }
-  html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score .score-3, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score .score-3 {
-    font-size: 20px;
-    margin-left: 8px;
-    margin-top: 20px; }
+  html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base {
+    width: 1200px;
+    height: 240px; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score > span, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score > span {
+      display: inline-block;
+      color: #fc5366;
+      vertical-align: middle; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score .score-1, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score .score-1 {
+      font-size: 16px; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score .score-2, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score .score-2 {
+      font-size: 60px;
+      font-weight: bold;
+      margin-left: 30px; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score .score-3, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score .score-3 {
+      font-size: 20px;
+      margin-left: 8px;
+      margin-top: 20px; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info {
+      font-size: 16px;
+      margin-top: 50px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info > span, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info > span {
+        min-width: 160px;
+        display: inline-block;
+        margin-right: 20px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info .base-name, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info .base-name {
+        color: #1c2438;
+        font-size: 28px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info .base-sex, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info .base-sex {
+        min-width: 120px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info .base-cardID, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info .base-cardID {
+        width: 280px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info .base-phone, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info .base-phone {
+        margin-left: 40px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info .base-edit, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-info .base-edit {
+        min-width: inherit;
+        margin-left: 40px; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-photo, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-photo {
+      margin-top: 20px;
+      display: inline-block; }
+  html .wrap .c-body .c-body-container .component-employ .employ-container .line, body .wrap .c-body .c-body-container .component-employ .employ-container .line {
+    height: 1px;
+    border-bottom: 1px solid #DDDEE1;
+    width: 1200px; }
+  html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate {
+    width: 1200px;
+    padding-top: 40px;
+    padding-bottom: 20px; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate .operate-select, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate .operate-select {
+      font-size: 16px;
+      border-radius: 4px;
+      color: #495060;
+      background-color: #f5f7f9;
+      padding: 24px 32px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate .operate-select .select-text, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate .operate-select .select-text {
+        cursor: pointer; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate .operate-select .select-value, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate .operate-select .select-value {
+        color: #2d8cf0; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate .operate-add, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate .operate-add {
+      padding-top: 10px; }
+  html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box {
+    width: 415px; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-head .head-title, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-head .head-title {
+      color: #3b4a65;
+      margin-top: 20px;
+      font-size: 16px; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-head .head-timeLine, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-head .head-timeLine {
+      background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZwAAAABCAYAAADqzhgQAAAABGdBTUEAALGPC/xhBQAAADFJREFUOBFjnDh7VRoDEshPDZuFxGUYlR8NH+T0MJo+RvMHcnoYLR9Gywfk9ECofAAAQfTOPhcEQMsAAAAASUVORK5CYII=) 10px center no-repeat;
+      vertical-align: middle;
+      width: 100%; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-head .head-timeLine img, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-head .head-timeLine img {
+        margin-top: -1px; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body {
+      border: 1px solid #E1E1E1;
+      box-shadow: 0 2px 4px 0 rgba(234, 234, 234, 0.5);
+      width: 370px;
+      height: 430px;
+      background: #fbfbfb; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-1, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-1 {
+        background: #ffffff;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        text-align: center; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-1 .circle-custom .custom-1, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-1 .circle-custom .custom-1 {
+          font-size: 44px;
+          color: #4a4a4a; }
+          html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-1 .circle-custom .custom-1 .custom-1-2, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-1 .circle-custom .custom-1 .custom-1-2 {
+            font-size: 18px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-1 .circle-custom .custom-2.line, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-1 .circle-custom .custom-2.line {
+          width: 40%;
+          margin: 10px auto; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-1 .circle-custom .custom-3, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-1 .circle-custom .custom-3 {
+          font-size: 12px;
+          color: #9b9b9b;
+          display: inline-block; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-2 .assess-title, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-2 .assess-title {
+        color: #495060;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        background: #ffffff;
+        padding-bottom: 15px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-2 .assess-desc, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-2 .assess-desc {
+        font-size: 14px;
+        padding: 0 15px 15px 15px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-2 .assess-desc .line, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-year .assess-year-container .assess-box .box-body .body-2 .assess-desc .line {
+          width: 100%;
+          margin-bottom: 15px; }
+  html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info {
+    padding-top: 60px; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .ivu-tabs-tab, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .ivu-tabs-tab {
+      font-size: 18px;
+      margin-bottom: 20px; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base {
+      max-width: 1200px;
+      text-align: center; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-add, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-add {
+        text-align: left;
+        padding-left: 400px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-add .ivu-btn-ghost, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-add .ivu-btn-ghost {
+          margin: 45px 0; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info {
+        width: 680px;
+        margin-left: 280px;
+        margin-bottom: 40px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info > div, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info > div {
+          display: inline-block;
+          vertical-align: top; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-1, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-1 {
+          font-size: 16px;
+          color: #1c2438;
+          width: 120px;
+          text-align: right; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2 {
+          padding-left: 40px;
+          width: 480px;
+          text-align: left;
+          color: #4a4a4a; }
+          html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2 ul, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2 ul, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2 li, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2 li {
+            list-style: none;
+            padding: 0;
+            margin: 0; }
+          html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2 ul > div, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2 ul > div {
+            font-size: 16px; }
+          html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2 ul li, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2 ul li {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #7d7d7d; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base {
+      width: 1200px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info {
+        margin-left: 240px;
+        margin-top: 40px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div {
+          display: inline-block;
+          vertical-align: top; }
+          html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div:first-child, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div:first-child {
+            width: 200px;
+            padding-top: 8px;
+            text-align: right;
+            color: #1c2438;
+            font-size: 16px; }
+          html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div .form-el, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div .form-el {
+            width: 260px;
+            height: 40px; }
+            html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div .form-el .ivu-input, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div .form-el .ivu-input, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div .form-el .ivu-select-selection, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div .form-el .ivu-select-selection, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div .form-el .ivu-select-selected-value, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div .form-el .ivu-select-selected-value {
+              height: 40px; }
+            html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div .form-el .ivu-select-placeholder, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div .form-el .ivu-select-placeholder, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div .form-el .ivu-select-selected-value, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div .form-el .ivu-select-selected-value {
+              height: 40px;
+              line-height: 40px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-1, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-1 {
+        text-align: center;
+        padding-top: 40px;
+        vertical-align: middle; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-7, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-7 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-7 .edit-7-cancel, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-7 .edit-7-cancel, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-7 .edit-7-ok, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-7 .edit-7-ok {
+          width: 160px;
+          height: 40px; }
+          html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-7 .edit-7-cancel span, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-7 .edit-7-cancel span, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-7 .edit-7-ok span, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-7 .edit-7-ok span {
+            font-size: 16px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-7 .edit-7-cancel, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-7 .edit-7-cancel {
+          margin-right: 20px; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month {
+      max-width: 1200px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .employ-add, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .employ-add {
+        text-align: left;
+        padding-left: 400px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .employ-add .ivu-btn-ghost, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .employ-add .ivu-btn-ghost {
+          margin: 45px 0; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .ivu-table, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .ivu-table {
+        font-size: 14px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-1, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-1 {
+        width: 500px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-1 .table-title, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-1 .table-title {
+          color: #1c2438;
+          font-size: 18px;
+          margin-bottom: 20px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-1 .t-columns1, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-1 .t-columns1 {
+          width: 250px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2 {
+        margin-top: 30px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2 .table-title, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2 .table-title {
+          color: #1c2438;
+          font-size: 18px;
+          margin-bottom: 20px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2 .t-columns1, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2 .t-columns1 {
+          width: 250px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2 .t-columns2, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2 .t-columns2 {
+          width: 250px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2 .t-columns3, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2 .t-columns3 {
+          width: 250px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2 .t-columns4, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2 .t-columns4 {
+          width: 250px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2 .t-columns5, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-2 .t-columns5 {
+          width: 250px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-3, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-3 {
+        width: 1000px;
+        margin-top: 30px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-3 .table-title, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-3 .table-title {
+          color: #1c2438;
+          font-size: 18px;
+          margin-bottom: 20px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-3 .t-columns1, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-3 .t-columns1 {
+          width: 250px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-3 .t-columns2, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-3 .t-columns2 {
+          width: 250px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-3 .t-columns3, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-3 .t-columns3 {
+          width: 250px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-4, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-4 {
+        margin-top: 30px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-4 table thead, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-4 table thead {
+          display: none; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-4 .table-title, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-4 .table-title {
+          color: #1c2438;
+          font-size: 18px;
+          margin-bottom: 20px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-4 .t-columns1, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .month-table-4 .t-columns1 {
+          width: 250px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .time-line, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .time-line {
+        margin-top: 30px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .time-line .table-title, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .time-line .table-title {
+          color: #1c2438;
+          font-size: 18px;
+          margin-bottom: 30px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .time-line .time, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .time-line .time {
+          font-size: 14px;
+          background-color: #ffffff;
+          border: solid 1px #d8d8d8;
+          border-radius: 4px;
+          padding: 8px;
+          position: relative;
+          margin-top: -8px;
+          display: inline-block;
+          width: 600px; }
+          html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .time-line .time .icon-time-line-arrow, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .month-table-container .time-line .time .icon-time-line-arrow {
+            position: absolute;
+            display: block;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAARCAYAAADg1u3YAAAABGdBTUEAALGPC/xhBQAAARRJREFUKBVtUDtOw0AQzfq7ieXKBcYNFV0UKZwDUnAHrsAFOEJOkCJUnAPRUNJSINuybFlG/sR4ZXt5GxTHG7LSanb2vXkzb8jkzImiaN513aumact/MOecBkHwWZbllwCVU0YYhmvTNC8syypOsYnv+7cgVH3fQ4h/SApJklwSQraO48wQh+J9C7AJY+zFtm1qGMYADgqQfcTECxBkVDAA3mDqqm1b0Xd8/mbAz1JVVYYrSUsJFJ7TNN2Ny/E+ukD1Q13X37hSoUj2LlzXrRRFucuyrMaKJdKwSc/z3uH/Ca0qiTFO0JfA1Vue50ya4UCCAtd1/b4oip+maabi/7jTAwsRrlYIG0rp1VmC4MZxfI31k19BBZxvK88UYwAAAABJRU5ErkJggg==) 0 0 no-repeat;
+            width: 8px;
+            height: 17px;
+            top: 6px;
+            left: -7px;
+            z-index: 1; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month {
+      width: 1200px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info {
+        margin-left: 100px;
+        margin-top: 40px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div {
+          display: inline-block;
+          vertical-align: top; }
+          html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div:first-child, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div:first-child {
+            width: 200px;
+            padding-top: 8px;
+            text-align: right;
+            color: #1c2438;
+            font-size: 16px; }
+          html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div .form-el, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div .form-el {
+            width: 260px;
+            height: 40px; }
+            html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div .form-el .ivu-input, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div .form-el .ivu-input, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div .form-el .ivu-select-selection, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div .form-el .ivu-select-selection, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div .form-el .ivu-select-selected-value, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div .form-el .ivu-select-selected-value {
+              height: 40px; }
+            html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div .form-el .ivu-select-placeholder, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div .form-el .ivu-select-placeholder, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div .form-el .ivu-select-selected-value, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info > div .form-el .ivu-select-selected-value {
+              height: 40px;
+              line-height: 40px; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-1, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-1 {
+        text-align: center;
+        padding-top: 40px;
+        vertical-align: middle; }
+      html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-7, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-7 {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-7 .edit-7-cancel, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-7 .edit-7-cancel, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-7 .edit-7-ok, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-7 .edit-7-ok {
+          width: 160px;
+          height: 40px; }
+          html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-7 .edit-7-cancel span, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-7 .edit-7-cancel span, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-7 .edit-7-ok span, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-7 .edit-7-ok span {
+            font-size: 16px; }
+        html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-7 .edit-7-cancel, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-7 .edit-7-cancel {
+          margin-right: 20px; }
+    html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-q, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-q, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-year, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-year {
+      padding-bottom: 400px; }
 
 html .wrap .c-header .c-head-menu .head-menu-ul .head-message-badge, body .wrap .c-header .c-head-menu .head-menu-ul .head-message-badge {
   border-radius: 6px;
   display: inline-block;
   background-color: transparent; }
+
+html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate .operate-add .ivu-btn-ghost, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate .operate-add .ivu-btn-ghost, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-add .ivu-btn-ghost, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-add .ivu-btn-ghost, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .employ-add .ivu-btn-ghost, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .employ-add .ivu-btn-ghost {
+  width: 220px;
+  height: 52px;
+  font-size: 16px; }
+  html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate .operate-add .active.ivu-btn-ghost, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-operate .operate-add .active.ivu-btn-ghost, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-add .active.ivu-btn-ghost, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-add .active.ivu-btn-ghost, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .employ-add .active.ivu-btn-ghost, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-month .employ-add .active.ivu-btn-ghost {
+    color: #57a3f3;
+    background-color: transparent;
+    border-color: #57a3f3; }
+
+.component-assess-add-tip .ivu-btn {
+  font-size: 14px; }
 
 html, body {
   width: 100%;
@@ -144,10 +444,12 @@ html, body {
     content: ' ';
     display: block;
     clear: both; }
+  html .overflow, body .overflow {
+    overflow: hidden; }
   html .wrap, body .wrap {
     width: 100%;
     height: 100%;
-    min-width: 1200px;
+    min-width: 1400px;
     /*公共头,菜单,搜索,退出,logo,*/
     /*body,left-tree,right-content*/ }
     html .wrap .c-header, body .wrap .c-header {
@@ -182,6 +484,9 @@ html, body {
       html .wrap .c-body .c-body-left, body .wrap .c-body .c-body-left {
         height: 100%;
         width: 320px;
+        margin-bottom: -10000px;
+        padding-bottom: 10000px;
+        overflow: hidden;
         background: #F5F7F9; }
         html .wrap .c-body .c-body-left .body-left-search, body .wrap .c-body .c-body-left .body-left-search {
           text-align: center;
