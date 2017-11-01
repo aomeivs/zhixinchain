@@ -2,8 +2,9 @@
   .employ-container{
     padding-top: 50px;
     padding-left: 50px;
-
     .employ-base{
+      width: 1200px;
+      height: 240px;
       .base-score{
         &>span{
           display: inline-block;
@@ -24,6 +25,448 @@
           margin-top: 20px;
         }
       }
+      .base-info{
+        font-size: 16px;
+        margin-top: 50px;
+        &>span{
+          min-width: 160px;
+          display: inline-block;
+          margin-right: 20px;
+        }
+        .base-name{
+          color: #1c2438;
+          font-size: 28px;
+        }
+        .base-sex{
+          min-width: 120px;
+
+        }
+        .base-cardID{
+          width: 280px;
+        }
+        .base-phone{
+          margin-left: 40px;
+        }
+        .base-edit{
+          min-width: inherit;
+          margin-left: 40px;
+        }
+      }
+      .base-photo{
+        margin-top: 20px;
+        display: inline-block;
+      }
+
     }
+
+    .line{
+      height: 1px;
+      border-bottom:1px solid #DDDEE1;
+      width: 1200px;
+    }
+
+  //  评价
+    .employ-assess{
+      .assess-operate{
+        width: 1200px;
+        padding-top: 40px;
+        padding-bottom: 20px;
+        .operate-select{
+          font-size: 16px;
+          border-radius: 4px;
+          color: #495060;
+          background-color: #f5f7f9;
+          padding:24px 32px;
+          .select-text{
+            cursor: pointer;
+          }
+          .select-value{
+            color: #2d8cf0;
+          }
+        }
+        .operate-add{
+          padding-top: 10px;
+          .ivu-btn-ghost{
+            @extend %ivu-btn-ghost;
+          }
+        }
+
+      }
+      .assess-year{
+        .assess-year-container{
+          .assess-box{
+            width: 415px;
+
+            .box-head{
+              .head-title{
+                color: #3b4a65;
+                margin-top: 20px;
+                font-size: 16px;
+              }
+              .head-timeLine{
+                background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZwAAAABCAYAAADqzhgQAAAABGdBTUEAALGPC/xhBQAAADFJREFUOBFjnDh7VRoDEshPDZuFxGUYlR8NH+T0MJo+RvMHcnoYLR9Gywfk9ECofAAAQfTOPhcEQMsAAAAASUVORK5CYII=) 10px center no-repeat;
+                vertical-align: middle;
+                width: 100%;
+                img{
+                  margin-top: -1px;
+
+                }
+              }
+            }
+
+
+
+            .box-body{
+              border: 1px solid #E1E1E1;
+              box-shadow: 0 2px 4px 0 rgba(234,234,234,0.50);
+              width: 370px;
+              height: 430px;
+              background: #fbfbfb;
+
+              .body-1{
+                background: #ffffff;
+                padding-top: 20px;
+                padding-bottom: 40px;
+                text-align: center;
+                .circle-custom{
+                  .custom-1{
+                    font-size: 44px;
+                    color: #4a4a4a;
+                    .custom-1-2{
+                      font-size: 18px;
+                    }
+                  }
+                  .custom-2{
+                    &.line{
+                      width: 40%;
+                      margin: 10px auto;
+                    }
+                  }
+                  .custom-3{
+                    font-size: 12px;
+                    color: #9b9b9b;
+                    display: inline-block;
+
+                  }
+                }
+              }
+              .body-2{
+                .assess-title{
+                  color: #495060;
+                  font-size: 18px;
+                  font-weight: bold;
+                  text-align: center;
+                  background: #ffffff;
+                  padding-bottom: 15px;
+                }
+                .assess-desc{
+                  font-size: 14px;
+                  padding: 0 15px 15px 15px;
+                  .line{
+                    width: 100%;
+                    margin-bottom: 15px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .assess-info{
+        padding-top: 60px;
+        .ivu-tabs-tab{
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+
+
+
+        //component-assess-info-base
+        .assess-info-base{
+          max-width:1200px;
+          text-align: center;
+          .employ-add{
+            text-align: left;
+            padding-left: 400px;
+            .ivu-btn-ghost{
+              @extend %ivu-btn-ghost;
+              margin: 45px 0;
+            }
+          }
+
+
+          .employ-info{
+            width: 680px;
+            margin-left: 280px;
+            margin-bottom: 40px;
+
+            &>div{
+              display: inline-block;
+              vertical-align: top;
+
+            }
+            .e-i-1{
+              font-size: 16px;
+              color: #1c2438;
+              width: 120px;
+              text-align: right;
+            }
+            .e-i-2{
+              padding-left: 40px;
+              width: 480px;
+              text-align: left;
+              color: #4a4a4a;
+              ul,li{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+              }
+              ul{
+                &>div{
+                  font-size: 16px;
+                }
+                li{
+                  font-size: 14px;
+                  margin-top: 10px;
+                  color: #7d7d7d;
+                }
+              }
+            }
+          }
+
+        }
+        .edit-assess-info-base{
+          width: 1200px;
+          .edit-info{
+            margin-left: 240px;
+            margin-top: 40px;
+            &>div{
+              display: inline-block;
+              vertical-align: top;
+              &:first-child{
+                width: 200px;
+                padding-top: 8px;
+                text-align: right;
+                color: #1c2438;
+                font-size: 16px;
+              }
+              .form-el{
+                width: 260px;
+                height: 40px;
+                .ivu-input,.ivu-select-selection,.ivu-select-selected-value{
+                  height: 40px;
+                }
+                .ivu-select-placeholder,.ivu-select-selected-value{
+                  height: 40px;
+                  line-height: 40px;
+                }
+              }
+            }
+          }
+          .edit-1{
+            text-align: center;
+            padding-top: 40px;
+            vertical-align: middle;
+
+          }
+          .edit-7{
+            margin-top: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+            .edit-7-cancel,.edit-7-ok{
+              width: 160px;
+              height: 40px;
+              span{
+                font-size: 16px;
+              }
+            }
+            .edit-7-cancel{
+               margin-right: 20px;
+            }
+            .edit-7-ok{
+            }
+          }
+        }
+
+        //component-assess-info-month
+        .assess-info-month{
+          max-width:1200px;
+          .employ-add{
+            text-align: left;
+            padding-left: 400px;
+            .ivu-btn-ghost{
+              @extend %ivu-btn-ghost;
+              margin: 45px 0;
+            }
+          }
+
+          .month-table-container{
+            .ivu-table{
+              font-size: 14px;
+            }
+            .month-table-1{
+              width: 500px;
+              .table-title{
+                color: #1c2438;
+                font-size: 18px;
+                margin-bottom: 20px;
+              }
+              .t-columns1{
+                width: 250px;
+              }
+              .t-columns2{
+              }
+            }
+            .month-table-2{
+              margin-top: 30px;
+              .table-title{
+                color: #1c2438;
+                font-size: 18px;
+                margin-bottom: 20px;
+              }
+              .t-columns1{
+                width: 250px;
+              }
+              .t-columns2{
+                width: 250px;
+              }
+              .t-columns3{
+                width: 250px;
+              }
+              .t-columns4{
+                width: 250px;
+              }
+              .t-columns5{
+                width: 250px;
+              }
+            }
+            .month-table-3{
+              width: 1000px;
+
+              margin-top: 30px;
+              .table-title{
+                color: #1c2438;
+                font-size: 18px;
+                margin-bottom: 20px;
+              }
+              .t-columns1{
+                width: 250px;
+              }
+              .t-columns2{
+                width: 250px;
+              }
+              .t-columns3{
+                width: 250px;
+              }
+
+            }
+            .month-table-4{
+              margin-top: 30px;
+              table thead{
+                display: none;
+              }
+              .table-title{
+                color: #1c2438;
+                font-size: 18px;
+                margin-bottom: 20px;
+              }
+              .t-columns1{
+                width: 250px;
+              }
+            }
+
+            .time-line{
+              margin-top: 30px;
+              .table-title{
+                color: #1c2438;
+                font-size: 18px;
+                margin-bottom: 30px;
+              }
+              .time{
+                font-size: 14px;
+                background-color: #ffffff;
+                border: solid 1px #d8d8d8;
+                border-radius:4px;
+                padding: 8px;
+                position: relative;
+                margin-top: -8px;
+                display: inline-block;
+                width: 600px;
+                .icon-time-line-arrow{
+                  position: absolute;
+                  display: block;
+                  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAARCAYAAADg1u3YAAAABGdBTUEAALGPC/xhBQAAARRJREFUKBVtUDtOw0AQzfq7ieXKBcYNFV0UKZwDUnAHrsAFOEJOkCJUnAPRUNJSINuybFlG/sR4ZXt5GxTHG7LSanb2vXkzb8jkzImiaN513aumact/MOecBkHwWZbllwCVU0YYhmvTNC8syypOsYnv+7cgVH3fQ4h/SApJklwSQraO48wQh+J9C7AJY+zFtm1qGMYADgqQfcTECxBkVDAA3mDqqm1b0Xd8/mbAz1JVVYYrSUsJFJ7TNN2Ny/E+ukD1Q13X37hSoUj2LlzXrRRFucuyrMaKJdKwSc/z3uH/Ca0qiTFO0JfA1Vue50ya4UCCAtd1/b4oip+maabi/7jTAwsRrlYIG0rp1VmC4MZxfI31k19BBZxvK88UYwAAAABJRU5ErkJggg==) 0 0 no-repeat;
+                  width: 8px;
+                  height:17px;
+                  top: 6px;
+                  left: -7px;
+                  z-index:1;
+                }
+              }
+            }
+          }
+        }
+        .edit-assess-info-month{
+          width: 1200px;
+          .edit-info{
+            margin-left: 100px;
+            margin-top: 40px;
+            &>div{
+              display: inline-block;
+              vertical-align: top;
+              &:first-child{
+                width: 200px;
+                padding-top: 8px;
+                text-align: right;
+                color: #1c2438;
+                font-size: 16px;
+              }
+              .form-el{
+                width: 260px;
+                height: 40px;
+                .ivu-input,.ivu-select-selection,.ivu-select-selected-value{
+                  height: 40px;
+                }
+                .ivu-select-placeholder,.ivu-select-selected-value{
+                  height: 40px;
+                  line-height: 40px;
+                }
+              }
+            }
+          }
+          .edit-1{
+            text-align: center;
+            padding-top: 40px;
+            vertical-align: middle;
+
+          }
+          .edit-7{
+            margin-top: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+            .edit-7-cancel,.edit-7-ok{
+              width: 160px;
+              height: 40px;
+              span{
+                font-size: 16px;
+              }
+            }
+            .edit-7-cancel{
+              margin-right: 20px;
+            }
+            .edit-7-ok{
+            }
+          }
+        }
+
+
+        .assess-info-q,.assess-info-year{
+          padding-bottom: 400px;
+        }
+
+      }
+    }
+
   }
 }
