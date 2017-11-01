@@ -50,15 +50,99 @@
         .base-edit{
           min-width: inherit;
           margin-left: 40px;
+          img{
+            cursor:pointer;
+
+          }
         }
       }
       .base-photo{
         margin-top: 20px;
         display: inline-block;
+        img{
+          border-radius:50%;
+        }
       }
 
     }
+    .edit-employ-base{
+      width: 1200px;
+      .edit-info{
+        margin-left: 130px;
+        margin-top: 40px;
+        &>div{
+          display: inline-block;
+          vertical-align: top;
+          margin-right: 100px;
 
+          &:last-child{
+            margin-right: 0;
+          }
+          &>div{
+            &:first-child{
+              width: 200px;
+              padding-top: 8px;
+              color: #1c2438;
+              font-size: 16px;
+              margin-bottom: 8px;
+            }
+            .form-el{
+              width: 260px;
+              height: 40px;
+              .ivu-input,.ivu-select-selection,.ivu-select-selected-value{
+                height: 40px;
+              }
+              .ivu-select-placeholder,.ivu-select-selected-value{
+                height: 40px;
+                line-height: 40px;
+              }
+            }
+          }
+
+
+        }
+
+      }
+      .edit-1{
+        text-align: center;
+        padding-top: 40px;
+        vertical-align: middle;
+
+      }
+      .edit-7{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+        .edit-7-cancel,.edit-7-ok{
+          width: 160px;
+          height: 40px;
+          span{
+            font-size: 16px;
+          }
+        }
+        .edit-7-cancel{
+          margin-right: 20px;
+        }
+        .edit-7-ok{
+        }
+      }
+
+      .employ-base-photo{
+        display: inline-block;
+        margin-right: 120px;
+        margin-top: 60px;
+        img{
+          border-radius: 50%;
+          width: 166px;
+          height: 166px;
+        }
+        .employ-base-photo-btn{
+          border: 1px solid #dedede; padding: 4px 12px; border-radius: 4px; text-align: center;  width: 120px;
+          border: 1px solid #57a3f3; color:#57a3f3; margin: 0 auto; margin-top: 8px; cursor:pointer;
+        }
+      }
+
+    }
     .line{
       height: 1px;
       border-bottom:1px solid #DDDEE1;
@@ -92,6 +176,60 @@
         }
 
       }
+
+      .add-assess-year{
+        width: 1200px;
+        .edit-info{
+          margin-left: 130px;
+          margin-top: 40px;
+          &>div{
+            display: inline-block;
+            vertical-align: top;
+            &:first-child{
+              width: 200px;
+              padding-top: 8px;
+              text-align: right;
+              color: #1c2438;
+              font-size: 16px;
+            }
+            .form-el{
+              width: 260px;
+              height: 40px;
+              .ivu-input,.ivu-select-selection,.ivu-select-selected-value{
+                height: 40px;
+              }
+              .ivu-select-placeholder,.ivu-select-selected-value{
+                height: 40px;
+                line-height: 40px;
+              }
+            }
+          }
+        }
+        .edit-1{
+          text-align: center;
+          padding-top: 40px;
+          vertical-align: middle;
+
+        }
+        .edit-7{
+          margin-top: 40px;
+          margin-bottom: 40px;
+          text-align: center;
+          .edit-7-cancel,.edit-7-ok{
+            width: 160px;
+            height: 40px;
+            span{
+              font-size: 16px;
+            }
+          }
+          .edit-7-cancel{
+            margin-right: 20px;
+          }
+          .edit-7-ok{
+          }
+        }
+      }
+
       .assess-year{
         .assess-year-container{
           .assess-box{
@@ -466,6 +604,168 @@
         }
 
       }
+    }
+
+  }
+}
+
+%component-employ-add{
+  .add-employ-container{
+    padding-top: 50px;
+    margin-left: 200px;
+    width: 1000px;
+
+    .add-employ-head{
+      text-align: center;
+
+      margin-top: 50px;
+      .add-employ-title{
+        color: #1c2438;
+        .e-title-1{
+          font-size: 40px;
+        }
+        .e-title-2{
+          font-size: 20px;
+        }
+
+      }
+      .add-employ-waring{
+        margin-top: 50px;
+        font-size: 16px;
+        margin-bottom: 30px;
+      }
+
+      .add-employ-contact{
+        padding: 12px 0;
+        font-size: 16px;
+        color: #b2b2b2;
+        .employ-contact-phone{
+          color: #fc5366;
+        }
+      }
+      .splite{
+        height: 4px;
+        width: 900px;
+        background: #298cff;
+        margin: 10px auto 30px;
+      }
+    }
+    .add-employ-body{
+      width: 1000px;
+      margin-bottom: 50px;
+
+      .body-1{
+        text-align: center;
+        .edit-info{
+          //margin-left: 160px;
+          margin-top: 40px;
+          &>div{
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+
+            &:last-child{
+              margin-right: 0;
+            }
+            &>div{
+              text-align: left;
+              display: inline-block;
+              &:first-child{
+                text-align: right;
+
+                width: 100px;
+                padding-top: 8px;
+                color: #1c2438;
+                font-size: 16px;
+                margin-bottom: 8px;
+              }
+              .form-el{
+                width: 260px;
+                height: 40px;
+                .ivu-input,.ivu-select-selection,.ivu-select-selected-value{
+                  height: 40px;
+                }
+                .ivu-select-placeholder,.ivu-select-selected-value{
+                  height: 40px;
+                  line-height: 40px;
+                  overflow: inherit;
+                }
+              }
+            }
+
+
+          }
+
+        }
+      }
+      .body-2{
+        .edit-info{
+          margin-left: 150px;
+          margin-top: 40px;
+          &>div{
+            display: inline-block;
+            vertical-align: top;
+            &:first-child{
+              width: 200px;
+              padding-top: 8px;
+              text-align: right;
+              color: #1c2438;
+              font-size: 16px;
+            }
+            .form-el{
+              width: 260px;
+              height: 40px;
+              .ivu-input,.ivu-select-selection,.ivu-select-selected-value{
+                height: 40px;
+              }
+              .ivu-select-placeholder,.ivu-select-selected-value{
+                height: 40px;
+                line-height: 40px;
+              }
+            }
+          }
+        }
+      }
+
+      .edit-1{
+        text-align: center;
+        padding-top: 40px;
+        vertical-align: middle;
+
+      }
+      .edit-7{
+        margin-top: 40px;
+        margin-bottom: 40px;
+        text-align: center;
+        .edit-7-cancel,.edit-7-ok{
+          width: 160px;
+          height: 40px;
+          span{
+            font-size: 16px;
+          }
+        }
+        .edit-7-cancel{
+          margin-right: 20px;
+        }
+        .edit-7-ok{
+        }
+      }
+
+      .employ-base-photo{
+        display: inline-block;
+        margin-right: 120px;
+        margin-top: 60px;
+        img{
+          border-radius: 50%;
+          width: 166px;
+          height: 166px;
+        }
+        .employ-base-photo-btn{
+          border: 1px solid #dedede; padding: 4px 12px; border-radius: 4px; text-align: center;  width: 120px;
+          border: 1px solid #57a3f3; color:#57a3f3; margin: 0 auto; margin-top: 8px; cursor:pointer;
+        }
+      }
+
     }
 
   }

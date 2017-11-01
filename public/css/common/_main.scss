@@ -31,6 +31,125 @@
   }
 }
 
+.component-modal-auth{
+  .modal-1{
+    .add-employ-container {
+      .add-employ-head {
+        text-align: center;
+        margin-top: 50px;
+        .add-employ-title {
+          color: #1c2438;
+          .e-title-1 {
+            font-size: 40px;
+          }
+          .e-title-2 {
+            font-size: 20px;
+          }
+
+        }
+      }
+      .add-employ-body {
+        .body-1{
+          margin-top: 44px;
+          font-size: 14px;
+        }
+        .body-2{
+          margin-top: 44px; margin-bottom: 88px;
+        }
+      }
+    }
+  }
+  .modal-2{
+    .add-employ-container {
+      .add-employ-head {
+        text-align: center;
+        margin-top: 50px;
+        .add-employ-title {
+          color: #1c2438;
+          .e-title-1 {
+            font-size: 80px;
+            color: #15a8ff;
+          }
+          .e-title-2 {
+            font-size: 30px;
+          }
+
+        }
+      }
+      .add-employ-body {
+
+        .body-1{
+          margin-top: 44px;
+          font-size: 14px;
+        }
+        .body-2{
+          margin-top: 44px; margin-bottom: 88px;
+        }
+      }
+    }
+  }
+
+  .modal-3{
+    .add-employ-container {
+      .add-employ-head {
+        text-align: center;
+        margin-top: 50px;
+        .add-employ-title {
+          color: #1c2438;
+          .e-title-1 {
+            font-size: 80px;
+            color: #ffb242;
+          }
+          .e-title-2 {
+            font-size: 30px;
+          }
+
+        }
+      }
+      .add-employ-body {
+
+        .body-1{
+          margin-top: 44px;
+          font-size: 14px;
+        }
+        .body-2{
+          margin-top: 30px; margin-bottom: 88px;
+        }
+        .body-3{
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  .modal-4{
+    .add-employ-container {
+      .add-employ-head {
+        text-align: center;
+        margin-top: 50px;
+        .add-employ-title {
+          color: #1c2438;
+          .e-title-1 {
+            font-size: 40px;
+          }
+          .e-title-2 {
+            font-size: 20px;
+          }
+
+        }
+      }
+      .add-employ-body {
+        .body-1{
+          width: 80%;
+          margin: 44px auto 80px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+}
+
 html,body{
   width: 100%;
   height: 100%;
@@ -61,6 +180,15 @@ html,body{
   .overflow{
     overflow: hidden;
   }
+  .text-center{
+    text-align: center;
+  }
+  .text-left{
+    text-align: left;
+  }
+  .text-right{
+    text-align: right;
+  }
 
   .wrap{
     width: 100%;
@@ -84,9 +212,11 @@ html,body{
             float: left;
             height: 80px;
             line-height: 80px;
-            //min-width: 80px;
             margin-right: 84px;
             vertical-align: middle;
+            a{
+              color: #ffffff;
+            }
             .c-head-user{
               &>div{
                 float: left;
@@ -206,6 +336,9 @@ html,body{
 
         .component-employ{
           @extend %component-employ
+        }
+        .component-employ-add{
+          @extend %component-employ-add;
         }
       }
 
