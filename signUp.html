@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+<div class="wrap login" id="app">
+    <div class="login-1">
+        <img src="public/images/login/logo.png">
+    </div>
+    <div class="login-2">
+        <span class="login-2-txtBigger">注册</span>
+        <span>/Sign Up</span>
+    </div>
+    <div class="login-3">
+        <div class="login-3-1 signUp-1">
+            <span>已有账号？</span>
+            <span class="login4-active">立即登录</span>
+        </div>
+        <div class="login-company">
+            <div class="login-3-2 bottomLine">
+                <input placeholder="请输入邮箱" id="login-company-input1">
+            </div>
+            <div class="sce_line" id="login-company-sce_line-1"></div>
+            <div class="login-3-2 bottomLine">
+                <input placeholder="请输入企业名称"  id="login-company-input2">
+            </div>
+            <div class="sce_line" id="login-company-sce_line-2"></div>
+
+            <div class="login-3-2 bottomLine">
+                <input placeholder=" 请输入由字母和数字组成的6-16位密码"  id="login-company-input3" type="password">
+            </div>
+            <div class="sce_line" id="login-company-sce_line-3"></div>
+        </div>
+    </div>
+    <div class="login-5" style="margin-top: 50px;">注册</div>
+    <div class="signUp-2">
+        <span> 恭喜您已注册成功，<span>3</span>秒后自动跳转登录</span>
+    </div>
+</div>
+
+<script>
+    $('#login-company-input1').on('focus',function () {
+        $("#login-company-sce_line-1").css("width","100%");
+    })
+    $('#login-company-input1').on('blur',function () {
+        $("#login-company-sce_line-1").css("width","0");
+    })
+    $('#login-company-input2').on('focus',function () {
+        $("#login-company-sce_line-2").css("width","100%");
+    })
+    $('#login-company-input2').on('blur',function () {
+        $("#login-company-sce_line-2").css("width","0");
+    })
+    $('#login-company-input3').on('focus',function () {
+        $("#login-company-sce_line-3").css("width","100%");
+    })
+    $('#login-company-input3').on('blur',function () {
+        $("#login-company-sce_line-3").css("width","0");
+    })
+</script>
+</body>
+</html>

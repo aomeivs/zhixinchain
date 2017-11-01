@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+
+
+<!--职信链，样式头为 c (chain小写) 例
+
+头部 c-header
+底部 c-footer
+组件 c-component-组件名（公用部分）
+
+无特别意义的逻辑结构以 相对有意义模块名 后，层级数字标识
+例： c-component-组件名 下
+
+组件名1>组件名1-1.
+
+或
+
+组件名-head>组件名-head-top>（组件名-head-top-1+组件名-head-top-2+组件名-head-top-3）
+
+ -->
+
+<div class="wrap login" id="app">
+    <div class="login-1">
+        <img src="public/images/login/logo.png">
+    </div>
+    <div class="login-2">
+        <span class="login-2-txtBigger">登录</span>
+        <span>/Sign In</span>
+    </div>
+    <div class="login-3">
+        <div class="login-3-1 bottomLine">
+            <span class="span1 active" id="company">企业</span>
+            <span class="span2" id="person">个人</span>
+        </div>
+        <div class="login-company">
+            <div class="login-3-2 bottomLine">
+                <input placeholder="请输入邮箱" id="login-company-input1">
+            </div>
+            <div class="sce_line" id="login-company-sce_line-1"></div>
+            <div class="login-3-2 bottomLine">
+                <input placeholder="请输入密码"  id="login-company-input2" type="password">
+            </div>
+            <div class="sce_line" id="login-company-sce_line-2"></div>
+        </div>
+
+        <div class="login-person" style="display: none">
+            <div class="login-3-2 bottomLine">
+                <input placeholder="请输入身份证号码" id="login-person-input1">
+            </div>
+            <div class="sce_line" id="login-person-sce_line1"></div>
+            <div class="login-3-2 bottomLine">
+                <input placeholder="请输入密码" id="login-person-input2" type="password">
+            </div>
+            <div class="sce_line" id="login-person-sce_line2"></div>
+        </div>
+    </div>
+    <div class="login-4">
+        <span class="span1 login4-active" id="zhuce-now">立即注册</span>
+        <span class="span2" id="getBackMsg">找回密码</span>
+    </div>
+    <div class="login-5">登录</div>
+
+</div>
+<script>
+    $('#person').on('click',function () {
+        $('.login-company').hide();
+        $('.login-person').show();
+        $('#company').removeClass("active");
+        $('#person').addClass("active");
+        $('#zhuce-now').hide();
+        $('#getBackMsg').addClass("login4-active");
+
+    })
+
+    $('#company').on('click',function () {
+        $('.login-company').show();
+        $('.login-person').hide();
+        $('#person').removeClass("active");
+        $('#company').addClass("active")
+        $('#zhuce-now').show();
+        $('#getBackMsg').removeClass("login4-active");
+    })
+    $('#login-company-input1').on('focus',function () {
+        $("#login-company-sce_line-1").css("width","100%");
+    })
+    $('#login-company-input1').on('blur',function () {
+        $("#login-company-sce_line-1").css("width","0");
+    })
+    $('#login-company-input2').on('focus',function () {
+        $("#login-company-sce_line-2").css("width","100%");
+    })
+    $('#login-company-input2').on('blur',function () {
+        $("#login-company-sce_line-2").css("width","0");
+    })
+    $('#login-person-input1').on('focus',function () {
+        $("#login-person-sce_line1").css("width","100%");
+    })
+    $('#login-person-input1').on('blur',function () {
+        $("#login-person-sce_line1").css("width","0");
+    })
+    $('#login-person-input2').on('focus',function () {
+        $("#login-person-sce_line2").css("width","100%");
+    })
+    $('#login-person-input2').on('blur',function () {
+        $("#login-person-sce_line2").css("width","0");
+    })
+
+</script>
+</body>
+</html>
