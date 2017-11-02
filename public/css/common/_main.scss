@@ -341,6 +341,12 @@ html,body{
         .component-employ-add{
           @extend %component-employ-add;
         }
+
+        .component-setting{
+          @extend %component-setting
+
+        }
+
       }
 
     }
