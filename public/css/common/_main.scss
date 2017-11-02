@@ -344,9 +344,113 @@ html,body{
 
         .component-setting{
           @extend %component-setting
-
         }
+      }
+      .component-employ-info-single{
+        width: 1320px;
+        margin: 40px auto 40px;
+        .employ-info-single{
+            @extend %component-employ;
+            //重写employ-container
+            .employ-container{
+              padding: 0;
+              width: 1200px;
+              margin: 0 auto;
+              .assess-info{
+                .assess-tab{
+                  padding-top: 40px;
+                }
+              }
+            }
+        }
+        .employ-leave{
+          position: relative;
+          margin-top: 80px;
+          .leave-icon{
+            position: absolute;
+            z-index: 1;
+            top: -60px;
+            left: 50px;
+          }
 
+          .leave-date{
+            background: #f7f7f7;
+            padding: 16px 24px;
+            width: 230px;
+            text-align: right;
+          }
+        }
+      }
+      .component-account{
+        .tabs-account{
+          &>.ivu-tabs-bar{
+            margin-bottom: 0;
+            border-bottom:none;
+            .ivu-tabs-nav-container{
+              height:auto;
+              .ivu-tabs-tab{
+                height: 80px;
+                width:220px;
+                padding-top: 26px;
+                text-align: center;
+                font-size: 20px;
+                background: #ffffff;
+              }
+              .ivu-tabs-tab-active{
+                padding-bottom: 5px;
+                background: #2d8cf0;
+                transform: translateZ(0);
+                border-color: #2d8cf0;
+                color: #fff;
+              }
+            }
+
+          }
+        }
+        width: 1320px;
+        margin: 40px auto 40px;
+        .employ-info-single{
+          @extend %component-employ;
+          //重写employ-container
+          .employ-container{
+            padding: 0;
+            width: 1200px;
+            margin: 0 auto;
+            .assess-info{
+
+              .assess-tab{
+                padding-top: 40px;
+              }
+              .assess-info-month{
+
+                .month-table-2{
+                  width: 1000px;
+                }
+
+                .month-table-3{
+                }
+
+              }
+            }
+          }
+        }
+        .employ-leave{
+          position: relative;
+          margin-top: 80px;
+          .leave-icon{
+            position: absolute;
+            z-index: 1;
+            top: -60px;
+            left: 50px;
+          }
+
+          .leave-date{
+            background: #f7f7f7;
+            padding: 16px 24px;
+            width: 230px;
+            text-align: right;
+          }
+        }
       }
 
     }
