@@ -35,6 +35,34 @@
  -->
 
 <div class="wrap" id="app">
+    <Modal v-model="modal2" :footer-hide="true" width="900">
+        <div class="component-modal-auth">
+            <div class="modal-2">
+                <div class="add-employ-container">
+                    <div class="add-employ-head">
+                        <div class="add-employ-title">
+                            <div class="e-title-1">
+                                <Icon type="android-checkmark-circle"></Icon>
+                            </div>
+                            <div class="e-title-2">密码修改成功！</div>
+                        </div>
+                    </div>
+
+                    <div class="add-employ-body text-center">
+                        <div class="body-1">
+                            <span>
+                                您需要重新登录，点击确定立即登录，将在 {{time}}秒 后自动登录。
+                            </span>
+                        </div>
+                        <div class="body-2">
+                            <i-button type="primary" size="large" style="width: 360px;" v-on:click="modalAuth">确定</i-button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </Modal>
     <div class="c-header">
         <div class="c-head-logo">
             <img src="public/images/logo.png" width="334" alt="职信链LOGO">
@@ -42,10 +70,10 @@
         <div class="c-head-menu">
             <ul class="head-menu-ul">
                 <li>
-                    <span>购买</span>
+                    <a href="">购买</a>
                 </li>
                 <li>
-                    <span>职信在线搜索</span>
+                    <a href="#">职信在线搜索</a>
                     <!--<img src="public/images/head-search.png" width="26" alt="职信链搜索按钮">-->
                 </li>
                 <li>
@@ -59,14 +87,14 @@
                 <li>
                     <div class="c-head-user">
                         <div class="user-photo">
-                            <img src="public/images/head-photo.png" width="39" alt="用户头像">
-                            <span>董兴海</span>
+                            <a href=""><img src="public/images/head-photo.png" width="39" alt="用户头像">
+                                <span>董兴海</span></a>
                         </div>
                         <div>
                             <img src="public/images/head-line.png" width="2" alt="">
                         </div>
                         <div class="user-logOut">
-                            <img src="public/images/head-exit.png" width="26" alt="退出">
+                            <img src="public/images/head-exit.png" style="cursor: pointer;" width="26" alt="退出">
                         </div>
                     </div>
                 </li>
@@ -105,68 +133,6 @@
                 <!--组件-树-->
                 <div class="component-tree">
                     <component-tree v-bind:tree='treeData'></component-tree>
-                    <!--<div class="employ-group">
-                        <div class="box group-box member-box">
-                            <div class="box-icon">
-                                <img src="public/images/tree-group.png" width="19" alt="图标">
-                                <img src="public/images/tree-arrow.png" style="margin-left: 4px;" width="7" alt="">
-                            </div>
-                            <div class="box-content">
-                                <span>技术中心</span>
-                            </div>
-                            <div class="box-control">
-                                <dropdown placement="bottom-end">
-                                    <a href="javascript:void(0)">
-                                        添加
-                                        <icon type="arrow-down-b"></icon>
-                                    </a>
-                                    <dropdown-menu slot="list">
-                                        <dropdown-item>员工</dropdown-item>
-                                        <dropdown-item>部门</dropdown-item>
-                                    </dropdown-menu>
-                                </dropdown>
-                            </div>
-                        </div>
-                        <div>
-
-                            <div class="employ-group">
-                                <div class="box group-box member-box">
-                                    <div class="box-icon">
-                                        <img src="public/images/tree-photo1.png" width="28" alt="图标">
-                                        &lt;!&ndash;<img src="public/images/tree-arrow.png" style="margin-left: 4px;" width="7" alt="">&ndash;&gt;
-                                    </div>
-                                    <div class="box-content">
-                                        <span>老大</span>
-                                    </div>
-                                    &lt;!&ndash;<div class="box-control">
-                                        <span>添加</span>
-                                    </div>&ndash;&gt;
-                                </div>
-                                <div class="box group-box member-box">
-                                    <div class="box-icon">
-                                        <img src="public/images/tree-group.png" width="19" alt="图标">
-                                        <img src="public/images/tree-arrow.png" style="margin-left: 4px;" width="7" alt="">
-                                    </div>
-                                    <div class="box-content">
-                                        <span>PHP</span>
-                                    </div>
-                                    <div class="box-control">
-                                        <dropdown placement="bottom-end">
-                                            <a href="javascript:void(0)">
-                                                添加
-                                                <icon type="arrow-down-b"></icon>
-                                            </a>
-                                            <dropdown-menu slot="list">
-                                                <dropdown-item>员工</dropdown-item>
-                                                <dropdown-item>部门</dropdown-item>
-                                            </dropdown-menu>
-                                        </dropdown>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>-->
                 </div>
 
                 <!--添加部门-->
@@ -195,50 +161,38 @@
         </div>
         <div class="c-body-container clearFix">
 
-            <!--登录后的仪表盘页面   组件部分  -->
-            <div class="component-dashboard">
-                <div class="dashboard-container">
-                    <img src="public/images/dashboard/icon-companyLogo.png" width="247" height="72" alt="">
-                    <div class="company-title">青岛职信链科技有限公司</div>
-                    <div class="line"></div>
-                    <div class="company-subTitle">
-                        在职员工上限数：20
-                    </div>
+            <div class="component-setting">
+                <div class="setting-user-container">
 
-                    <div class="employ-info">
-                        <div class="dashboard-box">
-                            <div class="employ-on">
-                                <img src="public/images/dashboard/icon-dashboardEmploy-on.png" width="78" alt="">
-                            </div>
-                            <div class="employ-count">
-                                16人
-                            </div>
-                            <div class="employ-count-desc">
-                                目前在职员工
+                    <div class="set-pwd">
+                        <div class="set-title">
+                            <div class="add-employ-title">
+                                <span class="e-title-1">修改密码</span><span class="e-title-2">/Modify password</span>
                             </div>
                         </div>
 
-                        <div class="dashboard-box">
-                            <div class="employ-on">
-                                <img src="public/images/dashboard/icon-dashboardEmploy-off.png" width="79" alt="">
+                        <div class="set-body">
+                            <div>
+                                <i-input type="password" size="large" style="width: 360px;" placeholder="请输入原密码"></i-input>
                             </div>
-                            <div class="employ-count">
-                                1人
+                            <div>
+                                <i-input type="password" size="large" style="width: 360px;" placeholder="请输入新密码（6至16位字母或数字）"></i-input>
                             </div>
-                            <div class="employ-count-desc">
-                                已离职员工
+                            <div>
+                                <i-input type="password" size="large" style="width: 360px;" placeholder="请输入新密码（6至16位字母或数字）"></i-input>
+                            </div>
+                            <div class="body-4">
+                                <i-button type="primary" class="" style="width: 360px;" size="large" v-on:click="modalAuth">确认修改</i-button>
                             </div>
                         </div>
                     </div>
+
                 </div>
-            </div>
-
-            <div class="liwenjin-1">
-
             </div>
 
         </div>
     </div>
+
 </div>
 
 
@@ -289,6 +243,73 @@
 
 </script>
 
+<!--评价，汽泡查看、添加组件-->
+<script type="html/x-template" id="component-assess-add-tip">
+    <div class="component-assess-add-tip" v-if="data.show">
+        <poptip width="200" placement="top">
+            <i-button type="text" size="small">查看</i-button>
+            <div class="api" slot="content">
+                {{data.date}}
+            </div>
+        </poptip>
+        <poptip width="200" placement="top" v-model="visible">
+            <i-button type="text" size="small">添加</i-button>
+            <div class="api" slot="content">
+                <div>
+                    <i-input placeholder="添加"></i-input>
+                </div>
+                <div style="padding:10px 0 ;">
+                    <i-button type="text" size="small" @click="close">取消</i-button>
+                    <i-button type="primary" size="small">保存</i-button>
+                </div>
+            </div>
+        </poptip>
+    </div>
+    <div class="component-assess-add-tip" v-else>
+        <poptip width="200" placement="top" v-model="visible">
+            <i-button type="text" size="small">添加</i-button>
+            <div class="api" slot="content">
+                <div>
+                    <i-input placeholder="添加"></i-input>
+                </div>
+                <div style="padding:10px 0 ;">
+                    <i-button type="text" size="small" @click="close">取消</i-button>
+                    <i-button type="primary" size="small">保存</i-button>
+                </div>
+            </div>
+        </poptip>
+    </div>
+</script>
+
+<!--下面暂时不用-->
+<script type="html/x-template" id="component-modal-auth">
+
+    <div class="component-modal-auth">
+        <div class="modal-1">
+            <div class="add-employ-container">
+                <div class="add-employ-head">
+                    <div class="add-employ-title">
+                        <span class="e-title-1">申请获得授权</span><span class="e-title-2">/Newly Increased</span>
+                    </div>
+                </div>
+
+                <div class="add-employ-body text-center">
+                    <div style="margin-top: 66px;">
+                        <i-input placeholder="请输入身份证号" size="large" style="width: 360px;"></i-input>
+                    </div>
+                    <div style="margin-top: 44px; margin-bottom: 88px;">
+                        <i-button type="primary" size="large" style="width: 360px;">立即申请</i-button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</script>
+
+
+
 <script>
 //    tree-item component
 
@@ -304,7 +325,7 @@
  * 见名识意
  */
 
-    Vue.component('component-tree', {
+    Vue.component('ComponentTree', {
         template:'#component-tree',
         props:['tree'],
         data:function(){
@@ -415,6 +436,43 @@
             }
         }
     })
+/**
+ * 组件-添加备注
+ *
+ *
+ */
+    Vue.component('ComponentAssessAddTip',{
+        template:'#component-assess-add-tip',
+        props:['data'],
+        data:function () {
+            return {
+                visible: false
+            }
+        },
+        methods:{
+            close () {
+                this.visible = false;
+            }
+        }
+    })
+/**
+ * 组件-modal-授权
+ *
+ *
+ */
+Vue.component('ComponentModalAuth',{
+    template:'#component-modal-auth',
+    data:function () {
+        return{
+
+        }
+    },
+    methods:{
+
+    }
+})
+
+
 
 
     var treeData =
@@ -521,11 +579,233 @@
             return {
                 value:'',
                 data:[],
-                treeData:treeData
+                treeData:treeData,
+
+
+
+
+                //不当在这里，属于年度总评组件内属性。
+
+
+                name:"2",//被选中Tab
+                assessInfoBase:false,//第一个tab开关状态
+                assessInfoBase2:true,//第2个tab开关状态
+                assessInfoBase3:false,//第3个tab开关状态
+                assessInfoBase4:false,//第4个tab开关状态
+                assessInfoBase5:true,//年度总评开关状态
+                assessInfoBase6:true,//基础信息编辑开关状态
+
+                percent: 80,
+                dropdown2_text:'职信链科技有限公司',
+
+                columns1: [
+                    {
+                        title: '年份及月度',
+                        key: 'title',
+                        className:'t-columns1'
+                    },
+                    {
+                        title: '月度评分',
+                        key: 'score',
+                        className:'t-columns2'
+                    }
+                ],
+                data1: [
+                    {
+                        title: '2017.8',
+                        score: 8
+                    },
+                    {
+                        title: '2017.7',
+                        score: 7
+                    },
+                    {
+                        title: '2017.6',
+                        score: 8
+                    },
+                ],
+//table2
+                columns2: [
+                    {
+                        title: '年份及月度',
+                        key: 'date',
+                        className:'t-columns1'
+                    },
+                    {
+                        title: '排名情况',
+                        key: 'order',
+                        className:'t-columns2'
+                    },
+                    {
+                        title: '业绩额',
+                        key: 'performance',
+                        className:'t-columns3'
+                    },
+                    {
+                        title: '员工意见',
+                        key: 'recommend',
+                        className:'t-columns4'
+                    },
+                    {
+                        title: '企业备注',
+                        key: 'remark',
+                        render: (h, params) => {
+                            return h('div', [
+                                h('component-assess-add-tip',{
+                                    props:{
+                                        data:this.data2[params.index]
+                                    }
+                                })
+                            ]);
+                        }
+                    }
+                ],
+                data2: [
+                    {
+                        date: '2017.8',
+                        order: '靠前',
+                        performance: '50万',
+                        recommend: '认同'
+                    },
+                    {
+                        date: '2017.7',
+                        order: '靠前',
+                        performance: '60万',
+                        recommend: '认同',
+                        show:true
+                    },
+                    {
+                        date: '2017.6',
+                        order: '靠前',
+                        performance: '70万',
+                        recommend: '认同'
+                    }
+
+                ],
+//table3
+                columns3: [
+                    {
+                        title: '年份及月度',
+                        key: 'date',
+                        className:'t-columns1'
+                    },
+                    {
+                        title: '考勤排名',
+                        key: 'order',
+                        className:'t-columns2'
+                    },
+                    {
+                        title: '员工意见',
+                        key: 'recommend',
+                        className:'t-columns3'
+                    },
+                    {
+                        title: '企业备注',
+                        key: 'remark',
+                        render: (h, params) => {
+                            return h('div', [
+                                h('ComponentAssessAddTip',{
+                                    props:{
+                                        data:this.data2[params.index]
+                                    }
+                                })
+                            ]);
+                        }
+                    }
+                ],
+                data3: [
+                    {
+                        date: '2017.8',
+                        order: '靠前',
+                        recommend: '认同'
+                    },
+                    {
+                        date: '2017.7',
+                        order: '靠前',
+                        recommend: '认同',
+                        show:true
+                    },
+                    {
+                        date: '2017.6',
+                        order: '靠前',
+                        recommend: '认同'
+                    }
+
+                ],
+//                table4
+                columns4: [
+                    {
+                        title: '年份及月度',
+                        key: 'title',
+                        className:'t-columns1'
+                    },
+                    {
+                        title: '月度评分',
+                        key: 'score'
+                    }
+                ],
+                data4: [
+                    {
+                        title: '2017.8',
+                        score: '业绩突出，奖励1万元'
+                    },
+                    {
+                        title: '2017.7',
+                        score: '业绩突出，奖励1万元'
+                    },
+                    {
+                        title: '2017.6',
+                        score: '业绩突出，奖励1万元'
+                    },
+                ],
+
+
+
+//                编辑数据
+                cityList: [
+                    {
+                        value: 'beijing',
+                        label: '北京市'
+                    },
+                    {
+                        value: 'shanghai',
+                        label: '上海市'
+                    },
+                    {
+                        value: 'shenzhen',
+                        label: '深圳市'
+                    },
+                    {
+                        value: 'hangzhou',
+                        label: '杭州市'
+                    },
+                    {
+                        value: 'nanjing',
+                        label: '南京市'
+                    },
+                    {
+                        value: 'chongqing',
+                        label: '重庆市'
+                    }
+                ],
+                model1: '',
+                modal1:true,
+                modal2:true,
+                modal3:true,
+                modal4:true,
+                time:5
             }
         },
         mounted:function () {
+            let timeInterval = setInterval(function (_this) {
+                console.log(this.time)
+                if(this.time>0){
+                    this.time--;
+                }else{
+                    clearInterval(timeInterval)
+                }
 
+            }.bind(this),1000)
         },
         methods: {
             handleSearch : function(value) {
@@ -534,10 +814,55 @@
                     value + value,
                     value + value + value
                 ];
+            },
+
+//            属于年度总评组件
+            dropdown2:function (v) {
+                this.dropdown2_text = v;
+            },
+            show (index) {
+                this.$Modal.info({
+                    title: '用户信息',
+                    content: `${this.data2[index].date}`
+                })
+            },
+            remove (index) {
+                this.data2.splice(index, 1);
+            },
+            assessInfoShow(name){
+
+                switch(name){
+                    case '1':
+                        this.assessInfoBase=!this.assessInfoBase;
+                        break;
+                    case '2':
+                        this.assessInfoBase2=!this.assessInfoBase2;
+                        break;
+                    case '3':
+                        this.assessInfoBase3=!this.assessInfoBase3;
+                        break;
+                    case '4':
+                        this.assessInfoBase4=!this.assessInfoBase4;
+                        break;
+                    case '5':
+                        this.assessInfoBase5=!this.assessInfoBase5;
+                        break;
+                    case '6':
+                        this.assessInfoBase6=!this.assessInfoBase6;
+                        break;
+                    default:
+                        break;
+                }
+
+            },
+            modalAuth:function () {
+                this.modal2=!this.modal2
             }
+
         }
     }).$mount('#app')
 </script>
+
 
 </body>
 </html>

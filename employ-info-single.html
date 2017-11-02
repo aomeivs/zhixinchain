@@ -74,126 +74,20 @@
         </div>
     </div>
     <div class="c-body">
-        <div class="c-body-left left">
-            <div class="body-left-search">
-                <auto-complete
-                        v-model="value"
-                        icon="ios-search"
-                        :data="data"
-                        placeholder="搜索员工"
-                        @on-search="handleSearch"
-                        style="width:290px">
-                </auto-complete>
-            </div>
-            <div class="body-left-CName">
-                职信链科技有限公司
-            </div>
-            <div class="left-body-container">
-                <!--在职员工-->
-                <div class="tree-employ employ-on">
-                    <div class="employ-on-block">
-                        <img class="employ-icon" src="public/images/tree-employ.png" width="23" alt="在职员工">
-                        <span class="employ-title">
-                        在职员工
-                    </span>
-                        <span class="employ-count">
-                        (3)
-                    </span>
-                    </div>
+        <!--登录后的 员工 页面   组件部分  -->
+        <div class="component-employ-info-single">
+            <div class="employ-leave clearFix">
+                <div class="leave-icon">
+                    <img src="public/images/employ/icon-leave-employ.png" width="231" alt="">
                 </div>
-
-                <!--组件-树-->
-                <div class="component-tree">
-                    <component-tree v-bind:tree='treeData'></component-tree>
-                </div>
-
-                <!--添加部门-->
-                <div class="tree-addGroup">
-                    <icon type="plus-round"></icon><span>添加部门</span>
-                </div>
-
-                <!--系统设置-->
-                <div class="tree-setting">
-                    <icon type="gear-a"></icon><span>系统设置</span>
-                </div>
-
-                <!--离职员工-->
-                <div class="tree-employ employ-off">
-                    <div class="employ-on-block">
-                        <img class="employ-icon" src="public/images/tree-employ-off.png" width="23" height="23" alt="离职员工">
-                        <span class="employ-title">
-                        已离职员工
-                    </span>
-                        <span class="employ-count">
-                        (1)
-                    </span>
-                    </div>
+                <div class="leave-date right">
+                    离职时间：2017.2.20
                 </div>
             </div>
-        </div>
-        <div class="c-body-container clearFix">
-            <!--登录后的 员工 页面   组件部分  -->
-            <div class="component-employ">
+            <Card class="employ-info-single">
                 <div class="employ-container">
-                    <!--编辑基础信息-->
-                    <div v-show="assessInfoBase6" class="edit-employ-base clearFix">
-                        <Card style="width: 100%;">
-                            <div class="clearFix">
-                                <div class="left">
-                                    <div class="edit-info edit-2">
-                                        <div>
-                                            <div>姓名</div>
-                                            <div>
-                                                <i-input class="form-el" placeholder="请输入" value="庞丁畅"></i-input>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div>性别</div>
-                                            <div>
-                                                <i-select v-model="model1" class="form-el" placeholder="请选择">
-                                                    <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
-                                                </i-select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="edit-info edit-3">
-                                        <div>
-                                            <div>身份证号</div>
-                                            <div>
-                                                <i-input class="form-el" :disabled="true" placeholder="请输入" value="371327199001016415"></i-input>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div>手机号</div>
-                                            <div>
-                                                <i-input class="form-el" placeholder="请输入" value="15805322430"></i-input>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="right">
-                                    <label class="employ-base-photo" for="employ-base-photo">
-                                        <img src="public/images/employ/employ-base-photo.png" width="166" height="166" alt="">
-                                        <div class="employ-base-photo-btn">
-                                            更换头像
-                                        </div>
-                                    </label>
-                                    <input type="file" name="" style="display: none;" id="employ-base-photo">
-                                </div>
-                            </div>
-
-
-                            <div class="edit-7">
-                                <div>
-                                    <i-button type="ghost" class="edit-7-cancel" v-on:click="assessInfoShow('6')">取消</i-button>
-                                    <i-button type="primary" class="edit-7-ok">保存</i-button>
-                                </div>
-                            </div>
-
-                        </Card>
-                    </div>
                     <!--基础信息-->
-                    <div v-show="!assessInfoBase6" class="employ-base clearFix">
+                    <div class="employ-base clearFix">
                         <div class="base-left left">
                             <div class="base-score">
                                 <span class="score-1">职信总评分</span>
@@ -201,32 +95,28 @@
                                 <span class="score-3">分</span>
                             </div>
                             <div class="base-info">
-                                <span class="base-name">
-                                    庞丁畅
-                                </span>
+                        <span class="base-name">
+                            庞丁畅
+                        </span>
                                 <span class="base-sex">
-                                    性别：男
-                                </span>
+                            性别：男
+                        </span>
                                 <span class="base-cardID">
-                                    身份证号：371327xxxxxxxx6415
-                                </span>
+                            身份证号：371327xxxxxxxx6415
+                        </span>
                                 <span class="base-phone">
-                                    手机号：158xxxx2430
-                                </span>
-                                <span class="base-edit">
-                                    <img v-on:click="assessInfoShow('6')" src="public/images/employ/icon-employ-base-edit.png" width="38" alt="">
-                                </span>
+                            手机号：158xxxx2430
+                        </span>
+
                             </div>
                         </div>
                         <div class="base-right right">
-                            <span class="base-photo">
-                                <img src="public/images/employ/employ-base-photo.png" width="166" alt="">
-                            </span>
+                    <span class="base-photo">
+                        <img src="public/images/employ/employ-base-photo.png" width="166" alt="">
+                    </span>
                         </div>
                     </div>
                     <div class="line"></div>
-
-
                     <!--评价-->
                     <div class="employ-assess">
                         <div class="assess-operate clearFix overflow">
@@ -243,55 +133,10 @@
                                     </dropdown-menu>
                                 </dropdown>
                             </div>
-                            <div v-show="!assessInfoBase5" class="operate-add right">
-                                <i-button type="ghost" size="large" shape="circle" icon="plus" class="active" v-on:click="assessInfoShow('5')">添加年度总评</i-button>
-                            </div>
                         </div>
 
-                        <!--添加年度总评-->
-                        <div v-show="assessInfoBase5" class="add-assess-year clearFix overflow">
-                            <Card style="width: 100%;">
-
-                                <div class="edit-info edit-2">
-                                    <div>评价年份：</div>
-                                    <div>
-                                        <row class="form-el">
-                                            <i-col span="12">
-                                                <date-picker type="month" placement="bottom-end" placeholder="选择日期" style="width: 260px;font-size: 12px;"></date-picker>
-                                            </i-col>
-                                        </row>
-                                    </div>
-                                </div>
-                                <div class="edit-info edit-3">
-                                    <div>评分情况：</div>
-                                    <div>
-                                        <i-select v-model="model1" class="form-el" placeholder="为员工年度总体表现评分">
-                                            <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
-                                        </i-select>
-                                        <div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="edit-info edit-6">
-                                    <div> 总评：</div>
-                                    <div>
-                                        <i-input type="textarea" :maxlength="500" :rows="10" style="width: 520px;" placeholder="请填写评语，500字以内"></i-input>
-                                    </div>
-                                </div>
-
-                                <div class="edit-7">
-                                    <div>
-                                        <i-button type="ghost" class="edit-7-cancel" v-on:click="assessInfoShow('5')">取消</i-button>
-                                        <i-button type="primary" class="edit-7-ok">保存</i-button>
-                                    </div>
-                                </div>
-
-                            </Card>
-                        </div>
                         <!--展示年度总评-->
-                        <div v-show="!assessInfoBase5" class="assess-year clearFix overflow">
+                        <div class="assess-year clearFix overflow">
                             <div class="assess-year-container">
                                 <div class="assess-box left">
                                     <!--员工表现-->
@@ -317,7 +162,7 @@
                                                     <div class="custom-1"><span>9</span><span class="custom-1-2">分</span></div>
                                                     <div class="custom-2 line"></div>
                                                     <span class="custom-3">2016年度
-                                                        <br>
+                                                <br>
     员工表现</span>
                                                 </div>
                                             </i-circle>
@@ -358,7 +203,7 @@
                                                     <div class="custom-1"><span>8</span><span class="custom-1-2">分</span></div>
                                                     <div class="custom-2 line"></div>
                                                     <span class="custom-3">2015年度
-                                                        <br>
+                                                <br>
     员工表现</span>
                                                 </div>
                                             </i-circle>
@@ -381,10 +226,7 @@
                             <tabs v-model="name">
                                 <tab-pane name="1" label="基本信息" icon="document-text">
                                     <div v-show="name==1" class="component-assess-info-base" v-bind:class="{'tab-active':name==1}">
-                                        <div v-show="!assessInfoBase" class="assess-tab assess-info-base">
-                                            <div class="employ-add">
-                                                <i-button type="ghost" size="large" shape="circle" icon="plus" class="active" v-on:click="assessInfoShow(name)">添加基本信息</i-button>
-                                            </div>
+                                        <div class="assess-tab assess-info-base">
                                             <div class="employ-info">
                                                 <div class="e-i-1">部门：</div>
                                                 <div class="e-i-2">
@@ -430,86 +272,11 @@
                                             </div>
 
                                         </div>
-                                        <div v-show="assessInfoBase" class="edit-assess-info-base">
-                                            <Card style="width: 100%;">
-                                                <div class="edit-1">
-                                                    <Icon type="android-alert" style="color:#ffbf00; font-size: 18px;margin-right: 8px;"></Icon>您只需填写员工变更的信息，未变更的不必填写。例如从总监晋升为总经理，您只需在下面的职位栏输入“总经理”，然后保存即可
-                                                </div>
-                                                <div class="edit-info edit-2">
-                                                    <div>职位：</div>
-                                                    <div>
-                                                        <i-input placeholder="请输入" class="form-el"></i-input>
-                                                    </div>
-                                                </div>
-                                                <div class="edit-info edit-3">
-                                                    <div>部门：</div>
-                                                    <div>
-                                                        <i-select v-model="model1" class="form-el">
-                                                            <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
-                                                        </i-select>
-                                                        <div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="edit-info edit-4">
-                                                    <div>薪资：</div>
-                                                    <div>
-                                                        <div>
-                                                            <i-input placeholder="请输入" class="form-el"></i-input>
-                                                            <span>元/月</span>
-                                                        </div>
-                                                        <div style="margin-top: 15px;">
-                                                            <i-switch size="large">
-                                                                <span slot="open">显示</span>
-                                                                <span slot="close">隐藏</span>
-                                                            </i-switch>
-                                                            该员工的职信被在线搜索查看时，薪资是否显示
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="edit-info edit-5">
-                                                    <div>新增劳动合同起止时间：</div>
-                                                    <div>
-                                                        <row class="form-el">
-                                                            <i-col span="12">
-                                                                <date-picker type="daterange" placement="top-end" placeholder="选择日期" style="width: 260px;font-size: 12px;"></date-picker>
-                                                            </i-col>
-                                                        </row>
-                                                    </div>
-                                                </div>
-                                                <div class="edit-info edit-6">
-                                                    <div>合同期内离职时间：</div>
-                                                    <div>
-                                                        <row class="form-el">
-                                                            <i-col span="12">
-                                                                <date-picker type="date" placement="top-end" placeholder="选择日期" style="width: 260px;font-size: 12px;"></date-picker>
-                                                            </i-col>
-                                                        </row>
-                                                        <div style="margin-top: 15px;">
-                                                            （若未离职则无需填写）
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="edit-7">
-                                                    <div>
-                                                        <i-button type="ghost" class="edit-7-cancel" v-on:click="assessInfoShow(name)">取消</i-button>
-                                                        <i-button type="primary" class="edit-7-ok">保存</i-button>
-                                                    </div>
-                                                </div>
-
-                                            </Card>
-                                        </div>
                                     </div>
                                 </tab-pane>
                                 <tab-pane name="2" label="月度评价" icon="document-text">
                                     <div v-show="name==2" class="component-assess-info-month" v-bind:class="{'tab-active':name==2}">
-                                        <div v-show="!assessInfoBase2" class="assess-tab assess-info-month">
-
-                                            <div class="employ-add">
-                                                <i-button type="ghost" size="large" shape="circle" icon="plus" class="active" v-on:click="assessInfoShow(name)">添加月度评价</i-button>
-                                            </div>
+                                        <div class="assess-tab assess-info-month">
 
                                             <div class="month-table-container">
 
@@ -551,85 +318,6 @@
                                             </div>
 
                                         </div>
-                                        <div v-show="assessInfoBase2" class="edit-assess-info-month">
-                                            <Card style="width: 100%;">
-                                                <div class="edit-1">
-                                                    <Icon type="android-alert" style="color:#ffbf00; font-size: 18px;margin-right: 8px;"></Icon>请尽量完善以下评价内容，最少填写一项
-                                                </div>
-                                                <div class="edit-info edit-2">
-                                                    <div>评价月份：</div>
-                                                    <div>
-                                                        <row class="form-el">
-                                                            <i-col span="12">
-                                                                <date-picker type="month" placement="bottom-end" placeholder="选择月" style="width: 260px;font-size: 12px;"></date-picker>
-                                                            </i-col>
-                                                        </row>
-                                                    </div>
-                                                </div>
-                                                <div class="edit-info edit-3">
-                                                    <div>评分情况：</div>
-                                                    <div>
-                                                        <i-select v-model="model1" class="form-el" placeholder="请为员工本月综合表现评分">
-                                                            <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
-                                                        </i-select>
-                                                        <div>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="edit-info edit-4">
-                                                    <div>业绩情况：</div>
-                                                    <div>
-                                                        <div>
-                                                            <i-select v-model="model1" class="form-el" placeholder="请选择排名">
-                                                                <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
-                                                            </i-select>
-                                                        </div>
-                                                        <div style="margin-top: 15px;">
-                                                            <i-input placeholder="业绩额（选填）" class="form-el"></i-input>
-                                                            <i-select v-model="model1" class="form-el" placeholder="万元">
-                                                                <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
-                                                            </i-select>
-                                                        </div>
-                                                        <div style="margin-top: 15px;">
-                                                            <i-switch size="large">
-                                                                <span slot="open">显示</span>
-                                                                <span slot="close">隐藏</span>
-                                                            </i-switch>
-                                                            该名员工职信被在线搜索查看时，业绩额是否显示
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="edit-info edit-5">
-                                                    <div>考勤情况：</div>
-                                                    <div>
-                                                        <i-select v-model="model1" class="form-el" placeholder="请选择排名">
-                                                            <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
-                                                        </i-select>
-                                                    </div>
-                                                </div>
-                                                <div class="edit-info edit-6">
-                                                    <div>奖惩情况：</div>
-                                                    <div>
-                                                        <i-button class="form-el" type="ghost" icon="plus">添加奖惩记录</i-button>
-                                                    </div>
-                                                </div>
-                                                <div class="edit-info edit-6">
-                                                    <div>评语：</div>
-                                                    <div>
-                                                        <i-input type="textarea" :rows="10" style="width: 520px;" placeholder="请填写评语，500字以内" :maxlength="500"></i-input>
-                                                    </div>
-                                                </div>
-
-                                                <div class="edit-7">
-                                                    <div>
-                                                        <i-button type="ghost" class="edit-7-cancel" v-on:click="assessInfoShow(name)">取消</i-button>
-                                                        <i-button type="primary" class="edit-7-ok">保存</i-button>
-                                                    </div>
-                                                </div>
-
-                                            </Card>
-                                        </div>
                                     </div>
                                 </tab-pane>
                                 <tab-pane name="3" label="季度评价" icon="document-text">
@@ -649,13 +337,12 @@
                             </tabs>
                         </div>
                     </div>
-
                 </div>
-            </div>
+            </Card>
         </div>
+
     </div>
 </div>
-
 
 <!--tree 模板-->
 <script type="html/x-template" id="component-tree">
@@ -744,7 +431,6 @@
 
 <script>
 //    tree-item component
-
 /***
  * 组件树
  * @params
@@ -999,19 +685,9 @@
                 data:[],
                 treeData:treeData,
 
-
-
-
                 //不当在这里，属于年度总评组件内属性。
 
-
-                name:"2",//被选中Tab
-                assessInfoBase:false,//第一个tab开关状态
-                assessInfoBase2:true,//第2个tab开关状态
-                assessInfoBase3:false,//第3个tab开关状态
-                assessInfoBase4:false,//第4个tab开关状态
-                assessInfoBase5:true,//年度总评开关状态
-                assessInfoBase6:true,//基础信息编辑开关状态
+                name:"1",
 
                 percent: 0,
                 dropdown2_text:'职信链科技有限公司',

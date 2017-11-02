@@ -32,6 +32,125 @@
   }
 }
 
+.component-modal-auth{
+  .modal-1{
+    .add-employ-container {
+      .add-employ-head {
+        text-align: center;
+        margin-top: 50px;
+        .add-employ-title {
+          color: #1c2438;
+          .e-title-1 {
+            font-size: 40px;
+          }
+          .e-title-2 {
+            font-size: 20px;
+          }
+
+        }
+      }
+      .add-employ-body {
+        .body-1{
+          margin-top: 44px;
+          font-size: 14px;
+        }
+        .body-2{
+          margin-top: 44px; margin-bottom: 88px;
+        }
+      }
+    }
+  }
+  .modal-2{
+    .add-employ-container {
+      .add-employ-head {
+        text-align: center;
+        margin-top: 50px;
+        .add-employ-title {
+          color: #1c2438;
+          .e-title-1 {
+            font-size: 80px;
+            color: #15a8ff;
+          }
+          .e-title-2 {
+            font-size: 30px;
+          }
+
+        }
+      }
+      .add-employ-body {
+
+        .body-1{
+          margin-top: 44px;
+          font-size: 14px;
+        }
+        .body-2{
+          margin-top: 44px; margin-bottom: 88px;
+        }
+      }
+    }
+  }
+
+  .modal-3{
+    .add-employ-container {
+      .add-employ-head {
+        text-align: center;
+        margin-top: 50px;
+        .add-employ-title {
+          color: #1c2438;
+          .e-title-1 {
+            font-size: 80px;
+            color: #ffb242;
+          }
+          .e-title-2 {
+            font-size: 30px;
+          }
+
+        }
+      }
+      .add-employ-body {
+
+        .body-1{
+          margin-top: 44px;
+          font-size: 14px;
+        }
+        .body-2{
+          margin-top: 30px; margin-bottom: 88px;
+        }
+        .body-3{
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  .modal-4{
+    .add-employ-container {
+      .add-employ-head {
+        text-align: center;
+        margin-top: 50px;
+        .add-employ-title {
+          color: #1c2438;
+          .e-title-1 {
+            font-size: 40px;
+          }
+          .e-title-2 {
+            font-size: 20px;
+          }
+
+        }
+      }
+      .add-employ-body {
+        .body-1{
+          width: 80%;
+          margin: 44px auto 80px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+}
+
 html,body{
   width: 100%;
   height: 100%;
@@ -62,6 +181,15 @@ html,body{
   .overflow{
     overflow: hidden;
   }
+  .text-center{
+    text-align: center;
+  }
+  .text-left{
+    text-align: left;
+  }
+  .text-right{
+    text-align: right;
+  }
 
   .wrap{
     width: 100%;
@@ -85,9 +213,11 @@ html,body{
             float: left;
             height: 80px;
             line-height: 80px;
-            //min-width: 80px;
             margin-right: 84px;
             vertical-align: middle;
+            a{
+              color: #ffffff;
+            }
             .c-head-user{
               &>div{
                 float: left;
@@ -207,6 +337,119 @@ html,body{
 
         .component-employ{
           @extend %component-employ
+        }
+        .component-employ-add{
+          @extend %component-employ-add;
+        }
+
+        .component-setting{
+          @extend %component-setting
+        }
+      }
+      .component-employ-info-single{
+        width: 1320px;
+        margin: 40px auto 40px;
+        .employ-info-single{
+            @extend %component-employ;
+            //重写employ-container
+            .employ-container{
+              padding: 0;
+              width: 1200px;
+              margin: 0 auto;
+              .assess-info{
+                .assess-tab{
+                  padding-top: 40px;
+                }
+              }
+            }
+        }
+        .employ-leave{
+          position: relative;
+          margin-top: 80px;
+          .leave-icon{
+            position: absolute;
+            z-index: 1;
+            top: -60px;
+            left: 50px;
+          }
+
+          .leave-date{
+            background: #f7f7f7;
+            padding: 16px 24px;
+            width: 230px;
+            text-align: right;
+          }
+        }
+      }
+      .component-account{
+        .tabs-account{
+          &>.ivu-tabs-bar{
+            margin-bottom: 0;
+            border-bottom:none;
+            .ivu-tabs-nav-container{
+              height:auto;
+              .ivu-tabs-tab{
+                height: 80px;
+                width:220px;
+                padding-top: 26px;
+                text-align: center;
+                font-size: 20px;
+                background: #ffffff;
+              }
+              .ivu-tabs-tab-active{
+                padding-bottom: 5px;
+                background: #2d8cf0;
+                transform: translateZ(0);
+                border-color: #2d8cf0;
+                color: #fff;
+              }
+            }
+
+          }
+        }
+        width: 1320px;
+        margin: 40px auto 40px;
+        .employ-info-single{
+          @extend %component-employ;
+          //重写employ-container
+          .employ-container{
+            padding: 0;
+            width: 1200px;
+            margin: 0 auto;
+            .assess-info{
+
+              .assess-tab{
+                padding-top: 40px;
+              }
+              .assess-info-month{
+
+                .month-table-2{
+                  width: 1000px;
+                }
+
+                .month-table-3{
+                }
+
+              }
+            }
+          }
+        }
+        .employ-leave{
+          position: relative;
+          margin-top: 80px;
+          .leave-icon{
+            position: absolute;
+            z-index: 1;
+            top: -60px;
+            left: 50px;
+          }
+
+          .leave-date{
+            background: #f7f7f7;
+            padding: 16px 24px;
+            width: 230px;
+            text-align: right;
+          }
         }
       }
 
