@@ -333,10 +333,9 @@
 
 
           .employ-info{
-            width: 680px;
-            margin-left: 280px;
-            margin-bottom: 40px;
-
+            width: 700px;
+            margin-left: 250px;
+            margin-bottom: 20px;
             &>div{
               display: inline-block;
               vertical-align: top;
@@ -345,10 +344,12 @@
             .e-i-1{
               font-size: 16px;
               color: #1c2438;
-              width: 120px;
+              width: 200px;
+              white-space: nowrap;
               text-align: right;
             }
             .e-i-2{
+
               padding-left: 40px;
               width: 480px;
               text-align: left;
@@ -368,6 +369,22 @@
                   color: #7d7d7d;
                 }
               }
+              &.pact{
+                ul{
+                  li{
+                    border: 1px solid #d9d9d9;
+                    padding: 20px;
+                    width: 460px;
+                    color: #4a4a4a;
+                    div{
+                      margin-bottom: 10px;
+                      img{
+                        border: 1px solid #d9d9d9;
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
 
@@ -381,6 +398,7 @@
               display: inline-block;
               vertical-align: top;
               &:first-child{
+                white-space: nowrap;
                 width: 200px;
                 padding-top: 8px;
                 text-align: right;
@@ -404,7 +422,6 @@
             text-align: center;
             padding-top: 40px;
             vertical-align: middle;
-
           }
           .edit-7{
             margin-top: 40px;

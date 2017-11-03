@@ -1,89 +1,93 @@
 @charset "utf-8";
-.wrap {
-  &.search-online {
-    .search-online-1{
-      text-align: center;
-      margin-top: 114px;
-    }
-    .search-online-2{
-      width: 870px;
-      margin: 0 auto;
-      margin-top: 118px;
+%search-online{
+  .search-online-1{
+    text-align: center;
+    margin-top: 114px;
+  }
+  .search-online-2{
+    width: 870px;
+    margin: 0 auto;
+    margin-top: 118px;
 
-    }
-    .search-online-2-1{
+  }
+  .search-online-2-1{
+    float: left;
+  }
+  .search-online-2-1 input{
+    height: 54px;
+    border-radius: 0px;
+    font-size: 16px;
+  }
+  .search-online-2-2{
+    float: left;
+  }
+  .search-online-2-2 button{
+    width: 199px;
+    height: 54px;
+    font-size: 18px;
+    border-radius: 0px;
+  }
+}
+%component-account-searchResult{
+  .search-result-1{
+    width: 1111px;
+    margin: 0 auto;
+    margin-top: 49px;
+    padding-bottom: 18px;
+  }
+  .search-result-1-1{
+    float: left;
+  }
+  .search-result-1-1 input{
+    height: 54px;
+    border-radius: 0px;
+    font-size: 16px;
+  }
+  .search-result-1-2{
+    float: left;
+  }
+  .search-result-1-2 button{
+    width: 210px;
+    height: 54px;
+    font-size: 18px;
+    border-radius: 0px;
+  }
+  .search-result-2{
+    width: 1111px;
+    margin: 0 auto;
+    margin-top: 30px;
+    .result-name{
       float: left;
+      line-height: 106px;
+      font-size: 28px;
+      color: #1c2438;
+      margin-right: 93px;
+      margin-left: 44px;
     }
-    .search-online-2-1 input{
-      height: 54px;
-      border-radius: 0px;
+    .result-other{
+      float: left;
+      line-height: 106px;
       font-size: 16px;
+      color: #495060;
+      margin-right: 98px;
     }
-    .search-online-2-2{
+    .result-shouquan{
       float: left;
-    }
-    .search-online-2-2 button{
-      width: 199px;
-      height: 54px;
-      font-size: 18px;
-      border-radius: 0px;
+      line-height: 106px;
+      font-size: 16px;
+      color: #298cff;
+      cursor: pointer;
     }
   }
-
+}
+.wrap{
+  &.search-online {
+    @extend %search-online;
+  }
   /*
    * 在线搜索结果页面样式
    */
   &.search-result {
-    .search-result-1{
-      width: 1111px;
-      margin: 0 auto;
-      margin-top: 49px;
-      padding-bottom: 18px;
-    }
-    .search-result-1-1{
-      float: left;
-    }
-    .search-result-1-1 input{
-      height: 54px;
-      border-radius: 0px;
-      font-size: 16px;
-    }
-    .search-result-1-2{
-      float: left;
-    }
-    .search-result-1-2 button{
-      width: 210px;
-      height: 54px;
-      font-size: 18px;
-      border-radius: 0px;
-    }
-    .search-result-2{
-      width: 1111px;
-      margin: 0 auto;
-      margin-top: 30px;
-      .result-name{
-        float: left;
-        line-height: 106px;
-        font-size: 28px;
-        color: #1c2438;
-        margin-right: 93px;
-        margin-left: 44px;
-      }
-      .result-other{
-        float: left;
-        line-height: 106px;
-        font-size: 16px;
-        color: #495060;
-        margin-right: 98px;
-      }
-      .result-shouquan{
-        float: left;
-        line-height: 106px;
-        font-size: 16px;
-        color: #298cff;
-        cursor: pointer;
-      }
-    }
-
+    @extend %component-account-searchResult;
   }
 }

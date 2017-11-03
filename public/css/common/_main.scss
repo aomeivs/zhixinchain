@@ -25,6 +25,49 @@
     border-color: #57a3f3;
   }
 }
+
+
+.addGroup-custom-tips {
+  display: block;
+  .ivu-poptip-rel{
+    display: block;
+  }
+}
+
+//tips
+.ivu-tooltip-popper[x-placement^=right] .ivu-tooltip-arrow {
+  left: 3px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: rgba(255, 255, 255, 0.9);
+}
+.ivu-tooltip-inner {
+  max-width: 250px;
+  min-height: 34px;
+  padding: 8px 12px;
+  color: #0a0a0a;
+  text-align: left;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  box-shadow: -4px 1px 15px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+
+//input:error
+.form-validateError .ivu-input {
+  border-color: #f53224;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
+}
+
+.form-validateError .ivu-select-selection {
+  border-color: #f53224;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
+}
+
+
+
 .component-assess-add-tip{
   .ivu-btn{
     font-size: 14px;
@@ -433,6 +476,10 @@ html,body{
               }
             }
           }
+          .component-account-searchResult{
+            @extend %component-account-searchResult;
+
+          }
         }
         .employ-leave{
           position: relative;
@@ -452,6 +499,7 @@ html,body{
           }
         }
       }
+
 
     }
 

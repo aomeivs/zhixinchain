@@ -266,15 +266,26 @@
                                     <div class="edit-info-1">
                                         <div>姓名 ：</div>
                                         <div>
-                                            <i-input class="form-el" placeholder="请输入" value="庞丁畅"></i-input>
+                                            <tooltip placement="right" :always='true'>
+                                                <i-input class="form-el form-validateError" placeholder="请输入" value="庞丁畅"></i-input>
+                                                <div slot="content">
+                                                    <p style="max-width: 100px; word-wrap: break-word; white-space: normal;">显示多行</p>
+                                                </div>
+                                            </tooltip>
+
                                         </div>
                                     </div>
                                     <div>
                                         <div>性别 ： </div>
                                         <div>
-                                            <i-select v-model="model1" class="form-el" placeholder="请选择">
+                                            <tooltip placement="right" :always='true'>
+                                            <i-select v-model="model1" class="form-el form-validateError" placeholder="请选择">
                                                 <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
                                             </i-select>
+                                                <div slot="content">
+                                                    <p style="max-width: 100px; word-wrap: break-word; white-space: normal;">显示多行信息显示多行信息显示多行信息</p>
+                                                </div>
+                                            </tooltip>
                                         </div>
                                     </div>
                                 </div>
@@ -530,6 +541,16 @@
                     var isGroup= type=='G'?true:false;
                     if(isGroup){
                         var _this = this;
+
+                        render: (h, params) => {
+                            return h('div', [
+                                h('component-assess-add-tip',{
+                                    props:{
+                                        data:this.data2[params.index]
+                                    }
+                                })
+                            ]);
+                        }
                         this.$Modal.confirm({
                             render:function(h){
                                 return h('Input',{
@@ -960,7 +981,10 @@ Vue.component('ComponentModalAuth',{
                 modal1:true,
                 modal2:true,
                 modal3:true,
-                modal4:true
+                modal4:true,
+
+
+//
             }
         },
         methods: {

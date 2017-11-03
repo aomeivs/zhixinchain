@@ -429,6 +429,43 @@
                                                 </div>
                                             </div>
 
+                                            <div class="employ-info">
+                                                <div class="e-i-1" style="text-align: right;">劳动合同或其他法律纠纷：</div>
+                                                <div class="e-i-2 pact">
+                                                    <ul>
+                                                        <li>
+                                                            <div>
+                                                                纠纷案件名称：泄露商业机密
+                                                            </div>
+                                                            <div>
+                                                                审结时间：2016.11.30
+                                                            </div>
+                                                            <div>
+                                                                审理结果：企业撤诉
+                                                            </div>
+                                                            <div>
+                                                                <img src="public/images/employ/ico-pact.png" width="100" height="100" alt="">
+                                                            </div>
+                                                        </li>
+
+                                                        <li>
+                                                            <div>
+                                                                纠纷案件名称：泄露商业机密
+                                                            </div>
+                                                            <div>
+                                                                审结时间：2016.11.30
+                                                            </div>
+                                                            <div>
+                                                                审理结果：企业撤诉
+                                                            </div>
+                                                            <div>
+                                                                <img src="public/images/employ/ico-pact.png" width="100" height="100" alt="">
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+
                                         </div>
                                         <div v-show="assessInfoBase" class="edit-assess-info-base">
                                             <Card style="width: 100%;">
@@ -488,6 +525,69 @@
                                                         </row>
                                                         <div style="margin-top: 15px;">
                                                             （若未离职则无需填写）
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="edit-info">
+                                                    <div>劳动合同或其他法律纠纷：</div>
+                                                    <div>
+
+                                                        <div style="margin-top: 10px;">
+                                                            <i-switch size="large" v-model="pactShow">
+                                                                <span slot="open">有</span>
+                                                                <span slot="close">无</span>
+                                                            </i-switch>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="pact" v-show="pactShow"
+                                                     style="border: 1px solid #d9d9d9; margin-top: 20px;"
+                                                >
+
+                                                    <div class="edit-info">
+                                                        <div>纠纷案件名称：</div>
+                                                        <div>
+                                                            <i-input placeholder="请输入" class="form-el"></i-input>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="edit-info">
+                                                        <div>合同期内离职时间：</div>
+                                                        <div>
+                                                            <row class="form-el">
+                                                                <i-col span="12">
+                                                                    <date-picker type="date" placement="top-end" placeholder="选择日期" style="width: 260px;font-size: 12px;"></date-picker>
+                                                                </i-col>
+                                                            </row>
+                                                        </div>
+                                                    </div>
+                                                    <div class="edit-info">
+                                                        <div>审理结果：</div>
+                                                        <div>
+                                                            <i-select v-model="model1" class="form-el">
+                                                                <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
+                                                            </i-select>
+                                                            <div>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="edit-info">
+                                                        <div>上传附件：</div>
+                                                        <div>
+                                                            <upload
+                                                                    style="width:200px; height: 200px;"
+                                                                    multiple
+                                                                    type="drag"
+                                                                    action="/">
+                                                                <div style="padding: 20px 0">
+                                                                    <icon type="ios-cloud-upload" size="52" style="color: #3399ff"></icon>
+                                                                    <p>点击添加</p>
+                                                                </div>
+                                                            </upload>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1002,11 +1102,13 @@
 
 
 
+
+
                 //不当在这里，属于年度总评组件内属性。
 
-
-                name:"2",//被选中Tab
-                assessInfoBase:false,//第一个tab开关状态
+                pactShow:false,//合同纠纷问题
+                name:"1",//被选中Tab
+                assessInfoBase:true,//第一个tab开关状态
                 assessInfoBase2:true,//第2个tab开关状态
                 assessInfoBase3:false,//第3个tab开关状态
                 assessInfoBase4:false,//第4个tab开关状态

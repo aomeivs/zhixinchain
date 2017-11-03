@@ -363,16 +363,17 @@ html .wrap .c-body .c-body-container .component-employ .employ-container, body .
         html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-add .ivu-btn-ghost, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-add .ivu-btn-ghost, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-add .ivu-btn-ghost, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-add .ivu-btn-ghost, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-add .ivu-btn-ghost, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-add .ivu-btn-ghost {
           margin: 45px 0; }
       html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info {
-        width: 680px;
-        margin-left: 280px;
-        margin-bottom: 40px; }
+        width: 700px;
+        margin-left: 250px;
+        margin-bottom: 20px; }
         html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info > div, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info > div, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info > div, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info > div, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info > div, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info > div {
           display: inline-block;
           vertical-align: top; }
         html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-1, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-1, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-1, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-1, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-1, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-1 {
           font-size: 16px;
           color: #1c2438;
-          width: 120px;
+          width: 200px;
+          white-space: nowrap;
           text-align: right; }
         html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2 {
           padding-left: 40px;
@@ -389,6 +390,15 @@ html .wrap .c-body .c-body-container .component-employ .employ-container, body .
             font-size: 14px;
             margin-top: 10px;
             color: #7d7d7d; }
+          html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li {
+            border: 1px solid #d9d9d9;
+            padding: 20px;
+            width: 460px;
+            color: #4a4a4a; }
+            html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li div, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li div, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li div, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li div, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li div, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li div {
+              margin-bottom: 10px; }
+              html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li div img, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li div img, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li div img, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li div img, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li div img, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .assess-info-base .employ-info .e-i-2.pact ul li div img {
+                border: 1px solid #d9d9d9; }
     html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-base, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-base, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-base, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-base {
       width: 1200px; }
       html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info {
@@ -398,6 +408,7 @@ html .wrap .c-body .c-body-container .component-employ .employ-container, body .
           display: inline-block;
           vertical-align: top; }
           html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div:first-child, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div:first-child, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div:first-child, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div:first-child, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div:first-child, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-base .edit-info > div:first-child {
+            white-space: nowrap;
             width: 200px;
             padding-top: 8px;
             text-align: right;
@@ -781,6 +792,38 @@ html .wrap .c-body .c-body-container .component-employ .employ-container .employ
     background-color: transparent;
     border-color: #57a3f3; }
 
+.addGroup-custom-tips {
+  display: block; }
+  .addGroup-custom-tips .ivu-poptip-rel {
+    display: block; }
+
+.ivu-tooltip-popper[x-placement^=right] .ivu-tooltip-arrow {
+  left: 3px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: rgba(255, 255, 255, 0.9); }
+
+.ivu-tooltip-inner {
+  max-width: 250px;
+  min-height: 34px;
+  padding: 8px 12px;
+  color: #0a0a0a;
+  text-align: left;
+  text-decoration: none;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: -4px 1px 15px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; }
+
+.form-validateError .ivu-input {
+  border-color: #f53224;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2); }
+
+.form-validateError .ivu-select-selection {
+  border-color: #f53224;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2); }
+
 .component-assess-add-tip .ivu-btn {
   font-size: 14px; }
 
@@ -1041,6 +1084,9 @@ html, body {
 .wrap.login {
   width: 100%;
   height: 890px;
+  position: absolute;
+  left: 0;
+  top: 0;
   /*
    *以下是注册页面的追加样式
    */
@@ -1289,5 +1335,73 @@ html, body {
       margin-top: 40px; }
     .wrap.index-lt .index-lt-4 .index-lt-4-4-1 {
       margin-top: 100px; }
+
+.wrap.search-online .search-online-1 {
+  text-align: center;
+  margin-top: 114px; }
+.wrap.search-online .search-online-2 {
+  width: 870px;
+  margin: 0 auto;
+  margin-top: 118px; }
+.wrap.search-online .search-online-2-1 {
+  float: left; }
+.wrap.search-online .search-online-2-1 input {
+  height: 54px;
+  border-radius: 0px;
+  font-size: 16px; }
+.wrap.search-online .search-online-2-2 {
+  float: left; }
+.wrap.search-online .search-online-2-2 button {
+  width: 199px;
+  height: 54px;
+  font-size: 18px;
+  border-radius: 0px; }
+
+html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1, .wrap.search-result .search-result-1 {
+  width: 1111px;
+  margin: 0 auto;
+  margin-top: 49px;
+  padding-bottom: 18px; }
+html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-1, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-1, .wrap.search-result .search-result-1-1 {
+  float: left; }
+html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-1 input, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-1 input, .wrap.search-result .search-result-1-1 input {
+  height: 54px;
+  border-radius: 0px;
+  font-size: 16px; }
+html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-2, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-2, .wrap.search-result .search-result-1-2 {
+  float: left; }
+html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-2 button, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-2 button, .wrap.search-result .search-result-1-2 button {
+  width: 210px;
+  height: 54px;
+  font-size: 18px;
+  border-radius: 0px; }
+html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2, .wrap.search-result .search-result-2 {
+  width: 1111px;
+  margin: 0 auto;
+  margin-top: 30px; }
+  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-name, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-name, .wrap.search-result .search-result-2 .result-name {
+    float: left;
+    line-height: 106px;
+    font-size: 28px;
+    color: #1c2438;
+    margin-right: 93px;
+    margin-left: 44px; }
+  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-other, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-other, .wrap.search-result .search-result-2 .result-other {
+    float: left;
+    line-height: 106px;
+    font-size: 16px;
+    color: #495060;
+    margin-right: 98px; }
+  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-shouquan, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-shouquan, .wrap.search-result .search-result-2 .result-shouquan {
+    float: left;
+    line-height: 106px;
+    font-size: 16px;
+    color: #298cff;
+    cursor: pointer; }
+
+.wrap {
+  /*
+   * 在线搜索结果页面样式
+   */ }
 
 /*# sourceMappingURL=app.css.map */

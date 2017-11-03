@@ -17,6 +17,9 @@
 <body>
 
 
+<!--403-->
+
+
 <!--职信链，样式头为 c (chain小写) 例
 
 头部 c-header
@@ -263,6 +266,16 @@
                                                             </ul>
                                                         </div>
                                                     </div>
+                                                    <div class="employ-info">
+                                                        <div class="e-i-1" style="text-align: right;">劳动合同或其他法律纠纷：</div>
+                                                        <div class="e-i-2 pact">
+                                                            <ul>
+                                                                <div>
+                                                                    无
+                                                                </div>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
 
                                                 </div>
                                             </div>
@@ -336,7 +349,40 @@
                 <tab-pane name="2" icon="document-text" label="职信在线搜索">
                     <Card v-show="name2==2" class="employ-info-single" style="min-height: 600px;">
                         <div class="employ-container">
-                            职信在线搜索
+                            <div class="component-account-searchResult">
+                                <div class="search-result-1">
+                                    <div class="search-result-1-1">
+                                        <i-input v-model="value" size="large" style="width: 900px"></i-input>
+                                    </div>
+                                    <div class="search-result-1-2">
+                                        <i-button type="primary" icon="ios-search">搜索</i-button>
+                                    </div>
+                                    <div style="clear: both"></div>
+                                </div>
+                                <div class="search-result-2">
+                                    <card  style="width:1111px;height: 134px;">
+                                        <div style="text-align:center">
+                                            <span class="result-name">庞丁畅</span>
+                                            <span class="result-other">手机号：158xxxx2430</span>
+                                            <span class="result-other">身份证号：371327xxxxxxxx6415</span>
+                                            <span class="result-other">未授权</span>
+                                            <span class="result-shouquan">申请授权</span>
+                                            <div style="clear: both"></div>
+                                        </div>
+                                    </card>
+                                </div>
+                                <div class="search-result-2">
+                                    <card  style="width:1111px;height: 134px;">
+                                        <div style="text-align:center">
+                                            <span class="result-name">庞丁畅</span>
+                                            <span class="result-other">手机号：158xxxx2430</span>
+                                            <span class="result-other">身份证号：371327xxxxxxxx6415</span>
+                                            <span class="result-other">已授权</span>
+                                            <div style="clear: both"></div>
+                                        </div>
+                                    </card>
+                                </div>
+                            </div>
                         </div>
                     </Card>
                 </tab-pane>
@@ -728,7 +774,7 @@
                 //不当在这里，属于年度总评组件内属性。
 
                 name:"2",
-                name2:"1",
+                name2:"2",
 
                 percent: 0,
                 dropdown2_text:'职信链科技有限公司',
