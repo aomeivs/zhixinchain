@@ -77,6 +77,10 @@
                     <!--<img src="public/images/head-search.png" width="26" alt="职信链搜索按钮">-->
                 </li>
                 <li>
+                    <a href="#"><Icon type="gear-a" style="color:white;font-size: 20px;"></Icon></a>
+                    <!--<img src="public/images/head-search.png" width="26" alt="职信链搜索按钮">-->
+                </li>
+                <li>
                     <div>
                         <!--badge count代表消息数 默认99封顶-->
                         <badge count="1">
@@ -102,65 +106,7 @@
         </div>
     </div>
     <div class="c-body">
-        <div class="c-body-left left">
-            <div class="body-left-search">
-                <auto-complete
-                        v-model="value"
-                        icon="ios-search"
-                        :data="data"
-                        placeholder="搜索员工"
-                        @on-search="handleSearch"
-                        style="width:290px">
-                </auto-complete>
-            </div>
-            <div class="body-left-CName">
-                职信链科技有限公司
-            </div>
-            <div class="left-body-container">
-                <!--在职员工-->
-                <div class="tree-employ employ-on">
-                    <div class="employ-on-block">
-                        <img class="employ-icon" src="public/images/tree-employ.png" width="23" alt="在职员工">
-                        <span class="employ-title">
-                        在职员工
-                    </span>
-                        <span class="employ-count">
-                        (3)
-                    </span>
-                    </div>
-                </div>
-
-                <!--组件-树-->
-                <div class="component-tree">
-                    <component-tree v-bind:tree='treeData'></component-tree>
-                </div>
-
-                <!--添加部门-->
-                <div class="tree-addGroup">
-                    <icon type="plus-round"></icon><span>添加部门</span>
-                </div>
-
-                <!--系统设置-->
-                <div class="tree-setting">
-                    <icon type="gear-a"></icon><span>系统设置</span>
-                </div>
-
-                <!--离职员工-->
-                <div class="tree-employ employ-off">
-                    <div class="employ-on-block">
-                        <img class="employ-icon" src="public/images/tree-employ-off.png" width="23" height="23" alt="离职员工">
-                        <span class="employ-title">
-                        已离职员工
-                    </span>
-                        <span class="employ-count">
-                        (1)
-                    </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="c-body-container clearFix">
-
+        <card style="width: 1000px; margin: 50px auto;">
             <div class="component-setting">
                 <div class="setting-user-container">
 
@@ -189,8 +135,7 @@
 
                 </div>
             </div>
-
-        </div>
+        </card>
     </div>
 
 </div>

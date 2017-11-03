@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/layout.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+
+
+<!--职信链，样式头为 c (chain小写) 例
+
+头部 c-header
+底部 c-footer
+组件 c-component-组件名（公用部分）
+
+无特别意义的逻辑结构以 相对有意义模块名 后，层级数字标识
+例： c-component-组件名 下
+
+组件名1>组件名1-1.
+
+或
+
+组件名-head>组件名-head-top>（组件名-head-top-1+组件名-head-top-2+组件名-head-top-3）
+
+ -->
+
+<div class="wrap" id="app">
+    <div class="c-header">
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu">
+            <ul class="head-menu-ul">
+                <li>
+                    <span>购买</span>
+                </li>
+                <li>
+                    <span>职信在线搜索</span>
+                </li>
+                <!--<li>-->
+                    <!--<img src="public/images/head-search.png" width="26" alt="职信链搜索按钮">-->
+                <!--</li>-->
+                <li>
+                    <div>
+                        <!--badge count代表消息数 默认99封顶-->
+                        <badge count="1">
+                            <a href="#" class="head-message-badge"><img src="public/images/head-mail.png" width="26" alt="消息(0)"></a>
+                        </badge>
+                    </div>
+                </li>
+                <li>
+                    <div class="c-head-user">
+                        <div class="user-photo">
+                            <img src="public/images/head-photo.png" width="39" alt="用户头像">
+                            <span>董兴海</span>
+                        </div>
+                        <div>
+                            <img src="public/images/head-line.png" width="2" alt="">
+                        </div>
+                        <div class="user-logOut">
+                            <img src="public/images/head-exit.png" width="26" alt="退出">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="c-body">
+
+        <div class="c-component-message">
+
+            <div class="message-box">
+                <div class="title">系统消息</div>
+                <card style="width:1400px;height: 162px;margin-bottom: 30px;">
+                    <div class="box1-1">
+                        <!--new标签-->
+                        <span class="card-new">NEW</span>
+                        <!--new标签结束-->
+                        <p class="p1">16 : 35</p>
+                        <p class="p2">2017-10-26</p>
+                    </div>
+
+                    <div class="box1-2">
+                        <p class="p3">京东集团请求访问你的职信详情</p>
+                    </div>
+                    <div class="box1-3">
+                        <i-button class="ibtn" type="primary">同意</i-button>
+                        <i-button class="ibtn2" type="ghost">拒绝</i-button>
+                    </div>
+                </card>
+                <card style="width:1400px;height: 162px;margin-bottom: 30px;">
+                    <div class="box1-1">
+                        <!--new标签-->
+                        <!--<span class="card-new">NEW</span>-->
+                        <!--new标签结束-->
+                        <p class="p1">16 : 35</p>
+                        <p class="p2">2017-10-26</p>
+                    </div>
+
+                    <div class="box1-2">
+                        <p class="p3">迅雷集团请求访问你的职信档案</p>
+                    </div>
+                    <div class="box1-3">
+                        <i-button class="ibtn" type="text">已同意</i-button>
+                    </div>
+                </card>
+                <card style="width:1400px;height: 162px;margin-bottom: 30px;">
+                    <div class="box1-1">
+                        <!--new标签-->
+                        <span class="card-new">NEW</span>
+                        <!--new标签结束-->
+                        <p class="p1">16 : 35</p>
+                        <p class="p2">2017-10-26</p>
+                    </div>
+
+                    <div class="box1-2">
+                        <p class="p3">李四（身份证号38144711566，手机号15841145948）已授权给您查看他的职信</p>
+                    </div>
+                    <div class="box1-3">
+                        <i-button class="ibtn" type="ghost">点击查看</i-button>
+                    </div>
+                </card>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<script>
+
+    var Main = {
+
+    }
+
+    var Component = Vue.extend(Main)
+    new Component().$mount('#app')
+</script>
+
+
+</body>
+</html>

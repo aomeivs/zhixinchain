@@ -675,106 +675,105 @@ html .wrap .c-body .c-body-container .component-employ-add .add-employ-container
         margin-top: 8px;
         cursor: pointer; }
 
-html .wrap .c-body .c-body-container .component-setting .setting-container, body .wrap .c-body .c-body-container .component-setting .setting-container {
+html .wrap .c-body .component-setting .setting-container, body .wrap .c-body .component-setting .setting-container {
   padding-top: 50px;
   padding-left: 50px; }
-  html .wrap .c-body .c-body-container .component-setting .setting-container .line, body .wrap .c-body .c-body-container .component-setting .setting-container .line {
+  html .wrap .c-body .component-setting .setting-container .line, body .wrap .c-body .component-setting .setting-container .line {
     height: 1px;
     width: 1200px;
     border-bottom: 1px solid #dddee1;
     margin: 40px 0; }
-  html .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-title .title-1, body .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-title .title-1 {
+  html .wrap .c-body .component-setting .setting-container .set-account .set-title .title-1, body .wrap .c-body .component-setting .setting-container .set-account .set-title .title-1 {
     display: inline-block;
     border-bottom: 4px solid #298cff;
     padding: 12px;
     margin-bottom: 18px;
     color: #333333;
     font-size: 18px; }
-  html .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-1, body .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-1 {
+  html .wrap .c-body .component-setting .setting-container .set-account .set-body .body-1, body .wrap .c-body .component-setting .setting-container .set-account .set-body .body-1 {
     border-top: 1px solid #d8d8d8;
     border-left: 1px solid #d8d8d8;
     border-collapse: collapse;
     border-spacing: 0; }
-    html .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-1 .t-head, body .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-1 .t-head {
+    html .wrap .c-body .component-setting .setting-container .set-account .set-body .body-1 .t-head, body .wrap .c-body .component-setting .setting-container .set-account .set-body .body-1 .t-head {
       background: #f8f8f9;
       padding: 18px; }
-    html .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-1 td, body .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-1 td {
+    html .wrap .c-body .component-setting .setting-container .set-account .set-body .body-1 td, body .wrap .c-body .component-setting .setting-container .set-account .set-body .body-1 td {
       border-right: 1px solid #d8d8d8;
       border-bottom: 1px solid #d8d8d8;
       padding: 8px 24px; }
-      html .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-1 td.t-body-1, body .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-1 td.t-body-1 {
+      html .wrap .c-body .component-setting .setting-container .set-account .set-body .body-1 td.t-body-1, body .wrap .c-body .component-setting .setting-container .set-account .set-body .body-1 td.t-body-1 {
         font-size: 24px;
         color: #40beff; }
-      html .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-1 td.t-body-3, body .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-1 td.t-body-3 {
+      html .wrap .c-body .component-setting .setting-container .set-account .set-body .body-1 td.t-body-3, body .wrap .c-body .component-setting .setting-container .set-account .set-body .body-1 td.t-body-3 {
         text-align: center; }
-        html .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-1 td.t-body-3 button span, body .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-1 td.t-body-3 button span {
+        html .wrap .c-body .component-setting .setting-container .set-account .set-body .body-1 td.t-body-3 button span, body .wrap .c-body .component-setting .setting-container .set-account .set-body .body-1 td.t-body-3 button span {
           font-size: 14px; }
-  html .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-2 .active, body .wrap .c-body .c-body-container .component-setting .setting-container .set-account .set-body .body-2 .active {
+  html .wrap .c-body .component-setting .setting-container .set-account .set-body .body-2 .active, body .wrap .c-body .component-setting .setting-container .set-account .set-body .body-2 .active {
     width: 200px;
     height: 52px;
     font-size: 16px;
     margin-top: 25px;
     color: #298cff; }
-  html .wrap .c-body .c-body-container .component-setting .setting-container .set-pwd .set-title .title-1, body .wrap .c-body .c-body-container .component-setting .setting-container .set-pwd .set-title .title-1 {
+  html .wrap .c-body .component-setting .setting-container .set-pwd .set-title .title-1, body .wrap .c-body .component-setting .setting-container .set-pwd .set-title .title-1 {
     display: inline-block;
     border-bottom: 4px solid #298cff;
     padding: 12px;
     margin-bottom: 18px;
     color: #333333;
     font-size: 18px; }
-  html .wrap .c-body .c-body-container .component-setting .setting-container .set-pwd .set-body > div, body .wrap .c-body .c-body-container .component-setting .setting-container .set-pwd .set-body > div {
+  html .wrap .c-body .component-setting .setting-container .set-pwd .set-body > div, body .wrap .c-body .component-setting .setting-container .set-pwd .set-body > div {
     margin-top: 20px;
     margin-bottom: 30px; }
-  html .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-title .title-1, body .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-title .title-1 {
+  html .wrap .c-body .component-setting .setting-container .set-custom .set-title .title-1, body .wrap .c-body .component-setting .setting-container .set-custom .set-title .title-1 {
     display: inline-block;
     border-bottom: 4px solid #298cff;
     padding: 12px;
     margin-bottom: 18px;
     color: #333333;
     font-size: 18px; }
-  html .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1, body .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1 {
+  html .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1, body .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1 {
     border-top: 1px solid #d8d8d8;
     border-left: 1px solid #d8d8d8;
     border-collapse: collapse;
     border-spacing: 0; }
-    html .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1 .t-head, body .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1 .t-head {
+    html .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1 .t-head, body .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1 .t-head {
       background: #f8f8f9;
       padding: 18px; }
-    html .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1 td, body .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1 td {
+    html .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1 td, body .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1 td {
       border-right: 1px solid #d8d8d8;
       border-bottom: 1px solid #d8d8d8;
       padding: 8px 24px; }
-      html .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-1, body .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-1 {
+      html .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-1, body .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-1 {
         font-size: 16px; }
-      html .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-3, body .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-3 {
+      html .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-3, body .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-3 {
         text-align: center; }
-        html .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-3 button span, body .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-3 button span {
+        html .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-3 button span, body .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-3 button span {
           font-size: 14px; }
-        html .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-3 .t-edit, body .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-3 .t-edit {
+        html .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-3 .t-edit, body .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-1 td.t-body-3 .t-edit {
           color: #298cff; }
-  html .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-2 .active, body .wrap .c-body .c-body-container .component-setting .setting-container .set-custom .set-body .body-2 .active {
+  html .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-2 .active, body .wrap .c-body .component-setting .setting-container .set-custom .set-body .body-2 .active {
     width: 200px;
     height: 52px;
     font-size: 16px;
     margin-top: 25px;
     color: #298cff; }
-html .wrap .c-body .c-body-container .component-setting .setting-user-container, body .wrap .c-body .c-body-container .component-setting .setting-user-container {
+html .wrap .c-body .component-setting .setting-user-container, body .wrap .c-body .component-setting .setting-user-container {
   padding-top: 50px;
-  padding-left: 150px;
   width: 1000px;
-  text-align: center; }
-  html .wrap .c-body .c-body-container .component-setting .setting-user-container .set-pwd, body .wrap .c-body .c-body-container .component-setting .setting-user-container .set-pwd {
+  text-align: center;
+  margin: 0 auto; }
+  html .wrap .c-body .component-setting .setting-user-container .set-pwd, body .wrap .c-body .component-setting .setting-user-container .set-pwd {
     margin-bottom: 50px; }
-    html .wrap .c-body .c-body-container .component-setting .setting-user-container .set-pwd .set-title, body .wrap .c-body .c-body-container .component-setting .setting-user-container .set-pwd .set-title {
-      text-align: center;
-      margin-top: 50px; }
-      html .wrap .c-body .c-body-container .component-setting .setting-user-container .set-pwd .set-title .add-employ-title, body .wrap .c-body .c-body-container .component-setting .setting-user-container .set-pwd .set-title .add-employ-title {
+    html .wrap .c-body .component-setting .setting-user-container .set-pwd .set-title, body .wrap .c-body .component-setting .setting-user-container .set-pwd .set-title {
+      text-align: center; }
+      html .wrap .c-body .component-setting .setting-user-container .set-pwd .set-title .add-employ-title, body .wrap .c-body .component-setting .setting-user-container .set-pwd .set-title .add-employ-title {
         color: #1c2438; }
-        html .wrap .c-body .c-body-container .component-setting .setting-user-container .set-pwd .set-title .add-employ-title .e-title-1, body .wrap .c-body .c-body-container .component-setting .setting-user-container .set-pwd .set-title .add-employ-title .e-title-1 {
+        html .wrap .c-body .component-setting .setting-user-container .set-pwd .set-title .add-employ-title .e-title-1, body .wrap .c-body .component-setting .setting-user-container .set-pwd .set-title .add-employ-title .e-title-1 {
           font-size: 40px; }
-        html .wrap .c-body .c-body-container .component-setting .setting-user-container .set-pwd .set-title .add-employ-title .e-title-2, body .wrap .c-body .c-body-container .component-setting .setting-user-container .set-pwd .set-title .add-employ-title .e-title-2 {
+        html .wrap .c-body .component-setting .setting-user-container .set-pwd .set-title .add-employ-title .e-title-2, body .wrap .c-body .component-setting .setting-user-container .set-pwd .set-title .add-employ-title .e-title-2 {
           font-size: 20px; }
-    html .wrap .c-body .c-body-container .component-setting .setting-user-container .set-pwd .set-body > div, body .wrap .c-body .c-body-container .component-setting .setting-user-container .set-pwd .set-body > div {
+    html .wrap .c-body .component-setting .setting-user-container .set-pwd .set-body > div, body .wrap .c-body .component-setting .setting-user-container .set-pwd .set-body > div {
       margin-top: 20px;
       margin-bottom: 30px; }
 
@@ -1080,6 +1079,134 @@ html, body {
             padding: 16px 24px;
             width: 230px;
             text-align: right; }
+      html .wrap .c-body .component-employ-leave .lizhi-list .ivu-card-body, body .wrap .c-body .component-employ-leave .lizhi-list .ivu-card-body {
+        padding: 0; }
+      html .wrap .c-body .component-employ-leave .lizhi-list, body .wrap .c-body .component-employ-leave .lizhi-list {
+        padding-top: 60px;
+        padding-left: 80px; }
+        html .wrap .c-body .component-employ-leave .lizhi-list .employ-card, body .wrap .c-body .component-employ-leave .lizhi-list .employ-card {
+          width: 544px;
+          height: 318px;
+          margin-right: 80px;
+          margin-bottom: 60px;
+          float: left; }
+          html .wrap .c-body .component-employ-leave .lizhi-list .employ-card .box-left img, body .wrap .c-body .component-employ-leave .lizhi-list .employ-card .box-left img {
+            width: 126px;
+            height: 126px;
+            border-radius: 50%; }
+      html .wrap .c-body .component-employ-leave .bg, body .wrap .c-body .component-employ-leave .bg {
+        width: 100%;
+        height: 14px;
+        background: #298CFF; }
+      html .wrap .c-body .component-employ-leave .box-left, body .wrap .c-body .component-employ-leave .box-left {
+        float: left;
+        margin: 50px 54px; }
+      html .wrap .c-body .component-employ-leave .box-right, body .wrap .c-body .component-employ-leave .box-right {
+        float: left;
+        margin-top: 65px; }
+      html .wrap .c-body .component-employ-leave .f28, body .wrap .c-body .component-employ-leave .f28 {
+        font-size: 28px;
+        color: #1c2438;
+        line-height: 28px; }
+      html .wrap .c-body .component-employ-leave .f14, body .wrap .c-body .component-employ-leave .f14 {
+        font-size: 14px;
+        color: #495060;
+        line-height: 30px; }
+      html .wrap .c-body .component-employ-leave .lizhi-list .line, body .wrap .c-body .component-employ-leave .lizhi-list .line {
+        width: 240px;
+        height: 1px;
+        background: #EFEFEF;
+        margin-top: 20px;
+        margin-bottom: 12px; }
+      html .wrap .c-body .c-component-message .message-box, body .wrap .c-body .c-component-message .message-box {
+        width: 1400px;
+        margin: 0 auto; }
+      html .wrap .c-body .c-component-message .title, body .wrap .c-body .c-component-message .title {
+        width: 100px;
+        height: 32px;
+        border-radius: 2px;
+        background: #e8e8e8;
+        text-align: center;
+        font-size: 14px;
+        line-height: 32px;
+        color: #4a4a4a;
+        margin-top: 40px;
+        margin-bottom: 30px; }
+      html .wrap .c-body .c-component-message .box1-1, body .wrap .c-body .c-component-message .box1-1 {
+        border-right: 1px solid #E8E8E8;
+        width: 195px;
+        height: 130px;
+        text-align: center;
+        margin-left: -16px;
+        float: left; }
+      html .wrap .c-body .c-component-message .p1, body .wrap .c-body .c-component-message .p1 {
+        color: #444C61;
+        font-size: 30px;
+        line-height: 30px;
+        padding-top: 34px;
+        margin-bottom: 10px; }
+      html .wrap .c-body .c-component-message .p2, body .wrap .c-body .c-component-message .p2 {
+        color: #444C61;
+        font-size: 16px;
+        line-height: 16px; }
+      html .wrap .c-body .c-component-message .p3, body .wrap .c-body .c-component-message .p3 {
+        color: #444C61;
+        font-size: 16px;
+        line-height: 16px;
+        padding-left: 50px;
+        padding-top: 57px; }
+      html .wrap .c-body .c-component-message .box1-2, body .wrap .c-body .c-component-message .box1-2 {
+        width: 865px;
+        text-align: left;
+        float: left; }
+      html .wrap .c-body .c-component-message .box1-3, body .wrap .c-body .c-component-message .box1-3 {
+        float: right;
+        padding-right: 16px; }
+      html .wrap .c-body .c-component-message .ibtn.ivu-btn.ivu-btn-ghost, body .wrap .c-body .c-component-message .ibtn.ivu-btn.ivu-btn-ghost {
+        width: 110px;
+        height: 36px;
+        color: #55A4FF;
+        background-color: transparent;
+        border-color: #55A4FF;
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 48px;
+        margin-right: 14px; }
+      html .wrap .c-body .c-component-message .ibtn2.ivu-btn.ivu-btn-ghost, body .wrap .c-body .c-component-message .ibtn2.ivu-btn.ivu-btn-ghost {
+        width: 110px;
+        height: 36px;
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 48px;
+        margin-right: 14px; }
+      html .wrap .c-body .c-component-message .ibtn.ivu-btn.ivu-btn-primary, body .wrap .c-body .c-component-message .ibtn.ivu-btn.ivu-btn-primary {
+        width: 110px;
+        height: 36px;
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 48px;
+        margin-right: 14px; }
+      html .wrap .c-body .c-component-message .ibtn.ivu-btn.ivu-btn-text, body .wrap .c-body .c-component-message .ibtn.ivu-btn.ivu-btn-text {
+        width: 110px;
+        height: 36px;
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 48px;
+        margin-right: 14px; }
+      html .wrap .c-body .c-component-message .card-new, body .wrap .c-body .c-component-message .card-new {
+        width: 64px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        display: block;
+        color: #fff;
+        font-size: 14px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 7;
+        background: #2199F7;
+        font-weight: bold; }
 
 .wrap.login {
   width: 100%;

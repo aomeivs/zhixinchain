@@ -140,16 +140,15 @@
   }
   .setting-user-container{
     padding-top: 50px;
-    padding-left: 150px;
+    //padding-left: 150px;
     width: 1000px;
     text-align: center;
-
+    margin: 0 auto;
 
     .set-pwd{
       margin-bottom: 50px;
       .set-title{
         text-align: center;
-        margin-top: 50px;
         .add-employ-title{
           color: #1c2438;
           .e-title-1{
@@ -158,7 +157,6 @@
           .e-title-2{
             font-size: 20px;
           }
-
         }
       }
       .set-body{
