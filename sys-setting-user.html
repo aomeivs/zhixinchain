@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://cdn.bootcss.com/babel-polyfill/6.26.0/polyfill.min.js"></script>
     <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
     <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
@@ -137,9 +138,7 @@
             </div>
         </card>
     </div>
-
 </div>
-
 
 <!--tree 模板-->
 <script type="html/x-template" id="component-tree">
@@ -363,13 +362,13 @@
                     this.$Modal.confirm({
                             title: '确认删除？',
                             content: '<p>确认删除后，部门下成员将一并删除！</p>',
-                            onOk: () => {
-                            this.$Message.info('删除成功');
+                            onOk: function(){
+                            return  this.$Message.info('删除成功');
                     prune(treeData.dataList,id)
                 },
-                    onCancel: () => {
+                    onCancel: function(){
                         _this.tree.title =_this.tempName;
-                        this.$Message.info('取消操作');
+                        return this.$Message.info('取消操作');
                     }
                 });
                 }
@@ -395,7 +394,7 @@
             }
         },
         methods:{
-            close () {
+            close:function () {
                 this.visible = false;
             }
         }
@@ -543,169 +542,6 @@ Vue.component('ComponentModalAuth',{
                 percent: 80,
                 dropdown2_text:'职信链科技有限公司',
 
-                columns1: [
-                    {
-                        title: '年份及月度',
-                        key: 'title',
-                        className:'t-columns1'
-                    },
-                    {
-                        title: '月度评分',
-                        key: 'score',
-                        className:'t-columns2'
-                    }
-                ],
-                data1: [
-                    {
-                        title: '2017.8',
-                        score: 8
-                    },
-                    {
-                        title: '2017.7',
-                        score: 7
-                    },
-                    {
-                        title: '2017.6',
-                        score: 8
-                    },
-                ],
-//table2
-                columns2: [
-                    {
-                        title: '年份及月度',
-                        key: 'date',
-                        className:'t-columns1'
-                    },
-                    {
-                        title: '排名情况',
-                        key: 'order',
-                        className:'t-columns2'
-                    },
-                    {
-                        title: '业绩额',
-                        key: 'performance',
-                        className:'t-columns3'
-                    },
-                    {
-                        title: '员工意见',
-                        key: 'recommend',
-                        className:'t-columns4'
-                    },
-                    {
-                        title: '企业备注',
-                        key: 'remark',
-                        render: (h, params) => {
-                            return h('div', [
-                                h('component-assess-add-tip',{
-                                    props:{
-                                        data:this.data2[params.index]
-                                    }
-                                })
-                            ]);
-                        }
-                    }
-                ],
-                data2: [
-                    {
-                        date: '2017.8',
-                        order: '靠前',
-                        performance: '50万',
-                        recommend: '认同'
-                    },
-                    {
-                        date: '2017.7',
-                        order: '靠前',
-                        performance: '60万',
-                        recommend: '认同',
-                        show:true
-                    },
-                    {
-                        date: '2017.6',
-                        order: '靠前',
-                        performance: '70万',
-                        recommend: '认同'
-                    }
-
-                ],
-//table3
-                columns3: [
-                    {
-                        title: '年份及月度',
-                        key: 'date',
-                        className:'t-columns1'
-                    },
-                    {
-                        title: '考勤排名',
-                        key: 'order',
-                        className:'t-columns2'
-                    },
-                    {
-                        title: '员工意见',
-                        key: 'recommend',
-                        className:'t-columns3'
-                    },
-                    {
-                        title: '企业备注',
-                        key: 'remark',
-                        render: (h, params) => {
-                            return h('div', [
-                                h('ComponentAssessAddTip',{
-                                    props:{
-                                        data:this.data2[params.index]
-                                    }
-                                })
-                            ]);
-                        }
-                    }
-                ],
-                data3: [
-                    {
-                        date: '2017.8',
-                        order: '靠前',
-                        recommend: '认同'
-                    },
-                    {
-                        date: '2017.7',
-                        order: '靠前',
-                        recommend: '认同',
-                        show:true
-                    },
-                    {
-                        date: '2017.6',
-                        order: '靠前',
-                        recommend: '认同'
-                    }
-
-                ],
-//                table4
-                columns4: [
-                    {
-                        title: '年份及月度',
-                        key: 'title',
-                        className:'t-columns1'
-                    },
-                    {
-                        title: '月度评分',
-                        key: 'score'
-                    }
-                ],
-                data4: [
-                    {
-                        title: '2017.8',
-                        score: '业绩突出，奖励1万元'
-                    },
-                    {
-                        title: '2017.7',
-                        score: '业绩突出，奖励1万元'
-                    },
-                    {
-                        title: '2017.6',
-                        score: '业绩突出，奖励1万元'
-                    },
-                ],
-
-
-
 //                编辑数据
                 cityList: [
                     {
@@ -765,40 +601,14 @@ Vue.component('ComponentModalAuth',{
             dropdown2:function (v) {
                 this.dropdown2_text = v;
             },
-            show (index) {
-                this.$Modal.info({
+            show:function (index) {
+                 this.$Modal.info({
                     title: '用户信息',
-                    content: `${this.data2[index].date}`
+                    content: ''
                 })
             },
-            remove (index) {
+            remove :function(index) {
                 this.data2.splice(index, 1);
-            },
-            assessInfoShow(name){
-
-                switch(name){
-                    case '1':
-                        this.assessInfoBase=!this.assessInfoBase;
-                        break;
-                    case '2':
-                        this.assessInfoBase2=!this.assessInfoBase2;
-                        break;
-                    case '3':
-                        this.assessInfoBase3=!this.assessInfoBase3;
-                        break;
-                    case '4':
-                        this.assessInfoBase4=!this.assessInfoBase4;
-                        break;
-                    case '5':
-                        this.assessInfoBase5=!this.assessInfoBase5;
-                        break;
-                    case '6':
-                        this.assessInfoBase6=!this.assessInfoBase6;
-                        break;
-                    default:
-                        break;
-                }
-
             },
             modalAuth:function () {
                 this.modal2=!this.modal2

@@ -796,6 +796,9 @@ html .wrap .c-body .c-body-container .component-employ .employ-container .employ
   .addGroup-custom-tips .ivu-poptip-rel {
     display: block; }
 
+.ivu-form-item {
+  margin-bottom: 0; }
+
 .ivu-tooltip-popper[x-placement^=right] .ivu-tooltip-arrow {
   left: 3px;
   border-width: 5px 5px 5px 0;
@@ -1270,14 +1273,15 @@ html, body {
       border-bottom-width: 4px;
       border-bottom-color: #3b99ff; }
   .wrap.login .login-3-2 {
-    height: 84px; }
+    height: 84px;
+    text-align: left; }
     .wrap.login .login-3-2 input {
       background: none;
       outline: none;
       border: 0px;
       line-height: 44px;
       height: 44px;
-      width: 98%;
+      width: 460px;
       margin-top: 31px;
       font-size: 15px;
       color: #797777; }

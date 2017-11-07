@@ -261,15 +261,20 @@
 
                     <div class="add-employ-body clearFix">
                         <Card style="width: 100%;">
+                            <i-form ref="formCustom" :model="formCustom" :rules="ruleCustom" :label-width="0">
+
+
                             <div class="body-1">
                                 <div class="edit-info edit-2">
                                     <div class="edit-info-1">
                                         <div>姓名 ：</div>
                                         <div>
-                                            <tooltip placement="right" :always='true'>
-                                                <i-input class="form-el form-validateError" placeholder="请输入" value="庞丁畅"></i-input>
+                                            <tooltip :disabled="visible.user" placement="right" :always='true'>
+                                                <form-item label="" :label-width="0" prop="user">
+                                                    <i-input type="text" v-model="formCustom.user" class="form-el" placeholder="请输入" value=""></i-input>
+                                                </form-item>
                                                 <div slot="content">
-                                                    <p style="max-width: 100px; word-wrap: break-word; white-space: normal;">显示多行</p>
+                                                    <p style="max-width: 100px; word-wrap: break-word; white-space: normal;">{{ruleCustom.user[0].message}}</p>
                                                 </div>
                                             </tooltip>
 
@@ -363,7 +368,7 @@
                                     <i-button type="primary" class="edit-7-ok">保存</i-button>
                                 </div>
                             </div>
-
+                            </i-form>
                         </Card>
                     </div>
 
@@ -978,16 +983,39 @@ Vue.component('ComponentModalAuth',{
                     }
                 ],
                 model1: '',
-                modal1:true,
-                modal2:true,
-                modal3:true,
-                modal4:true,
+                modal1:false,
+                modal2:false,
+                modal3:false,
+                modal4:false,
+                formCustom:{
+                    user: '',
+                },
+                ruleCustom: {
+                    user: [
+                        { required: true, message: '请填写用户名', trigger: 'blur' }
+                    ]
+                },
+                visible:{
+                    user:false
+                }
 
 
 //
             }
         },
         methods: {
+            handleSubmit (name) {
+                this.$refs[name].validate((valid) => {
+                    if (valid) {
+                        this.$Message.success('提交成功!');
+                    } else {
+                        this.$Message.error('表单验证失败!');
+                    }
+                })
+            },
+            handleReset (name) {
+                this.$refs[name].resetFields();
+            },
             handleSearch : function(value) {
                 this.data = !value ? [] : [
                     value,
