@@ -52,7 +52,12 @@
         </div>
         <div class="login-company">
             <div class="login-3-2 bottomLine">
+                <tooltip :disabled="visible.user" placement="right" :always='true'>
                 <input placeholder="请输入邮箱" id="login-company-input1">
+                    <div slot="content">
+                        <p style="max-width: 100px; word-wrap: break-word; white-space: normal;">请输入邮箱</p>
+                    </div>
+                </tooltip>
             </div>
             <div class="sce_line" id="login-company-sce_line-1"></div>
             <div class="login-3-2 bottomLine">
@@ -80,48 +85,63 @@
 
 </div>
 <script>
-    $('#person').on('click',function () {
-        $('.login-company').hide();
-        $('.login-person').show();
-        $('#company').removeClass("active");
-        $('#person').addClass("active");
-        $('#zhuce-now').hide();
-        $('#getBackMsg').addClass("login4-active");
 
+    new Vue({
+        el:'#app',
+        data:function () {
+            return {
+                visible:{
+                    user:false
+                }
+            }
+        },
+        mounted:function () {
+            $('#person').on('click',function () {
+                $('.login-company').hide();
+                $('.login-person').show();
+                $('#company').removeClass("active");
+                $('#person').addClass("active");
+                $('#zhuce-now').hide();
+                $('#getBackMsg').addClass("login4-active");
+
+            })
+
+            $('#company').on('click',function () {
+                $('.login-company').show();
+                $('.login-person').hide();
+                $('#person').removeClass("active");
+                $('#company').addClass("active")
+                $('#zhuce-now').show();
+                $('#getBackMsg').removeClass("login4-active");
+            })
+            $('#login-company-input1').on('focus',function () {
+                $("#login-company-sce_line-1").css("width","100%");
+            })
+            $('#login-company-input1').on('blur',function () {
+                $("#login-company-sce_line-1").css("width","0");
+            })
+            $('#login-company-input2').on('focus',function () {
+                $("#login-company-sce_line-2").css("width","100%");
+            })
+            $('#login-company-input2').on('blur',function () {
+                $("#login-company-sce_line-2").css("width","0");
+            })
+            $('#login-person-input1').on('focus',function () {
+                $("#login-person-sce_line1").css("width","100%");
+            })
+            $('#login-person-input1').on('blur',function () {
+                $("#login-person-sce_line1").css("width","0");
+            })
+            $('#login-person-input2').on('focus',function () {
+                $("#login-person-sce_line2").css("width","100%");
+            })
+            $('#login-person-input2').on('blur',function () {
+                $("#login-person-sce_line2").css("width","0");
+            })
+        }
     })
 
-    $('#company').on('click',function () {
-        $('.login-company').show();
-        $('.login-person').hide();
-        $('#person').removeClass("active");
-        $('#company').addClass("active")
-        $('#zhuce-now').show();
-        $('#getBackMsg').removeClass("login4-active");
-    })
-    $('#login-company-input1').on('focus',function () {
-        $("#login-company-sce_line-1").css("width","100%");
-    })
-    $('#login-company-input1').on('blur',function () {
-        $("#login-company-sce_line-1").css("width","0");
-    })
-    $('#login-company-input2').on('focus',function () {
-        $("#login-company-sce_line-2").css("width","100%");
-    })
-    $('#login-company-input2').on('blur',function () {
-        $("#login-company-sce_line-2").css("width","0");
-    })
-    $('#login-person-input1').on('focus',function () {
-        $("#login-person-sce_line1").css("width","100%");
-    })
-    $('#login-person-input1').on('blur',function () {
-        $("#login-person-sce_line1").css("width","0");
-    })
-    $('#login-person-input2').on('focus',function () {
-        $("#login-person-sce_line2").css("width","100%");
-    })
-    $('#login-person-input2').on('blur',function () {
-        $("#login-person-sce_line2").css("width","0");
-    })
+
 
     //登录验证
 

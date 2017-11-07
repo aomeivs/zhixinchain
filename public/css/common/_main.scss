@@ -33,7 +33,11 @@
     display: block;
   }
 }
+//form-item去除mb
+.ivu-form-item{
+  margin-bottom: 0;
 
+}
 //tips
 .ivu-tooltip-popper[x-placement^=right] .ivu-tooltip-arrow {
   left: 3px;
