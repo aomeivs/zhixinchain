@@ -93,6 +93,19 @@
       cursor: pointer;
     }
   }
+
+  /*
+   * 无搜索结果样式
+   */
+
+  .search-noResult{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 18px;
+  }
+  .search-noResult-1{
+    margin-top: 27px;
+  }
 }
 .wrap{
   &.search-online {
