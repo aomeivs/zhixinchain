@@ -60,40 +60,40 @@
     margin: 0 auto;
     margin-top: 30px;
     .result-name{
-      float: left;
-      line-height: 106px;
+      text-align: center;
+      display: inline-block;
+      line-height: 102px;
       font-size: 28px;
       color: #1c2438;
-      margin-right: 93px;
-      margin-left: 30px;
     }
     .name{
-      width: 114px;
+      width: 220px;
     }
     .mobile{
-      width: 164px;
+      width: 230px;
     }
     .cardNum{
-      width: 242px;
+      width: 353px;
     }
     .authorizeStatus{
       width: 50px;
     }
     .result-other{
-      float: left;
-      line-height: 106px;
+      text-align: left;
+      display: inline-block;
+      line-height: 102px;
       font-size: 16px;
       color: #495060;
-      margin-right: 96px;
     }
 
     .result-shouquan{
-      float: left;
-      width: 66px;
-      line-height: 106px;
+      display: inline-block;
+      text-align: center;
+      line-height: 102px;
       font-size: 16px;
       color: #298cff;
       cursor: pointer;
+      width: 200px;
     }
   }
 
