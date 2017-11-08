@@ -392,6 +392,7 @@
         .edit-assess-info-base{
           width: 1200px;
           .edit-info{
+
             margin-left: 240px;
             margin-top: 40px;
             &>div{
@@ -567,6 +568,47 @@
           .edit-info{
             margin-left: 100px;
             margin-top: 40px;
+            .e-i-2{
+              width: 480px;
+              text-align: left;
+              color: #4a4a4a;
+              ul,li{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+              }
+              ul{
+                &>div{
+                  font-size: 16px;
+                }
+                li{
+                  font-size: 14px;
+                  color: #7d7d7d;
+                  margin-bottom: 10px;
+
+                }
+              }
+              &.pact{
+                ul{
+                  li{
+                    border: 1px solid #d9d9d9;
+                    padding: 20px;
+                    width: 460px;
+                    color: #4a4a4a;
+                    margin-bottom: 10px;
+                    &>div{
+                      margin-bottom: 10px;
+                      &:last-child{
+                        margin-bottom: 0;
+                      }
+                      img{
+                        border: 1px solid #d9d9d9;
+                      }
+                    }
+                  }
+                }
+              }
+            }
             &>div{
               display: inline-block;
               vertical-align: top;

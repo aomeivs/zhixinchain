@@ -267,9 +267,10 @@
                             <div class="body-1">
                                 <div class="edit-info edit-2">
                                     <div class="edit-info-1">
+                                        <i-button type="ghost" v-on:click="tishi">提示切换</i-button>
                                         <div>姓名 ：</div>
                                         <div>
-                                            <tooltip :disabled="visible.user" placement="right" :always='true'>
+                                            <tooltip :disabled="visible" placement="right" :always='true' :transfer="true">
                                                 <form-item label="" :label-width="0" prop="user">
                                                     <i-input type="text" v-model="formCustom.user" class="form-el" placeholder="请输入" value=""></i-input>
                                                 </form-item>
@@ -995,15 +996,14 @@ Vue.component('ComponentModalAuth',{
                         { required: true, message: '请填写用户名', trigger: 'blur' }
                     ]
                 },
-                visible:{
-                    user:false
-                }
-
-
+                visible:true
 //
             }
         },
         methods: {
+            tishi:function () {
+                this.visible=!this.visible
+            },
             handleSubmit (name) {
                 this.$refs[name].validate((valid) => {
                     if (valid) {

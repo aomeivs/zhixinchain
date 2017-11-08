@@ -712,7 +712,37 @@
                                                 <div class="edit-info edit-6">
                                                     <div>奖惩情况：</div>
                                                     <div>
-                                                        <i-button class="form-el" type="ghost" icon="plus">添加奖惩记录</i-button>
+                                                        <i-button v-show="!editPunish" class="form-el" type="ghost" icon="plus" @click="addPunish">添加奖惩记录</i-button>
+                                                        <div class="e-i-2 pact" style="margin-top: 10px;">
+                                                                <ul v-show="!editPunish">
+                                                                    <li>
+                                                                        <div>
+                                                                            <div class="text-left" style="font-size: 12px;">2017-10-10</div>
+                                                                            奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细
+                                                                        </div>
+
+                                                                        <div>
+                                                                            <div class="text-left" style="font-size: 12px;">2017-10-10</div>
+                                                                            奖惩情况情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细
+                                                                        </div>
+                                                                    </li>
+                                                                </ul>
+
+
+                                                                <div v-if="editPunish">
+                                                                    <div>
+                                                                        <i-input type="textarea" :rows="10" style="width: 520px;" placeholder="奖惩情况，500字以内" :maxlength="500"></i-input>
+                                                                    </div>
+                                                                    <div style="margin-top:20px; text-align: center;">
+                                                                        <i-button type="text"   @click="addPunish"style="margin-right: 20px;">取消</i-button>
+                                                                        <i-button type="primary"  @click="addPunish">保存</i-button>
+                                                                    </div>
+                                                                    <hr style="margin-top: 20px;border: none;
+    border-top: 1px solid #d9d9d9;">
+                                                                </div>
+
+
+                                                            </div>
                                                     </div>
                                                 </div>
                                                 <div class="edit-info edit-6">
@@ -782,18 +812,22 @@
                 <span>{{tree.title}}</span>
             </div>
             <!--编辑状态-->
-            <div v-else class="box-content"><i-input v-model="groupName" placeholder="请输入..." size="small" style="width: 100px;"></i-input><span v-on:click.stop="save(tree.id)"><img
-                    src="public/images/tree-group-edit.png" width="16" style="margin-left: 8px;margin-top: -2px;" alt=""></span></div>
+            <div v-else class="box-content"><i-input v-model="groupName" placeholder="请输入..." size="small" style="width: 100px;"></i-input><span v-on:click.stop="save(tree.id)">
+                <Icon type="checkmark-round" style="margin-left: 8px;margin-top: -2px; color: #607D8B;cursor: pointer;"></Icon></span>
+                <span v-on:click.stop="save(tree.id)">
+                    <Icon type="arrow-return-right" style="margin-left: 8px;margin-top: -2px; color: #607D8B;cursor: pointer;"></Icon>
+                </span></div>
             <!--控制状态-->
             <div v-if="tree.dataList && !tree.root && !editStatus" class="box-control">
                 <dropdown @on-click="dropDown" placement="bottom-end">
                     <a href="javascript:void(0)">
-                        添加
-                        <icon type="arrow-down-b"></icon>
+                        <Icon type="gear-a" style="font-size: 16px;"></Icon>
+                        <!--<icon type="arrow-down-b"></icon>-->
                     </a>
                     <dropdown-menu slot="list">
-                        <dropdown-item name="E">员工</dropdown-item>
-                        <dropdown-item name="G">部门</dropdown-item>
+                        <dropdown-item name="E">添加员工</dropdown-item>
+                        <dropdown-item name="G">添加部门</dropdown-item>
+                        <dropdown-item name="DG">删除部门</dropdown-item>
                     </dropdown-menu>
                 </dropdown>
             </div>
@@ -1309,7 +1343,8 @@
                         label: '重庆市'
                     }
                 ],
-                model1: ''
+                model1: '',
+                editPunish:false
             }
         },
         methods: {
@@ -1359,6 +1394,9 @@
                         break;
                 }
 
+            },
+            addPunish(){
+                this.editPunish=!this.editPunish;
             }
 
         }
