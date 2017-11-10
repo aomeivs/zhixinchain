@@ -444,7 +444,7 @@
         }
 
         //component-assess-info-month
-        .assess-info-month{
+        .assess-info-month,.assess-info-q,.assess-info-year{
           max-width:1200px;
           .employ-add{
             text-align: left;
@@ -563,7 +563,7 @@
             }
           }
         }
-        .edit-assess-info-month{
+        .edit-assess-info-month,.edit-assess-info-q,.edit-assess-info-year{
           width: 1200px;
           .edit-info{
             margin-left: 100px;
@@ -657,9 +657,8 @@
           }
         }
 
-
         .assess-info-q,.assess-info-year{
-          padding-bottom: 400px;
+          //padding-bottom: 400px;
         }
 
       }
