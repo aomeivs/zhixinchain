@@ -76,10 +76,10 @@
             </ul>
         </div>
     </div>
-    <div class="c-body">
+    <div class="c-body" v-bind:style="{'margin-left':marginLeft}">
         <div class="c-body-left left">
-            <div class="c-accordion">
-                <Icon type="arrow-left-b" class="icon-c-accordion active"></Icon>
+            <div class="c-accordion" v-on:click="accordionToggle">
+                <Icon type="arrow-left-b" class="icon-c-accordion" v-bind:class="{active:!accordionOpen}"></Icon>
             </div>
             <div class="body-left-search">
                 <auto-complete
@@ -448,6 +448,7 @@
             return {
                 value:'',
                 data:[],
+                accordionOpen:true,
                 treeData:treeData,
                 columns1: [
                     {
@@ -560,6 +561,15 @@
         mounted:function () {
 
         },
+        computed:{
+            marginLeft:function () {
+                if(!this.accordionOpen){
+                    return '-320px'
+                }else{
+                    return '0'
+                }
+            }
+        },
         methods: {
             handleSearch : function(value) {
                 this.data = !value ? [] : [
@@ -567,6 +577,9 @@
                     value + value,
                     value + value + value
                 ];
+            },
+            accordionToggle:function () {
+                this.accordionOpen = !this.accordionOpen;
             }
         }
     }).$mount('#app')

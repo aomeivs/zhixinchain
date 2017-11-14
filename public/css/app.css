@@ -141,7 +141,7 @@ html .wrap .c-body .c-body-container .component-dashboard, body .wrap .c-body .c
 
 html .wrap .c-body .c-body-container .component-employ .employ-container, body .wrap .c-body .c-body-container .component-employ .employ-container, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container, html .wrap .c-body .component-account .employ-info-single .employ-container, body .wrap .c-body .component-account .employ-info-single .employ-container {
   padding-top: 50px;
-  padding-left: 50px; }
+  padding-left: 80px; }
   html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-base, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-base {
     width: 1200px;
     height: 240px; }
@@ -1001,10 +1001,10 @@ html, body {
         border-radius: 100px; }
         html .wrap .c-body .c-accordion .icon-c-accordion, body .wrap .c-body .c-accordion .icon-c-accordion {
           transform: rotate(0);
-          transition: all 1s; }
+          transition: all 0.2s; }
           html .wrap .c-body .c-accordion .icon-c-accordion.active, body .wrap .c-body .c-accordion .icon-c-accordion.active {
             transform: rotate(180deg);
-            transition: all 1s; }
+            transition: all 0.2s; }
       html .wrap .c-body .c-body-left, body .wrap .c-body .c-body-left {
         height: 100%;
         width: 320px;

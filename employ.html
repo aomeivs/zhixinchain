@@ -74,8 +74,11 @@
             </ul>
         </div>
     </div>
-    <div class="c-body">
+    <div class="c-body" v-bind:style="{'margin-left':marginLeft}">
         <div class="c-body-left left">
+            <div class="c-accordion" v-on:click="accordionToggle">
+                <Icon type="arrow-left-b" class="icon-c-accordion" v-bind:class="{active:!accordionOpen}"></Icon>
+            </div>
             <div class="body-left-search">
                 <auto-complete
                         v-model="value"
@@ -1440,7 +1443,7 @@
                 value:'',
                 data:[],
                 treeData:treeData,
-
+                accordionOpen:true,
 
 
 
@@ -1654,6 +1657,15 @@
                 editPunish:false
             }
         },
+        computed:{
+            marginLeft:function () {
+                if(!this.accordionOpen){
+                    return '-320px'
+                }else{
+                    return '0'
+                }
+            }
+        },
         methods: {
             handleSearch : function(value) {
                 this.data = !value ? [] : [
@@ -1704,6 +1716,9 @@
             },
             addPunish(){
                 this.editPunish=!this.editPunish;
+            },
+            accordionToggle:function () {
+                this.accordionOpen = !this.accordionOpen;
             }
 
         }
