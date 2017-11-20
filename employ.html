@@ -164,7 +164,7 @@
                                         <div>
                                             <div>身份证号</div>
                                             <div>
-                                                <i-input class="form-el" :disabled="true" placeholder="请输入" value="371327199001016415"></i-input>
+                                                <i-input class="form-el" placeholder="请输入" value="371327199001016415"></i-input>
                                             </div>
                                         </div>
                                         <div>
@@ -382,7 +382,7 @@
                             </div>
                         </div>
                         <div class="assess-info overflow">
-                            <tabs v-model="name">
+                            <tabs v-model="name" v-on:on-click="tabsToggle(name)">
                                 <tab-pane name="1" label="基本信息" icon="document-text">
                                     <div v-show="name==1" class="component-assess-info-base" v-bind:class="{'tab-active':name==1}">
                                         <div v-show="!assessInfoBase" class="assess-tab assess-info-base">
@@ -473,21 +473,26 @@
                                         </div>
                                         <div v-show="assessInfoBase" class="edit-assess-info-base">
                                             <Card style="width: 100%;">
+                                                <i-form ref="formValidate" ref="formCustom" :model="formCustom" :rules="ruleCustom" :label-width="0" :show-message="showMessage">
                                                 <div class="edit-1">
                                                     <Icon type="android-alert" style="color:#ffbf00; font-size: 18px;margin-right: 8px;"></Icon>您只需填写员工变更的信息，未变更的不必填写。例如从总监晋升为总经理，您只需在下面的职位栏输入“总经理”，然后保存即可
                                                 </div>
                                                 <div class="edit-info edit-2">
                                                     <div>职位：</div>
                                                     <div>
-                                                        <i-input placeholder="请输入" class="form-el"></i-input>
+                                                    <form-item label="" :label-width="0" prop="user">
+                                                        <i-input type="text" v-model="formCustom.user" class="form-el" placeholder="请输入" value=""></i-input>
+                                                    </form-item>
                                                     </div>
                                                 </div>
                                                 <div class="edit-info edit-3">
                                                     <div>部门：</div>
                                                     <div>
+                                                        <form-item label="" :label-width="0" prop="user">
                                                         <i-select v-model="model1" class="form-el">
                                                             <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
                                                         </i-select>
+                                                        </form-item>
                                                         <div>
 
                                                         </div>
@@ -497,10 +502,12 @@
                                                     <div>薪资：</div>
                                                     <div>
                                                         <div>
-                                                            <i-input placeholder="请输入" class="form-el"></i-input>
-                                                            <span>元/月</span>
+                                                            <form-item label="" :label-width="0" prop="user">
+                                                            <i-input placeholder="请输入" class="form-el"></i-input><span>元/月</span>
+                                                            </form-item>
+
                                                         </div>
-                                                        <div style="margin-top: 15px;">
+                                                        <div style="margin-top: 25px;">
                                                             <i-switch size="large">
                                                                 <span slot="open">显示</span>
                                                                 <span slot="close">隐藏</span>
@@ -512,16 +519,19 @@
                                                 <div class="edit-info edit-5">
                                                     <div>新增劳动合同起止时间：</div>
                                                     <div>
+                                                        <form-item label="" :label-width="0" prop="user">
                                                         <row class="form-el">
                                                             <i-col span="12">
                                                                 <date-picker type="daterange" placement="top-end" placeholder="选择日期" style="width: 260px;font-size: 12px;"></date-picker>
                                                             </i-col>
                                                         </row>
+                                                        </form-item>
                                                     </div>
                                                 </div>
                                                 <div class="edit-info edit-6">
                                                     <div>合同期内离职时间：</div>
                                                     <div>
+                                                        <form-item label="" :label-width="0" prop="user">
                                                         <row class="form-el">
                                                             <i-col span="12">
                                                                 <date-picker type="date" placement="top-end" placeholder="选择日期" style="width: 260px;font-size: 12px;"></date-picker>
@@ -530,6 +540,7 @@
                                                         <div style="margin-top: 15px;">
                                                             （若未离职则无需填写）
                                                         </div>
+                                                        </form-item>
                                                     </div>
                                                 </div>
                                                 <div class="edit-info">
@@ -553,26 +564,32 @@
                                                     <div class="edit-info">
                                                         <div>纠纷案件名称：</div>
                                                         <div>
+                                                            <form-item label="" :label-width="0" prop="user">
                                                             <i-input placeholder="请输入" class="form-el"></i-input>
+                                                            </form-item>
                                                         </div>
                                                     </div>
 
                                                     <div class="edit-info">
                                                         <div>合同期内离职时间：</div>
                                                         <div>
+                                                            <form-item label="" :label-width="0" prop="user">
                                                             <row class="form-el">
                                                                 <i-col span="12">
                                                                     <date-picker type="date" placement="top-end" placeholder="选择日期" style="width: 260px;font-size: 12px;"></date-picker>
                                                                 </i-col>
                                                             </row>
+                                                            </form-item>
                                                         </div>
                                                     </div>
                                                     <div class="edit-info">
                                                         <div>审理结果：</div>
                                                         <div>
+                                                            <form-item label="" :label-width="0" prop="user">
                                                             <i-select v-model="model1" class="form-el">
                                                                 <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
                                                             </i-select>
+                                                            </form-item>
                                                             <div>
 
                                                             </div>
@@ -599,14 +616,15 @@
                                                 <div class="edit-7">
                                                     <div>
                                                         <i-button type="ghost" class="edit-7-cancel" v-on:click="assessInfoShow(name)">取消</i-button>
-                                                        <i-button type="primary" class="edit-7-ok">保存</i-button>
+                                                        <i-button type="primary" v-on:click="validata('formValidate1')" class="edit-7-ok">保存</i-button>
                                                     </div>
                                                 </div>
+                                                </i-form>
                                             </Card>
                                         </div>
                                     </div>
                                 </tab-pane>
-                                <tab-pane name="2" label="月度评价" icon="document-text">
+                                <tab-pane name="2" :disabled="true" label="月度评价" icon="document-text">
                                     <div v-show="name==2" class="component-assess-info-month" v-bind:class="{'tab-active':name==2}">
                                         <div v-show="!assessInfoBase2" class="assess-tab assess-info-month">
 
@@ -1654,7 +1672,17 @@
                     }
                 ],
                 model1: '',
-                editPunish:false
+                editPunish:false,
+                formCustom:{
+                    user: '',
+                },
+                ruleCustom: {
+                    user: [
+                        { required: true, message: '请填写用户名', trigger: 'blur' }
+                    ]
+                },
+                visible:false,
+                showMessage:true,
             }
         },
         computed:{
@@ -1719,6 +1747,22 @@
             },
             accordionToggle:function () {
                 this.accordionOpen = !this.accordionOpen;
+            },
+            tabsToggle(name){
+//                return this.name = 1;
+//                this.name=1;
+//                return;
+//                this.$refs['formValidate'].resetFields();
+//                this.showMessage = false;
+            },
+            validata(vform){
+                this.$refs['formValidate'].validate(valid=>{
+                    if (valid) {
+//                        this.$Message.success('验证成功!');
+                    } else {
+//                        this.$Message.error('验证失败');
+                    }
+                })
             }
 
         }
