@@ -1328,13 +1328,13 @@ html, body {
 
 .wrap.index-lt {
   /*
-   * 背景bunner 部分
+   * 鑳屾櫙bunner 閮ㄥ垎
    */
   /**
-   * 立即加入按钮部分
+   * 绔嬪嵆鍔犲叆鎸夐挳閮ㄥ垎
    */
   /*
-  * 职信介绍部分
+  * 鑱屼俊浠嬬粛閮ㄥ垎
   */ }
   .wrap.index-lt .index-lt-1 {
     background-color: white;
@@ -1488,47 +1488,66 @@ html, body {
   font-size: 18px;
   border-radius: 0px; }
 
-html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1, .wrap.search-result .search-result-1 {
-  width: 1111px;
-  margin: 0 auto;
-  margin-top: 49px;
-  padding-bottom: 18px; }
-html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-1, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-1, .wrap.search-result .search-result-1-1 {
-  float: left; }
-html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-1 input, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-1 input, .wrap.search-result .search-result-1-1 input {
-  height: 54px;
-  border-radius: 0px;
-  font-size: 16px; }
-html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-2, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-2, .wrap.search-result .search-result-1-2 {
-  float: left; }
-html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-2 button, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-2 button, .wrap.search-result .search-result-1-2 button {
-  width: 210px;
-  height: 54px;
-  font-size: 18px;
-  border-radius: 0px; }
-html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2, .wrap.search-result .search-result-2 {
-  width: 1111px;
-  margin: 0 auto;
-  margin-top: 30px; }
-  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-name, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-name, .wrap.search-result .search-result-2 .result-name {
-    float: left;
-    line-height: 106px;
-    font-size: 28px;
-    color: #1c2438;
-    margin-right: 93px;
-    margin-left: 44px; }
-  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-other, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-other, .wrap.search-result .search-result-2 .result-other {
-    float: left;
-    line-height: 106px;
-    font-size: 16px;
-    color: #495060;
-    margin-right: 98px; }
-  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-shouquan, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-shouquan, .wrap.search-result .search-result-2 .result-shouquan {
-    float: left;
-    line-height: 106px;
-    font-size: 16px;
-    color: #298cff;
-    cursor: pointer; }
+html .wrap .c-body .component-account .employ-info-single .component-account-searchResult, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult, .wrap.search-result {
+  /*
+   * 无搜索结果样式
+   */ }
+  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1, .wrap.search-result .search-result-1 {
+    width: 1111px;
+    margin: 0 auto;
+    margin-top: 49px;
+    padding-bottom: 18px; }
+  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-1, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-1, .wrap.search-result .search-result-1-1 {
+    float: left; }
+  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-1 input, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-1 input, .wrap.search-result .search-result-1-1 input {
+    height: 54px;
+    border-radius: 0px;
+    font-size: 16px; }
+  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-2, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-2, .wrap.search-result .search-result-1-2 {
+    float: left; }
+  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-2 button, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-1-2 button, .wrap.search-result .search-result-1-2 button {
+    width: 210px;
+    height: 54px;
+    font-size: 18px;
+    border-radius: 0px; }
+  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2, .wrap.search-result .search-result-2 {
+    width: 1111px;
+    margin: 0 auto;
+    margin-top: 30px; }
+    html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-name, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-name, .wrap.search-result .search-result-2 .result-name {
+      text-align: center;
+      display: inline-block;
+      line-height: 102px;
+      font-size: 28px;
+      color: #1c2438; }
+    html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .name, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .name, .wrap.search-result .search-result-2 .name {
+      width: 220px; }
+    html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .mobile, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .mobile, .wrap.search-result .search-result-2 .mobile {
+      width: 230px; }
+    html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .cardNum, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .cardNum, .wrap.search-result .search-result-2 .cardNum {
+      width: 353px; }
+    html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .authorizeStatus, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .authorizeStatus, .wrap.search-result .search-result-2 .authorizeStatus {
+      width: 50px; }
+    html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-other, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-other, .wrap.search-result .search-result-2 .result-other {
+      text-align: left;
+      display: inline-block;
+      line-height: 102px;
+      font-size: 16px;
+      color: #495060; }
+    html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-shouquan, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-result-2 .result-shouquan, .wrap.search-result .search-result-2 .result-shouquan {
+      display: inline-block;
+      text-align: center;
+      line-height: 102px;
+      font-size: 16px;
+      color: #298cff;
+      cursor: pointer;
+      width: 200px; }
+  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-noResult, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-noResult, .wrap.search-result .search-noResult {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 18px; }
+  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-noResult-1, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-noResult-1, .wrap.search-result .search-noResult-1 {
+    margin-top: 27px; }
 
 .wrap {
   /*
