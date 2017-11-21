@@ -1644,6 +1644,7 @@ html .wrap .c-body .component-account .employ-info-single .component-account-sea
    */ }
 
 html .wrap .c-body .c-component-vouchers, body .wrap .c-body .c-component-vouchers {
-  color: red; }
+  color: red;
+  color: yellow; }
 
 /*# sourceMappingURL=app.css.map */
