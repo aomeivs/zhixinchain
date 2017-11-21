@@ -972,6 +972,21 @@ html, body {
           vertical-align: middle; }
           html .wrap .c-header .c-head-menu .head-menu-ul li a, body .wrap .c-header .c-head-menu .head-menu-ul li a {
             color: #ffffff; }
+          html .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo, body .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo {
+            color: #333;
+            width: 300px;
+            line-height: 2;
+            padding: 10px 15px;
+            font-size: 14px; }
+            html .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-uline, body .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-uline {
+              border-top: 1px solid #f1f1f1;
+              margin: 8px 0; }
+            html .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u1, html .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u2, body .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u1, body .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u2 {
+              font-size: 12px; }
+              html .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u1 .h-m-u-1, html .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u2 .h-m-u-1, body .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u1 .h-m-u-1, body .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u2 .h-m-u-1 {
+                color: #666; }
+            html .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u3 a.head-message-badge, body .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u3 a.head-message-badge {
+              color: #333; }
           html .wrap .c-header .c-head-menu .head-menu-ul li .c-head-user > div, body .wrap .c-header .c-head-menu .head-menu-ul li .c-head-user > div {
             float: left; }
           html .wrap .c-header .c-head-menu .head-menu-ul li .c-head-user .user-photo, body .wrap .c-header .c-head-menu .head-menu-ul li .c-head-user .user-photo {
@@ -1627,5 +1642,9 @@ html .wrap .c-body .component-account .employ-info-single .component-account-sea
   /*
    * 在线搜索结果页面样式
    */ }
+
+html .wrap .c-body .c-component-vouchers, body .wrap .c-body .c-component-vouchers {
+  color: red;
+  color: yellow; }
 
 /*# sourceMappingURL=app.css.map */

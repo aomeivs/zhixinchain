@@ -265,6 +265,31 @@ html,body{
             a{
               color: #ffffff;
             }
+            .head-menu-userInfo{
+              color: #333;
+              width: 300px;
+              line-height: 2;
+              padding:10px 15px;
+              font-size: 14px;
+              .head-menu-uline{
+                border-top: 1px solid #f1f1f1;
+                margin:8px 0;
+              }
+
+              .head-menu-u1,.head-menu-u2{
+                font-size: 12px;
+                .h-m-u-1{
+                  color: #666;
+                }
+              }
+              .head-menu-u3{
+                a{
+                  &.head-message-badge{
+                    color: #333;
+                  }
+                }
+              }
+            }
             .c-head-user{
               &>div{
                 float: left;
@@ -729,6 +754,10 @@ html,body{
           background: #2199F7;
           font-weight: bold;
         }
+      }
+
+      .c-component-vouchers{
+        @extend %component-vouchers
       }
 
     }
