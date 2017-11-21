@@ -1,7 +1,76 @@
 %component-vouchers{
-  color:red;
-  color:yellow;
-
-
-
+  .vouchers-1{
+    text-align: center;
+    margin-top: 105px;
+    font-size: 25px;
+    font-weight: 500;
+    color: #1c2438;
+    letter-spacing: -0.8px;
+    .vouchers-1-txtBigger{
+      font-size: 54px;
+    }
+  }
+  .vouchers-2{
+    text-align: center;
+    margin-top: 43px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #4a4a4a;
+    .vouchers-2-red{
+      color: #ff4a60;
+    }
+  }
+  .vouchers-3{
+    margin: 0 auto;
+    margin-top: 44px;
+    margin-bottom: 120px;
+    width: 959px;
+    height: 770px;
+    border-radius: 4px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+    .vouchers-3-1-1{
+      background: url(../images/djq.png) center no-repeat;
+      width: 257px;
+      height: 206px;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      .daijq-F1{
+        margin-top: 105px;
+        font-size: 16px;
+        color: #565a5c;
+      }
+      .daijq-F2{
+        margin-top: 21px;
+        color: #9b9b9b;
+        font-size: 14px;
+      }
+      .daijq-F1-blueTxt{
+        color: #40beff;
+      }
+    }
+    .vouchers-3-1{
+      padding-top: 79px;
+      text-align: center;
+    }
+    .vouchers-left70{
+      margin-left: 70px;
+    }
+    .vouchers-3-2{
+      width: 317px;
+      height: 52px;
+      border-radius: 100px;
+      background-color: #40beff;
+      text-align: center;
+      margin: 0 auto;
+      font-size: 18px;
+      margin-top: 90px;
+      color: white;
+      padding-top: 12px;
+    }
+    .vouchers-3-no{
+      text-align: center;
+      padding-top: 208px;
+    }
+  }
 }
