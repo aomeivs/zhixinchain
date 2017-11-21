@@ -241,7 +241,7 @@ html,body{
   .wrap{
     width: 100%;
     height: 100%;
-    min-width: 1400px;
+    min-width: 1350px;
     /*公共头,菜单,搜索,退出,logo,*/
     .c-header{
       background-color: #1B7CE1;
@@ -292,6 +292,34 @@ html,body{
     //c-body container下的
     .c-body{
       height: 100%;
+      position: relative;
+
+      .c-accordion{
+        text-align: center;
+        font-size: 12px;
+        position: absolute;
+        width: 12px;
+        height: 100px;
+        line-height: 100px;
+        cursor: pointer;
+        top: 240px;
+        left: (30+320)+px;
+
+        background: #F1F1F1;
+        border: 1px solid #EBEBEB;
+        box-shadow: 0 2px 11px 0 rgba(221,221,221,0.50);
+        border-radius: 100px;
+
+        .icon-c-accordion{
+          transform: rotate(0);
+          transition: all 0.2s;
+          &.active{
+            transform: rotate(180deg);
+            transition: all 0.2s;
+          }
+
+        }
+      }
       .c-body-left{
         height: 100%;
         width: 320px;
@@ -299,6 +327,7 @@ html,body{
         padding-bottom: 10000px;
         overflow: hidden;
         background: #F5F7F9;
+
         .body-left-search{
           text-align: center;
           padding: 16px 0;
@@ -507,6 +536,45 @@ html,body{
       }
 
       .component-employ-leave{
+        padding-bottom: 40px;
+        .employ-leave-table{
+          padding-top: 60px;
+          padding-left: 80px;
+          .search-result-1{
+            width: 950px;
+            margin: 0 auto;
+            margin-top: 0px;
+            padding-bottom: 40px;
+          }
+          .search-result-1-1{
+            float: left;
+          }
+          .search-result-1-1 input{
+            height: 54px;
+            border-radius: 0px;
+            font-size: 16px;
+          }
+          .search-result-1-2{
+            float: left;
+          }
+          .search-result-1-2 button{
+            width: 210px;
+            height: 54px;
+            font-size: 18px;
+            border-radius: 0px;
+          }
+
+          .table-title{
+            color: #1c2438;
+            font-size: 18px;
+            margin-bottom: 20px;
+
+          }
+        }
+
+
+
+        //以下样式被遗弃。
         .lizhi-list .ivu-card-body {
           padding:0;
         }

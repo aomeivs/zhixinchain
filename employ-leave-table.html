@@ -6,7 +6,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="https://cdn.bootcss.com/babel-polyfill/6.26.0/polyfill.min.js"></script>
     <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
     <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
@@ -14,6 +13,10 @@
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="public/js/layout.js"></script>
     <link rel="stylesheet" href="public/css/app.css">
+    <style>
+
+
+    </style>
 </head>
 <body>
 
@@ -36,34 +39,6 @@
  -->
 
 <div class="wrap" id="app">
-    <Modal v-model="modal2" :footer-hide="true" width="900">
-        <div class="component-modal-auth">
-            <div class="modal-2">
-                <div class="add-employ-container">
-                    <div class="add-employ-head">
-                        <div class="add-employ-title">
-                            <div class="e-title-1">
-                                <Icon type="android-checkmark-circle"></Icon>
-                            </div>
-                            <div class="e-title-2">密码修改成功！</div>
-                        </div>
-                    </div>
-
-                    <div class="add-employ-body text-center">
-                        <div class="body-1">
-                            <span>
-                                您需要重新登录，点击确定立即登录，将在 {{time}}秒 后自动登录。
-                            </span>
-                        </div>
-                        <div class="body-2">
-                            <i-button type="primary" size="large" style="width: 360px;" v-on:click="modalAuth">确定</i-button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </Modal>
     <div class="c-header">
         <div class="c-head-logo">
             <img src="public/images/logo.png" width="334" alt="职信链LOGO">
@@ -71,15 +46,10 @@
         <div class="c-head-menu">
             <ul class="head-menu-ul">
                 <li>
-                    <a href="">购买</a>
+                    <span>购买</span>
                 </li>
                 <li>
-                    <a href="#">职信在线搜索</a>
-                    <!--<img src="public/images/head-search.png" width="26" alt="职信链搜索按钮">-->
-                </li>
-                <li>
-                    <a href="#"><Icon type="gear-a" style="color:white;font-size: 20px;"></Icon></a>
-                    <!--<img src="public/images/head-search.png" width="26" alt="职信链搜索按钮">-->
+                    <img src="public/images/head-search.png" width="26" alt="职信链搜索按钮">
                 </li>
                 <li>
                     <div>
@@ -92,58 +62,112 @@
                 <li>
                     <div class="c-head-user">
                         <div class="user-photo">
-                            <a href=""><img src="public/images/head-photo.png" width="39" alt="用户头像">
-                                <span>董兴海</span></a>
+                            <img src="public/images/head-photo.png" width="39" alt="用户头像">
+                            <span>董兴海</span>
                         </div>
                         <div>
                             <img src="public/images/head-line.png" width="2" alt="">
                         </div>
                         <div class="user-logOut">
-                            <img src="public/images/head-exit.png" style="cursor: pointer;" width="26" alt="退出">
+                            <img src="public/images/head-exit.png" width="26" alt="退出">
                         </div>
                     </div>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="c-body">
-        <card style="width: 1000px; margin: 50px auto;">
-            <div class="component-setting">
-                <div class="setting-user-container">
+    <div class="c-body" v-bind:style="{'margin-left':marginLeft}">
+        <div class="c-body-left left">
+            <div class="c-accordion" v-on:click="accordionToggle">
+                <Icon type="arrow-left-b" class="icon-c-accordion" v-bind:class="{active:!accordionOpen}"></Icon>
+            </div>
+            <div class="body-left-search">
+                <auto-complete
+                        v-model="value"
+                        icon="ios-search"
+                        :data="data"
+                        placeholder="搜索员工"
+                        @on-search="handleSearch"
+                        style="width:290px">
+                </auto-complete>
+            </div>
+            <div class="body-left-CName">
+                职信链科技有限公司
+            </div>
+            <div class="left-body-container">
+                <!--在职员工-->
+                <div class="tree-employ employ-on">
+                    <div class="employ-on-block">
+                        <img class="employ-icon" src="public/images/tree-employ.png" width="23" alt="在职员工">
+                        <span class="employ-title">
+                        在职员工
+                    </span>
+                        <span class="employ-count">
+                        (3)
+                    </span>
+                    </div>
+                </div>
 
-                    <div class="set-pwd">
-                        <div class="set-title">
-                            <div class="add-employ-title">
-                                <span class="e-title-1">修改密码</span><span class="e-title-2">/Modify password</span>
-                            </div>
+                <!--组件-树-->
+                <div class="component-tree">
+                    <component-tree v-bind:tree='treeData'></component-tree>
+                </div>
+
+                <!--添加部门-->
+                <div class="tree-addGroup">
+                    <icon type="plus-round"></icon><span>添加部门</span>
+                </div>
+
+                <!--系统设置-->
+                <div class="tree-setting">
+                    <icon type="gear-a"></icon><span>系统设置</span>
+                </div>
+
+                <!--离职员工-->
+                <div class="tree-employ employ-off">
+                    <div class="employ-on-block">
+                        <img class="employ-icon" src="public/images/tree-employ-off.png" width="23" height="23" alt="离职员工">
+                        <span class="employ-title">
+                        已离职员工
+                    </span>
+                        <span class="employ-count">
+                        (1)
+                    </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-body-container clearFix">
+
+
+            <div class="component-employ-leave">
+                <!--已离职员工列表  -->
+                <div class="employ-leave-table">
+                    <div class="search-result-1">
+                        <div class="search-result-1-1">
+                            <i-input v-model="value" size="large" style="min-width: 700px"></i-input>
                         </div>
-                        <i-form style="width: 360px; margin: 0 auto;" ref="formValidate" ref="formCustom" :model="formCustom" :rules="ruleCustom" :label-width="0" :show-message="showMessage">
-                        <div class="set-body">
-
-                            <div>
-                                <form-item label="" :label-width="0" prop="user">
-                                <i-input type="password" size="large" style="width: 360px;" placeholder="请输入原密码"></i-input>
-                                </form-item>
-                            </div>
-                            <div>
-                                <i-input type="password" size="large" style="width: 360px;" placeholder="请输入新密码（6至16位字母或数字）"></i-input>
-                            </div>
-                            <div>
-                                <i-input type="password" size="large" style="width: 360px;" placeholder="请输入新密码（6至16位字母或数字）"></i-input>
-                            </div>
-                            <div class="body-4">
-                                <i-button type="primary" class="" style="width: 360px;" size="large" v-on:click="modalAuth">确认修改</i-button>
-                            </div>
-
+                        <div class="search-result-1-2">
+                            <i-button type="primary" icon="ios-search">搜索</i-button>
                         </div>
-                        </i-form>
+                        <div style="clear: both"></div>
+                    </div>
+                    <!--一个卡片-->
+                    <div class="table-title">已离职员工：</div>
+                    <i-table border :columns="columns1" :data="data1" style="margin-right: 40px"></i-table>
+
+                    <div class="text-center" style="margin-top:40px;">
+                        <Page :total="200" show-total></Page>
                     </div>
 
                 </div>
             </div>
-        </card>
+
+
+        </div>
     </div>
 </div>
+
 
 <!--tree 模板-->
 <script type="html/x-template" id="component-tree">
@@ -192,73 +216,6 @@
 
 </script>
 
-<!--评价，汽泡查看、添加组件-->
-<script type="html/x-template" id="component-assess-add-tip">
-    <div class="component-assess-add-tip" v-if="data.show">
-        <poptip width="200" placement="top">
-            <i-button type="text" size="small">查看</i-button>
-            <div class="api" slot="content">
-                {{data.date}}
-            </div>
-        </poptip>
-        <poptip width="200" placement="top" v-model="visible">
-            <i-button type="text" size="small">添加</i-button>
-            <div class="api" slot="content">
-                <div>
-                    <i-input placeholder="添加"></i-input>
-                </div>
-                <div style="padding:10px 0 ;">
-                    <i-button type="text" size="small" @click="close">取消</i-button>
-                    <i-button type="primary" size="small">保存</i-button>
-                </div>
-            </div>
-        </poptip>
-    </div>
-    <div class="component-assess-add-tip" v-else>
-        <poptip width="200" placement="top" v-model="visible">
-            <i-button type="text" size="small">添加</i-button>
-            <div class="api" slot="content">
-                <div>
-                    <i-input placeholder="添加"></i-input>
-                </div>
-                <div style="padding:10px 0 ;">
-                    <i-button type="text" size="small" @click="close">取消</i-button>
-                    <i-button type="primary" size="small">保存</i-button>
-                </div>
-            </div>
-        </poptip>
-    </div>
-</script>
-
-<!--下面暂时不用-->
-<script type="html/x-template" id="component-modal-auth">
-
-    <div class="component-modal-auth">
-        <div class="modal-1">
-            <div class="add-employ-container">
-                <div class="add-employ-head">
-                    <div class="add-employ-title">
-                        <span class="e-title-1">申请获得授权</span><span class="e-title-2">/Newly Increased</span>
-                    </div>
-                </div>
-
-                <div class="add-employ-body text-center">
-                    <div style="margin-top: 66px;">
-                        <i-input placeholder="请输入身份证号" size="large" style="width: 360px;"></i-input>
-                    </div>
-                    <div style="margin-top: 44px; margin-bottom: 88px;">
-                        <i-button type="primary" size="large" style="width: 360px;">立即申请</i-button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</script>
-
-
-
 <script>
 //    tree-item component
 
@@ -274,7 +231,7 @@
  * 见名识意
  */
 
-    Vue.component('ComponentTree', {
+    Vue.component('component-tree', {
         template:'#component-tree',
         props:['tree'],
         data:function(){
@@ -285,7 +242,8 @@
                 groupName:'',
                 tempName:'',
                 // 编辑状态
-                editStatus:false}
+                editStatus:false,
+            }
         },
         computed:{
             openValue:function(){
@@ -366,13 +324,13 @@
                     this.$Modal.confirm({
                             title: '确认删除？',
                             content: '<p>确认删除后，部门下成员将一并删除！</p>',
-                            onOk: function(){
-                            return  this.$Message.info('删除成功');
+                            onOk: () => {
+                            this.$Message.info('删除成功');
                     prune(treeData.dataList,id)
                 },
-                    onCancel: function(){
+                    onCancel: () => {
                         _this.tree.title =_this.tempName;
-                        return this.$Message.info('取消操作');
+                        this.$Message.info('取消操作');
                     }
                 });
                 }
@@ -384,43 +342,6 @@
             }
         }
     })
-/**
- * 组件-添加备注
- *
- *
- */
-    Vue.component('ComponentAssessAddTip',{
-        template:'#component-assess-add-tip',
-        props:['data'],
-        data:function () {
-            return {
-                visible: false
-            }
-        },
-        methods:{
-            close:function () {
-                this.visible = false;
-            }
-        }
-    })
-/**
- * 组件-modal-授权
- *
- *
- */
-Vue.component('ComponentModalAuth',{
-    template:'#component-modal-auth',
-    data:function () {
-        return{
-
-        }
-    },
-    methods:{
-
-    }
-})
-
-
 
 
     var treeData =
@@ -527,81 +448,127 @@ Vue.component('ComponentModalAuth',{
             return {
                 value:'',
                 data:[],
+                accordionOpen:true,
                 treeData:treeData,
-
-
-
-
-                //不当在这里，属于年度总评组件内属性。
-
-
-                name:"2",//被选中Tab
-                assessInfoBase:false,//第一个tab开关状态
-                assessInfoBase2:true,//第2个tab开关状态
-                assessInfoBase3:false,//第3个tab开关状态
-                assessInfoBase4:false,//第4个tab开关状态
-                assessInfoBase5:true,//年度总评开关状态
-                assessInfoBase6:true,//基础信息编辑开关状态
-
-                percent: 80,
-                dropdown2_text:'职信链科技有限公司',
-
-//                编辑数据
-                cityList: [
+                columns1: [
                     {
-                        value: 'beijing',
-                        label: '北京市'
+                        title: '姓名',
+                        key: 'title',
+                        className:'t-columns1'
                     },
                     {
-                        value: 'shanghai',
-                        label: '上海市'
+                        title: '职位',
+                        key: 'position',
+                        className:'t-columns2'
                     },
                     {
-                        value: 'shenzhen',
-                        label: '深圳市'
+                        title: '部门',
+                        key: 'group',
+                        className:'t-columns2'
                     },
                     {
-                        value: 'hangzhou',
-                        label: '杭州市'
+                        title: '入职时间',
+                        key: 'enterTime',
+                        className:'t-columns2'
                     },
                     {
-                        value: 'nanjing',
-                        label: '南京市'
+                        title: '离职时间',
+                        key: 'outTime',
+                        className:'t-columns2'
                     },
                     {
-                        value: 'chongqing',
-                        label: '重庆市'
+                        title: '',
+                        key: 'operate',
+                        className:'t-columns2',
+                        render: (h, params) => {
+                            return h('Button', {
+                                props: {
+                                    type: 'ghost',
+                                    size: 'small'
+                                },
+                                style: {
+                                },
+                                on: {
+                                    click: () => {
+                                        alert(JSON.stringify(this.data1[params.index]))
+                                    }
+                                }
+                            }, '查看详细')
+                        }
                     }
                 ],
-                model1: '',
-                modal1:true,
-                modal2:true,
-                modal3:true,
-                modal4:true,
-                time:5,
-                formCustom:{
-                    user: '',
-                },
-                ruleCustom: {
-                    user: [
-                        { required: true, message: '请填写用户名', trigger: 'blur' }
-                    ]
-                },
-                visible:false,
-                showMessage:true,
+                data1: [
+                    {
+                        title: '庞丁畅',
+                        position: '产品经理',
+                        group:'产品',
+                        enterTime:'2017-10-10',
+                        outTime:'',
+                    },
+                    {
+                        title: '庞丁畅',
+                        position: '产品经理',
+                        group:'产品',
+                        enterTime:'2017-10-10',
+                        outTime:'',
+                    },
+                    {
+                        title: '庞丁畅',
+                        position: '产品经理',
+                        group:'产品',
+                        enterTime:'2017-10-10',
+                        outTime:'',
+                    },
+                    {
+                        title: '庞丁畅',
+                        position: 8,
+                        group:'',
+                        enterTime:'',
+                        outTime:'',
+                    },
+                    {
+                        title: '庞丁畅',
+                        position: '产品经理',
+                        group:'产品',
+                        enterTime:'2017-10-10',
+                        outTime:'',
+                    },
+                    {
+                        title: '庞丁畅',
+                        position: '产品经理',
+                        group:'产品',
+                        enterTime:'2017-10-10',
+                        outTime:'',
+                    },
+                    {
+                        title: '庞丁畅',
+                        position: '产品经理',
+                        group:'产品',
+                        enterTime:'2017-10-10',
+                        outTime:'',
+                    },
+                    {
+                        title: '庞丁畅',
+                        position: '产品经理',
+                        group:'产品',
+                        enterTime:'2017-10-10',
+                        outTime:'',
+                    }
 
+                ]
             }
         },
         mounted:function () {
-            let timeInterval = setInterval(function (_this) {
-                console.log(this.time)
-                if(this.time>0){
-                    this.time--;
-                }else{
-                    clearInterval(timeInterval)
-                }
 
-            }.bind(this),1000)
+        },
+        computed:{
+            marginLeft:function () {
+                if(!this.accordionOpen){
+                    return '-320px'
+                }else{
+                    return '0'
+                }
+            }
         },
         methods: {
             handleSearch : function(value) {
@@ -611,28 +578,12 @@ Vue.component('ComponentModalAuth',{
                     value + value + value
                 ];
             },
-
-//            属于年度总评组件
-            dropdown2:function (v) {
-                this.dropdown2_text = v;
-            },
-            show:function (index) {
-                 this.$Modal.info({
-                    title: '用户信息',
-                    content: ''
-                })
-            },
-            remove :function(index) {
-                this.data2.splice(index, 1);
-            },
-            modalAuth:function () {
-                this.modal2=!this.modal2
+            accordionToggle:function () {
+                this.accordionOpen = !this.accordionOpen;
             }
-
         }
     }).$mount('#app')
 </script>
-
 
 </body>
 </html>
