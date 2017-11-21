@@ -117,10 +117,13 @@
                                 <span class="e-title-1">修改密码</span><span class="e-title-2">/Modify password</span>
                             </div>
                         </div>
-
+                        <i-form style="width: 360px; margin: 0 auto;" ref="formValidate" ref="formCustom" :model="formCustom" :rules="ruleCustom" :label-width="0" :show-message="showMessage">
                         <div class="set-body">
+
                             <div>
+                                <form-item label="" :label-width="0" prop="user">
                                 <i-input type="password" size="large" style="width: 360px;" placeholder="请输入原密码"></i-input>
+                                </form-item>
                             </div>
                             <div>
                                 <i-input type="password" size="large" style="width: 360px;" placeholder="请输入新密码（6至16位字母或数字）"></i-input>
@@ -131,7 +134,9 @@
                             <div class="body-4">
                                 <i-button type="primary" class="" style="width: 360px;" size="large" v-on:click="modalAuth">确认修改</i-button>
                             </div>
+
                         </div>
+                        </i-form>
                     </div>
 
                 </div>
@@ -280,8 +285,7 @@
                 groupName:'',
                 tempName:'',
                 // 编辑状态
-                editStatus:false,
-            }
+                editStatus:false}
         },
         computed:{
             openValue:function(){
@@ -574,7 +578,18 @@ Vue.component('ComponentModalAuth',{
                 modal2:true,
                 modal3:true,
                 modal4:true,
-                time:5
+                time:5,
+                formCustom:{
+                    user: '',
+                },
+                ruleCustom: {
+                    user: [
+                        { required: true, message: '请填写用户名', trigger: 'blur' }
+                    ]
+                },
+                visible:false,
+                showMessage:true,
+
             }
         },
         mounted:function () {

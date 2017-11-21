@@ -473,7 +473,7 @@
                                         </div>
                                         <div v-show="assessInfoBase" class="edit-assess-info-base">
                                             <Card style="width: 100%;">
-                                                <i-form ref="formValidate" ref="formCustom" :model="formCustom" :rules="ruleCustom" :label-width="0" :show-message="showMessage">
+                                                <i-form ref="formValidate" :model="formCustom" :rules="ruleCustom" :label-width="0" :show-message="showMessage">
                                                 <div class="edit-1">
                                                     <Icon type="android-alert" style="color:#ffbf00; font-size: 18px;margin-right: 8px;"></Icon>您只需填写员工变更的信息，未变更的不必填写。例如从总监晋升为总经理，您只需在下面的职位栏输入“总经理”，然后保存即可
                                                 </div>
@@ -585,10 +585,10 @@
                                                     <div class="edit-info">
                                                         <div>审理结果：</div>
                                                         <div>
-                                                            <form-item label="" :label-width="0" prop="user">
-                                                            <i-select v-model="model1" class="form-el">
+                                                            <form-item label="" :label-width="0" prop="user"><i-select v-model="model1" class="form-el">
                                                                 <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
                                                             </i-select>
+
                                                             </form-item>
                                                             <div>
 

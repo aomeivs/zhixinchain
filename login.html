@@ -54,25 +54,40 @@
             <div class="login-3-2 bottomLine">
                 <tooltip :disabled="visible.user" placement="right" :always='true'>
                 <input placeholder="请输入邮箱" id="login-company-input1">
-                    <div slot="content">
-                        <p style="max-width: 100px; word-wrap: break-word; white-space: normal;">请输入邮箱</p>
-                    </div>
+                <div slot="content">
+                    <p style="max-width: 100px; word-wrap: break-word; white-space: normal;">请输入邮箱</p>
+                </div>
                 </tooltip>
             </div>
             <div class="sce_line" id="login-company-sce_line-1"></div>
             <div class="login-3-2 bottomLine">
+                <tooltip :disabled="visible.upwd" placement="right" :always='true'>
                 <input placeholder="请输入密码"  id="login-company-input2" type="password">
+                <div slot="content">
+                    <p style="max-width: 100px; word-wrap: break-word; white-space: normal;">请输入密码</p>
+                </div>
+                </tooltip>
             </div>
             <div class="sce_line" id="login-company-sce_line-2"></div>
         </div>
 
         <div class="login-person" style="display: none">
             <div class="login-3-2 bottomLine">
+                <tooltip :disabled="visible.cardID" placement="right" :always='true'>
                 <input placeholder="请输入身份证号码" id="login-person-input1">
+                <div slot="content">
+                    <p style="max-width: 100px; word-wrap: break-word; white-space: normal;">请输入身份证号码</p>
+                </div>
+                </tooltip>
             </div>
             <div class="sce_line" id="login-person-sce_line1"></div>
             <div class="login-3-2 bottomLine">
+                <tooltip :disabled="visible.cpwd" placement="right" :always='true'>
                 <input placeholder="请输入密码" id="login-person-input2" type="password">
+                <div slot="content">
+                    <p style="max-width: 100px; word-wrap: break-word; white-space: normal;">请输入密码</p>
+                </div>
+                </tooltip>
             </div>
             <div class="sce_line" id="login-person-sce_line2"></div>
         </div>
@@ -81,7 +96,7 @@
         <span class="span1 login4-active" id="zhuce-now">立即注册</span>
         <span class="span2" id="getBackMsg">找回密码</span>
     </div>
-    <div class="login-5">登录</div>
+    <div class="login-5" @click="login(type)">登录</div>
 
 </div>
 <script>
@@ -91,8 +106,17 @@
         data:function () {
             return {
                 visible:{
-                    user:false
-                }
+                    user:true,
+                    upwd:true,
+                    cardID:true,
+                    cpwd:true
+                },
+                type:1
+            }
+        },
+        methods:{
+            login(type){
+                this.visible.user=false
             }
         },
         mounted:function () {
