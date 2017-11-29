@@ -23,7 +23,7 @@
                 <img src="public/images/index/logo.png">
             </div>
             <div class="floatLeft-99 index-lt-1-1-2">
-                <span style="color: #ff500a;">购买</span>
+                <span style="color: #ff500a;" id="showBuyContent2">购买</span>
                 <span>订单查询</span>
             </div>
             <div class="floatLeft-99 index-lt-1-1-3">
@@ -79,9 +79,168 @@
     </div>
 </div>
 <div class="component-modal-mask mask-buy">
+    <div  class="upZheGai" style="display: none">
+        <div class="zhegaiContent" >
+            <div class="zhegaiContent-close" style="position: relative">
+                <img src="public/images/index/Combined.png" id="closeBuyContent" style="position: absolute; right: 19px; top: 19px; cursor: pointer;">
+            </div>
+            <div class="zhegaiContent-title">
+                <p>购买</p>
+            </div>
+            <div class="zhegaiContent-buyChoice" id="zhegaiContent-buyChoice">
+                <div class="zhegaiContent-buyChoice-1 one">
+                    <div class="zhegaiContent-buyChoice-1-1"><span>规格选择：</span></div>
+                    <div class="zhegaiContent-buyChoice-bnt" style="margin-left: 20px">
+                        <div class="zhegaiContent-buyChoice-bnt-1 buyChoice-bnt-action" id="editionSelectedA" data-edit-num="10" data-edit-price="1490">A版</div>
+                        <span class="zhegaiContent-buyChoice-bnt-2" id="isShowTextA">支持员工数<span id="edition_A">10</span>人以下</span>
+                    </div>
+                    <div class="zhegaiContent-buyChoice-bnt">
+                        <div class="zhegaiContent-buyChoice-bnt-1"  id="editionSelectedB" data-edit-num="20" data-edit-price="2990">B版</div>
+                        <span class="zhegaiContent-buyChoice-bnt-2 textHidden_lt" id="isShowTextB">支持员工数<span class="num" id="edition_B" >20</span>人以下</span>
+                    </div>
+                    <div class="zhegaiContent-buyChoice-bnt">
+                        <div class="zhegaiContent-buyChoice-bnt-1" id="editionSelectedC" data-edit-num="40" data-edit-price="5990">C版</div>
+                        <span class="zhegaiContent-buyChoice-bnt-2 textHidden_lt" id="isShowTextC">支持员工数<span id="edition_C">40</span>人以下</span>
+                    </div>
+                    <div class="clearFloat"></div>
+                </div>
 
+
+                <div class="zhegaiContent-buyChoice-1">
+                    <div class="zhegaiContent-buyChoice-1-1"><span></span></div>
+                    <div class="zhegaiContent-buyChoice-bnt" style="margin-left: 20px">
+                        <div class="zhegaiContent-buyChoice-bnt-1" id="editionSelectedD" data-edit-num="60" data-edit-price="9990">D版</div>
+                        <span class="zhegaiContent-buyChoice-bnt-2 textHidden_lt" id="isShowTextD">支持员工数<span id="edition_D">60</span>人以下</span>
+                    </div>
+                    <div class="zhegaiContent-buyChoice-bnt">
+                        <div class="zhegaiContent-buyChoice-bnt-1" id="editionSelectedE" data-edit-num="100" data-edit-price="19990">E版</div>
+                        <span class="zhegaiContent-buyChoice-bnt-2 textHidden_lt" id="isShowTextE">支持员工数<span id="edition_E">100</span>人以下</span>
+                    </div>
+
+                    <div class="zhegaiContent-buyChoice-bnt">
+                        <div class="zhegaiContent-buyChoice-bnt-1" id="editionSelectedF" data-edit-num="100" data-edit-price="20000">F版</div>
+                        <span class="zhegaiContent-buyChoice-bnt-2 textHidden_lt" id="isShowTextF">支持员工数<span id="edition_F">100</span>人以上</span>
+                    </div>
+                    <div class="clearFloat"></div>
+                </div>
+
+
+                <div class="zhegaiContent-buyChoice-1">
+                    <div class="zhegaiContent-buyChoice-1-1" style="line-height: 26px"><span>额外员工数量：</span></div>
+                    <div class="zhegaiContent-buyChoice-bnt" style="margin-left: 20px">
+                        <div class="zhegaiContent-buyChoice-bnt-1">
+                            <input type="number" placeholder="请输入大于或者等于5的整数"  id="addNum_input" style="border-style: hidden;height: 26px;width: 177px;outline: none;">
+                        </div>
+                    </div>
+                    <div class="clearFloat"></div>
+                </div>
+
+                <div class="zhegaiContent-buyChoice-2">
+                    <img src="public/images/index/tishi.png">
+                    <span>如果该版本支持的最高员工数不能满足需求，您可以额外增加支持员工数。5人起增加，每增加一人，服务费用增加<span id="prePrice">300</span>元</span>
+                </div>
+                <div class="zhegaiContent-buyChoice-total">
+                    <span>您当前已选择</span>
+                    <span class="zhegaiContent-buyChoice-fontYellow"><span id="fuwu_name">A版</span>服务</span>，额外增加员工
+                    <span class="zhegaiContent-buyChoice-fontYellow" id="add_num">0</span>人，共支持员工数
+                    <span class="zhegaiContent-buyChoice-fontYellow" id="total_num">10</span>
+                </div>
+                <div class="zhegaiContent-buyChoice-3">
+                    <div class="zhegaiContent-buyChoice-1" style=" padding-top: 2px;">
+                        <div class="zhegaiContent-buyChoice-1-1">
+                            <span>服务年费：</span>
+                        </div>
+                        <div class="zhegaiContent-buyChoice-bnt" style="margin-left: 20px">
+                            <span class="" style="color: black;" id="total_yearPrice">596元/年</span>
+                            <span class="font-gary-samall">（</span>
+                            <span  class="font-gary-samall" style="text-decoration: line-through" ><span id="price_before">1490</span>元/年</span>
+                            <span class="font-gary-samall">）</span>
+                        </div>
+                        <div class="clearFloat"></div>
+                    </div>
+
+                    <div class="zhegaiContent-buyChoice-1" style=" padding-top: 0px; padding-bottom: 2px;">
+                        <div class="zhegaiContent-buyChoice-1-1">
+                            <span>预付款：</span>
+                        </div>
+                        <div class="zhegaiContent-buyChoice-bnt" style="margin-left: 20px">
+                            <span class="" style="color: #fb9e06;" id="payment_year">179元</span>
+                            <span class="zhegaiContent-buyChoice-fontblue" style="font-size: 13px">（您需预支付总价的30%，剩下的70%于2017年12月25日产品上线后支付）</span>
+                        </div>
+                        <div class="clearFloat"></div>
+                    </div>
+                    <div class="zhegaiContent-buyChoice-1" style=" padding-top: 0px;">
+                        <div class="zhegaiContent-buyChoice-1-1" style=" height: 26px;line-height: 26px;"><span>代金劵：</span></div>
+                        <div class="zhegaiContent-buyChoice-bnt" style="margin-left: 20px ;line-height: 26px;">
+                            <div class="zhegaiContent-buyChoice-bnt-1" style="line-height: 26px;border-color: #c2c3c4;">
+                                <input type="text" placeholder="请输入代金券码"  id="daijin_input" style="border-style: hidden;height: 26px;width: 177px;outline: none;">
+                            </div>
+                        </div>
+                        <div class="zhegaiContent-buyChoice-3-2">
+                            <span>- </span><span id="daijin_sum">0</span><span>元</span>
+                        </div>
+                        <div class="clearFloat"></div>
+                    </div>
+                    <div class="zhegaiContent-buyChoice-1" style=" padding-top: 0px;">
+                        <div class="zhegaiContent-buyChoice-1-1">
+                            <span>应付总额：</span>
+                        </div>
+                        <div class="zhegaiContent-buyChoice-bnt" style="margin-left: 20px">
+                            <span class="" style="color: #e81212;font-size: 21px;"><span id="endpPay">596</span>元</span>
+                        </div>
+                        <div class="clearFloat"></div>
+                    </div>
+                    <div class="clearFloat"></div>
+                </div>
+
+                <div class="zhegaiContent-buyChoice-4">
+                    <div><img src="public/images/index/xinxi.png"></div>
+                </div>
+
+                <div class="zhegaiContent-buyChoice-5">
+                    <div class="zhegaiContent-buyChoice-5-1">
+                        <div class="zhegaiContent-buyChoice-1-1"><span>联系人：</span></div>
+                        <div class="zhegaiContent-buyChoice-bnt" style="margin-left: 20px">
+                            <div class="zhegaiContent-buyChoice-bnt-1">
+                                <input type="text" placeholder="姓名" style="border-style: hidden;height: 32px;width: 236px;outline: none;">
+                            </div>
+                        </div>
+
+                        <div class="zhegaiContent-buyChoice-1-1"><span>手机号：</span></div>
+                        <div class="zhegaiContent-buyChoice-bnt" style="margin-left: 20px">
+                            <div class="zhegaiContent-buyChoice-bnt-1">
+                                <input type="text" placeholder="手机号" id="phoneNum" style="border-style: hidden;height: 32px;width: 236px;outline: none;">
+                            </div>
+                        </div>
+                        <div class="clearFloat"></div>
+                    </div>
+
+                    <div class="zhegaiContent-buyChoice-5-1">
+                        <div class="zhegaiContent-buyChoice-1-1"><span>企业名称：</span></div>
+                        <div class="zhegaiContent-buyChoice-bnt" style="margin-left: 20px">
+                            <div class="zhegaiContent-buyChoice-bnt-1">
+                                <input type="text" placeholder="企业名称" style="border-style: hidden;height: 32px;width: 236px;outline: none;">
+                            </div>
+                        </div>
+                        <div class="clearFloat"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="zhegaiContent-buyChoice-6">
+                    <div class="zhegaiContent-buyChoice-6-1" style=" height: 21px;"></div>
+                    <div class="zhegaiContent-buyChoice-6-2">立即支付</div>
+                    <span>全国客服电话：400-6190828</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 </div>
 <div id="outdated"></div>
+
 <script>
     //插件函数，将其放入 DOM 加载完毕后的函数中
     outdatedBrowser({
@@ -90,6 +249,303 @@
         lowerThan: 'transform',
         languagePath: 'public/lang/zh-cn.html'
     })
+</script>
+
+
+<script>
+    var inputNum=0;
+
+    $('#showBuyContent2').on('click',function () {
+
+        $('.upZheGai').show();
+        $('body').css("overflow","hidden")
+        if(!$.placeholderInit({replaceAll:false})){
+            $('.upZheGai input[placeholder]').each(function () {
+                var $el = $(this);
+                $el.placeholder({className:'IE9-upZheGai'})
+            })
+        }
+    })
+
+    $('#closeBuyContent').on('click',function(){
+        $('.IE9-upZheGai').remove()
+
+        $('.upZheGai').hide();
+        $('body').css("overflow","inherit")
+    })
+
+    $('#editionSelectedB').on('click',function () {
+        $('#editionSelectedB').addClass("buyChoice-bnt-action");
+        $('#editionSelectedA').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedC').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedD').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedE').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedF').removeClass("buyChoice-bnt-action");
+        $('#isShowTextB').show();
+        $('#isShowTextA').hide();
+        $('#isShowTextC').hide();
+        $('#isShowTextD').hide();
+        $('#isShowTextE').hide();
+        $('#isShowTextF').hide();
+        //更改增加单个员工的价格
+        $('#prePrice').text(300);
+        // 赋值选择的版本
+        var edition_nameText=$('#editionSelectedB').text();
+        $('#fuwu_name').text(edition_nameText);
+        //清空输入框内容
+        $('#addNum_input').val("")
+        inputNum=0;
+        $('#add_num').text(0)
+        //赋值版本服务人数
+        var  edition_wufuNum=$('#edition_B').text();
+        $('#total_num').text(Number(inputNum)+Number(edition_wufuNum));
+        //赋值价格
+        $('#price_before').text($(this).attr('data-edit-price'))
+        $.getPrice(300);
+
+    })
+    $('#editionSelectedC').on('click',function () {
+        $('#editionSelectedC').addClass("buyChoice-bnt-action");
+        $('#editionSelectedA').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedB').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedD').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedE').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedF').removeClass("buyChoice-bnt-action");
+        $('#isShowTextC').show()
+        $('#isShowTextA').hide();
+        $('#isShowTextB').hide();
+        $('#isShowTextD').hide();
+        $('#isShowTextE').hide();
+        $('#isShowTextF').hide();
+        //更改增加单个员工的价格
+        $('#prePrice').text(300);
+        // 赋值选择的版本
+        var edition_nameText=$('#editionSelectedC').text();
+        $('#fuwu_name').text(edition_nameText);
+        //清空输入框内容
+        $('#addNum_input').val("")
+        inputNum=0;
+        $('#add_num').text(0)
+        //赋值版本服务人数
+        var  edition_wufuNum=$('#edition_C').text();
+        $('#total_num').text(Number(inputNum)+Number(edition_wufuNum));
+        //赋值价格
+        $('#price_before').text($(this).attr('data-edit-price'))
+        $.getPrice(300);
+    })
+    $('#editionSelectedD').on('click',function () {
+        $('#editionSelectedD').addClass("buyChoice-bnt-action");
+        $('#editionSelectedA').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedB').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedC').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedE').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedF').removeClass("buyChoice-bnt-action");
+        $('#isShowTextD').show();
+        $('#isShowTextA').hide();
+        $('#isShowTextB').hide();
+        $('#isShowTextC').hide();
+        $('#isShowTextE').hide();
+        $('#isShowTextF').hide();
+        //更改增加单个员工的价格
+        $('#prePrice').text(300);
+        // 赋值选择的版本
+        var edition_nameText=$('#editionSelectedD').text();
+        $('#fuwu_name').text(edition_nameText);
+        //清空输入框内容
+        $('#addNum_input').val("")
+        inputNum=0;
+        $('#add_num').text(0)
+        //赋值版本服务人数
+        var  edition_wufuNum=$('#edition_D').text();
+        $('#total_num').text(Number(inputNum)+Number(edition_wufuNum));
+        //赋值价格0
+        $('#price_before').text($(this).attr('data-edit-price'))
+        $.getPrice(300);
+    })
+    $('#editionSelectedE').on('click',function () {
+        $('#editionSelectedE').addClass("buyChoice-bnt-action");
+        $('#editionSelectedA').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedB').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedD').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedC').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedF').removeClass("buyChoice-bnt-action");
+        $('#isShowTextE').show()
+        $('#isShowTextA').hide();
+        $('#isShowTextB').hide();
+        $('#isShowTextD').hide();
+        $('#isShowTextC').hide();
+        $('#isShowTextF').hide();
+        //更改增加单个员工的价格
+        $('#prePrice').text(300);
+        // 赋值选择的版本
+        var edition_nameText=$('#editionSelectedE').text();
+        $('#fuwu_name').text(edition_nameText);
+        //清空输入框内容
+        $('#addNum_input').val("")
+        inputNum=0;
+        $('#add_num').text(0)
+        //赋值版本服务人数
+        var  edition_wufuNum=$('#edition_E').text();
+        $('#total_num').text(Number(inputNum)+Number(edition_wufuNum));
+        //赋值价格
+        $('#price_before').text($(this).attr('data-edit-price'))
+        $.getPrice(300);
+    })
+
+    $('#editionSelectedF').on('click',function () {
+        $('#editionSelectedF').addClass("buyChoice-bnt-action");
+        $('#editionSelectedE').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedA').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedB').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedD').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedC').removeClass("buyChoice-bnt-action");
+        $('#isShowTextF').show()
+        $('#isShowTextE').hide()
+        $('#isShowTextA').hide();
+        $('#isShowTextB').hide();
+        $('#isShowTextD').hide();
+        $('#isShowTextC').hide();
+        //更改增加单个员工的价格
+        $('#prePrice').text(200);
+        // 赋值选择的版本
+        var edition_nameText=$('#editionSelectedF').text();
+        $('#fuwu_name').text(edition_nameText);
+        //清空输入框内容
+        $('#addNum_input').val("")
+        inputNum=0;
+        $('#add_num').text(0)
+        //赋值版本服务人数
+        var  edition_wufuNum=$('#edition_F').text();
+        $('#total_num').text(Number(inputNum)+Number(edition_wufuNum));
+        //赋值价格
+        $('#price_before').text($(this).attr('data-edit-price'))
+        $.getPrice(200);
+    })
+    $('#editionSelectedA').on('click',function () {
+        $('#editionSelectedA').addClass("buyChoice-bnt-action");
+        $('#editionSelectedE').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedB').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedD').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedC').removeClass("buyChoice-bnt-action");
+        $('#editionSelectedF').removeClass("buyChoice-bnt-action");
+        $('#isShowTextA').show()
+        $('#isShowTextE').hide();
+        $('#isShowTextB').hide();
+        $('#isShowTextD').hide();
+        $('#isShowTextC').hide();
+        $('#isShowTextF').hide();
+        //更改增加单个员工的价格
+        $('#prePrice').text(300);
+        // 赋值选择的版本
+        var edition_nameText=$('#editionSelectedA').text();
+        $('#fuwu_name').text(edition_nameText);
+        //清空输入框内容
+        $('#addNum_input').val("")
+        inputNum=0;
+        $('#add_num').text(0)
+        //赋值版本服务人数
+        var  edition_wufuNum=$('#edition_A').text();
+        $('#total_num').text(Number(inputNum)+Number(edition_wufuNum));
+        //赋值价格
+        $('#price_before').text($(this).attr('data-edit-price'))
+        $.getPrice(300);
+    })
+
+    $('#addNum_input').on('change',function () {
+        var addNumInput=$('#addNum_input').val();
+
+        if(addNumInput.length!=0 && addNumInput!=""){
+            //输入验证
+            //验证是否为数字
+            var regu = /^[0-9]+\.?[0-9]*$/;
+            if ( regu.test(addNumInput)){
+                //验证输入是否为5的倍数
+                if(addNumInput>=5){
+                    inputNum=addNumInput;
+                    $('#add_num').text(addNumInput);
+                    var num = $('.buyChoice-bnt-action').attr('data-edit-num');
+                    $('#total_num').text(Number(addNumInput)+Number(num));
+                    //判断是否为F版
+                    if( $('#fuwu_name').text()=="F版"){
+                        $.getPrice(200);
+                    }else{
+                        $.getPrice(300);
+                    }
+                }else{
+                    mizhu.alert('温馨提示', '请输入大于或者等于5的整数');
+                    //清空输入框内容
+                    $('#addNum_input').val("")
+                    inputNum=0;
+                    $('#add_num').text(0)
+                }
+            }else{
+                mizhu.alert('温馨提示', '请输入大于或者等于5的整数');
+//                alert("请输入大于或者等于5的整数");
+                //清空输入框内容
+                $('#addNum_input').val("")
+                inputNum=0;
+                $('#add_num').text(0)
+            }
+        }else {
+            inputNum=0;
+            $('#add_num').text(0);
+            var num = $('.buyChoice-bnt-action').attr('data-edit-num');
+            $('#total_num').text(Number(addNumInput)+Number(num));
+            $.getPrice(300);
+        }
+    })
+    //验证手机号码
+    $('#phoneNum').on('change',function () {
+        var phone=$('#phoneNum').val();
+        var pattern = /^1[34578]\d{9}$/;
+        if (!pattern.test(phone)){
+//            alert("请输入正确的手机号码");
+            mizhu.alert('温馨提示', '请输入正确的手机号码');
+            $('#phoneNum').val("")
+        }
+    })
+
+    $('#daijin_input').on('change',function () {
+        var pre_price=$('#prePrice').text();
+        $.getPrice(pre_price);
+    })
+
+    $.extend({getPrice:function(unit_price){
+        //计算价格函数
+        var priceBrfore=$('#price_before').text();
+        var addNum=$('#add_num').text();
+        //服务总价
+        var editionTotalPrice=(priceBrfore*0.4+addNum*unit_price);
+        $('#total_yearPrice').text(Math.ceil(editionTotalPrice))
+        //首付款
+        var payment=Math.ceil(editionTotalPrice*0.3);
+        $('#payment_year').text(payment)
+        //验证 代金券码是否正确
+        var daijinStatus=false;
+        var daijinText=$('#daijin_input').val();
+        if(daijinText==""){
+            daijinStatus=false;
+        }else {
+            //验证券码是否正确
+            if(daijinText=="abc"){
+                //正确
+                daijinStatus=true;
+                $('#daijin_sum').text(100);
+            }else{
+                //错误
+                mizhu.alert('温馨提示', '输入代金劵码有误，请重新输入');
+                $('#daijin_input').val("")
+                $('#daijin_sum').text(0);
+            }
+        }
+        //最终支付
+        if (daijinStatus){
+            $('#endpPay').text(payment-100)
+        }else{
+            $('#endpPay').text(payment)
+        }
+
+    }});
 </script>
 </body>
 </html>
