@@ -11,6 +11,8 @@
     <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
     <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="http://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="public/css/outdatedBrowser.min.css">
+    <script src="public/js/outdatedBrowser.min.js"></script>
     <link rel="stylesheet" href="public/css/app.css">
 </head>
 <body>
@@ -76,6 +78,18 @@
 
     </div>
 </div>
+<div class="component-modal-mask mask-buy">
 
+</div>
+<div id="outdated"></div>
+<script>
+    //插件函数，将其放入 DOM 加载完毕后的函数中
+    outdatedBrowser({
+        bgColor: '#f25648',
+        color: '#ffffff',
+        lowerThan: 'transform',
+        languagePath: 'public/lang/zh-cn.html'
+    })
+</script>
 </body>
 </html>
