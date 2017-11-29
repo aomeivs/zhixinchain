@@ -198,6 +198,12 @@
 
 }
 
+.component-modal-mask{
+  &.mask-buy{
+    @extend %component-modal-buy;
+  }
+}
+
 html,body{
   width: 100%;
   height: 100%;
