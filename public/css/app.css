@@ -803,6 +803,14 @@ html .wrap .c-body .component-setting .setting-user-container, body .wrap .c-bod
       margin-top: 20px;
       margin-bottom: 30px; }
 
+.component-modal-mask.mask-buy {
+  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0; }
+
 html .wrap .c-header .c-head-menu .head-menu-ul .head-message-badge, body .wrap .c-header .c-head-menu .head-menu-ul .head-message-badge {
   border-radius: 6px;
   display: inline-block;
