@@ -1,0 +1,739 @@
+@charset "utf-8";
+//  徽标 组件化
+%component-badge{
+  background: #F1F1F1;
+  border-radius: 3px;
+  color: #000000;
+  padding: 8px 12px;
+  font-size: 18px;
+  &.small{
+    font-size: 14px;
+  }
+}
+%badge{
+  border-radius: 6px;
+  display: inline-block;
+  background-color: transparent;
+}
+%ivu-btn-ghost {
+  width: 220px;
+  height: 52px;
+  font-size: 16px;
+  &.active{
+    color: #57a3f3;
+    background-color: transparent;
+    border-color: #57a3f3;
+  }
+}
+
+
+.addGroup-custom-tips {
+  display: block;
+  .ivu-poptip-rel{
+    display: block;
+  }
+}
+//form-item去除mb
+.ivu-form-item{
+  margin-bottom: 0;
+
+}
+//tips
+.ivu-tooltip-popper[x-placement^=right] .ivu-tooltip-arrow {
+  left: 3px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: rgba(255, 255, 255, 0.9);
+}
+.ivu-tooltip-inner {
+  max-width: 250px;
+  min-height: 34px;
+  padding: 8px 12px;
+  color: #0a0a0a;
+  text-align: left;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  box-shadow: -4px 1px 15px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+
+//input:error
+.form-validateError .ivu-input {
+  border-color: #f53224;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
+}
+
+.form-validateError .ivu-select-selection {
+  border-color: #f53224;
+  outline: 0;
+  box-shadow: 0 0 0 2px rgba(255, 87, 34, 0.2);
+}
+
+
+
+.component-assess-add-tip{
+  .ivu-btn{
+    font-size: 14px;
+
+  }
+}
+
+.component-modal-auth{
+  .modal-1{
+    .add-employ-container {
+      .add-employ-head {
+        text-align: center;
+        margin-top: 50px;
+        .add-employ-title {
+          color: #1c2438;
+          .e-title-1 {
+            font-size: 40px;
+          }
+          .e-title-2 {
+            font-size: 20px;
+          }
+
+        }
+      }
+      .add-employ-body {
+        .body-1{
+          margin-top: 44px;
+          font-size: 14px;
+        }
+        .body-2{
+          margin-top: 44px; margin-bottom: 88px;
+        }
+      }
+    }
+  }
+  .modal-2{
+    .add-employ-container {
+      .add-employ-head {
+        text-align: center;
+        margin-top: 50px;
+        .add-employ-title {
+          color: #1c2438;
+          .e-title-1 {
+            font-size: 80px;
+            color: #15a8ff;
+          }
+          .e-title-2 {
+            font-size: 30px;
+          }
+
+        }
+      }
+      .add-employ-body {
+
+        .body-1{
+          margin-top: 44px;
+          font-size: 14px;
+        }
+        .body-2{
+          margin-top: 44px; margin-bottom: 88px;
+        }
+      }
+    }
+  }
+
+  .modal-3{
+    .add-employ-container {
+      .add-employ-head {
+        text-align: center;
+        margin-top: 50px;
+        .add-employ-title {
+          color: #1c2438;
+          .e-title-1 {
+            font-size: 80px;
+            color: #ffb242;
+          }
+          .e-title-2 {
+            font-size: 30px;
+          }
+
+        }
+      }
+      .add-employ-body {
+
+        .body-1{
+          margin-top: 44px;
+          font-size: 14px;
+        }
+        .body-2{
+          margin-top: 30px; margin-bottom: 88px;
+        }
+        .body-3{
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+
+  .modal-4{
+    .add-employ-container {
+      .add-employ-head {
+        text-align: center;
+        margin-top: 50px;
+        .add-employ-title {
+          color: #1c2438;
+          .e-title-1 {
+            font-size: 40px;
+          }
+          .e-title-2 {
+            font-size: 20px;
+          }
+
+        }
+      }
+      .add-employ-body {
+        .body-1{
+          width: 80%;
+          margin: 44px auto 80px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  font-family: "Hiragino Sans GB","Microsoft Yahei",SimSun,Arial,"Helvetica Neue",Helvetica;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+
+  ul,li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  img{
+    vertical-align: middle;
+  }
+  .left{
+    float: left;
+  }
+  .right{
+    float: right;
+  }
+  .clearFix:after{
+    content: ' ';
+    display: block;
+    clear: both;
+  }
+  .overflow{
+    overflow: hidden;
+  }
+  .text-center{
+    text-align: center;
+  }
+  .text-left{
+    text-align: left;
+  }
+  .text-right{
+    text-align: right;
+  }
+
+  .wrap{
+    width: 100%;
+    height: 100%;
+    min-width: 1350px;
+    /*公共头,菜单,搜索,退出,logo,*/
+    .c-header{
+      background-color: #1B7CE1;
+      background-image: linear-gradient(126deg, #1B7CE1 0%, #23A2FE 100%);
+      height: 80px;
+      .c-head-logo{
+        float: left;
+        padding-top: 12px;
+        padding-left: 36px;
+      }
+      .c-head-menu{
+        color: #ffffff;
+        float: right;
+        .head-menu-ul{
+          li{
+            float: left;
+            height: 80px;
+            line-height: 80px;
+            margin-right: 84px;
+            vertical-align: middle;
+            a{
+              color: #ffffff;
+            }
+            .c-head-user{
+              &>div{
+                float: left;
+              }
+              .user-photo{
+                padding-right: 40px;
+                img{
+                  width: 39px;
+                  height: 39px;
+                  border-radius: 50%;
+                }
+              }
+              .user-logOut{
+                padding-left: 40px;
+              }
+            }
+          }
+          .head-message-badge{
+            @extend %badge;
+          }
+        }
+      }
+    }
+    /*body,left-tree,right-content*/
+    //c-body container下的
+    .c-body{
+      height: 100%;
+      position: relative;
+
+      .c-accordion{
+        text-align: center;
+        font-size: 12px;
+        position: absolute;
+        width: 12px;
+        height: 100px;
+        line-height: 100px;
+        cursor: pointer;
+        top: 240px;
+        left: (30+320)+px;
+
+        background: #F1F1F1;
+        border: 1px solid #EBEBEB;
+        box-shadow: 0 2px 11px 0 rgba(221,221,221,0.50);
+        border-radius: 100px;
+
+        .icon-c-accordion{
+          transform: rotate(0);
+          transition: all 0.2s;
+          &.active{
+            transform: rotate(180deg);
+            transition: all 0.2s;
+          }
+
+        }
+      }
+      .c-body-left{
+        height: 100%;
+        width: 320px;
+        margin-bottom: -10000px;
+        padding-bottom: 10000px;
+        overflow: hidden;
+        background: #F5F7F9;
+
+        .body-left-search{
+          text-align: center;
+          padding: 16px 0;
+          .ivu-auto-complete{
+            text-align: left;
+          }
+        }
+        .body-left-CName{
+          background-color: #1B7CE1;
+          background-image: linear-gradient(126deg, #1B7CE1 0%, #23A2FE 100%);
+          height: 64px;
+          line-height: 64px;
+          text-align: center;
+          font-size: 20px;
+          color: #ffffff;
+        }
+        .left-body-container{
+          margin-left: 50px;
+          //tree在、离职
+          .tree-employ{
+            margin-left: 10px;
+            margin-top: 8px;
+            %employ-on-block{
+              height: 48px;
+              line-height: 48px;
+              .employ-icon{
+                margin-top: -4px;
+              }
+              .employ-title{
+                margin-left: 20px;
+                display: inline-block;
+                min-width: 100px;
+              }
+              .employ-count{
+                margin-left: 20px;
+              }
+            }
+            &.employ-on{
+              .employ-on-block{
+                @extend %employ-on-block;
+              }
+              color: #298cff;
+              font-weight: bold;
+            }
+            &.employ-off{
+              .employ-on-block{
+                @extend %employ-on-block;
+              }
+              color: #4A4A4A;
+              font-weight: bold;
+            }
+          }
+          //树-组件
+          .component-tree{
+            @extend %component-tree;
+          }
+        //  添加部门
+          .tree-addGroup,.tree-setting{
+            width: 230px;
+            height: 48px;
+            line-height: 48px;
+            border-radius: 24px;
+            border:1px solid #298CFF;
+            color: #298CFF;
+            text-align: center;
+            margin-top: 28px;
+            margin-bottom: 18px;
+            span{
+              margin-left:8px;
+            }
+            &.active{
+              background: #298CFF;
+              color: #ffffff;
+            }
+          }
+        }
+      }
+      .c-body-container{
+        margin-left: 320px;
+        height: 100%;
+        .component-dashboard{
+          @extend %component-dashboard;
+        }
+
+        .component-employ{
+          @extend %component-employ
+        }
+        .component-employ-add{
+          @extend %component-employ-add;
+        }
+      }
+
+      //c-body下的
+      .component-setting{
+        @extend %component-setting
+      }
+      .component-employ-info-single{
+        width: 1320px;
+        margin: 40px auto 40px;
+        .employ-info-single{
+            @extend %component-employ;
+            //重写employ-container
+            .employ-container{
+              padding: 0;
+              width: 1200px;
+              margin: 0 auto;
+              .assess-info{
+                .assess-tab{
+                  padding-top: 40px;
+                }
+              }
+            }
+        }
+        .employ-leave{
+          position: relative;
+          margin-top: 80px;
+          .leave-icon{
+            position: absolute;
+            z-index: 1;
+            top: -60px;
+            left: 50px;
+          }
+
+          .leave-date{
+            background: #f7f7f7;
+            padding: 16px 24px;
+            width: 230px;
+            text-align: right;
+          }
+        }
+      }
+      .component-account{
+        .tabs-account{
+          &>.ivu-tabs-bar{
+            margin-bottom: 0;
+            border-bottom:none;
+            .ivu-tabs-nav-container{
+              height:auto;
+              .ivu-tabs-tab{
+                height: 80px;
+                width:220px;
+                padding-top: 26px;
+                text-align: center;
+                font-size: 20px;
+                background: #ffffff;
+              }
+              .ivu-tabs-tab-active{
+                padding-bottom: 5px;
+                background: #2d8cf0;
+                transform: translateZ(0);
+                border-color: #2d8cf0;
+                color: #fff;
+              }
+            }
+
+          }
+        }
+        width: 1320px;
+        margin: 40px auto 40px;
+        .employ-info-single{
+          @extend %component-employ;
+          //重写employ-container
+          .employ-container{
+            padding: 0;
+            width: 1200px;
+            margin: 0 auto;
+            .assess-info{
+
+              .assess-tab{
+                padding-top: 40px;
+              }
+              .assess-info-month{
+
+                .month-table-2{
+                  width: 1000px;
+                }
+
+                .month-table-3{
+                }
+
+              }
+            }
+          }
+          .component-account-searchResult{
+            @extend %component-account-searchResult;
+
+          }
+        }
+        .employ-leave{
+          position: relative;
+          margin-top: 80px;
+          .leave-icon{
+            position: absolute;
+            z-index: 1;
+            top: -60px;
+            left: 50px;
+          }
+
+          .leave-date{
+            background: #f7f7f7;
+            padding: 16px 24px;
+            width: 230px;
+            text-align: right;
+          }
+        }
+      }
+
+      .component-employ-leave{
+        padding-bottom: 40px;
+        .employ-leave-table{
+          padding-top: 60px;
+          padding-left: 80px;
+          .search-result-1{
+            width: 950px;
+            margin: 0 auto;
+            margin-top: 0px;
+            padding-bottom: 40px;
+          }
+          .search-result-1-1{
+            float: left;
+          }
+          .search-result-1-1 input{
+            height: 54px;
+            border-radius: 0px;
+            font-size: 16px;
+          }
+          .search-result-1-2{
+            float: left;
+          }
+          .search-result-1-2 button{
+            width: 210px;
+            height: 54px;
+            font-size: 18px;
+            border-radius: 0px;
+          }
+
+          .table-title{
+            color: #1c2438;
+            font-size: 18px;
+            margin-bottom: 20px;
+
+          }
+        }
+
+
+
+        //以下样式被遗弃。
+        .lizhi-list .ivu-card-body {
+          padding:0;
+        }
+        .lizhi-list{
+          .employ-card{
+            width:544px;height: 318px;margin-right: 80px;margin-bottom: 60px;float: left;
+            .box-left{
+              img{
+                width: 126px;
+                height: 126px;
+                border-radius:50%;
+              }
+            }
+          }
+          padding-top: 60px;
+          padding-left: 80px;
+        }
+        .bg{
+          width: 100%;
+          height: 14px;
+          background: #298CFF;
+        }
+        .box-left{
+          float: left;
+          margin: 50px 54px;
+        }
+        .box-right{
+          float: left;
+          margin-top: 65px;
+        }
+        .f28{
+          font-size: 28px;
+          color: #1c2438;
+          line-height: 28px;
+        }
+        .f14{
+          font-size: 14px;
+          color: #495060;
+          line-height: 30px;
+        }
+        .lizhi-list .line{
+          width:240px;
+          height: 1px;
+          background: #EFEFEF;
+          margin-top: 20px;
+          margin-bottom: 12px;
+        }
+      }
+      .c-component-message{
+        .message-box{
+          width: 1400px;
+          margin: 0 auto;
+        }
+        .title{
+          width: 100px;
+          height: 32px;
+          border-radius: 2px;
+          background: #e8e8e8;
+          text-align: center;
+          font-size: 14px;
+          line-height: 32px;
+          color: #4a4a4a;
+          margin-top: 40px;
+          margin-bottom: 30px;
+        }
+        .box1-1{
+          border-right: 1px solid #E8E8E8;
+          width:195px;
+          height: 130px;
+          text-align: center;
+          margin-left: -16px;
+          float: left;
+        }
+        .p1{
+          color: #444C61;
+          font-size: 30px;
+          line-height: 30px;
+          padding-top: 34px;
+          margin-bottom: 10px;
+        }
+        .p2{
+          color: #444C61;
+          font-size: 16px;
+          line-height: 16px;
+        }
+        .p3{
+          color: #444C61;
+          font-size: 16px;
+          line-height: 16px;
+          padding-left: 50px;
+          padding-top: 57px;
+
+        }
+        .box1-2{
+          width:865px;
+          text-align: left;
+          float: left;
+        }
+        .box1-3{
+          float: right;
+          padding-right: 16px;
+
+        }
+        .ibtn.ivu-btn.ivu-btn-ghost{
+          width: 110px;
+          height: 36px;
+          color: #55A4FF;
+          background-color: transparent;
+          border-color: #55A4FF;
+          font-size: 16px;
+          line-height: 22px;
+          margin-top: 48px;
+          margin-right: 14px;
+        }
+
+        .ibtn2.ivu-btn.ivu-btn-ghost{
+          width: 110px;
+          height: 36px;
+          font-size: 16px;
+          line-height: 22px;
+          margin-top: 48px;
+          margin-right: 14px;
+        }
+        .ibtn.ivu-btn.ivu-btn-primary{
+          width: 110px;
+          height: 36px;
+          font-size: 16px;
+          line-height: 22px;
+          margin-top: 48px;
+          margin-right: 14px;
+        }
+        .ibtn.ivu-btn.ivu-btn-text{
+          width: 110px;
+          height: 36px;
+          font-size: 16px;
+          line-height: 22px;
+          margin-top: 48px;
+          margin-right: 14px;
+        }
+        .card-new{
+          width:64px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          display: block;
+          color: #fff;
+          font-size: 14px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: 7;
+          background: #2199F7;
+          font-weight: bold;
+        }
+      }
+
+    }
+
+  }
+
+}
+
