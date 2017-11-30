@@ -111,65 +111,43 @@
             <!--优惠券不为空时 -->
             <div class="vouchers-3" id="vouchers-have">
                 <div class="vouchers-3-1">
-                    <div class="vouchers-3-1-1">
-                        <p class="daijq-F1">
-                            优惠券码
-                            <span class="daijq-F1-blueTxt">AX901</span>
-                        </p>
-                        <p class="daijq-F2">
-                            有效期至：2017-12-31
-                        </p>
-                    </div>
-                    <div class="vouchers-3-1-1 vouchers-left70">
-                        <p class="daijq-F1">
-                            优惠券码
-                            <span class="daijq-F1-blueTxt">AX902</span>
-                        </p>
-                        <p class="daijq-F2">
-                            有效期至：2017-12-31
-                        </p>
-                    </div>
-                </div>
-                <div class="vouchers-3-1">
-                    <div class="vouchers-3-1-1">
-                        <p class="daijq-F1">
-                            优惠券码
-                            <span class="daijq-F1-blueTxt">AX903</span>
-                        </p>
-                        <p class="daijq-F2">
-                            有效期至：2017-12-31
-                        </p>
-                    </div>
-                    <div class="vouchers-3-1-1 vouchers-left70">
-                        <p class="daijq-F1">
-                            优惠券码
-                            <span class="daijq-F1-blueTxt">AX904</span>
-                        </p>
-                        <p class="daijq-F2">
-                            有效期至：2017-12-31
-                        </p>
-                    </div>
+                    <div class="vouchers-3-1" style="
+    width: 780px;
+    margin: 0 auto;
+    text-align:left;
+"><div class="vouchers-3-1-1"><p class="daijq-F1">
+                        优惠券码
+                        <span class="daijq-F1-blueTxt">AX901</span></p> <p class="daijq-F2">
+                        有效期至：2017-12-31
+                    </p></div><div class="vouchers-3-1-1"><p class="daijq-F1">
+                        优惠券码
+                        <span class="daijq-F1-blueTxt">AX901</span></p> <p class="daijq-F2">
+                        有效期至：2017-12-31
+                    </p></div><div class="vouchers-3-1-1"><p class="daijq-F1">
+                        优惠券码
+                        <span class="daijq-F1-blueTxt">AX901</span></p> <p class="daijq-F2">
+                        有效期至：2017-12-31
+                    </p></div><div class="vouchers-3-1-1"><p class="daijq-F1">
+                        优惠券码
+                        <span class="daijq-F1-blueTxt">AX901</span></p> <p class="daijq-F2">
+                        有效期至：2017-12-31
+                    </p></div> </div>
                 </div>
 
                 <!--图片下载按钮-->
 
                 <div class="vouchers-3-2 download-imgAll" style="cursor: pointer;" @click="downloadImageAll">下载全部优惠券图片</div>
-
             </div>
             <!--优惠券为空时 -->
             <div class="vouchers-3" id="vouchers-empty" style="display: block">
                 <div class="vouchers-3-no">
                     <img src="public/images/djq-empty.png">
                 </div>
-
             </div>
         </div>
-
     </div>
 </div>
-
 <script>
-
     var Main = {
         data () {
             return {
@@ -199,11 +177,9 @@
                         }
                     );
                 }
-
             }
         }
     }
-
     var Component = Vue.extend(Main)
     new Component().$mount('#app')
 </script>
