@@ -1134,6 +1134,7 @@
                 <template v-else>
                     <img src="public/images/tree-group.png" width="19" alt="图标">
                     <img class="arrow-rotate-none" v-bind:class="{'arrow-rotate':open}" src="public/images/tree-arrow.png" style="margin-left: 4px;" width="7" alt="">
+
                 </template>
             </div>
             <!--部门和员工名称-->
@@ -1154,7 +1155,7 @@
             <div v-if="tree.dataList && !tree.root && !editStatus" class="box-control">
                 <dropdown @on-click="dropDown" placement="bottom-end">
                     <a href="javascript:void(0)">
-                        <Icon type="gear-a" style="font-size: 16px;"></Icon>
+                        <Icon type="plus-round" style="font-size: 16px;"></Icon>
                         <!--<icon type="arrow-down-b"></icon>-->
                     </a>
                     <dropdown-menu slot="list">
