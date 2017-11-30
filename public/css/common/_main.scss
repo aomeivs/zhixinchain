@@ -323,7 +323,10 @@ html,body{
     //c-body container下的
     .c-body{
       height: 100%;
+      display: table;
+      overflow: hidden;
       position: relative;
+
 
       .c-accordion{
         text-align: center;
@@ -356,6 +359,7 @@ html,body{
         width: 320px;
         margin-bottom: -10000px;
         padding-bottom: 10000px;
+        display: table-cell;
         overflow: hidden;
         background: #F5F7F9;
 
@@ -439,6 +443,8 @@ html,body{
       .c-body-container{
         margin-left: 320px;
         height: 100%;
+        display: table-cell;
+        vertical-align: top;
         .component-dashboard{
           @extend %component-dashboard;
         }

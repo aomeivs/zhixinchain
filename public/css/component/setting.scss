@@ -2,9 +2,13 @@
   .setting-container{
     padding-top: 50px;
     padding-left: 50px;
+    //setting-bottom增加底部距离
+    padding-bottom: 80px;
     .line{
       height: 1px;
-      width: 1200px;
+      //setting line 增加 线宽自适应和最大宽度
+      width: 100%;
+      max-width:1200px;
       border-bottom:1px solid #dddee1;
       margin: 40px 0;
     }
