@@ -3,7 +3,7 @@
     <div class="upZheGai" style="display: block">
         <div class="zhegaiContent" >
             <div class="zhegaiContent-close" style="position: relative">
-                <img src="public/images/index/Combined.png" id="closeBuyContent" style="position: absolute; right: 19px; top: 19px; cursor: pointer;">
+                <img src="/static/public/images/index/Combined.png" id="closeBuyContent" style="position: absolute; right: 19px; top: 19px; cursor: pointer;">
             </div>
             <div class="zhegaiContent-title">
                 <p>购买</p>
@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="zhegaiContent-buyChoice-2">
-                    <img src="public/images/index/tishi.png">
+                    <img src="/static/public/images/index/tishi.png">
                     <span>如果该版本支持的最高员工数不能满足需求，您可以额外增加支持员工数。5人起增加，每增加一人，服务费用增加<span id="prePrice">{{prePrice}}</span>元</span>
                 </div>
                 <div class="zhegaiContent-buyChoice-total">
