@@ -543,5 +543,42 @@
     });
 
 </script>
+
+<!-- 动态添加头部统计数据及table-->
+<script>
+    //动态添加头部区块统计数据
+    var arr_countNum={jk_heightNum:'222,222',jk_nodeNum:'3,333,333',jk_userNum:'6,666,666',jk_dealNum:'8,888'};
+    function change_jkNum(arr_countNum){
+        $('#jk_heightNum').text(arr_countNum.jk_heightNum);
+        $('#jk_nodeNum').text(arr_countNum.jk_nodeNum);
+        $('#jk_userNum').text(arr_countNum.jk_userNum);
+        $('#jk_dealNum').text(arr_countNum.jk_dealNum);
+    }
+    // 动态添加table
+    var arr_table = [{jukuai_height:'8088518',deal_num:'5',code:'A6281C33EEA8F69F15AA18F7D8CDFA36C43765B02B1CE0B06D00134F8A18596D',date:'564042950'},
+        {jukuai_height:'8088518',deal_num:'5',code:'A6281C33EEA8F69F15AA18F7D8CDFA36C43765B02B1CE0B06D00134F8A18596D',date:'564042950'},
+        {jukuai_height:'8088518',deal_num:'5',code:'A6281C33EEA8F69F15AA18F7D8CDFA36C43765B02B1CE0B06D00134F8A18596D',date:'564042950'},
+        {jukuai_height:'8088518',deal_num:'5',code:'A6281C33EEA8F69F15AA18F7D8CDFA36C43765B02B1CE0B06D00134F8A18596D',date:'564042950'}];
+    var tableHtmlHead=' <tr class="qk_numShow_title_tr">'+
+        '<th class="qk_numShow_title_th" width="150">区块高度</th>'+
+        '<th width="150">交易数</th>'+
+        '<th>区块哈希</th>'+
+        '<th width="123">时间</th>'+
+        '</tr>';
+    function tableInit(arr_table) {
+        var tableHtmlContent = '';
+        for(item in arr_table){
+            tableHtmlContent+='<tr class="qk_numShow_tr">'+'<td class="color_blue">'+arr_table[item].jukuai_height+'</td>'
+                +'<td>'+arr_table[item].deal_num+'</td>'
+                +'<td>'+arr_table[item].code+'</td>'
+                +'<td>'+arr_table[item].date+'</td>';
+        }
+        $('#table_jknum').html(tableHtmlHead+tableHtmlContent)
+    }
+    $(document).ready(function() {
+        change_jkNum(arr_countNum);
+        tableInit(arr_table);
+    });
+</script>
 </body>
 </html>
