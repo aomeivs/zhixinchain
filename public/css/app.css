@@ -1218,6 +1218,7 @@ html, body {
       html .wrap .c-body .c-body-container, body .wrap .c-body .c-body-container {
         margin-left: 320px;
         height: 100%;
+        width: 100%;
         display: table-cell;
         vertical-align: top; }
       html .wrap .c-body .component-employ-info-single, body .wrap .c-body .component-employ-info-single {
