@@ -1,6 +1,11 @@
 @charset "utf-8";
 .wrap {
   .component-index{
+
+    .head-menu-userInfo{
+      @extend %head-menu-userInfo;
+    }
+
     .zi18{
       font-size: 18px;
     }

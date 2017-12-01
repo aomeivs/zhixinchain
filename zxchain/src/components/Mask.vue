@@ -1,6 +1,6 @@
 <template>
 <div class="component-modal-mask mask-buy">
-    <div class="upZheGai" style="display: block">
+    <div class="upZheGai" style="display: none;">
         <div class="zhegaiContent" >
             <div class="zhegaiContent-close" style="position: relative">
                 <img src="/static/public/images/index/Combined.png" id="closeBuyContent" style="position: absolute; right: 19px; top: 19px; cursor: pointer;">
