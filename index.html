@@ -38,13 +38,18 @@
                     <li data-menuanchor="buy" id="home5"><span class="buy">购买</span></li>
 
                     <li  style="display: block; width: 120px;">
-                        <dropdown trigger="custom" :visible="visible" style="margin-left: 20px">
+                        <!--企业-->
+                        <dropdown trigger="custom" :visible="visible" style="margin-left: 20px ;display: none">
                             <a href="javascript:void(0)" @click.stop="handleOpen()">
                                 控制台
                                 <icon type="arrow-down-b"></icon>
                             </a>
                             <dropdown-menu slot="list">
                                 <div class="head-menu-userInfo">
+                                    <div class="clearFix head-menu-company-diy">
+                                        <span>青岛网络科技特别开心有限公司</span>
+                                    </div>
+                                    <div class="line head-menu-uline"></div>
                                     <div class="clearFix head-menu-u1">
                                         <span class="left h-m-u-1">支持员工数量</span>
                                         <span class="right">40</span>
@@ -69,7 +74,26 @@
                                     </div>
                                 </div>
                             </dropdown-menu>
-                        </dropdown></li>
+                        </dropdown>
+                        <!--个人-->
+                        <dropdown trigger="custom" :visible="visible" style="margin-left: 20px ;">
+                            <a href="javascript:void(0)" @click.stop="handleOpen()">
+                                控制台
+                                <icon type="arrow-down-b"></icon>
+                            </a>
+                            <dropdown-menu slot="list">
+                                <div class="head-menu-userInfo" style="width: 110px;">
+                                    <div class="clearFix head-menu-person-diy">
+                                        <span>周累了</span>
+                                    </div>
+                                    <div class="line head-menu-uline"></div>
+                                    <div class="clearFix head-menu-person-diy span-hand">
+                                        <span >退出</span>
+                                    </div>
+                                </div>
+                            </dropdown-menu>
+                        </dropdown>
+                    </li>
 
                     <li class="loginAndSignIn" style="width: 205px; display: none;">
                         <span class="span1">登录</span>
