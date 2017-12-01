@@ -324,9 +324,9 @@ html,body{
     .c-body{
       height: 100%;
       display: table;
+      width: 100%;
       overflow: hidden;
       position: relative;
-
 
       .c-accordion{
         text-align: center;
@@ -775,7 +775,6 @@ html,body{
       }
 
     }
-
   }
 
 }
