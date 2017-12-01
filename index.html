@@ -27,13 +27,13 @@
                 </a>
                 <ul id="menu" class="menu zi18">
 
-                    <li data-menuanchor="index" class="cur" id="home1" ><a href="#index" >首页</a></li>
+                    <li data-menuanchor="index" class="cur select" id="home1">首页</li>
 
-                    <li data-menuanchor="about" id="home2"><a href="#about" >关于职信链</a></li>
+                    <li data-menuanchor="about" id="home2" class="select">关于职信链</li>
 
-                    <li data-menuanchor="technical" id="home3"><a href="#technical" >技术架构</a></li>
+                    <li data-menuanchor="technical" id="home3" class="select">技术架构</li>
 
-                    <li data-menuanchor="team" id="home4"><a href="#team" >团队优势</a></li>
+                    <li data-menuanchor="team" id="home4" class="select">团队优势</li>
 
                     <li data-menuanchor="buy" id="home5"><span class="buy">购买</span></li>
 
@@ -435,51 +435,45 @@
 
 <!--js部分滚动条监听事件-->
 <script>
-        var navContainer = document.getElementById("header");
-        var navBox = document.getElementById("menu");
-        var text = document.getElementById("text_lt");
-        var navBoxChild = navBox.children;
-        var textChild = text.children;
-        var num = navContainer.offsetTop;
-        var a = navContainer.offsetHeight;
-        window.onscroll = function(){
-            var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-            //当导航与相应文档接触的时候自动切换
-            //method1
-            for(var i=0;i<navBoxChild.length;i++){
-                if( scrollTop + a >= textChild[i].offsetTop){
-                    for(var j=0;j<navBoxChild.length;j++){
-                        navBoxChild[j].className = "";
-                    }
-                    navBoxChild[i].className = "cur";
-                }
-            }
-        };
-//    for(var i=0;i<navBoxChild.length;i++){
-//        var interval;
-//        navBoxChild[i].index = i;
-//        navBoxChild[i].onclick = function(){
-//            var self = this;
-//            clearInterval(interval);
-//            interval = setInterval(function(){
-//
-//                if(document.body.scrollTop + a<=textChild[self.index].offsetTop){
-//
-//                    document.body.scrollTop += 40;
-//                    if(document.body.scrollTop + a>=textChild[self.index].offsetTop){
-//                        document.body.scrollTop = textChild[self.index].offsetTop-a;
-//                        clearInterval(interval);
-//                    }
-//                }else{
-//                    document.body.scrollTop /= 1.1;
-//                    if(document.body.scrollTop + a<=textChild[self.index].offsetTop){
-//                        document.body.scrollTop = textChild[self.index].offsetTop-a;
-//                        clearInterval(interval);
-//                    }
-//                }
-//            },40);
-//        };
-//    }
+    var $aside = $("#header>ul>.select");
+    var $section_pos  =$("#content1,#content2,#content3,#content4");
+    $aside.each(function(index) {
+        $(this).on("click",function(){
+            var pox = $($section_pos[index]);
+            $('html,body').stop().animate({scrollTop: pox.position().top}, 200);
+        })
+    });
+
+
+    /**scroll even**/
+
+    var p1 = $("#content1");
+    var p2 = $("#content2");
+    var p3 = $("#content3");
+    var p4 = $("#content4");
+    var p5 = $("#content6");
+
+    $(window).scroll(function(){
+
+        if($(window).scrollTop()>=p1.position().top&&$(window).scrollTop()<p2.position().top){
+            $($aside[0]).siblings().removeClass("cur");
+            $($aside[0]).addClass("cur");
+        }
+        if($(window).scrollTop()>=p2.position().top&&$(window).scrollTop()<p3.position().top){
+            $($aside[1]).siblings().stop().removeClass("cur");
+            $($aside[1]).addClass("cur");
+        }
+        if($(window).scrollTop()>=p3.position().top&&$(window).scrollTop()<p4.position().top){
+            $($aside[2]).siblings().removeClass("cur");
+            $($aside[2]).addClass("cur");
+        }
+        if($(window).scrollTop()>=p4.position().top&&$(window).scrollTop()<p5.position().top){
+            $($aside[3]).siblings().removeClass("cur");
+            $($aside[3]).addClass("cur");
+        }
+
+    });
+
 </script>
 </body>
 </html>
