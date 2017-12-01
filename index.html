@@ -37,7 +37,39 @@
 
                     <li data-menuanchor="buy" id="home5"><span class="buy">购买</span></li>
 
-                    <li  style="display: block">控制台</li>
+                    <li  style="display: block; width: 120px;">
+                        <dropdown trigger="custom" :visible="visible" style="margin-left: 20px">
+                            <a href="javascript:void(0)" @click.stop="handleOpen()">
+                                控制台
+                                <icon type="arrow-down-b"></icon>
+                            </a>
+                            <dropdown-menu slot="list">
+                                <div class="head-menu-userInfo">
+                                    <div class="clearFix head-menu-u1">
+                                        <span class="left h-m-u-1">支持员工数量</span>
+                                        <span class="right">40</span>
+                                    </div>
+                                    <div class="clearFix head-menu-u2">
+                                        <span class="left h-m-u-1">有效期至</span>
+                                        <span class="right">2018.11.19</span>
+                                    </div>
+                                    <div class="line head-menu-uline"></div>
+                                    <div class="clearFix head-menu-u3">
+                                    <span class="left">
+                                        <badge dot>
+                                            <a href="#" class="head-message-badge">我的优惠券</a>
+                                        </badge>
+                                    </span>
+                                        <span class="right">
+                                        <a href="#" class="head-message-badge">
+                                            <Icon type="android-exit"></Icon>
+                                            <span>退出</span>
+                                        </a>
+                                    </span>
+                                    </div>
+                                </div>
+                            </dropdown-menu>
+                        </dropdown></li>
 
                     <li class="loginAndSignIn" style="width: 205px; display: none;">
                         <span class="span1">登录</span>
@@ -435,6 +467,42 @@
 
 <!--js部分滚动条监听事件-->
 <script>
+    var Main = {
+        data () {
+            return {
+                visible: false
+            }
+        },
+        methods: {
+            handleOpen () {
+                this.visible = !this.visible;
+            },
+            closeModal(){
+                this.visible = false;
+            },
+            downloadImageAll(){
+                var imgs = document.querySelectorAll('.vouchers-3-1-1');
+                for(imgData in imgs){
+                    html2canvas(imgs[imgData],
+                        {
+                            onrendered: function (canvas) {
+                                var a = document.createElement('a');
+                                // toDataURL defaults to png, so we need to request a jpeg, then convert for file download.
+                                a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+                                a.download = 'somefilename-'+Date.now()+'.jpg';
+                                a.onclick=function click(){}
+                                a.click();
+                            }
+                        }
+                    );
+                }
+            }
+        }
+    }
+    var Component = Vue.extend(Main)
+    new Component().$mount('#app')
+
+
     var $aside = $("#header>ul>.select");
     var $section_pos  =$("#content1,#content2,#content3,#content4");
     $aside.each(function(index) {
