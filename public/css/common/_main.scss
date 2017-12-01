@@ -243,7 +243,31 @@ html,body{
   .text-right{
     text-align: right;
   }
+%head-menu-userInfo{
+  color: #333;
+  width: 300px;
+  line-height: 2;
+  padding:10px 15px;
+  font-size: 14px;
+  .head-menu-uline{
+    border-top: 1px solid #f1f1f1;
+    margin:8px 0;
+  }
 
+  .head-menu-u1,.head-menu-u2{
+    font-size: 12px;
+    .h-m-u-1{
+      color: #666;
+    }
+  }
+  .head-menu-u3{
+    a{
+      &.head-message-badge{
+        color: #333;
+      }
+    }
+  }
+}
   .wrap{
     width: 100%;
     height: 100%;
@@ -272,30 +296,9 @@ html,body{
               color: #ffffff;
             }
             .head-menu-userInfo{
-              color: #333;
-              width: 300px;
-              line-height: 2;
-              padding:10px 15px;
-              font-size: 14px;
-              .head-menu-uline{
-                border-top: 1px solid #f1f1f1;
-                margin:8px 0;
-              }
-
-              .head-menu-u1,.head-menu-u2{
-                font-size: 12px;
-                .h-m-u-1{
-                  color: #666;
-                }
-              }
-              .head-menu-u3{
-                a{
-                  &.head-message-badge{
-                    color: #333;
-                  }
-                }
-              }
+              @extend %head-menu-userInfo;
             }
+
             .c-head-user{
               &>div{
                 float: left;

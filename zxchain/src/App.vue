@@ -35,8 +35,24 @@ export default {
     setTimeout(function() {
       this.loading(false)
     }.bind(this), 2000);
+    jQuery(function(){
+      if(jQuery('.c-header').length>0){
+        jQuery('.c-header').css('margin-top','-80px');
+        jQuery('.wrap').css('padding-top','80px');
+      }
+    })
   }
 }
+
+
+
+/*   plugins:[
+    new webpack.ProvidePlugin({
+      $:"jquery",
+      jQuery:"jquery",
+      "window.jQuery":"jquery"
+    })
+  ] */
 </script>
 <style>
 
