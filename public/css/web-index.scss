@@ -4,6 +4,10 @@
 
     .head-menu-userInfo{
       @extend %head-menu-userInfo;
+
+
+
+
     }
 
     .zi18{
@@ -36,19 +40,20 @@
       float: left;
       margin: 0 24px;
       list-style-type: none;
-      line-height: 99px;
+      //line-height: 99px;
+      padding-top: 34px;
       width: 90px;
       text-align: center;
     }
 
-
     .menu a{
       color: #000000;
       cursor: pointer;
-      height: 94px;
+      //height: 94px;
       width: 100%;
       display: block;
     }
+
 
     .menu .cur{
       height: 99px;
@@ -56,7 +61,7 @@
     }
     .menu .buy{
       cursor: pointer;
-      height: 94px;
+      //height: 94px;
       width: 100%;
       display: block;
       color: #FF500A;

@@ -1932,13 +1932,12 @@ html .wrap .c-body .c-component-vouchers .vouchers-3 .vouchers-3-no, body .wrap 
     float: left;
     margin: 0 24px;
     list-style-type: none;
-    line-height: 99px;
+    padding-top: 34px;
     width: 90px;
     text-align: center; }
 .wrap .component-index .menu a {
     color: #000000;
     cursor: pointer;
-    height: 94px;
     width: 100%;
     display: block; }
 .wrap .component-index .menu .cur {
@@ -1946,7 +1945,6 @@ html .wrap .c-body .c-component-vouchers .vouchers-3 .vouchers-3-no, body .wrap 
     border-bottom: 2px solid #FE8C5F; }
 .wrap .component-index .menu .buy {
     cursor: pointer;
-    height: 94px;
     width: 100%;
     display: block;
     color: #FF500A; }
