@@ -172,4 +172,51 @@
 
     }
   }
+
+  .pay-status{
+    width: 1000px;
+    margin: 50px auto;
+    padding-top: 50px;
+    text-align: center;
+
+    .set-pay{
+      margin-bottom: 50px;
+      .set-title{
+        text-align: center;
+        .add-employ-title{
+          color: #1c2438;
+          .e-title-1{
+            font-size: 40px;
+          }
+          .e-title-2{
+            font-size: 20px;
+          }
+        }
+      }
+      .set-status{
+        width: 600px;
+        margin: 50px auto;
+        padding: 150px;
+        &.success{
+          border: 2px solid #40BEFF;
+          .status-icon{
+            color:#40BEFF;
+          }
+        }
+        &.failed{
+          border: 2px solid #FFB95D;
+          .status-icon{
+            color:#FFB95D;
+          }
+        }
+        .status-icon{
+          font-size: 56px;
+        }
+        .status-text{
+          font-size: 28px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
 }

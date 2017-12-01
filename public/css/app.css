@@ -804,6 +804,38 @@ html .wrap .c-body .component-setting .setting-user-container, body .wrap .c-bod
     html .wrap .c-body .component-setting .setting-user-container .set-pwd .set-body > div, body .wrap .c-body .component-setting .setting-user-container .set-pwd .set-body > div {
       margin-top: 20px;
       margin-bottom: 30px; }
+html .wrap .c-body .component-setting .pay-status, body .wrap .c-body .component-setting .pay-status {
+  width: 1000px;
+  margin: 50px auto;
+  padding-top: 50px;
+  text-align: center; }
+  html .wrap .c-body .component-setting .pay-status .set-pay, body .wrap .c-body .component-setting .pay-status .set-pay {
+    margin-bottom: 50px; }
+    html .wrap .c-body .component-setting .pay-status .set-pay .set-title, body .wrap .c-body .component-setting .pay-status .set-pay .set-title {
+      text-align: center; }
+      html .wrap .c-body .component-setting .pay-status .set-pay .set-title .add-employ-title, body .wrap .c-body .component-setting .pay-status .set-pay .set-title .add-employ-title {
+        color: #1c2438; }
+        html .wrap .c-body .component-setting .pay-status .set-pay .set-title .add-employ-title .e-title-1, body .wrap .c-body .component-setting .pay-status .set-pay .set-title .add-employ-title .e-title-1 {
+          font-size: 40px; }
+        html .wrap .c-body .component-setting .pay-status .set-pay .set-title .add-employ-title .e-title-2, body .wrap .c-body .component-setting .pay-status .set-pay .set-title .add-employ-title .e-title-2 {
+          font-size: 20px; }
+    html .wrap .c-body .component-setting .pay-status .set-pay .set-status, body .wrap .c-body .component-setting .pay-status .set-pay .set-status {
+      width: 600px;
+      margin: 50px auto;
+      padding: 150px; }
+      html .wrap .c-body .component-setting .pay-status .set-pay .set-status.success, body .wrap .c-body .component-setting .pay-status .set-pay .set-status.success {
+        border: 2px solid #40BEFF; }
+        html .wrap .c-body .component-setting .pay-status .set-pay .set-status.success .status-icon, body .wrap .c-body .component-setting .pay-status .set-pay .set-status.success .status-icon {
+          color: #40BEFF; }
+      html .wrap .c-body .component-setting .pay-status .set-pay .set-status.failed, body .wrap .c-body .component-setting .pay-status .set-pay .set-status.failed {
+        border: 2px solid #FFB95D; }
+        html .wrap .c-body .component-setting .pay-status .set-pay .set-status.failed .status-icon, body .wrap .c-body .component-setting .pay-status .set-pay .set-status.failed .status-icon {
+          color: #FFB95D; }
+      html .wrap .c-body .component-setting .pay-status .set-pay .set-status .status-icon, body .wrap .c-body .component-setting .pay-status .set-pay .set-status .status-icon {
+        font-size: 56px; }
+      html .wrap .c-body .component-setting .pay-status .set-pay .set-status .status-text, body .wrap .c-body .component-setting .pay-status .set-pay .set-status .status-text {
+        font-size: 28px;
+        margin-top: 20px; }
 
 .component-modal-mask.mask-buy .upZheGai {
   background: rgba(99, 99, 99, 0.5);
@@ -1135,6 +1167,7 @@ html, body {
     html .wrap .c-body, body .wrap .c-body {
       height: 100%;
       display: table;
+      width: 100%;
       overflow: hidden;
       position: relative; }
       html .wrap .c-body .c-accordion, body .wrap .c-body .c-accordion {
