@@ -1124,9 +1124,9 @@ html, body {
       border-top: 1px solid #f1f1f1;
       margin: 8px 0; }
     html .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u1, body .wrap .c-header .c-head-menu .head-menu-ul li html .head-menu-userInfo .head-menu-u1, html .wrap .component-index .head-menu-userInfo .head-menu-u1, .wrap .component-index html .head-menu-userInfo .head-menu-u1, html .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u2, body .wrap .c-header .c-head-menu .head-menu-ul li html .head-menu-userInfo .head-menu-u2, html .wrap .component-index .head-menu-userInfo .head-menu-u2, .wrap .component-index html .head-menu-userInfo .head-menu-u2, html .wrap .c-header .c-head-menu .head-menu-ul li body .head-menu-userInfo .head-menu-u1, body .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u1, body .wrap .component-index .head-menu-userInfo .head-menu-u1, .wrap .component-index body .head-menu-userInfo .head-menu-u1, html .wrap .c-header .c-head-menu .head-menu-ul li body .head-menu-userInfo .head-menu-u2, body .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u2, body .wrap .component-index .head-menu-userInfo .head-menu-u2, .wrap .component-index body .head-menu-userInfo .head-menu-u2 {
-      font-size: 12px; }
+      font-size: 14px; }
       html .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u1 .h-m-u-1, body .wrap .c-header .c-head-menu .head-menu-ul li html .head-menu-userInfo .head-menu-u1 .h-m-u-1, html .wrap .component-index .head-menu-userInfo .head-menu-u1 .h-m-u-1, .wrap .component-index html .head-menu-userInfo .head-menu-u1 .h-m-u-1, html .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u2 .h-m-u-1, body .wrap .c-header .c-head-menu .head-menu-ul li html .head-menu-userInfo .head-menu-u2 .h-m-u-1, html .wrap .component-index .head-menu-userInfo .head-menu-u2 .h-m-u-1, .wrap .component-index html .head-menu-userInfo .head-menu-u2 .h-m-u-1, html .wrap .c-header .c-head-menu .head-menu-ul li body .head-menu-userInfo .head-menu-u1 .h-m-u-1, body .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u1 .h-m-u-1, body .wrap .component-index .head-menu-userInfo .head-menu-u1 .h-m-u-1, .wrap .component-index body .head-menu-userInfo .head-menu-u1 .h-m-u-1, html .wrap .c-header .c-head-menu .head-menu-ul li body .head-menu-userInfo .head-menu-u2 .h-m-u-1, body .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u2 .h-m-u-1, body .wrap .component-index .head-menu-userInfo .head-menu-u2 .h-m-u-1, .wrap .component-index body .head-menu-userInfo .head-menu-u2 .h-m-u-1 {
-        color: #666; }
+        color: #333; }
     html .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u3 a.head-message-badge, body .wrap .c-header .c-head-menu .head-menu-ul li html .head-menu-userInfo .head-menu-u3 a.head-message-badge, html .wrap .component-index .head-menu-userInfo .head-menu-u3 a.head-message-badge, .wrap .component-index html .head-menu-userInfo .head-menu-u3 a.head-message-badge, html .wrap .c-header .c-head-menu .head-menu-ul li body .head-menu-userInfo .head-menu-u3 a.head-message-badge, body .wrap .c-header .c-head-menu .head-menu-ul li .head-menu-userInfo .head-menu-u3 a.head-message-badge, body .wrap .component-index .head-menu-userInfo .head-menu-u3 a.head-message-badge, .wrap .component-index body .head-menu-userInfo .head-menu-u3 a.head-message-badge {
       color: #333; }
   html .wrap, body .wrap {
@@ -1591,13 +1591,13 @@ html, body {
 
 .wrap.index-lt {
   /*
-   * 鑳屾櫙bunner 閮ㄥ垎
+   * 背景bunner 部分
    */
   /**
-   * 绔嬪嵆鍔犲叆鎸夐挳閮ㄥ垎
+   * 立即加入按钮部分
    */
   /*
-  * 鑱屼俊浠嬬粛閮ㄥ垎
+  * 职信介绍部分
   */ }
   .wrap.index-lt .index-lt-1 {
     background-color: white;
@@ -1907,11 +1907,14 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
   * 数据动态部分
   */ }
   .wrap .component-index .head-menu-userInfo .head-menu-company-diy {
-    text-align: left;
-    font-size: 16px; }
+    font-size: 16px;
+    text-align: center; }
   .wrap .component-index .head-menu-userInfo .head-menu-person-diy {
     text-align: center;
-    font-size: 16px; }
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
   .wrap .component-index .head-menu-userInfo .span-hand {
     cursor: pointer; }
   .wrap .component-index .zi18 {
