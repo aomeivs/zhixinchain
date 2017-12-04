@@ -6,12 +6,15 @@
       @extend %head-menu-userInfo;
 
       .head-menu-company-diy{
-        text-align: left;
         font-size: 16px;
+        text-align: center;
       }
       .head-menu-person-diy{
         text-align: center;
         font-size: 16px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
       .span-hand{
         cursor: pointer;
