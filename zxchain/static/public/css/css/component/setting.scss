@@ -1,0 +1,224 @@
+@charset "utf-8";
+%component-setting{
+  .setting-container{
+    padding-top: 50px;
+    //setting-bottom增加left距离
+    padding-left: 80px;
+    //setting-bottom增加底部距离
+    padding-bottom: 80px;
+    .line{
+      height: 1px;
+      //setting line 增加 线宽自适应和最大宽度
+      width: 100%;
+      max-width:1200px;
+      border-bottom:1px solid #dddee1;
+      margin: 40px 0;
+    }
+
+    .set-account{
+      .set-title{
+        .title-1{
+          display: inline-block;
+          border-bottom:4px solid #298cff;
+          padding: 12px;
+          margin-bottom: 18px;
+          color: #333333;
+          font-size: 18px;
+        }
+      }
+      .set-body{
+        .body-1{
+          border-top:1px solid #d8d8d8;
+          border-left:1px solid #d8d8d8;
+          border-collapse: collapse;
+          border-spacing: 0;
+          .t-head{
+            background: #f8f8f9;
+            padding: 18px;
+          }
+          td{
+            border-right:1px solid #d8d8d8;
+            border-bottom:1px solid #d8d8d8;
+            padding: 8px 24px;
+            &.t-body-1{
+              font-size: 24px;
+              color: #40beff;
+            }
+            &.t-body-3{
+              text-align: center;
+              button{
+                span{
+                  font-size: 14px;
+                }
+              }
+            }
+          }
+
+        }
+        .body-2{
+          .active{
+            width: 200px;
+            height: 52px;
+            font-size: 16px;
+            margin-top: 25px;
+            color: #298cff;
+          }
+        }
+      }
+    }
+
+    .set-pwd{
+      .set-title{
+        .title-1{
+          display: inline-block;
+          border-bottom:4px solid #298cff;
+          padding: 12px;
+          margin-bottom: 18px;
+          color: #333333;
+          font-size: 18px;
+        }
+      }
+      .set-body{
+        &>div{
+          margin-top: 20px;
+          margin-bottom: 30px;
+        }
+        .body-4{
+
+        }
+      }
+
+    }
+
+    .set-custom{
+      .set-title{
+        .title-1{
+          display: inline-block;
+          border-bottom:4px solid #298cff;
+          padding: 12px;
+          margin-bottom: 18px;
+          color: #333333;
+          font-size: 18px;
+        }
+      }
+      .set-body{
+        .body-1{
+          border-top:1px solid #d8d8d8;
+          border-left:1px solid #d8d8d8;
+          border-collapse: collapse;
+          border-spacing: 0;
+          .t-head{
+            background: #f8f8f9;
+            padding: 18px;
+          }
+          td{
+            border-right:1px solid #d8d8d8;
+            border-bottom:1px solid #d8d8d8;
+            padding: 8px 24px;
+            &.t-body-1{
+              font-size: 16px;
+            }
+
+            &.t-body-3{
+              text-align: center;
+              button{
+                span{
+                  font-size: 14px;
+                }
+              }
+              .t-edit{
+                color: #298cff;
+              }
+            }
+          }
+        }
+        .body-2{
+          .active{
+            width: 200px;
+            height: 52px;
+            font-size: 16px;
+            margin-top: 25px;
+            color: #298cff;
+          }
+        }
+      }
+    }
+  }
+  .setting-user-container{
+    padding-top: 50px;
+    //padding-left: 150px;
+    width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+
+    .set-pwd{
+      margin-bottom: 50px;
+      .set-title{
+        text-align: center;
+        .add-employ-title{
+          color: #1c2438;
+          .e-title-1{
+            font-size: 40px;
+          }
+          .e-title-2{
+            font-size: 20px;
+          }
+        }
+      }
+      .set-body{
+        &>div{
+          margin-top: 20px;
+          margin-bottom: 30px;
+        }
+      }
+
+    }
+  }
+
+  .pay-status{
+    width: 1000px;
+    margin: 50px auto;
+    padding-top: 50px;
+    text-align: center;
+
+    .set-pay{
+      margin-bottom: 50px;
+      .set-title{
+        text-align: center;
+        .add-employ-title{
+          color: #1c2438;
+          .e-title-1{
+            font-size: 40px;
+          }
+          .e-title-2{
+            font-size: 20px;
+          }
+        }
+      }
+      .set-status{
+        width: 600px;
+        margin: 50px auto;
+        padding: 150px;
+        &.success{
+          border: 2px solid #40BEFF;
+          .status-icon{
+            color:#40BEFF;
+          }
+        }
+        &.failed{
+          border: 2px solid #FFB95D;
+          .status-icon{
+            color:#FFB95D;
+          }
+        }
+        .status-icon{
+          font-size: 56px;
+        }
+        .status-text{
+          font-size: 28px;
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}

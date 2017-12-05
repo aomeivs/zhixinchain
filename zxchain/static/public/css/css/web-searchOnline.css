@@ -1,0 +1,89 @@
+@charset "UTF-8";
+.wrap.search-online .search-online-1 {
+  text-align: center;
+  margin-top: 114px; }
+.wrap.search-online .search-online-2 {
+  width: 870px;
+  margin: 0 auto;
+  margin-top: 118px; }
+.wrap.search-online .search-online-2-1 {
+  float: left; }
+.wrap.search-online .search-online-2-1 input {
+  height: 54px;
+  border-radius: 0px;
+  font-size: 16px; }
+.wrap.search-online .search-online-2-2 {
+  float: left; }
+.wrap.search-online .search-online-2-2 button {
+  width: 199px;
+  height: 54px;
+  font-size: 18px;
+  border-radius: 0px; }
+
+.wrap.search-result {
+  /*
+   * 无搜索结果样式
+   */ }
+  .wrap.search-result .search-result-1 {
+    width: 1111px;
+    margin: 0 auto;
+    margin-top: 49px;
+    padding-bottom: 18px; }
+  .wrap.search-result .search-result-1-1 {
+    float: left; }
+  .wrap.search-result .search-result-1-1 input {
+    height: 54px;
+    border-radius: 0px;
+    font-size: 16px; }
+  .wrap.search-result .search-result-1-2 {
+    float: left; }
+  .wrap.search-result .search-result-1-2 button {
+    width: 210px;
+    height: 54px;
+    font-size: 18px;
+    border-radius: 0px; }
+  .wrap.search-result .search-result-2 {
+    width: 1111px;
+    margin: 0 auto;
+    margin-top: 30px; }
+    .wrap.search-result .search-result-2 .result-name {
+      text-align: center;
+      display: inline-block;
+      line-height: 102px;
+      font-size: 28px;
+      color: #1c2438; }
+    .wrap.search-result .search-result-2 .name {
+      width: 220px; }
+    .wrap.search-result .search-result-2 .mobile {
+      width: 230px; }
+    .wrap.search-result .search-result-2 .cardNum {
+      width: 353px; }
+    .wrap.search-result .search-result-2 .authorizeStatus {
+      width: 50px; }
+    .wrap.search-result .search-result-2 .result-other {
+      text-align: left;
+      display: inline-block;
+      line-height: 102px;
+      font-size: 16px;
+      color: #495060; }
+    .wrap.search-result .search-result-2 .result-shouquan {
+      display: inline-block;
+      text-align: center;
+      line-height: 102px;
+      font-size: 16px;
+      color: #298cff;
+      cursor: pointer;
+      width: 200px; }
+  .wrap.search-result .search-noResult {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 18px; }
+  .wrap.search-result .search-noResult-1 {
+    margin-top: 27px; }
+
+.wrap {
+  /*
+   * 在线搜索结果页面样式
+   */ }
+
+/*# sourceMappingURL=web-searchOnline.css.map */
