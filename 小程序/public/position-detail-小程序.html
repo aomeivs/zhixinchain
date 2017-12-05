@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css"/>
+    <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="dist/css/common.css">
+    <title></title>
+</head>
+<body>
+<style>
+    @media only screen and (min-width: 320px){
+        div.res-special span img{
+            width:14px;
+            max-height:16px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        div.res-special span span{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .mask-content {
+            width:300px !important;
+        }
+    }
+    @media only screen and (min-width: 360px){
+        div.res-special span img{
+            width:16px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        div.res-special span span{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .mask-content {
+            width:320px !important;
+        }
+    }
+    @media only screen and (min-width: 375px){
+        div.res-special span img{
+            width:14px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        div.res-special span span{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .mask-content {
+            width:340px !important;
+        }
+    }
+
+
+    div.col-xs-12 {
+        padding: 0;
+    }
+
+    div.col-sm-10 {
+        padding-left: 0 !important;
+    }
+
+    div.resume-des div.name {
+        padding-left: 0 !important;
+    }
+
+    div.resume-base > .row > div {
+        margin-bottom: 10px;
+        color: #999;
+    }
+
+    .wap-wrap {
+        max-width: 1024px;
+        margin: 0 auto;
+    }
+
+    div.res-special span{
+        display: inline-block;
+        padding:0 4px 0px 4px;
+    }
+
+    div.resume-base .name p,div.resume-base .name div{
+        display: inline-block;
+    }
+    div.resume-base .name p{
+        color: #666;
+    }
+
+    .bgcolor{
+        background: #f1f1f1;
+        line-height:36px;
+        height: 36px;
+    }
+    div.resume-base > .row > div.color333{
+        color: #333;
+    }
+
+    .qy-title{
+        background: #ffffff;border-bottom: 1px solid #f1f1f1;padding: 12px 15px; position: relative;
+    }
+    .qy-title span{
+        display: inline-block;
+    }
+    .qy-title span.home-back{
+        position: absolute;
+        left: 15px;
+        top: 12px;
+    }
+    .qy-title span.home-title{
+        width: 100%; text-align: center;font-size: 16px;
+    }
+    .qy-title span.home-icon{
+        position: absolute;
+        right: 15px;
+        top: 10px;
+    }
+    .res-special span{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .res-special img{
+        display: inline-block;
+        vertical-align: top !important;
+    }
+
+
+
+    .res-special span{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .res-special img{
+        display: inline-block;
+        vertical-align: top !important;
+    }
+    .colorF5A623{
+        color: #FF2F60!important;
+    }
+    .mask {
+        position: fixed;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 1;
+    }
+    .mask-content {
+        background: #FFFFFF;
+        border-radius: 8px;
+        position: relative;
+        width: 2.8rem;
+        height: 4rem;
+        margin: 0 auto;
+        overflow: auto;
+        margin-top: 50px;
+    }
+    .mask-close {
+        position: absolute;
+        display: inline-block;
+        top: 10px;
+        right: 10px;
+    }
+
+    .colorFC5357 {
+        color: #FC5357 !important;
+    }
+    .mt30 {
+        margin-top: 30px;
+    }
+    .text-center {
+        text-align: center;
+    }
+    .m9 .mask-content p {
+        font-size: 14px;
+    }
+    .m9 .mask-content p {
+        font-size: 14px;
+    }
+    .color9B9B9B {
+        color: #9B9B9B !important;
+    }
+    .step3 .step-btn {
+        background: #F5A623;
+        border-radius: 4px;
+        width: 266px;
+        height: 36px;
+        color: #fff;
+        text-align: center;
+        border: none;
+        font-size: 14px;
+    }
+
+    #m1{
+        width: 45%;display: inline-block;margin-top: 0;
+    }
+    #m9{
+        width: 45%;display: inline-block;margin-top: 0; margin-left: 10px;
+    }
+
+
+    html,body,.wap-wrap{
+        height: 100%;
+    }
+    .footer{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding:8px 20px;
+        background: #fff;
+    }
+
+
+
+    .bonus-tips{
+        font-size: 12px;
+        padding: 0;
+        border: 1px solid #f1f1f1;
+        background: #f7f7f7;color: #666;
+    }
+
+    div.res-special>span {
+        padding: 0px;
+        text-align: left;
+        padding-right: 2px;
+        vertical-align: middle;
+
+    }
+    div.res-special>span img,div.res-special>span span{
+        vertical-align: middle !important;
+    }
+    div.res-special span:first-child{
+        padding: 0;
+    }
+    .p-box{
+        padding: 18px 12px 12px;
+        border-top:1px solid #EAEAEA;
+        /*font-family: NotoSansHans-Light;*/
+    }
+    .p-box .box-s1 span{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .p-box .box-s1 span.st1{
+        width: 4px;
+        background: #FEA100;
+        height: 14px;
+        margin-right:5px;
+    }
+    .p-box .box-s1 span.st2{
+        color: #1a1a1a;
+        font-size: 14px;
+    }
+    .p-box .box-s2,.p-box .box-s3{
+        padding: 12px 12px 8px;
+        line-height: 1.8;
+        color: #4A4A4A;
+    }
+    .p-box .box-s2 p,.p-box .box-s3 p{
+        padding: 0;
+        margin: 0;
+        line-height: 1.8;
+        color: #4A4A4A;
+        font-size: 13px;
+    }
+    .p-box .box-s3 .s-box{
+        display: inline-block;
+        margin-bottom:10px;
+    }
+    .p-box .box-s3 .s-box span{
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .p-box .box-s3 .s-box span.st1{
+        color: #9b9b9b;
+        min-width:70px;
+        text-align: right;
+    }
+    .p-box .box-s3 .s-box span.st2{
+        width:200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .template-box:hover .detail-edit{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+        z-index:1;
+        display: block;
+    }
+    .template-box .detail-edit img{
+        display: inline-block;
+        padding:4px;
+    }
+    .detail-block.template-box{
+        margin-top: 20px; position: relative;
+    }
+
+    .p-box .p-box{
+        padding: 18px 0 12px;
+        margin-left: -12px;
+    }
+    .b-first{
+        margin-top: 20px;
+    }
+</style>
+<div class="wap-wrap w100 ">
+    <div class="qy-title">
+        <span class="home-back" onclick="history.back()">
+            <img src="dist/img/qy-arrow-left.png" width="12" alt="">
+        </span>
+        <span class="home-title">职位详情</span>
+        <span class="home-icon" onclick="location.href='home'">
+            <img src="hr/home-icon.png" alt="" width="20">
+        </span>
+    </div>
+    <div class="content-wrap clearfix w100 mt0" style="-webkit-font-smoothing: antialiased;">
+        <div class="alert alert-warning" style="font-size: 12px; padding: 6px; margin-bottom: 6px;">向这个合推职位推荐人才简历，成功推荐者获猎头总收益的30%，所有有效推荐者均分猎头总收益的10%</div>
+        <div class="content content-block w100">
+            <!--基本信息-->
+            <div class="detail-block mt0">
+                <div class="resume-base" style="padding: 10px 30px;">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="name">
+                                <p class="fz18 mb0"><a href="position-detail-wap2.html">安琪开发工程师</a></p>
+                                <!--update-->
+                                <div class="cus-tips" style="font-size: 14px;display: block; margin-top: 4px;">
+                                    <span class="colorF5A623">推荐入职奖金: 10000元，参与奖金: 2500元</span>
+                                    <div class="alert alert-warning" style="font-size: 12px; padding: 6px; margin-bottom: 6px;">推荐奖金：这是成功推荐者可以获得的奖金的最高数额，范围约为2256元-3384元（猎头总收益的30%），具体以招聘成功后企业的付款为准<br>参与奖金：这是有效推荐者可以参与均分的奖金的最高数额，范围约为752元-1128元（猎头总收益的10%），具体以招聘成功后企业的付款为准</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12" style="margin-top: -6px;font-size: 12px;">
+                            <div class="res-special">
+                                <span><img src="http://test.m.xzhiliao.com/static/img/add.png" width="14" alt=""> <span>青岛</span> </span>
+                                <span><img src="http://test.m.xzhiliao.com/static/img/money.png" width="14" alt=""> <span>8K-10K</span> </span>
+                                <span><img src="http://test.m.xzhiliao.com/static/img/clock.png" width="14" alt=""> <span>三年</span> </span>
+                                <span><img src="http://test.m.xzhiliao.com/static/img/edu.png" width="14" alt=""> <span>本科</span></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="row ">
+                                <div class="col-xs-6 ft12">职业性质：<span>全职</span>
+                                </div>
+                                <div class="col-xs-6 ft12">招聘人数： <span>5人</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12">
+                            <div class="row ft12">
+                                <div class="col-xs-8">发布时间：2016-04-03
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-block template-box">
+                <!--富文本模板-->
+                <div class="p-box">
+                    <div class="box-s1">
+                        <span class="st1"></span>
+                        <span class="st2">职位描述：</span>
+                    </div>
+                    <div class="box-s2">
+
+
+
+                        1、计算机相关专业本科以上学历，六年以上Java软件开发B/S项目工作经验，熟练掌握Java系统开发；
+                        <br>
+                        2、能独立承担项目;
+                        <br>
+                        3、对各种开源的框架，如Spring、SpringMVC、Hibernate、Ibatis等有深入了解。
+                        <br>
+                        4、深刻理解软件系统架构，精通面向对象分析设计方法，逻辑能力强，熟练掌握如何设计系统的构架及完整解决深刻理解软件系统架构，精通面向对象分析设计方法，逻辑能力强，熟练掌握如何设计系统的构架及完整解决方案
+                        <br>
+                        5、良好的沟通理解能力、团队协作意识、学习能力、执行力，并热爱技术研发工作；
+                        <br>
+                        6、熟悉linux系统，熟悉常用shell命令的优先考虑；
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="detail-block " style="margin-top: 0;margin-bottom: 20px;font-size: 12px;">
+                <div class="detail-top bgcolor">
+                    <span>联系信息</span>
+                </div>
+                <div class="resume-base ">
+                    <div class="row">
+                        <div class="col-xs-12 color333">
+                            发单人：高明
+                        </div>
+                        <div class="col-xs-12 color333">
+                            手机号 ：13697675882
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="detail-block " style="margin-top: 0;margin-bottom: 40px;font-size: 12px;">
+                <div class="detail-top bgcolor">
+                    <span>公司简介</span>
+                </div>
+                <div class="resume-base ">
+                    <div class="row">
+                        <div class="col-xs-12 color333">
+                            IT服务（系统/数据/维护）/快速消费/配件/销售/服务）
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer text-center" style="background: #f7f7f7;">
+    <div id="m1" style="width: 100%;">
+        <div class="btn btn-warning btn-block" type="button">推荐</div>
+    </div>
+</div>
+
+<div class="mask rule-mask m1" style="display: none;">
+    <div class="mask-content" style="height: auto;margin-top: 200px;">
+        <div class="mask-close m1">
+            <img src="hr/mask-close.png" alt="">
+        </div>
+        <div style="width: 90%; margin: 0px auto;overflow: auto;
+    height: auto; text-align: center">
+            <div>
+                <br>
+                <p>
+                    请登陆小职了PC端www.xzhiliao.com进行推荐
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.m9 .mask-close,.m1 .mask-close').click(function () {
+        $(this).parents('.mask').hide();
+        $('.wap-wrap').css('overflow','inherit')
+    })
+
+    $('#m1').click(function () {
+        $('.mask.m1').show();
+        $('.wap-wrap').css('overflow','hidden')
+    })
+
+    $(window).on('click',function () {
+        $('.mask.share').hide();
+    })
+    $('#m9').on('click',function (e) {
+        e.stopPropagation()
+        $('.mask.share').show();
+    })
+</script>
+
+</body>
+</html>
