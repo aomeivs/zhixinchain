@@ -6,11 +6,14 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>平台首页</title>
+    <script src="https://cdn.bootcss.com/babel-polyfill/6.22.0/polyfill.min.js"></script>
+    <script src="https://cdn.bootcss.com/event-source-polyfill/0.0.9/eventsource.min.js"></script>
     <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
     <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
     <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="http://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+    <script src="public/js/ie-lte9.js"></script>
     <link rel="stylesheet" href="public/css/outdatedBrowser.min.css">
     <script src="public/js/outdatedBrowser.min.js"></script>
     <link rel="stylesheet" href="public/css/app.css">
@@ -79,7 +82,7 @@
     </div>
 </div>
 <div class="component-modal-mask mask-buy">
-    <div  class="upZheGai" style="display: none">
+    <div class="upZheGai" style="display: none">
         <div class="zhegaiContent" >
             <div class="zhegaiContent-close" style="position: relative">
                 <img src="public/images/index/Combined.png" id="closeBuyContent" style="position: absolute; right: 19px; top: 19px; cursor: pointer;">
@@ -235,7 +238,6 @@
                 </div>
 
             </div>
-
         </div>
     </div>
 </div>
@@ -472,14 +474,14 @@
                         $.getPrice(300);
                     }
                 }else{
-                    mizhu.alert('温馨提示', '请输入大于或者等于5的整数');
+                    alert('温馨提示,请输入大于或者等于5的整数');
                     //清空输入框内容
                     $('#addNum_input').val("")
                     inputNum=0;
                     $('#add_num').text(0)
                 }
             }else{
-                mizhu.alert('温馨提示', '请输入大于或者等于5的整数');
+                alert('温馨提示,请输入大于或者等于5的整数');
 //                alert("请输入大于或者等于5的整数");
                 //清空输入框内容
                 $('#addNum_input').val("")
@@ -500,7 +502,7 @@
         var pattern = /^1[34578]\d{9}$/;
         if (!pattern.test(phone)){
 //            alert("请输入正确的手机号码");
-            mizhu.alert('温馨提示', '请输入正确的手机号码');
+            alert('温馨提示,请输入正确的手机号码');
             $('#phoneNum').val("")
         }
     })
@@ -510,7 +512,8 @@
         $.getPrice(pre_price);
     })
 
-    $.extend({getPrice:function(unit_price){
+    $.extend({
+        getPrice:function(unit_price){
         //计算价格函数
         var priceBrfore=$('#price_before').text();
         var addNum=$('#add_num').text();
@@ -533,7 +536,7 @@
                 $('#daijin_sum').text(100);
             }else{
                 //错误
-                mizhu.alert('温馨提示', '输入代金劵码有误，请重新输入');
+                alert('温馨提示,输入代金劵码有误，请重新输入');
                 $('#daijin_input').val("")
                 $('#daijin_sum').text(0);
             }
