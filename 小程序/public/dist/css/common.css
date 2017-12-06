@@ -1,29 +1,4 @@
-body{
-    max-width: 640px;
-    margin:0 auto;
-    background: #e7eaef;
-    font-size:14px;
-}
 
-@media only screen and (min-width: 320px){
-    .content-wrap .appointment-wrap{
-        padding-left:20px;
-        padding-right:20px;
-    }
-    div.content-wrap div.content-block,div.content-block.resume-scroll{
-        padding:20px 5px;
-    }
-
-}
-@media only screen and (min-width: 360px){
-    .content-wrap .appointment-wrap{
-        padding-left:40px;
-        padding-right:40px;
-    }
-    div.content-wrap div.content-block,div.content-block.resume-scroll{
-        padding:20px;
-    }
-}
 
 .left {
     float: left;
@@ -114,7 +89,7 @@ div.fixed-pay-button,.footer-box{
     font-size:14px;
 }
 .ft12{
-    font-size:12px;
+    font-size:14px;
 }
 .fz18{
     font-size: 18px;
@@ -171,18 +146,21 @@ div.resume-base > .row > div {
     display: inline-block;
     padding: 8px 0;
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .interview-btn.w100px {
     width: 100px;
 }
-
+.text-right{
+    text-align: right;
+}
 .interview-sm-btn {
     padding: 4px 8px;
     width: auto;
-    font-size: 12px;
+    font-size: 14px;
     border: none;
+
     background: #F5A623;
     color: #ffffff;
 }
@@ -224,8 +202,6 @@ div.resume-base > .row > div {
     background: #FFFFFF;
     border-radius: 4px;
     margin: 0 auto;
-    min-width: 300px;
-    padding: 20px;
     margin-top: 150px;
 }
 
@@ -237,12 +213,15 @@ div.resume-base > .row > div {
 .fix-footer {
     background: #f7f7f7;
     color: #ffffff;
+    width: 80%;
+    margin: 0 auto;
 }
 
-.fix-footer .footer-operator {
+.footer-operator {
 
     display: inline-block;
     width: 32%;
+
     text-align: center;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     margin: 8px 0;
@@ -263,7 +242,7 @@ div.resume-base > .row > div {
     line-height: 32px;
     color: #F5A623;
     vertical-align: middle;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -288,10 +267,8 @@ div.resume-detail.view.pb0{
 
 div.content-block {
     background: #FFFFFF;
-    width: 860px;
-    box-shadow: 0px 1px 1px 0px rgba(195, 188, 188, 0.50);
     border-radius: 2px;
-    padding: 20px;
+    font-size: 14px;
 }
 
 div.resume-des {

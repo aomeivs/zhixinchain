@@ -3,55 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
-    <link rel="stylesheet" href="dist/css/bootstrap.min.css"/>
+    <!--<link rel="stylesheet" href="dist/css/bootstrap.min.css"/>-->
     <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
     <link rel="stylesheet" href="dist/css/common.css">
     <title></title>
 </head>
 <body>
 <style>
-    @media only screen and (min-width: 320px){
-        div.res-special span img{
-            width:14px;
-            max-height:16px;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        div.res-special span span{
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .mask-content {
-            width:300px !important;
-        }
+    .clearfix:after{
+        display: table;
+        content: " ";
     }
-    @media only screen and (min-width: 360px){
-        div.res-special span img{
-            width:16px;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        div.res-special span span{
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .mask-content {
-            width:320px !important;
-        }
+    .w6{
+        display: inline-block;
+        width: 49%;
     }
-    @media only screen and (min-width: 375px){
-        div.res-special span img{
-            width:14px;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        div.res-special span span{
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .mask-content {
-            width:340px !important;
-        }
+    .alert {
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    .alert-warning {
+        color: #8a6d3b;
+        background-color: #fcf8e3;
+        border-color: #faebcc;
+    }
+    .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    .btn-warning {
+        color: #fff;
+        background-color: #f0ad4e;
+        border-color: #eea236;
+    }
+    .btn-block {
+        display: block;
     }
 
 
@@ -67,7 +72,7 @@
         padding-left: 0 !important;
     }
 
-    div.resume-base > .row > div {
+    div.resume-base .row  div {
         margin-bottom: 10px;
         color: #999;
     }
@@ -87,6 +92,12 @@
     }
     div.resume-base .name p{
         color: #666;
+        padding: 0;
+        margin: 0;
+    }
+    div.resume-base .name p a{
+        text-decoration: none;
+        color: #333333;
     }
 
     .bgcolor{
@@ -152,8 +163,7 @@
         background: #FFFFFF;
         border-radius: 8px;
         position: relative;
-        width: 2.8rem;
-        height: 4rem;
+        width: 90%;
         margin: 0 auto;
         overflow: auto;
         margin-top: 50px;
@@ -325,9 +335,9 @@
         <div class="content content-block w100">
             <!--基本信息-->
             <div class="detail-block mt0">
-                <div class="resume-base" style="padding: 10px 30px;">
-                    <div class="row">
-                        <div class="col-xs-12">
+                <div class="resume-base" style="padding: 10px">
+                    <div>
+                        <div>
                             <div class="name">
                                 <p class="fz18 mb0"><a href="position-detail-wap2.html">安琪开发工程师</a></p>
                                 <!--update-->
@@ -337,7 +347,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12" style="margin-top: -6px;font-size: 12px;">
+                        <div style="font-size: 12px;">
                             <div class="res-special">
                                 <span><img src="http://test.m.xzhiliao.com/static/img/add.png" width="14" alt=""> <span>青岛</span> </span>
                                 <span><img src="http://test.m.xzhiliao.com/static/img/money.png" width="14" alt=""> <span>8K-10K</span> </span>
@@ -345,17 +355,17 @@
                                 <span><img src="http://test.m.xzhiliao.com/static/img/edu.png" width="14" alt=""> <span>本科</span></span>
                             </div>
                         </div>
-                        <div class="col-xs-12">
-                            <div class="row ">
-                                <div class="col-xs-6 ft12">职业性质：<span>全职</span>
+                        <div>
+                            <div style="font-size: 12px; margin: 8px 0;">
+                                <div class="w6 ">职业性质：<span>全职</span>
                                 </div>
-                                <div class="col-xs-6 ft12">招聘人数： <span>5人</span>
+                                <div class="w6  text-right">招聘人数： <span>5人</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xs-12">
-                            <div class="row ft12">
-                                <div class="col-xs-8">发布时间：2016-04-03
+                        <div style="font-size: 12px;">
+                            <div class="w100 ">
+                                <div>发布时间：2016-04-03
                                 </div>
                             </div>
                         </div>
