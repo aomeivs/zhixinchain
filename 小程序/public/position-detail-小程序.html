@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
-    <!--<link rel="stylesheet" href="dist/css/bootstrap.min.css"/>-->
     <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
     <link rel="stylesheet" href="dist/css/common.css">
     <title></title>
@@ -233,18 +232,25 @@
         background: #f7f7f7;color: #666;
     }
 
-    div.res-special>span {
+    div.res-special span {
         padding: 0px;
         text-align: left;
         padding-right: 2px;
         vertical-align: middle;
 
     }
-    div.res-special>span img,div.res-special>span span{
+    div.res-special span img,div.res-special span span{
         vertical-align: middle !important;
+        display: inline-block;
     }
-    div.res-special span:first-child{
-        padding: 0;
+
+    div.res-special span span{
+        margin-right: 8px;
+    }
+    div.res-special span img{
+
+    }
+    div.res-special span:last-child{
     }
     .p-box{
         padding: 18px 12px 12px;
@@ -343,7 +349,7 @@
                                 <!--update-->
                                 <div class="cus-tips" style="font-size: 14px;display: block; margin-top: 4px;">
                                     <span class="colorF5A623">推荐入职奖金: 10000元，参与奖金: 2500元</span>
-                                    <div class="alert alert-warning" style="font-size: 12px; padding: 6px; margin-bottom: 6px;">推荐奖金：这是成功推荐者可以获得的奖金的最高数额，范围约为2256元-3384元（猎头总收益的30%），具体以招聘成功后企业的付款为准<br>参与奖金：这是有效推荐者可以参与均分的奖金的最高数额，范围约为752元-1128元（猎头总收益的10%），具体以招聘成功后企业的付款为准</div>
+                                    <div class="alert alert-warning" style="font-size: 12px; padding: 6px; margin-bottom: 6px; margin-top: 6px;">推荐奖金：这是成功推荐者可以获得的奖金的最高数额，范围约为2256元-3384元（猎头总收益的30%），具体以招聘成功后企业的付款为准<br>参与奖金：这是有效推荐者可以参与均分的奖金的最高数额，范围约为752元-1128元（猎头总收益的10%），具体以招聘成功后企业的付款为准</div>
                                 </div>
                             </div>
                         </div>
