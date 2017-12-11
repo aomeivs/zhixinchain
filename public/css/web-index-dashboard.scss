@@ -6,8 +6,8 @@
   bottom: 123px;
   font-size: 14px;
   color: #4a4a4a;
-  width: 282px;
-  height: 147px;
+  width: 300px;
+  height: 150px;
   text-align: right;
   .kefu-lt-1-left{
     display: inline-block;
@@ -26,7 +26,6 @@
       border-bottom: solid 1px #e6e6e6;
     }
     .kefu-lt-1-left-2{
-
       padding-left: 13px;
     }
     .kefu-lt-1-left-2 p{
@@ -36,6 +35,8 @@
   .kefu-lt-1-right{
     display: inline-block;
     vertical-align: top;
+    width: 60px;
+    text-align: center;
   }
   .kefu-lt-1-right span{
 

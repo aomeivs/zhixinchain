@@ -177,7 +177,7 @@
                                 </div>
                                 <div class="right">
                                     <label class="employ-base-photo" for="employ-base-photo">
-                                        <img src="public/images/employ/employ-base-photo.png" width="166" height="166" alt="">
+                                        <img src="public/images/photo-empoy-default.png" width="166" height="166" alt="">
                                         <div class="employ-base-photo-btn">
                                             更换头像
                                         </div>
@@ -224,7 +224,7 @@
                         </div>
                         <div class="base-right right">
                             <span class="base-photo">
-                                <img src="public/images/employ/employ-base-photo.png" width="166" alt="">
+                                <img src="public/images/photo-empoy-default.png" width="166" alt="">
                             </span>
                         </div>
                     </div>
@@ -629,7 +629,7 @@
                                         </div>
                                     </div>
                                 </tab-pane>
-                                <tab-pane name="2" :disabled="true" label="月度评价" icon="document-text">
+                                <tab-pane name="2" :disabled="false" label="月度评价" icon="document-text">
                                     <div v-show="name==2" class="component-assess-info-month" v-bind:class="{'tab-active':name==2}">
                                         <div v-show="!assessInfoBase2" class="assess-tab assess-info-month">
 
@@ -742,12 +742,20 @@
                                                                 <ul v-show="!editPunish">
                                                                     <li>
                                                                         <div>
-                                                                            <div class="text-left" style="font-size: 12px;">2017-10-10</div>
+                                                                            <div class="text-left time">
+                                                                                2017-10-10
+                                                                                <div class="edit">
+                                                                                <i-button type="text"  size="small">
+                                                                                    <Icon type="edit"></Icon>
+                                                                                    <span style="padding-left: 4px;">编辑</span>
+                                                                                </i-button>
+                                                                                </div>
+                                                                            </div>
                                                                             奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细
                                                                         </div>
 
                                                                         <div>
-                                                                            <div class="text-left" style="font-size: 12px;">2017-10-10</div>
+                                                                            <div class="text-left time">2017-10-10 <div class="edit"><i-button type="text"  size="small"><Icon type="edit"></Icon><span style="padding-left: 4px;">编辑</span></i-button></div></div>
                                                                             奖惩情况情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细
                                                                         </div>
                                                                     </li>
