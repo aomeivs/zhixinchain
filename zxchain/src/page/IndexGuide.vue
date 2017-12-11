@@ -477,16 +477,16 @@
 <script>
 export default {
   name: 'IndexGuide',
-    data () {
+    data :function() {
         return {
             visible: false
         }
     },
     methods: {
-        handleOpen () {
+        handleOpen :function() {
             this.visible = !this.visible;
         },
-        closeModal(){
+        closeModal:function(){
             this.visible = false;
         },
         downloadImageAll(){

@@ -1,0 +1,165 @@
+%component-modal-buy{
+  .upZheGai{
+    background: rgba(99, 99, 99, 0.5);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    overflow-y: auto;
+  }
+  .upZheGai input{
+    font-size: 13px;
+  }
+
+  .zhegaiContent{
+    background: #ffffff;
+    width: 926px;
+    height: 850px;
+    min-width: 400px;
+    min-height: 250px;
+    margin: 0 auto;
+    margin-top: 8px;
+  }
+  .zhegaiContent-title{
+    text-align: center;
+    font-size: x-large;
+    padding-top: 16px;
+  }
+  .zhegaiContent-buyChoice{
+    background-color: #f4f4f4;
+    margin-top: 18px;
+  }
+  .zhegaiContent-buyChoice-1.one{
+    padding-top: 20px;
+  }
+  .zhegaiContent-buyChoice-1-1{
+    width: 132px;
+    text-align: right;
+    font-size: 14px;
+    /*color: #757373;*/
+    height: 36px;
+    line-height: 36px;
+    float: left;
+  }
+  .zhegaiContent-buyChoice-bnt{
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 60px;
+    height: 60px;
+  }
+  .zhegaiContent-buyChoice-bnt-1{
+    width: 187px;
+    line-height: 36px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #40beff;
+    background-color: white;
+    cursor: pointer;
+  }
+  .zhegaiContent-buyChoice-bnt-2{
+    display: block;
+    color: #757373;
+    margin-top: 2px;
+    font-size: 12px;
+  }
+  .clearFloat{
+    clear: both;
+  }
+  .buyChoice-bnt-action{
+    background-color: #40beff;
+    color: white;
+  }
+  .zhegaiContent-buyChoice-2{
+    font-size: 14px;
+    color: #5b5a5a;
+    text-align: left;
+    margin-left: 146px;
+    padding-bottom: 20px;
+  }
+  .zhegaiContent-buyChoice-3 .zhegaiContent-buyChoice-bnt{
+    margin-left: 20px;
+    height: 36px;
+    line-height: 36px;
+    color: #33b3f4;
+    font-size: 18px;
+  }
+  .zhegaiContent-buyChoice-3{
+    background-color: white;
+  }
+  .zhegaiContent-buyChoice-3 .font-gary-samall{
+    font-size: 13px;
+    color: #858584;
+  }
+  .textHidden_lt{
+    display: none;
+  }
+  .zhegaiContent-buyChoice-4{
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    background-color: white;
+    margin-top: 8px;
+  }
+  .zhegaiContent-buyChoice-5 .zhegaiContent-buyChoice-1-1{
+    width: 150px;
+    font-size: 16px;
+  }
+  .zhegaiContent-buyChoice-5 .zhegaiContent-buyChoice-bnt-1{
+    width: 254px;
+    border-color: #cfcfcc;
+  }
+  .zhegaiContent-buyChoice-5{
+    background-color: white;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .zhegaiContent-buyChoice-5-1{
+    margin-bottom: 13px;
+  }
+  .zhegaiContent-buyChoice-total{
+    background-color: white;
+    margin-bottom: 8px;
+    font-size: 20px;
+    text-align: center;
+    color: #22acf3;
+    letter-spacing: 1px;
+    padding: 12px 0px;
+  }
+  .zhegaiContent-buyChoice-fontYellow{
+    color: #ff9204;
+  }
+  .zhegaiContent-buyChoice-fontblue{
+    color: #22acf3;
+  }
+  .zhegaiContent-buyChoice-6{
+    background-color: white;
+    margin-top: 8px;
+  }
+  .zhegaiContent-buyChoice-6-2{
+    width: 330px;
+    height: 46px;
+    line-height: 46px;
+    background-color: #40beff;
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    cursor: pointer;
+  }
+  .zhegaiContent-buyChoice-6 span{
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+    color: #8d8f90;
+  }
+  .zhegaiContent-buyChoice-3-2{
+    float: left;
+    line-height: 28px;
+    margin-left: 11px;
+    font-size: 17px;
+  }
+
+}

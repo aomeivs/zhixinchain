@@ -1,10 +1,16 @@
+@charset "utf-8";
 %component-setting{
   .setting-container{
     padding-top: 50px;
-    padding-left: 50px;
+    //setting-bottom增加left距离
+    padding-left: 80px;
+    //setting-bottom增加底部距离
+    padding-bottom: 80px;
     .line{
       height: 1px;
-      width: 1200px;
+      //setting line 增加 线宽自适应和最大宽度
+      width: 100%;
+      max-width:1200px;
       border-bottom:1px solid #dddee1;
       margin: 40px 0;
     }
@@ -166,6 +172,53 @@
         }
       }
 
+    }
+  }
+
+  .pay-status{
+    width: 1000px;
+    margin: 50px auto;
+    padding-top: 50px;
+    text-align: center;
+
+    .set-pay{
+      margin-bottom: 50px;
+      .set-title{
+        text-align: center;
+        .add-employ-title{
+          color: #1c2438;
+          .e-title-1{
+            font-size: 40px;
+          }
+          .e-title-2{
+            font-size: 20px;
+          }
+        }
+      }
+      .set-status{
+        width: 600px;
+        margin: 50px auto;
+        padding: 150px;
+        &.success{
+          border: 2px solid #40BEFF;
+          .status-icon{
+            color:#40BEFF;
+          }
+        }
+        &.failed{
+          border: 2px solid #FFB95D;
+          .status-icon{
+            color:#FFB95D;
+          }
+        }
+        .status-icon{
+          font-size: 56px;
+        }
+        .status-text{
+          font-size: 28px;
+          margin-top: 20px;
+        }
+      }
     }
   }
 }

@@ -198,6 +198,12 @@
 
 }
 
+.component-modal-mask{
+  &.mask-buy{
+    @extend %component-modal-buy;
+  }
+}
+
 html,body{
   width: 100%;
   height: 100%;
@@ -237,7 +243,33 @@ html,body{
   .text-right{
     text-align: right;
   }
+%head-menu-userInfo{
+  color: #333;
+  width: 300px;
+  line-height: 2;
+  padding:10px 15px;
+  font-size: 14px;
+  .head-menu-uline{
+    border-top: 1px solid #f1f1f1;
+    margin:8px 0;
+  }
 
+  .head-menu-u1,.head-menu-u2{
+    font-size: 14px;
+    .h-m-u-1{
+      color: #333;
+
+
+    }
+  }
+  .head-menu-u3{
+    a{
+      &.head-message-badge{
+        color: #333;
+      }
+    }
+  }
+}
   .wrap{
     width: 100%;
     height: 100%;
@@ -265,6 +297,10 @@ html,body{
             a{
               color: #ffffff;
             }
+            .head-menu-userInfo{
+              @extend %head-menu-userInfo;
+            }
+
             .c-head-user{
               &>div{
                 float: left;
@@ -292,6 +328,9 @@ html,body{
     //c-body container下的
     .c-body{
       height: 100%;
+      display: table;
+      width: 100%;
+      overflow: hidden;
       position: relative;
 
       .c-accordion{
@@ -325,6 +364,7 @@ html,body{
         width: 320px;
         margin-bottom: -10000px;
         padding-bottom: 10000px;
+        display: table-cell;
         overflow: hidden;
         background: #F5F7F9;
 
@@ -408,6 +448,10 @@ html,body{
       .c-body-container{
         margin-left: 320px;
         height: 100%;
+        width: 100%;
+
+        display: table-cell;
+        vertical-align: top;
         .component-dashboard{
           @extend %component-dashboard;
         }
@@ -731,8 +775,11 @@ html,body{
         }
       }
 
-    }
+      .c-component-vouchers{
+        @extend %component-vouchers
+      }
 
+    }
   }
 
 }
