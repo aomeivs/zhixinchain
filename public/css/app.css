@@ -984,6 +984,11 @@ html .wrap .c-body .c-body-container .component-employ .employ-container .employ
     background-color: transparent;
     border-color: #57a3f3; }
 
+.require {
+  color: red;
+  display: inline-block;
+  margin-right: 8px; }
+
 .addGroup-custom-tips {
   display: block; }
   .addGroup-custom-tips .ivu-poptip-rel {
