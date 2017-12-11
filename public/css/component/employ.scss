@@ -597,11 +597,20 @@
                 ul{
                   li{
                     border: 1px solid #d9d9d9;
+
                     padding: 20px;
                     width: 460px;
                     color: #4a4a4a;
                     margin-bottom: 10px;
                     &>div{
+                      .time{
+                        font-size: 12px; height: 24px; line-height: 24px; overflow: hidden;
+                        .edit{
+                          float: right;
+                          margin-top: -2px;
+
+                        }
+                      }
                       margin-bottom: 10px;
                       &:last-child{
                         margin-bottom: 0;
