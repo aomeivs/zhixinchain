@@ -33,8 +33,9 @@ html .wrap .c-body .c-body-left .left-body-container .component-tree, body .wrap
       display: block;
       clear: both; }
     html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box.active, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box.active {
-      border-right: 2px solid #1B7CE1;
       color: #1B7CE1; }
+    html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-icon:hover, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-icon:hover, html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-content:hover, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-content:hover {
+      cursor: pointer; }
     html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box > div, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box > div {
       vertical-align: middle;
       height: 26px;
@@ -1233,7 +1234,11 @@ html, body {
               height: 48px;
               line-height: 48px; }
               html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-icon, html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-icon, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-icon, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-icon {
-                margin-top: -4px; }
+                margin-top: -4px;
+                display: inline-block;
+                vertical-align: middle;
+                width: 23px;
+                height: 23px; }
               html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-title, html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-title, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-title, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-title {
                 margin-left: 20px;
                 display: inline-block;
@@ -1241,12 +1246,27 @@ html, body {
               html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-count, html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-count, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-count, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-count {
                 margin-left: 20px; }
             html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on {
-              color: #298cff;
               font-weight: bold; }
+              html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block {
+                color: #4A4A4A; }
+                html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-icon, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-icon {
+                  background: url("../images/tree-employ.png") 0 0 no-repeat; }
+                html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block.active, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block.active {
+                  color: #298cff; }
+                  html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block.active .employ-icon, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block.active .employ-icon {
+                    background: url("../images/tree-employ-active.png") 0 0 no-repeat; }
             html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off {
-              color: #4A4A4A;
               font-weight: bold; }
+              html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block {
+                color: #4A4A4A; }
+                html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-icon, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-icon {
+                  background: url("../images/tree-employ-off.png") 0 0 no-repeat; }
+                html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block.active, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block.active {
+                  color: #298cff; }
+                  html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block.active .employ-icon, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block.active .employ-icon {
+                    background: url("../images/tree-employ-off-active.png") 0 0 no-repeat; }
           html .wrap .c-body .c-body-left .left-body-container .tree-addGroup, html .wrap .c-body .c-body-left .left-body-container .tree-setting, body .wrap .c-body .c-body-left .left-body-container .tree-addGroup, body .wrap .c-body .c-body-left .left-body-container .tree-setting {
+            cursor: pointer;
             width: 230px;
             height: 48px;
             line-height: 48px;

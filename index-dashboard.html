@@ -92,7 +92,8 @@
                 <!--在职员工-->
                 <div class="tree-employ employ-on">
                     <div class="employ-on-block">
-                        <img class="employ-icon" src="public/images/tree-employ.png" width="23" alt="在职员工">
+                        <div class="employ-icon"></div>
+                        <!--<img class="employ-icon" src="public/images/tree-employ.png" width="23" alt="在职员工">-->
                         <span class="employ-title">
                         在职员工
                     </span>
@@ -108,7 +109,7 @@
                 </div>
 
                 <!--添加部门-->
-                <div class="tree-addGroup">
+                <div class="tree-addGroup active">
                     <icon type="plus-round"></icon><span>添加部门</span>
                 </div>
 
@@ -120,7 +121,8 @@
                 <!--离职员工-->
                 <div class="tree-employ employ-off">
                     <div class="employ-on-block">
-                        <img class="employ-icon" src="public/images/tree-employ-off.png" width="23" height="23" alt="离职员工">
+                        <div class="employ-icon"></div>
+                        <!--<img class="employ-icon" src="public/images/tree-employ-off.png" width="23" height="23" alt="离职员工">-->
                         <span class="employ-title">
                         已离职员工
                     </span>
@@ -244,12 +246,13 @@
             <div v-if="tree.dataList && !tree.root && !editStatus" class="box-control">
                 <dropdown @on-click="dropDown" placement="bottom-end">
                     <a href="javascript:void(0)">
-                        添加
-                        <icon type="arrow-down-b"></icon>
+                        <Icon type="plus-round" style="font-size: 16px;"></Icon>
+                        <!--<icon type="arrow-down-b"></icon>-->
                     </a>
                     <dropdown-menu slot="list">
-                        <dropdown-item name="E">员工</dropdown-item>
-                        <dropdown-item name="G">部门</dropdown-item>
+                        <dropdown-item name="E">添加员工</dropdown-item>
+                        <dropdown-item name="G">添加部门</dropdown-item>
+                        <dropdown-item name="DG">编辑部门</dropdown-item>
                     </dropdown-menu>
                 </dropdown>
             </div>
