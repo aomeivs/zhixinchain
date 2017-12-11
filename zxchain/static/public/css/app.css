@@ -1591,13 +1591,13 @@ html, body {
 
 .wrap.index-lt {
   /*
-   * 背景bunner 部分
+   * 鑳屾櫙bunner 閮ㄥ垎
    */
   /**
-   * 立即加入按钮部分
+   * 绔嬪嵆鍔犲叆鎸夐挳閮ㄥ垎
    */
   /*
-  * 职信介绍部分
+  * 鑱屼俊浠嬬粛閮ㄥ垎
   */ }
   .wrap.index-lt .index-lt-1 {
     background-color: white;
@@ -1906,6 +1906,17 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
   /**
   * 数据动态部分
   */ }
+  .wrap .component-index .head-menu-userInfo .head-menu-company-diy {
+    font-size: 16px;
+    text-align: center; }
+  .wrap .component-index .head-menu-userInfo .head-menu-person-diy {
+    text-align: center;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .wrap .component-index .head-menu-userInfo .span-hand {
+    cursor: pointer; }
   .wrap .component-index .zi18 {
     font-size: 18px; }
   .wrap .component-index a {
@@ -2244,6 +2255,45 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     border-width: 2px;
     border-radius: 6px;
     margin-left: 12px;
+    cursor: pointer; }
+
+.wrap .kefu-lt {
+  position: absolute;
+  right: 50px;
+  bottom: 123px;
+  font-size: 14px;
+  color: #4a4a4a;
+  width: 282px;
+  height: 147px;
+  text-align: right; }
+  .wrap .kefu-lt .kefu-lt-1-left {
+    display: inline-block;
+    width: 205.4px;
+    height: 146.8px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: solid 1px #e6e6e6;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-right: 20px;
+    text-align: left; }
+    .wrap .kefu-lt .kefu-lt-1-left .kefu-lt-1-left-1 {
+      height: 40px;
+      padding-top: 10px;
+      padding-left: 13px;
+      border-bottom: solid 1px #e6e6e6; }
+    .wrap .kefu-lt .kefu-lt-1-left .kefu-lt-1-left-2 {
+      padding-left: 13px; }
+    .wrap .kefu-lt .kefu-lt-1-left .kefu-lt-1-left-2 p {
+      margin-top: 10px; }
+  .wrap .kefu-lt .kefu-lt-1-right {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center; }
+  .wrap .kefu-lt .kefu-lt-1-right span {
+    font-size: 12px;
+    color: #000000;
+    cursor: pointer; }
+  .wrap .kefu-lt .kefu-lt-1-right img {
     cursor: pointer; }
 
 /*# sourceMappingURL=app.css.map */

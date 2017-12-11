@@ -1,0 +1,123 @@
+@charset "utf-8";
+%search-online{
+  .search-online-1{
+    text-align: center;
+    margin-top: 114px;
+  }
+  .search-online-2{
+    width: 870px;
+    margin: 0 auto;
+    margin-top: 118px;
+
+  }
+  .search-online-2-1{
+    float: left;
+  }
+  .search-online-2-1 input{
+    height: 54px;
+    border-radius: 0px;
+    font-size: 16px;
+  }
+  .search-online-2-2{
+    float: left;
+  }
+  .search-online-2-2 button{
+    width: 199px;
+    height: 54px;
+    font-size: 18px;
+    border-radius: 0px;
+  }
+}
+%component-account-searchResult{
+  .search-result-1{
+    width: 1111px;
+    margin: 0 auto;
+    margin-top: 49px;
+    padding-bottom: 18px;
+  }
+  .search-result-1-1{
+    float: left;
+  }
+  .search-result-1-1 input{
+    height: 54px;
+    border-radius: 0px;
+    font-size: 16px;
+  }
+  .search-result-1-2{
+    float: left;
+  }
+  .search-result-1-2 button{
+    width: 210px;
+    height: 54px;
+    font-size: 18px;
+    border-radius: 0px;
+  }
+
+
+
+  .search-result-2{
+    width: 1111px;
+    margin: 0 auto;
+    margin-top: 30px;
+    .result-name{
+      text-align: center;
+      display: inline-block;
+      line-height: 102px;
+      font-size: 28px;
+      color: #1c2438;
+    }
+    .name{
+      width: 220px;
+    }
+    .mobile{
+      width: 230px;
+    }
+    .cardNum{
+      width: 353px;
+    }
+    .authorizeStatus{
+      width: 50px;
+    }
+    .result-other{
+      text-align: left;
+      display: inline-block;
+      line-height: 102px;
+      font-size: 16px;
+      color: #495060;
+    }
+
+    .result-shouquan{
+      display: inline-block;
+      text-align: center;
+      line-height: 102px;
+      font-size: 16px;
+      color: #298cff;
+      cursor: pointer;
+      width: 200px;
+    }
+  }
+
+  /*
+   * 无搜索结果样式
+   */
+
+  .search-noResult{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 18px;
+  }
+  .search-noResult-1{
+    margin-top: 27px;
+  }
+}
+.wrap{
+  &.search-online {
+    @extend %search-online;
+  }
+  /*
+   * 在线搜索结果页面样式
+   */
+  &.search-result {
+    @extend %component-account-searchResult;
+  }
+}

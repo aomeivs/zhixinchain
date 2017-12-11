@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,cAAQ;EACN,KAAK,EAAE,GAAG",
+"sources": ["web-index-dashboard.scss"],
+"names": [],
+"file": "web-index-dashboard.css"
+}

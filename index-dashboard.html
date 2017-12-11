@@ -105,68 +105,6 @@
                 <!--组件-树-->
                 <div class="component-tree">
                     <component-tree v-bind:tree='treeData'></component-tree>
-                    <!--<div class="employ-group">
-                        <div class="box group-box member-box">
-                            <div class="box-icon">
-                                <img src="public/images/tree-group.png" width="19" alt="图标">
-                                <img src="public/images/tree-arrow.png" style="margin-left: 4px;" width="7" alt="">
-                            </div>
-                            <div class="box-content">
-                                <span>技术中心</span>
-                            </div>
-                            <div class="box-control">
-                                <dropdown placement="bottom-end">
-                                    <a href="javascript:void(0)">
-                                        添加
-                                        <icon type="arrow-down-b"></icon>
-                                    </a>
-                                    <dropdown-menu slot="list">
-                                        <dropdown-item>员工</dropdown-item>
-                                        <dropdown-item>部门</dropdown-item>
-                                    </dropdown-menu>
-                                </dropdown>
-                            </div>
-                        </div>
-                        <div>
-
-                            <div class="employ-group">
-                                <div class="box group-box member-box">
-                                    <div class="box-icon">
-                                        <img src="public/images/tree-photo1.png" width="28" alt="图标">
-                                        &lt;!&ndash;<img src="public/images/tree-arrow.png" style="margin-left: 4px;" width="7" alt="">&ndash;&gt;
-                                    </div>
-                                    <div class="box-content">
-                                        <span>老大</span>
-                                    </div>
-                                    &lt;!&ndash;<div class="box-control">
-                                        <span>添加</span>
-                                    </div>&ndash;&gt;
-                                </div>
-                                <div class="box group-box member-box">
-                                    <div class="box-icon">
-                                        <img src="public/images/tree-group.png" width="19" alt="图标">
-                                        <img src="public/images/tree-arrow.png" style="margin-left: 4px;" width="7" alt="">
-                                    </div>
-                                    <div class="box-content">
-                                        <span>PHP</span>
-                                    </div>
-                                    <div class="box-control">
-                                        <dropdown placement="bottom-end">
-                                            <a href="javascript:void(0)">
-                                                添加
-                                                <icon type="arrow-down-b"></icon>
-                                            </a>
-                                            <dropdown-menu slot="list">
-                                                <dropdown-item>员工</dropdown-item>
-                                                <dropdown-item>部门</dropdown-item>
-                                            </dropdown-menu>
-                                        </dropdown>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>-->
                 </div>
 
                 <!--添加部门-->
@@ -239,9 +177,43 @@
 
         </div>
     </div>
+    <kefu></kefu>
 </div>
 
-
+<script type="html/x-template" id="kefu">
+    <div class="kefu-lt">
+        <div class="kefu-lt-1">
+            <div class="kefu-lt-1-left" v-show="open">
+                <div class="kefu-lt-1-left-1"><span>客服电话</span></div>
+                <div class="kefu-lt-1-left-2">
+                    <p>全国：400-6190828</p>
+                    <p>总部：0532-80913319</p>
+                    <p>北京：010-57493123</p>
+                </div>
+            </div>
+            <div class="kefu-lt-1-right">
+                <img src="public/images/kefu.png" @click="click_kefu()">
+                <br>
+                <span>联系客服</span>
+            </div>
+        </div>
+    </div>
+</script>
+<script>
+    Vue.component('kefu', {
+        template:'#kefu',
+        data:function(){
+            return {
+                open:false
+            }
+        },
+        methods: {
+            click_kefu:function(){
+                this.open=!this.open
+            }
+        }
+    })
+</script>
 <!--tree 模板-->
 <script type="html/x-template" id="component-tree">
 
@@ -290,6 +262,7 @@
 </script>
 
 <script>
+
 //    tree-item component
 
 /***

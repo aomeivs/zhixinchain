@@ -1,11 +1,11 @@
 /*
-Sass::SyntaxError: ".wrap .component-index .head-menu-userInfo" failed to @extend "%head-menu-userInfo".
-The selector "%head-menu-userInfo" was not found.
-Use "@extend %head-menu-userInfo !optional" if the extend should be able to fail.
+Sass::SyntaxError: "%component-employ .employ-container .employ-assess .assess-operate .operate-add .ivu-btn-ghost" failed to @extend "%ivu-btn-ghost".
+The selector "%ivu-btn-ghost" was not found.
+Use "@extend %ivu-btn-ghost !optional" if the extend should be able to fail.
 
 
 Backtrace:
-web-index.scss:6
+employ.scss:177
 E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/tree/visitors/extend.rb:56:in `block in check_extends_fired!'
 E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/util/subset_map.rb:105:in `block in each_value'
 E:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.5.3/lib/sass/util/subset_map.rb:105:in `each'
@@ -32,4 +32,4 @@ E:/Ruby24-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Sass::SyntaxError: \".wrap .component-index .head-menu-userInfo\" failed to @extend \"%head-menu-userInfo\".\A The selector \"%head-menu-userInfo\" was not found.\A Use \"@extend %head-menu-userInfo !optional\" if the extend should be able to fail.\A "; }
+  content: "Sass::SyntaxError: \"%component-employ .employ-container .employ-assess .assess-operate .operate-add .ivu-btn-ghost\" failed to @extend \"%ivu-btn-ghost\".\A The selector \"%ivu-btn-ghost\" was not found.\A Use \"@extend %ivu-btn-ghost !optional\" if the extend should be able to fail.\A "; }

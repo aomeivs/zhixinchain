@@ -144,7 +144,7 @@ html .wrap .c-body .c-body-container .component-employ .employ-container, body .
   padding-left: 80px; }
   html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-base, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-base {
     width: 1200px;
-    padding-bottom: 40px; }
+    height: 240px; }
     html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score > span, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score > span, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base .base-score > span, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base .base-score > span, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-base .base-score > span, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-base .base-score > span {
       display: inline-block;
       color: #fc5366;
@@ -983,11 +983,6 @@ html .wrap .c-body .c-body-container .component-employ .employ-container .employ
     color: #57a3f3;
     background-color: transparent;
     border-color: #57a3f3; }
-
-.require {
-  color: red;
-  display: inline-block;
-  margin-right: 8px; }
 
 .addGroup-custom-tips {
   display: block; }

@@ -34,12 +34,15 @@
                         </div>
                     </div>
                 </div>
+                <Kefu></Kefu>
             </div>
 </template>
 
 <script>
+    import Kefu from '@/components/Kefu'
     export default {
         name: 'Dashboard',
+        components: {Kefu},
         methods:{
             
         }
