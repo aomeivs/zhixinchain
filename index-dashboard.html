@@ -79,7 +79,7 @@
                             <badge count="1">
                                 <a href="#" class="head-message-badge"><img src="public/images/head-mail.png" width="26" alt="消息(0)"></a>
                             </badge>
-                            <div slot="content" style="line-height: 2;">
+                            <div slot="content" style="line-height: 2;" @click="headUserMsgTip">
                                 <b>在“消息”中可处理与授权
                                     <br>有关的操作。</b>
                             </div>
@@ -549,6 +549,9 @@
                     title: '系统消息',
                     desc: nodesc ? '' : '身份证号130102199901015671,手机号15898822505,<a href="javascript:void(0)">已授权给您将他加入企业职信链</a> '
                 });
+            },
+            headUserMsgTip(){
+                this.tooltipStatus =!this.tooltipStatus;
             }
         },
         mounted:function () {
