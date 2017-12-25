@@ -2207,12 +2207,15 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     border-radius: 6px;
     color: white;
     cursor: pointer;
-    margin-left: 65%; }
+    margin-left: 65%;
+    display: inline-block;
+    margin-left: 50px; }
   .wrap .component-index .content1-2 {
     width: 1200px;
     text-align: center;
     margin: 0 auto;
-    margin-top: -210px; }
+    margin-top: -210px;
+    padding-left: 440px; }
   .wrap .component-index #index {
     position: relative; }
   .wrap .component-index #content2 {
