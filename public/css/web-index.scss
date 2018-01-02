@@ -25,6 +25,7 @@
 
     .zi18{
       font-size: 18px;
+      margin-bottom: 133px;
     }
     a{text-decoration: none;}
 
@@ -75,6 +76,8 @@
             //height: 94px;
             width: 100%;
             display: block;
+
+
           }
         }
       }
@@ -83,6 +86,37 @@
     #index{
       height: 524px;
       min-width:1400px;
+      .banner-1{
+        padding-top: 178px;
+        text-align: center;
+        color: white;
+        font-size: 64px;
+      }
+      .banner-2{
+        width: 840px;
+        height: 60px;
+        background-color: #62aeed;
+        margin: 0 auto;
+        margin-top: 64px;
+        border-radius: 2px;
+        .banner-2-1{
+          display: inline-block;
+          height: 60px;
+          border: none;
+          width: 696px;
+          padding-left: 8px;
+        }
+        .banner-2-2{
+          display: inline-block;
+          width: 134px;
+          text-align: center;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          color: white;
+          cursor: pointer;
+        }
+      }
+
     }
 
     /*第二屏开始*/
@@ -102,6 +136,7 @@
       height: 140px;
       /*块内元素居中*/
       text-align: center;
+      margin-top: 133px;
     }
     .title img{
       margin-top: 80px;
@@ -121,24 +156,31 @@
     }
 
     /*内容*/
+    .bkColor-1{
+      background-color: #f5f5f4;
 
+    }
     .part-2{
       width: 1200px;
       margin: 0 auto;
-      margin-top: 50px;
+      padding-top: 136px;
+      padding-bottom: 144px;
     }
     .part-2-1{
       width: 550px;
       height: 454px;
-      border: 1px solid #E8E8E8;
+      //border: 1px solid #E8E8E8;
       float: left;
+      margin-left: 20px;
       span{
         color: #40BEFF
       }
       .zi24{
         width: 360px;
-        text-align: center;
-        margin: 50px auto;
+        text-align: left;
+        //margin: 50px auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
         line-height: 40px;
       }
     }
@@ -147,7 +189,7 @@
       color: #4A4A4A;
     }
     .part-2-2{
-      text-align: center;
+      text-align: left;
       margin-top: 40px;
       .zi14{
         width: 300px;
@@ -274,7 +316,11 @@
     /*page8结束*/
 
     /*page9 常见问题*/
+    #page9{
+      background-color: #f5f5f4;
+      padding-top: 1px;
 
+    }
     .part-9{
       margin: 60px auto;
       text-align: center;
