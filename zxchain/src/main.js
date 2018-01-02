@@ -41,3 +41,5 @@ var vNew = new Vue({
 })
 
 window.vNew = vNew;
+
+

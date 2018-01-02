@@ -144,7 +144,7 @@ html .wrap .c-body .c-body-container .component-employ .employ-container, body .
   padding-left: 80px; }
   html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-base, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-base {
     width: 1200px;
-    height: 240px; }
+    padding-bottom: 40px; }
     html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score > span, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score > span, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base .base-score > span, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base .base-score > span, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-base .base-score > span, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-base .base-score > span {
       display: inline-block;
       color: #fc5366;
@@ -984,6 +984,11 @@ html .wrap .c-body .c-body-container .component-employ .employ-container .employ
     background-color: transparent;
     border-color: #57a3f3; }
 
+.require {
+  color: red;
+  display: inline-block;
+  margin-right: 8px; }
+
 .addGroup-custom-tips {
   display: block; }
   .addGroup-custom-tips .ivu-poptip-rel {
@@ -1591,13 +1596,13 @@ html, body {
 
 .wrap.index-lt {
   /*
-   * 鑳屾櫙bunner 閮ㄥ垎
+   * 背景bunner 部分
    */
   /**
-   * 绔嬪嵆鍔犲叆鎸夐挳閮ㄥ垎
+   * 立即加入按钮部分
    */
   /*
-  * 鑱屼俊浠嬬粛閮ㄥ垎
+  * 职信介绍部分
   */ }
   .wrap.index-lt .index-lt-1 {
     background-color: white;
@@ -2263,13 +2268,13 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
   bottom: 123px;
   font-size: 14px;
   color: #4a4a4a;
-  width: 282px;
-  height: 147px;
+  width: 300px;
+  height: 150px;
   text-align: right; }
   .wrap .kefu-lt .kefu-lt-1-left {
     display: inline-block;
-    width: 205.4px;
-    height: 146.8px;
+    width: 200px;
+    height: 150px;
     border-radius: 4px;
     background-color: #ffffff;
     border: solid 1px #e6e6e6;
@@ -2288,6 +2293,7 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
   .wrap .kefu-lt .kefu-lt-1-right {
     display: inline-block;
     vertical-align: top;
+    width: 60px;
     text-align: center; }
   .wrap .kefu-lt .kefu-lt-1-right span {
     font-size: 12px;

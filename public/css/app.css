@@ -33,8 +33,9 @@ html .wrap .c-body .c-body-left .left-body-container .component-tree, body .wrap
       display: block;
       clear: both; }
     html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box.active, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box.active {
-      border-right: 2px solid #1B7CE1;
       color: #1B7CE1; }
+    html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-icon:hover, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-icon:hover, html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-content:hover, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-content:hover {
+      cursor: pointer; }
     html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box > div, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box > div {
       vertical-align: middle;
       height: 26px;
@@ -144,7 +145,7 @@ html .wrap .c-body .c-body-container .component-employ .employ-container, body .
   padding-left: 80px; }
   html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-base, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-base {
     width: 1200px;
-    height: 240px; }
+    padding-bottom: 40px; }
     html .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score > span, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-base .base-score > span, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base .base-score > span, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-base .base-score > span, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-base .base-score > span, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-base .base-score > span {
       display: inline-block;
       color: #fc5366;
@@ -545,10 +546,28 @@ html .wrap .c-body .c-body-container .component-employ .employ-container, body .
               border: 1px solid #d9d9d9;
               padding: 20px;
               width: 460px;
-              color: #4a4a4a;
-              margin-bottom: 10px; }
+              color: #4a4a4a; }
               html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div {
+                margin-bottom: 20px;
+                border-top: 1px solid #f1f1f1;
+                padding-top: 20px;
+                position: relative;
                 margin-bottom: 10px; }
+                html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div:first-child, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div:first-child, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div:first-child, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div:first-child, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div:first-child, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div:first-child, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div:first-child, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div:first-child, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div:first-child, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div:first-child, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div:first-child, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div:first-child, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div:first-child, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div:first-child, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div:first-child, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div:first-child, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div:first-child, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div:first-child {
+                  margin-top: 10px; }
+                html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div .time, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div .time, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div .time, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div .time, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div .time, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div .time, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div .time, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div .time, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div .time, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div .time, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div .time, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div .time, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div .time, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div .time, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div .time, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div .time, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div .time, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div .time {
+                  font-size: 12px;
+                  height: 24px;
+                  line-height: 24px;
+                  overflow: hidden;
+                  position: absolute;
+                  right: 0px;
+                  background: rgba(255, 255, 255, 0.9);
+                  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+                  top: -25px; }
+                  html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div .time .edit, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div .time .edit, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div .time .edit, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div .time .edit, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div .time .edit, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div .time .edit, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div .time .edit, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div .time .edit, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div .time .edit, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div .time .edit, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div .time .edit, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div .time .edit, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div .time .edit, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div .time .edit, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div .time .edit, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div .time .edit, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div .time .edit, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div .time .edit {
+                    float: right;
+                    margin-top: -2px; }
                 html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div:last-child, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div:last-child, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div:last-child, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div:last-child, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div:last-child, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div:last-child, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div:last-child, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div:last-child, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div:last-child, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div:last-child, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div:last-child, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div:last-child, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div:last-child, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div:last-child, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div:last-child, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div:last-child, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div:last-child, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div:last-child {
                   margin-bottom: 0; }
                 html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div img, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div img, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div img, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div img, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div img, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-month .edit-info .e-i-2.pact ul li > div img, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div img, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div img, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div img, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div img, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div img, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-q .edit-info .e-i-2.pact ul li > div img, html .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div img, body .wrap .c-body .c-body-container .component-employ .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div img, html .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div img, body .wrap .c-body .component-employ-info-single .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div img, html .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div img, body .wrap .c-body .component-account .employ-info-single .employ-container .employ-assess .assess-info .edit-assess-info-year .edit-info .e-i-2.pact ul li > div img {
@@ -1215,7 +1234,12 @@ html, body {
           line-height: 64px;
           text-align: center;
           font-size: 20px;
-          color: #ffffff; }
+          color: #ffffff;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          padding-left: 10px;
+          padding-right: 10px; }
         html .wrap .c-body .c-body-left .left-body-container, body .wrap .c-body .c-body-left .left-body-container {
           margin-left: 50px; }
           html .wrap .c-body .c-body-left .left-body-container .tree-employ, body .wrap .c-body .c-body-left .left-body-container .tree-employ {
@@ -1225,7 +1249,11 @@ html, body {
               height: 48px;
               line-height: 48px; }
               html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-icon, html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-icon, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-icon, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-icon {
-                margin-top: -4px; }
+                margin-top: -4px;
+                display: inline-block;
+                vertical-align: middle;
+                width: 23px;
+                height: 23px; }
               html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-title, html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-title, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-title, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-title {
                 margin-left: 20px;
                 display: inline-block;
@@ -1233,12 +1261,27 @@ html, body {
               html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-count, html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-count, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-count, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-count {
                 margin-left: 20px; }
             html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on {
-              color: #298cff;
               font-weight: bold; }
+              html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block {
+                color: #4A4A4A; }
+                html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-icon, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block .employ-icon {
+                  background: url("../images/tree-employ.png") 0 0 no-repeat; }
+                html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block.active, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block.active {
+                  color: #298cff; }
+                  html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block.active .employ-icon, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-on .employ-on-block.active .employ-icon {
+                    background: url("../images/tree-employ-active.png") 0 0 no-repeat; }
             html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off {
-              color: #4A4A4A;
               font-weight: bold; }
+              html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block {
+                color: #4A4A4A; }
+                html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-icon, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block .employ-icon {
+                  background: url("../images/tree-employ-off.png") 0 0 no-repeat; }
+                html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block.active, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block.active {
+                  color: #298cff; }
+                  html .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block.active .employ-icon, body .wrap .c-body .c-body-left .left-body-container .tree-employ.employ-off .employ-on-block.active .employ-icon {
+                    background: url("../images/tree-employ-off-active.png") 0 0 no-repeat; }
           html .wrap .c-body .c-body-left .left-body-container .tree-addGroup, html .wrap .c-body .c-body-left .left-body-container .tree-setting, body .wrap .c-body .c-body-left .left-body-container .tree-addGroup, body .wrap .c-body .c-body-left .left-body-container .tree-setting {
+            cursor: pointer;
             width: 230px;
             height: 48px;
             line-height: 48px;
@@ -1425,7 +1468,8 @@ html, body {
         font-size: 16px;
         line-height: 16px;
         padding-left: 50px;
-        padding-top: 57px; }
+        padding-top: 50px;
+        line-height: 1.5; }
       html .wrap .c-body .c-component-message .box1-2, body .wrap .c-body .c-component-message .box1-2 {
         width: 865px;
         text-align: left;
@@ -1596,13 +1640,13 @@ html, body {
 
 .wrap.index-lt {
   /*
-   * 鑳屾櫙bunner 閮ㄥ垎
+   * 背景bunner 部分
    */
   /**
-   * 绔嬪嵆鍔犲叆鎸夐挳閮ㄥ垎
+   * 立即加入按钮部分
    */
   /*
-  * 鑱屼俊浠嬬粛閮ㄥ垎
+  * 职信介绍部分
   */ }
   .wrap.index-lt .index-lt-1 {
     background-color: white;
@@ -1938,38 +1982,37 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     height: 99px;
     background: #ffffff;
     margin: 0 auto; }
-  .wrap .component-index #header .logo {
-    float: left;
-    padding-top: 14px;
-    padding-right: 60px; }
-  .wrap .component-index .menu {
-    float: left; }
-  .wrap .component-index .menu li {
-    float: left;
-    margin: 0 24px;
-    list-style-type: none;
-    padding-top: 34px;
-    width: 90px;
-    text-align: center; }
-  .wrap .component-index .menu a {
-    color: #000000;
-    cursor: pointer;
-    width: 100%;
-    display: block; }
-  .wrap .component-index .menu .cur {
-    height: 99px;
-    border-bottom: 2px solid #FE8C5F; }
-  .wrap .component-index .menu .buy {
-    cursor: pointer;
-    width: 100%;
-    display: block;
-    color: #FF500A; }
-  .wrap .component-index .select {
-    cursor: pointer; }
+    .wrap .component-index #header .logo {
+      float: left;
+      padding-top: 14px;
+      padding-right: 60px; }
+    .wrap .component-index #header .menu {
+      float: left; }
+      .wrap .component-index #header .menu li {
+        float: left;
+        margin: 0 24px;
+        list-style-type: none;
+        padding-top: 34px;
+        width: 90px;
+        text-align: center; }
+        .wrap .component-index #header .menu li.cur {
+          height: 99px;
+          border-bottom: 2px solid #FE8C5F; }
+        .wrap .component-index #header .menu li.buy {
+          cursor: pointer;
+          width: 100%;
+          display: block;
+          color: #FF500A; }
+        .wrap .component-index #header .menu li.select {
+          cursor: pointer; }
+        .wrap .component-index #header .menu li a {
+          color: #000000;
+          cursor: pointer;
+          width: 100%;
+          display: block; }
   .wrap .component-index #index {
-    height: 759px; }
-  .wrap .component-index #about {
-    height: 740px; }
+    height: 524px;
+    min-width: 1400px; }
   .wrap .component-index .zi48 {
     font-size: 48px;
     color: #40BEFF;
@@ -2002,30 +2045,30 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     height: 454px;
     border: 1px solid #E8E8E8;
     float: left; }
+    .wrap .component-index .part-2-1 span {
+      color: #40BEFF; }
+    .wrap .component-index .part-2-1 .zi24 {
+      width: 360px;
+      text-align: center;
+      margin: 50px auto;
+      line-height: 40px; }
   .wrap .component-index .zi24 {
     font-size: 24px;
     color: #4A4A4A; }
-  .wrap .component-index .part-2-1 .zi24 {
-    width: 360px;
-    text-align: center;
-    margin: 50px auto;
-    line-height: 40px; }
-  .wrap .component-index .part-2-1 span {
-    color: #40BEFF; }
   .wrap .component-index .part-2-2 {
     text-align: center;
     margin-top: 40px; }
+    .wrap .component-index .part-2-2 .zi14 {
+      width: 300px;
+      text-align: justify;
+      line-height: 20px;
+      display: inline-block; }
+    .wrap .component-index .part-2-2 img {
+      padding-right: 20px;
+      vertical-align: top; }
   .wrap .component-index .zi14 {
     font-size: 14px;
     color: #4A4A4A; }
-  .wrap .component-index .part-2-2 .zi14 {
-    width: 300px;
-    text-align: justify;
-    line-height: 20px;
-    display: inline-block; }
-  .wrap .component-index .part-2-2 img {
-    padding-right: 20px;
-    vertical-align: top; }
   .wrap .component-index .part3 {
     width: 1200px;
     margin: 0 auto;
@@ -2034,14 +2077,14 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     height: 1310px; }
   .wrap .component-index #page4 {
     height: 1400px; }
-  .wrap .component-index .title4 {
-    border: 1px dashed #E8E8E8;
-    text-align: justify;
-    width: 810px;
-    margin: 0 auto;
-    line-height: 28px;
-    margin-top: 50px;
-    padding: 30px 60px; }
+    .wrap .component-index #page4 .title4 {
+      border: 1px dashed #E8E8E8;
+      text-align: justify;
+      width: 810px;
+      margin: 0 auto;
+      line-height: 28px;
+      margin-top: 50px;
+      padding: 30px 60px; }
   .wrap .component-index #team {
     height: 620px; }
   .wrap .component-index #page6 {
@@ -2053,13 +2096,13 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
         align-content: flex-start;
         flex-wrap:  wrap;*/
     text-align: center; }
-  .wrap .component-index .part-6 img {
-    margin-bottom: 30px; }
-  .wrap .component-index .part-6-2 {
-    margin: 0 auto;
-    width: 760px;
-    display: flex;
-    justify-content: space-between; }
+    .wrap .component-index .part-6 img {
+      margin-bottom: 30px; }
+    .wrap .component-index .part-6 .part-6-2 {
+      margin: 0 auto;
+      width: 760px;
+      display: flex;
+      justify-content: space-between; }
   .wrap .component-index #buy {
     height: 630px; }
   .wrap .component-index .part-7 {
@@ -2074,25 +2117,25 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     text-align: center;
     margin: 0px auto;
     margin-bottom: 50px; }
-  .wrap .component-index .part-8-1 {
-    margin: 20px auto;
-    width: 1200px;
-    display: flex;
-    justify-content: space-between; }
-  .wrap .component-index .part-8-2 {
-    margin: 20px auto;
-    width: 760px;
-    display: flex;
-    justify-content: space-between; }
-  .wrap .component-index .part-8-3 {
-    margin: 30px auto;
-    width: 400px;
-    height: 76px;
-    background: #F57F23;
-    text-align: center;
-    line-height: 76px;
-    color: #ffffff;
-    cursor: pointer; }
+    .wrap .component-index .part-8 .part-8-1 {
+      margin: 20px auto;
+      width: 1200px;
+      display: flex;
+      justify-content: space-between; }
+    .wrap .component-index .part-8 .part-8-2 {
+      margin: 20px auto;
+      width: 760px;
+      display: flex;
+      justify-content: space-between; }
+    .wrap .component-index .part-8 .part-8-3 {
+      margin: 30px auto;
+      width: 400px;
+      height: 76px;
+      background: #F57F23;
+      text-align: center;
+      line-height: 76px;
+      color: #ffffff;
+      cursor: pointer; }
   .wrap .component-index .part-9 {
     margin: 60px auto;
     text-align: center;
@@ -2163,77 +2206,71 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     border-radius: 6px;
     color: white;
     cursor: pointer;
-    margin-left: 65%; }
-  .wrap .component-index .content1-2 {
-    width: 1200px;
-    text-align: center;
-    margin: 0 auto;
-    margin-top: -210px; }
+    margin-left: 65%;
+    display: inline-block;
+    margin-left: 50px; }
   .wrap .component-index #index {
     position: relative; }
   .wrap .component-index #content2 {
     margin-top: 95px; }
   .wrap .component-index .qk_jiedianNum {
-    height: 110px;
     width: 1186px;
     margin: 0 auto;
     border-radius: 4px;
     background-color: #ffffff;
     box-shadow: 0 0 6px 0 #55a4ff;
-    position: absolute;
-    bottom: -60px;
-    left: 50%;
-    margin-left: -593px; }
-  .wrap .component-index .qk_jiedianNum_1 {
-    background: url(../../public/images/index/jiedian_line.png) right center no-repeat;
-    width: 292px;
-    margin-top: 26px;
-    overflow: hidden;
-    display: inline-block; }
-  .wrap .component-index .qk_jiedianNum_1 img {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 36px; }
-  .wrap .component-index .qk_jiedianNum_1_1 {
-    display: inline-block; }
-  .wrap .component-index .qk_jiedianNum_1_1 > .p1 {
-    font-size: 24px;
-    color: #40beff;
-    margin-left: 33px; }
-  .wrap .component-index .qk_jiedianNum_1_1 > .p2 {
-    font-size: 16px;
-    color: #4a4a4a;
-    margin-left: 33px;
-    margin-top: 9px; }
-  .wrap .component-index .qk_jiedianNum_2 {
-    background: none; }
+    border: 4px solid #5FADFF; }
+    .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 {
+      background: url(../../public/images/index/jiedian_line.png) right center no-repeat;
+      width: 292px;
+      margin-top: 26px;
+      margin-bottom: 20px;
+      overflow: hidden;
+      display: inline-block; }
+      .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 img {
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 36px; }
+      .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 .qk_jiedianNum_1_1 {
+        display: inline-block; }
+      .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 .p1 {
+        font-size: 24px;
+        color: #1B7DE2;
+        margin-left: 33px; }
+      .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 .p2 {
+        font-size: 16px;
+        color: #4a4a4a;
+        margin-left: 33px;
+        margin-top: 9px; }
+    .wrap .component-index .qk_jiedianNum .qk_jiedianNum_2 {
+      background: none; }
   .wrap .component-index .qk_numShow {
     text-align: center;
     width: 1200px;
     margin: 0 auto;
     margin-top: 82px;
     margin-bottom: 82px; }
-  .wrap .component-index .qk_numShow_table {
-    width: 1200px; }
-  .wrap .component-index .qk_numShow_title_tr {
-    height: 50px;
-    background-color: #40beff;
-    font-size: 16px;
-    border: none;
-    color: #4a4a4a; }
-  .wrap .component-index .qk_numShow_title_tr th {
-    font-size: 16px;
-    border: none;
-    font-weight: 500;
-    color: #4a4a4a; }
-  .wrap .component-index .qk_numShow_tr {
-    height: 50px;
-    font-size: 14px;
-    color: #4a4a4a; }
-  .wrap .component-index .qk_numShow_tr td {
-    border-bottom: solid 1px #e8e8e8; }
-  .wrap .component-index .qk_numShow_tr .color_blue {
-    color: #40beff; }
+    .wrap .component-index .qk_numShow .qk_numShow_table {
+      width: 1200px; }
+      .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_title_tr {
+        height: 50px;
+        background-color: #40beff;
+        font-size: 16px;
+        border: none;
+        color: #4a4a4a; }
+        .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_title_tr th {
+          font-size: 16px;
+          border: none;
+          font-weight: 500;
+          color: #4a4a4a; }
+      .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_tr {
+        height: 50px;
+        font-size: 14px;
+        color: #4a4a4a; }
+        .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_tr td {
+          border-bottom: solid 1px #e8e8e8; }
+        .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_tr .color_blue {
+          color: #40beff; }
   .wrap .component-index .loginAndSignIn .span1 {
     display: inline-block;
     background-color: white;
@@ -2268,13 +2305,13 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
   bottom: 123px;
   font-size: 14px;
   color: #4a4a4a;
-  width: 282px;
-  height: 147px;
+  width: 300px;
+  height: 150px;
   text-align: right; }
   .wrap .kefu-lt .kefu-lt-1-left {
     display: inline-block;
-    width: 205.4px;
-    height: 146.8px;
+    width: 200px;
+    height: 150px;
     border-radius: 4px;
     background-color: #ffffff;
     border: solid 1px #e6e6e6;
@@ -2292,7 +2329,9 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       margin-top: 10px; }
   .wrap .kefu-lt .kefu-lt-1-right {
     display: inline-block;
-    vertical-align: top; }
+    vertical-align: top;
+    width: 60px;
+    text-align: center; }
   .wrap .kefu-lt .kefu-lt-1-right span {
     font-size: 12px;
     color: #000000;

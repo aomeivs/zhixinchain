@@ -31,8 +31,15 @@
         clear: both;
       }
       &.active{
-        border-right: 2px solid #1B7CE1;
+        //部门或员工被选中的状态，暂时把右侧竖线去掉，原因：更多操作这部门不隐藏了，所以两个图形元素出现会导致视觉混乱。
+        //border-right: 2px solid #1B7CE1;
         color: #1B7CE1;
+      }
+      &{
+        .box-icon:hover,.box-content:hover{
+          cursor: pointer;
+          //color: #1B7CE1;
+        }
       }
       &>div{
         vertical-align: middle;

@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://cdn.bootcss.com/lodash.js/4.17.4/lodash.min.js"></script>
+
     <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
     <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
@@ -33,7 +35,29 @@
 组件名-head>组件名-head-top>（组件名-head-top-1+组件名-head-top-2+组件名-head-top-3）
 
  -->
+<style>
+    .headUserMsgTip .ivu-tooltip-popper[x-placement^=bottom] .ivu-tooltip-arrow {
+        top: 3px;
+        border-width: 0 5px 5px;
+        border-bottom-color: #fe705b;
+    }
+    .headUserMsgTip .ivu-tooltip-popper{
+        top:60px !important;
+    }
 
+    .headUserMsgTip .ivu-tooltip-inner {
+        max-width: 250px;
+        min-height: 34px;
+        padding: 8px 12px;
+        color: #ffffff;
+        text-align: left;
+        text-decoration: none;
+        background-color: #fe705b;
+        border-radius: 4px;
+        box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
+        white-space: nowrap;
+    }
+</style>
 <div class="wrap" id="app">
     <div class="c-header">
         <div class="c-head-logo">
@@ -50,10 +74,16 @@
                 </li>
                 <li>
                     <div>
-                        <!--badge count代表消息数 默认99封顶-->
-                        <badge count="1">
-                            <a href="#" class="head-message-badge"><img src="public/images/head-mail.png" width="26" alt="消息(0)"></a>
-                        </badge>
+                        <tooltip :disabled="tooltipStatus" class="headUserMsgTip" content="Bottom Center 文字提示" placement="bottom" :always="true" >
+                            <!--badge count代表消息数 默认99封顶-->
+                            <badge count="1">
+                                <a href="#" class="head-message-badge"><img src="public/images/head-mail.png" width="26" alt="消息(0)"></a>
+                            </badge>
+                            <div slot="content" style="line-height: 2;" @click="headUserMsgTip">
+                                <b>在“消息”中可处理与授权
+                                    <br>有关的操作。</b>
+                            </div>
+                        </tooltip>
                     </div>
                 </li>
                 <li>
@@ -85,14 +115,15 @@
                         style="width:290px">
                 </auto-complete>
             </div>
-            <div class="body-left-CName">
+            <div class="body-left-CName" title="职信链科技有限公司">
                 职信链科技有限公司
             </div>
             <div class="left-body-container">
                 <!--在职员工-->
                 <div class="tree-employ employ-on">
                     <div class="employ-on-block">
-                        <img class="employ-icon" src="public/images/tree-employ.png" width="23" alt="在职员工">
+                        <div class="employ-icon"></div>
+                        <!--<img class="employ-icon" src="public/images/tree-emphandleOpenloy.png" width="23" alt="在职员工">-->
                         <span class="employ-title">
                         在职员工
                     </span>
@@ -108,7 +139,7 @@
                 </div>
 
                 <!--添加部门-->
-                <div class="tree-addGroup">
+                <div class="tree-addGroup active">
                     <icon type="plus-round"></icon><span>添加部门</span>
                 </div>
 
@@ -120,7 +151,8 @@
                 <!--离职员工-->
                 <div class="tree-employ employ-off">
                     <div class="employ-on-block">
-                        <img class="employ-icon" src="public/images/tree-employ-off.png" width="23" height="23" alt="离职员工">
+                        <div class="employ-icon"></div>
+                        <!--<img class="employ-icon" src="public/images/tree-employ-off.png" width="23" height="23" alt="离职员工">-->
                         <span class="employ-title">
                         已离职员工
                     </span>
@@ -242,14 +274,15 @@
                     src="public/images/tree-group-edit.png" width="16" style="margin-left: 8px;margin-top: -2px;" alt=""></span></div>
             <!--控制状态-->
             <div v-if="tree.dataList && !tree.root && !editStatus" class="box-control">
-                <dropdown @on-click="dropDown" placement="bottom-end">
+                <dropdown trigger="click" @on-click="dropDown" placement="bottom-end">
                     <a href="javascript:void(0)">
-                        添加
-                        <icon type="arrow-down-b"></icon>
+                        <Icon type="plus-round" style="font-size: 16px;"></Icon>
+                        <!--<icon type="arrow-down-b"></icon>-->
                     </a>
                     <dropdown-menu slot="list">
-                        <dropdown-item name="E">员工</dropdown-item>
-                        <dropdown-item name="G">部门</dropdown-item>
+                        <dropdown-item name="E">添加员工</dropdown-item>
+                        <dropdown-item name="G">添加部门</dropdown-item>
+                        <dropdown-item name="DG">编辑部门</dropdown-item>
                     </dropdown-menu>
                 </dropdown>
             </div>
@@ -298,14 +331,15 @@
         },
         mounted:function(){
 
+
             if(this.tree.open){
                 this.open=true
             }else{
                 this.tree.root?this.open=true:this.open;
             }
-
         },
         methods: {
+
             click:function(){
                 this.open=!this.open
             },
@@ -494,11 +528,9 @@
             return {
                 value:'',
                 data:[],
-                treeData:treeData
+                treeData:treeData,
+                tooltipStatus:false
             }
-        },
-        mounted:function () {
-
         },
         methods: {
             handleSearch : function(value) {
@@ -507,7 +539,24 @@
                     value + value,
                     value + value + value
                 ];
+            },
+            openMsg (nodesc) {
+                this.$Notice.config({
+                    top:150,
+                    duration: 0
+                });
+                this.$Notice.open({
+                    title: '系统消息',
+                    desc: nodesc ? '' : '身份证号130102199901015671,手机号15898822505,<a href="javascript:void(0)">已授权给您将他加入企业职信链</a> '
+                });
+            },
+            headUserMsgTip(){
+                this.tooltipStatus =!this.tooltipStatus;
             }
+        },
+        mounted:function () {
+//            this.openMsg(false);
+//            setTimeout(()=>{this.tooltipStatus=true;},3000)
         }
     }).$mount('#app')
 </script>

@@ -177,7 +177,7 @@
                                 </div>
                                 <div class="right">
                                     <label class="employ-base-photo" for="employ-base-photo">
-                                        <img src="public/images/employ/employ-base-photo.png" width="166" height="166" alt="">
+                                        <img src="public/images/photo-empoy-default.png" width="166" height="166" alt="">
                                         <div class="employ-base-photo-btn">
                                             更换头像
                                         </div>
@@ -224,7 +224,7 @@
                         </div>
                         <div class="base-right right">
                             <span class="base-photo">
-                                <img src="public/images/employ/employ-base-photo.png" width="166" alt="">
+                                <img src="public/images/photo-empoy-default.png" width="166" alt="">
                             </span>
                         </div>
                     </div>
@@ -629,7 +629,7 @@
                                         </div>
                                     </div>
                                 </tab-pane>
-                                <tab-pane name="2" :disabled="true" label="月度评价" icon="document-text">
+                                <tab-pane name="2" :disabled="false" label="月度评价" icon="document-text">
                                     <div v-show="name==2" class="component-assess-info-month" v-bind:class="{'tab-active':name==2}">
                                         <div v-show="!assessInfoBase2" class="assess-tab assess-info-month">
 
@@ -742,12 +742,19 @@
                                                                 <ul v-show="!editPunish">
                                                                     <li>
                                                                         <div>
-                                                                            <div class="text-left" style="font-size: 12px;">2017-10-10</div>
+                                                                            <div class="text-left time">
+                                                                                <div class="edit">
+                                                                                <i-button type="text"  size="small">
+                                                                                    <Icon type="edit"></Icon>
+                                                                                    <span style="padding-left: 4px;">编辑</span>
+                                                                                </i-button>
+                                                                                </div>
+                                                                            </div>
                                                                             奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细
                                                                         </div>
 
                                                                         <div>
-                                                                            <div class="text-left" style="font-size: 12px;">2017-10-10</div>
+                                                                            <div class="text-left time"><div class="edit"><i-button type="text"  size="small"><Icon type="edit"></Icon><span style="padding-left: 4px;">编辑</span></i-button></div></div>
                                                                             奖惩情况情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细奖惩情况详细
                                                                         </div>
                                                                     </li>
@@ -979,6 +986,9 @@
 
                                                 <div class="time-line">
                                                     <div class="table-title">评语：</div>
+                                                    <div style="border: 1px solid #dedede; text-align: center; padding: 15px;">
+                                                        暂无评语
+                                                    </div>
                                                     <timeline>
                                                         <timeline-item>
                                                             <div class="time"><span class="icon-time-line-arrow"></span>业绩突出，再接再厉</div>
@@ -1160,7 +1170,17 @@
                     <dropdown-menu slot="list">
                         <dropdown-item name="E">添加员工</dropdown-item>
                         <dropdown-item name="G">添加部门</dropdown-item>
-                        <dropdown-item name="DG">删除部门</dropdown-item>
+                        <dropdown-item name="DG">编辑部门</dropdown-item>
+                        <dropdown-item :disabled="true" name="DG">
+                            <div>
+                                <tooltip content="部门下有员工，不可删除！" placement="right" :transfer="true">
+                                    删除部门
+                                    <div slot="content">
+                                        <p>部门下有员工，不可删234234除!</p>
+                                    </div>
+                                </tooltip>
+                            </div>
+                        </dropdown-item>
                     </dropdown-menu>
                 </dropdown>
             </div>
