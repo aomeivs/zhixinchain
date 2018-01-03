@@ -69,8 +69,9 @@
     .body-about{
       width: 950px;
       margin: 0 auto;
+      padding-bottom: 150px;
+      padding-top: 110px;
       .about1{
-        margin-top: 110px;
         .title{
           color: #333333;
           font-size: 32px;
@@ -130,7 +131,6 @@
     .body-roadmap{
       background: #7058a0 url(../images/content-block2-bg.png) center top no-repeat;
       height: 620px;
-      margin-top: 150px;
       min-width:1200px;
       .title{
         padding-top: 100px;
