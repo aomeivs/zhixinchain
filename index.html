@@ -11,10 +11,15 @@
     <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
     <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="http://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+    <!--[if lt ie 9]>
     <script src="public/js/ie-lte9.js"></script>
+    <![endif ]-->
     <link rel="stylesheet" href="public/css/outdatedBrowser.min.css">
     <script src="public/js/outdatedBrowser.min.js"></script>
     <link rel="stylesheet" href="public/css/app.css">
+    <link href="https://cdn.bootcss.com/Swiper/4.0.7/css/swiper.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/Swiper/4.0.7/js/swiper.min.js"></script>
+    <script src="public/js/jquery.fadethis.min.js"></script>
     <style>
         .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 {
             width: 389px;
@@ -22,6 +27,12 @@
 
         .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1:last-child {
             background: none;
+        }
+        .guji1>div,.guji2>div,#page9>div{
+            margin-top: 200px;
+        }
+        .wrap .component-index #page9{
+            padding-top: 150px;
         }
     </style>
 </head>
@@ -40,11 +51,12 @@
 
                     <li data-menuanchor="about" id="home2" class="select">关于职信链</li>
 
-                    <li data-menuanchor="technical" id="home3" class="select">技术架构</li>
+                    <li data-menuanchor="technical" id="home3" class="select">常见问题</li>
 
-                    <li data-menuanchor="team" id="home4" class="select">团队优势</li>
 
-                    <li data-menuanchor="buy" id="home5"><span class="buy">购买</span></li>
+                    <li data-menuanchor="buy" id="home5"><span class="buy" style="color: #ff500a;">购买</span></li>
+                    <li data-menuanchor="team" id="home4" class="select">试用</li>
+
 
                     <li style="display: block; width: 120px;">
                         <!--企业-->
@@ -153,15 +165,15 @@
                 </div>
 
                 <div id="about" class="section">
-                    <div class="title"><img src="public/images/index/title-l.png">
+                    <div class="title "><img src="public/images/index/title-l.png">
                         <p class="zi48">职信是什么</p> <img src="public/images/index/title-r.png"></div>
-                    <div class="title2 zi18"><p>
+                    <div class="title2 zi18 "><p>
                         职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等
                     </p>
                     </div>
-                    <div class="bkColor-1">
-                        <div class="part-2">
-                            <div class="part-2-1" style="margin-right: 40px;"><p class="zi24">
+                    <div class="bkColor-1 ">
+                        <div class="part-2 guji1">
+                            <div class="part-2-1" style="margin-right: 40px; width: 460px;padding-left: 40px;"><p class="zi24">
                                 对企业来说，职信是奇效的<br><span>管人工具</span>和<span>阅人工具</span></p>
                                 <div class="part-2-2">
                                     <p class="zi14">
@@ -174,16 +186,34 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="part-2-1" style="margin-left: 40px;">
-                                <img src="public/images/index/mE1.jpg">
+                            <div class="part-2-1" >
+
+                                <!-- Swiper -->
+                                <div class="swiper-container" style="height: 511px;    width: 600px;">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="public/images/index/m-e-1.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="public/images/index/m-e-2.png" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="public/images/index/m-e-3.png" alt="">
+                                        </div>
+                                    </div>
+                                    <!-- Add Pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                
+                                
                             </div>
                             <div style="clear: both"></div>
                         </div>
                     </div>
 
 
-                    <div class="part-2">
-                        <div class="part-2-1" style="margin-right: 40px;"><p class="zi24">
+                    <div class="part-2 guji2">
+                        <div class="part-2-1" style="margin-right: 40px;width: 460px;"><p class="zi24">
                             对员工来说，<br>职信是可信的个人<span>数字资产</span></p>
                             <div class="part-2-2">
                                 <p class="zi14">
@@ -192,7 +222,7 @@
                             </div>
                         </div>
                         <div class="part-2-1" style="margin-left: 40px;">
-                            <img src="public/images/index/mA1.jpg">
+                            <img src="public/images/index/m-a-1.png">
                         </div>
                         <div style="clear: both"></div>
                     </div>
@@ -200,12 +230,104 @@
                 </div>
 
             </div>
-            <div id="page9" class="section">
+            <div id="page9" class="section ">
                 <div class="title"><img src="public/images/index/title-l.png">
-                    <p class="zi48">常见问题</p> <img src="public/images/index/title-r.png"></div>
-                <div class=" part-9"><img src="public/images/index/ques-1.png"> <img
-                        src="public/images/index/ques-2.png"> <img
-                        src="public/images/index/ques-3.png"> <img src="public/images/index/ques-4.png"></div>
+                    <p class="zi48">常见问题</p><img src="public/images/index/title-r.png"></div>
+                <div class="part-9">
+                    <!--<img src="public/images/index/ques.png">-->
+                    <ul>
+                        <li>
+                            <div class="question">
+                                <div class="icon-q">
+                                    Q
+                                </div>
+                                <div>
+                                    职信个人隐私是怎样处理的？
+                                </div>
+                            </div>
+                            <div class="answer">
+                                <div class="icon-a">
+                                    A
+                                </div>
+                                <div>
+                                    ①   员工在职期间的职信是可以同事间相互开放的（工资除外）；
+                                    <br>
+                                    ②   任何时间，对于非当前同事外的他人，须获得本人授权方可查看职信；
+                                    <br>
+                                    ③   任何单位都可以通过姓名查看该人是否已存在职信记录，但未经本人授权无权查看内容。
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="question">
+                                <div class="icon-q">
+                                    Q
+                                </div>
+                                <div>
+                                    职信企业商业机密是怎样处理的？
+                                </div>
+                            </div>
+                            <div class="answer">
+                                <div class="icon-a">
+                                    A
+                                </div>
+                                <div>
+                                    ①   优秀员工在职期间，即便本人授权外人，外人也不能查看其当前单位职信情况的；
+                                    <br>
+                                    ②   非优秀员工在职期间，外人在获得本人授权后可以查看其所有职信；
+                                    <br>
+                                    ③   企业可自行选择相对值描述员工状况，而不是采用绝对值。 如：“当月业绩排名靠前”，而不是采用“业绩5万
+                                    元”的表述。
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="question">
+                                <div class="icon-q">
+                                    Q
+                                </div>
+                                <div>
+                                    职信是如何发布到平台上的？
+                                </div>
+                            </div>
+                            <div class="answer">
+                                <div class="icon-a">
+                                    A
+                                </div>
+                                <div>
+                                    ①   由用户公司授权（可分级）给HR经理、或相关责任人负责发布；
+                                    <br>
+                                    ②   职信内容分为客观与主观2大类。发布的任何信息，员工本人可以通过平台发表“认同”、“不认同”、“未表态
+                                    （表态时间为1个月）”3种状态，并可针对某条信息发布个人意见；
+                                    <br>
+                                    ③   企业启用职信系统时，可以补录在职员工前6个月的职信记录。
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="question">
+                                <div class="icon-q">
+                                    Q
+                                </div>
+                                <div>
+                                    是否发布后可以更改、删除信息？
+                                </div>
+                            </div>
+                            <div class="answer">
+                                <div class="icon-a">
+                                    A
+                                </div>
+                                <div>
+                                    ①   不可以。但可以隐藏不开放给他人；
+                                    <br>
+                                    ②   职信基于区块链技术，因而一旦发布，永不可更改、删除，这正是职信的可信之处；
+                                    <br>
+                                    ③   针对任何员工可能发生的错误职信内容，都可以在随后任意时间内针对具体月份追加发布。
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
                 <div class="backBase">
                     <div class="tabAll">
                         <div class="tabOne" style="float: left; width: 432px; height: 100%;">
@@ -235,8 +357,7 @@
                             <div class="textSpace"><p>北京市朝阳区光华路9号世贸天阶南区A座5楼国际大学创新联盟一带一路合作中心</p></div>
                         </div>
                         <div class="tabThree" style="float: left; width: 430px; height: 100%;">
-                            <div class="imgSpace"><img src="public/images/index/footer/logo2.png"
-                                                       style="margin-left: 40px;">
+                            <div class="imgSpace"><img src="public/images/index/footer/logo2.png">
                                 <div style="padding-left: 60px; padding-top: 20px; color: rgb(223, 223, 223); font-size: 14px;">
                                     鲁ICP备17055140号-1
                                 </div>
@@ -254,7 +375,6 @@
 
     </div>
 </div>
-
 <!--js部分滚动条监听事件-->
 <script>
 
@@ -281,7 +401,7 @@
             },
             downloadImageAll(){
                 var imgs = document.querySelectorAll('.vouchers-3-1-1');
-                for (imgData in imgs) {
+                for (var imgData=0;imgData<imgs.length;imgData++) {
                     html2canvas(imgs[imgData],
                         {
                             onrendered: function (canvas) {
@@ -305,7 +425,7 @@
 
 
     var $aside = $("#header>ul>.select");
-    var $section_pos = $("#content1,#content2,#content3,#content4");
+    var $section_pos = $("#content1,#content2,#page9");
     $aside.each(function (index) {
         $(this).on("click", function () {
             var pox = $($section_pos[index]);
@@ -318,87 +438,56 @@
 
     var p1 = $("#content1");
     var p2 = $("#content2");
-    var p3 = $("#content3");
-    var p4 = $("#content4");
-    var p5 = $("#content6");
+    var p3 = $("#page9");
+    var p4 = $(".guji1");
+    var p5 = $(".guji2");
+
 
     $(window).scroll(function () {
 
         if ($(window).scrollTop() >= p1.position().top && $(window).scrollTop() < p2.position().top) {
             $($aside[0]).siblings().removeClass("cur");
             $($aside[0]).addClass("cur");
+
+
         }
         if ($(window).scrollTop() >= p2.position().top && $(window).scrollTop() < p3.position().top) {
             $($aside[1]).siblings().stop().removeClass("cur");
             $($aside[1]).addClass("cur");
+            p3.children('div').stop().animate({marginTop:'0px'})
+
         }
-        if ($(window).scrollTop() >= p3.position().top && $(window).scrollTop() < p4.position().top) {
+        if ($(window).scrollTop() >= p3.position().top) {
             $($aside[2]).siblings().removeClass("cur");
             $($aside[2]).addClass("cur");
-        }
-        if ($(window).scrollTop() >= p4.position().top && $(window).scrollTop() < p5.position().top) {
-            $($aside[3]).siblings().removeClass("cur");
-            $($aside[3]).addClass("cur");
+
         }
 
+        if ($(window).scrollTop() >= p3.position().top && $(window).scrollTop() < p4.position().top) {
+
+            $($aside[1]).siblings().stop().removeClass("cur");
+            $($aside[1]).addClass("cur");
+        }
+
+
+        if ($(window).scrollTop()+$(window).height() >= p4.position().top && $(window).scrollTop()+$(window).height() < p5.position().top) {
+            p4.children('div').stop().animate({marginTop:'0px'})
+        }
+        if ($(window).scrollTop()+$(window).height()-200 >= p5.position().top) {
+            p5.children('div').stop().animate({marginTop:'0px'})
+        }
     });
 
 </script>
 
-<!-- 动态添加头部统计数据及table-->
 <script>
-    //动态添加头部区块统计数据
-    var arr_countNum = {jk_heightNum: '222,222', jk_nodeNum: '3,333,333', jk_userNum: '6,666,666', jk_dealNum: '8,888'};
-    function change_jkNum(arr_countNum) {
-        $('#jk_heightNum').text(arr_countNum.jk_heightNum);
-        $('#jk_nodeNum').text(arr_countNum.jk_nodeNum);
-        $('#jk_userNum').text(arr_countNum.jk_userNum);
-        $('#jk_dealNum').text(arr_countNum.jk_dealNum);
-    }
-    // 动态添加table
-    var arr_table = [{
-        jukuai_height: '8088518',
-        deal_num: '5',
-        code: 'A6281C33EEA8F69F15AA18F7D8CDFA36C43765B02B1CE0B06D00134F8A18596D',
-        date: '564042950'
-    },
-        {
-            jukuai_height: '8088518',
-            deal_num: '5',
-            code: 'A6281C33EEA8F69F15AA18F7D8CDFA36C43765B02B1CE0B06D00134F8A18596D',
-            date: '564042950'
+    var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        mousewheel:true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
         },
-        {
-            jukuai_height: '8088518',
-            deal_num: '5',
-            code: 'A6281C33EEA8F69F15AA18F7D8CDFA36C43765B02B1CE0B06D00134F8A18596D',
-            date: '564042950'
-        },
-        {
-            jukuai_height: '8088518',
-            deal_num: '5',
-            code: 'A6281C33EEA8F69F15AA18F7D8CDFA36C43765B02B1CE0B06D00134F8A18596D',
-            date: '564042950'
-        }];
-    var tableHtmlHead = ' <tr class="qk_numShow_title_tr">' +
-        '<th class="qk_numShow_title_th" width="150">区块高度</th>' +
-        '<th width="150">交易数</th>' +
-        '<th>区块哈希</th>' +
-        '<th width="123">时间</th>' +
-        '</tr>';
-    function tableInit(arr_table) {
-        var tableHtmlContent = '';
-        for (item in arr_table) {
-            tableHtmlContent += '<tr class="qk_numShow_tr">' + '<td class="color_blue">' + arr_table[item].jukuai_height + '</td>'
-                + '<td>' + arr_table[item].deal_num + '</td>'
-                + '<td>' + arr_table[item].code + '</td>'
-                + '<td>' + arr_table[item].date + '</td>';
-        }
-        $('#table_jknum').html(tableHtmlHead + tableHtmlContent)
-    }
-    $(document).ready(function () {
-        change_jkNum(arr_countNum);
-        tableInit(arr_table);
     });
 </script>
 </body>

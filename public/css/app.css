@@ -1967,7 +1967,8 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
   .wrap .component-index .head-menu-userInfo .span-hand {
     cursor: pointer; }
   .wrap .component-index .zi18 {
-    font-size: 18px; }
+    font-size: 18px;
+    margin-bottom: 133px; }
   .wrap .component-index a {
     text-decoration: none; }
   .wrap .component-index .head_fixed {
@@ -1993,7 +1994,7 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
         margin: 0 24px;
         list-style-type: none;
         padding-top: 34px;
-        width: 90px;
+        width: 100px;
         text-align: center; }
         .wrap .component-index #header .menu li.cur {
           height: 99px;
@@ -2013,6 +2014,32 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
   .wrap .component-index #index {
     height: 524px;
     min-width: 1400px; }
+    .wrap .component-index #index .banner-1 {
+      padding-top: 178px;
+      text-align: center;
+      color: white;
+      font-size: 64px; }
+    .wrap .component-index #index .banner-2 {
+      width: 840px;
+      height: 60px;
+      background-color: #62aeed;
+      margin: 0 auto;
+      margin-top: 64px;
+      border-radius: 2px; }
+      .wrap .component-index #index .banner-2 .banner-2-1 {
+        display: inline-block;
+        height: 60px;
+        border: none;
+        width: 696px;
+        padding-left: 8px; }
+      .wrap .component-index #index .banner-2 .banner-2-2 {
+        display: inline-block;
+        width: 134px;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: white;
+        cursor: pointer; }
   .wrap .component-index .zi48 {
     font-size: 48px;
     color: #40BEFF;
@@ -2023,9 +2050,8 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
   .wrap .component-index .title {
     height: 140px;
     /*块内元素居中*/
-    text-align: center; }
-  .wrap .component-index .title img {
-    margin-top: 80px; }
+    text-align: center;
+    margin-top: 133px; }
   .wrap .component-index .title2 {
     text-align: center;
     padding-top: 20px;
@@ -2036,27 +2062,31 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     width: 930px;
     margin: 0 auto;
     line-height: 28px; }
+  .wrap .component-index .bkColor-1 {
+    background-color: #f5f5f4; }
   .wrap .component-index .part-2 {
     width: 1200px;
     margin: 0 auto;
-    margin-top: 50px; }
+    padding-top: 136px;
+    padding-bottom: 144px; }
   .wrap .component-index .part-2-1 {
-    width: 550px;
-    height: 454px;
-    border: 1px solid #E8E8E8;
-    float: left; }
+    width: 560px;
+    height: 501px;
+    float: left;
+    margin-left: 20px; }
     .wrap .component-index .part-2-1 span {
       color: #40BEFF; }
     .wrap .component-index .part-2-1 .zi24 {
       width: 360px;
-      text-align: center;
-      margin: 50px auto;
+      text-align: left;
+      margin-top: 50px;
+      margin-bottom: 50px;
       line-height: 40px; }
   .wrap .component-index .zi24 {
     font-size: 24px;
     color: #4A4A4A; }
   .wrap .component-index .part-2-2 {
-    text-align: center;
+    text-align: left;
     margin-top: 40px; }
     .wrap .component-index .part-2-2 .zi14 {
       width: 300px;
@@ -2136,10 +2166,42 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       line-height: 76px;
       color: #ffffff;
       cursor: pointer; }
+  .wrap .component-index #page9 {
+    background-color: #f5f5f4;
+    padding-top: 1px; }
   .wrap .component-index .part-9 {
     margin: 60px auto;
     text-align: center;
     width: 1200px; }
+    .wrap .component-index .part-9 ul {
+      width: 920px;
+      margin: 0 auto;
+      text-align: left; }
+      .wrap .component-index .part-9 ul li {
+        border-bottom: dashed 1px #d1d1d1;
+        padding-bottom: 30px; }
+        .wrap .component-index .part-9 ul li .question {
+          font-size: 18px;
+          color: #40beff;
+          font-weight: bold;
+          margin: 30px 0 20px; }
+          .wrap .component-index .part-9 ul li .question > div {
+            display: inline-block;
+            line-height: 36px; }
+            .wrap .component-index .part-9 ul li .question > div:first-child {
+              width: 60px; }
+            .wrap .component-index .part-9 ul li .question > div:last-child {
+              width: 820px; }
+        .wrap .component-index .part-9 ul li .answer {
+          font-size: 16px; }
+          .wrap .component-index .part-9 ul li .answer > div {
+            line-height: 36px;
+            display: inline-block; }
+            .wrap .component-index .part-9 ul li .answer > div:first-child {
+              width: 60px;
+              vertical-align: top; }
+            .wrap .component-index .part-9 ul li .answer > div:last-child {
+              width: 820px; }
   .wrap .component-index .backBase {
     background: #343d50;
     color: white;
