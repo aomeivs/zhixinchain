@@ -21,6 +21,60 @@
 </head>
 <body>
 <div class="wrap search-result" id="app">
+    <Modal v-model="modal1" :footer-hide="true" width="900">
+        <div class="component-modal-auth">
+            <div class="modal-1">
+                <div class="add-employ-container">
+                    <div class="add-employ-head">
+                        <div class="add-employ-title">
+                            <span class="e-title-1">申请获得授权</span><span class="e-title-2">/Newly Increased</span>
+                        </div>
+                    </div>
+
+                    <div class="add-employ-body text-center">
+                        <div class="body-1">
+                            <i-input placeholder="请输入身份证号" size="large" style="width: 360px;"></i-input>
+                        </div>
+                        <div class="body-2">
+                            <i-button type="primary" size="large" style="width: 360px;">立即申请</i-button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </Modal>
+    <Modal v-model="modal3" :footer-hide="true" width="900">
+        <div class="component-modal-auth">
+            <div class="modal-3">
+                <div class="add-employ-container">
+                    <div class="add-employ-head">
+                        <div class="add-employ-title">
+                            <div class="e-title-1">
+                                <Icon type="android-alert"></Icon>
+                            </div>
+                            <div class="e-title-2">申请授权需要购买会员功能！</div>
+                        </div>
+                    </div>
+
+                    <div class="add-employ-body text-center">
+                        <!--<div class="body-1">
+                            <span>
+                                该员工不存在于职信链中，我们将再次发送短信申请。
+                            </span>
+                        </div>
+                        <div class="body-3">
+                            <i-input placeholder="请输入手机号码" size="large" style="width: 360px;"></i-input>
+                        </div>-->
+                        <div class="body-2">
+                            <i-button type="primary" size="large" style="width: 360px;">立即购买</i-button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </Modal>
     <div class="component-index">
         <div id="nav-container">
             <div id="header">
@@ -37,7 +91,7 @@
 
 
                     <li data-menuanchor="buy" id="home5"><span class="buy" style="color: #ff500a;">购买</span></li>
-                    <li data-menuanchor="team" id="home4" class="select">试用</li>
+                    <li data-menuanchor="team" id="home4">试用</li>
 
 
                     <li style="display: block; width: 120px;">
@@ -127,7 +181,7 @@
                         <span class="result-other mobile">手机号：158xxxx2430</span>
                         <span class="result-other cardNum">身份证号：371327xxxxxxxx6415</span>
                         <span class="result-other authorizeStatus">未授权</span>
-                        <span class="result-shouquan">申请授权</span>
+                        <span class="result-shouquan" @click="handleAuth">申请授权</span>
                     </div>
                 </card>
             </div>
@@ -156,10 +210,15 @@
         data () {
             return {
                 visible: false,
-                value:'Placeholder'
+                value:'丁',
+                modal1:false,
+                modal3:false
             }
         },
         methods: {
+            handleAuth(){
+                this.modal3=true;
+            },
             handleOpen () {
                 this.visible = !this.visible;
             },
