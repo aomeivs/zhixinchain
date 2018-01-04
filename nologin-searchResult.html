@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在线搜索</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/layout.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+    <style>
+        .wrap .component-index .zi18{
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+<div class="wrap search-result" id="app">
+    <div class="component-index">
+        <div id="nav-container">
+            <div id="header">
+                <a href="Homepage.html">
+                    <img src="public/images/index/logo.png" alt="" class="logo" style="border: 0px;"/>
+                </a>
+                <ul id="menu" class="menu zi18">
+
+                    <li data-menuanchor="index" class="select" id="home1">首页</li>
+
+                    <li data-menuanchor="about" id="home2" class="select">关于职信链</li>
+
+                    <li data-menuanchor="technical" id="home3" class="select">常见问题</li>
+
+
+                    <li data-menuanchor="buy" id="home5"><span class="buy" style="color: #ff500a;">购买</span></li>
+                    <li data-menuanchor="team" id="home4" class="select">试用</li>
+
+
+                    <li style="display: block; width: 120px;">
+                        <!--企业-->
+                        <dropdown trigger="click" :visible="visible" style="margin-left: 20px ;">
+                            <a href="javascript:void(0)" @click.stop="handleOpen()">
+                                控制台
+                                <icon type="arrow-down-b"></icon>
+                            </a>
+                            <dropdown-menu slot="list">
+                                <div class="head-menu-userInfo">
+                                    <div class="clearFix head-menu-company-diy">
+                                        <span><a href="javascript:alert(0)"
+                                                 style="color:#1B7CE1;">青岛网络科技特别开心有限公司</a></span>
+                                    </div>
+                                    <div class="line head-menu-uline"></div>
+                                    <div class="clearFix head-menu-u1">
+                                        <span class="left h-m-u-1">支持员工数量</span>
+                                        <span class="right">40</span>
+                                    </div>
+                                    <div class="clearFix head-menu-u2">
+                                        <span class="left h-m-u-1">有效期至</span>
+                                        <span class="right">2018.11.19</span>
+                                    </div>
+                                    <div class="line head-menu-uline"></div>
+                                    <div class="clearFix head-menu-u3">
+                                    <span class="left">
+                                        <badge dot>
+                                            <a href="#" class="head-message-badge">我的优惠券</a>
+                                        </badge>
+                                    </span>
+                                        <span class="right">
+                                        <a href="#" class="head-message-badge">
+                                            <Icon type="android-exit"></Icon>
+                                            <span>退出</span>
+                                        </a>
+                                    </span>
+                                    </div>
+                                </div>
+                            </dropdown-menu>
+                        </dropdown>
+                        <!--个人-->
+                        <dropdown trigger="custom" :visible="visible" style="margin-left: 20px ;display: none">
+                            <a href="javascript:void(0)" @click.stop="handleOpen()">
+                                控制台
+                                <icon type="arrow-down-b"></icon>
+                            </a>
+                            <dropdown-menu slot="list">
+                                <div class="head-menu-userInfo" style="width: 110px;">
+                                    <div class="clearFix head-menu-person-diy">
+                                        <span>周累了</span>
+                                    </div>
+                                    <div class="line head-menu-uline"></div>
+                                    <div class="clearFix head-menu-person-diy span-hand">
+                                        <span>退出</span>
+                                    </div>
+                                </div>
+                            </dropdown-menu>
+                        </dropdown>
+                    </li>
+
+                    <li class="loginAndSignIn" style="width: 205px; display: none;">
+                        <span class="span1">登录</span>
+                        <span class="span2">注册</span>
+                    </li>
+
+                </ul>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+    </div>
+    <div class="c-body">
+        <div class="search-result-1">
+            <div class="search-result-1-1">
+                <i-input v-model="value" size="large" style="width: 900px"></i-input>
+            </div>
+            <div class="search-result-1-2">
+                 <i-button type="primary" icon="ios-search">搜索</i-button>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+        <div id="search-result-content">
+            <div class="search-result-2">
+                <card  style="width:1111px;height: 134px;">
+                    <div>
+                        <span class="result-name name">丁畅</span>
+                        <span class="result-other mobile">手机号：158xxxx2430</span>
+                        <span class="result-other cardNum">身份证号：371327xxxxxxxx6415</span>
+                        <span class="result-other authorizeStatus">未授权</span>
+                        <span class="result-shouquan">申请授权</span>
+                    </div>
+                </card>
+            </div>
+            <div class="search-result-2">
+            <card  style="width:1111px;height: 134px;">
+                <div>
+                    <span class="result-name name">庞丁美子</span>
+                    <span class="result-other mobile">手机号：158xxxx2430</span>
+                    <span class="result-other cardNum">身份证号：371327xxxxxxxx6415</span>
+                    <span class="result-other authorizeStatus">已授权</span>
+                </div>
+            </card>
+        </div>
+        </div>
+
+        <div class="search-noResult">
+            <img src="public/images/no-searchResult.png">
+            <div class="search-noResult-1">
+                没有找到与搜索条件匹配的结果！
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var Main = {
+        data () {
+            return {
+                visible: false,
+                value:'Placeholder'
+            }
+        },
+        methods: {
+            handleOpen () {
+                this.visible = !this.visible;
+            },
+            closeModal(){
+                this.visible = false;
+            },
+            downloadImageAll(){
+                var imgs = document.querySelectorAll('.vouchers-3-1-1');
+                for (var imgData=0;imgData<imgs.length;imgData++) {
+                    html2canvas(imgs[imgData],
+                        {
+                            onrendered: function (canvas) {
+                                var a = document.createElement('a');
+                                // toDataURL defaults to png, so we need to request a jpeg, then convert for file download.
+                                a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+                                a.download = 'somefilename-' + Date.now() + '.jpg';
+                                a.onclick = function click() {
+                                }
+                                a.click();
+                            }
+                        }
+                    );
+                }
+            }
+        }
+    }
+
+    var Component = Vue.extend(Main)
+    new Component().$mount('#app')
+
+
+</script>
+</body>
+</html>
