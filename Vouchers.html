@@ -16,6 +16,7 @@
     <script src="https://cdn.bootcss.com/es6-promise/4.1.1/es6-promise.auto.js"></script>
     <script src="https://cdn.bootcss.com/es6-promise/4.1.1/es6-promise.auto.min.js"></script>
     <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="https://cdn.bootcss.com/jspdf/1.3.5/jspdf.min.js"></script>
     <link rel="stylesheet" href="public/css/app.css">
 
 </head>
@@ -115,7 +116,8 @@
     width: 780px;
     margin: 0 auto;
     text-align:left;
-"><div class="vouchers-3-1-1"><p class="daijq-F1">
+">
+                        <div class="vouchers-3-1-1" id="vouchers1"><p class="daijq-F1">
                         优惠券码
                         <span class="daijq-F1-blueTxt">AX901</span></p> <p class="daijq-F2">
                         有效期至：2017-12-31
@@ -136,6 +138,13 @@
 
                 <!--图片下载按钮-->
 
+
+                <div id="ieSaveImgTip" style="
+                display: none;
+                text-align: center;
+                margin-top: 60px;
+                margin-bottom: -80px;
+                font-size: 12px;">当前浏览器环境不支持保存图片功能，请手动保存优惠码。</div>
                 <div class="vouchers-3-2 download-imgAll" style="cursor: pointer;" @click="downloadImageAll">下载全部优惠券图片</div>
             </div>
             <!--优惠券为空时 -->
@@ -147,35 +156,102 @@
         </div>
     </div>
 </div>
+
 <script>
+
+//    function SaveAs5(imgURL)
+//    {
+//        var oPop = window.open(imgURL,"Image","width=0, height=0, top=5000, left=5000");
+//        for(; oPop.document.readyState != "complete"; )
+//        {
+//            if (oPop.document.readyState == "complete")break;
+//        }
+//        oPop.document.execCommand("SaveAs");
+//        oPop.close();
+//    }
+//
+//    function oDownLoad(url) {
+//        myBrowser();
+//        if (myBrowser()==="IE"||myBrowser()==="Edge"){
+//            //IE
+//            odownLoad.href="#";
+//            var oImg=document.createElement("img");
+//            oImg.src=url;
+//            oImg.id="downImg";
+//            var odown=document.getElementById("down");
+//            odown.appendChild(oImg);
+//            SaveAs5(document.getElementById('downImg').src)
+//        }else{
+//            //!IE
+//            odownLoad.href=url;
+//            odownLoad.download="";
+//        }
+//    }
+
+var isSupportDownload = 'download' in document.createElement('a');
+if(!isSupportDownload){
+    $('#ieSaveImgTip').show();
+//    SaveAs5()
+
+}
+
     var Main = {
-        data () {
+        data :function() {
             return {
                 visible: false
             }
         },
         methods: {
-            handleOpen () {
+            handleOpen :function() {
                 this.visible = !this.visible;
             },
-            closeModal(){
+            closeModal:function(){
                 this.visible = false;
             },
-            downloadImageAll(){
-                var imgs = document.querySelectorAll('.vouchers-3-1-1');
-                for(imgData in imgs){
-                    html2canvas(imgs[imgData],
-                        {
-                            onrendered: function (canvas) {
-                                var a = document.createElement('a');
-                                // toDataURL defaults to png, so we need to request a jpeg, then convert for file download.
-                                a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
-                                a.download = 'somefilename-'+Date.now()+'.jpg';
-                                a.onclick=function click(){}
-                                a.click();
-                            }
+            downloadImageAll:function(){
+
+
+
+                var imgs = $('.vouchers-3-1-1');
+                for(var imgData in imgs){
+                    if(!isSupportDownload) {
+                        $('#ieSaveImgTip').show();
+//
+
+                        var imgs = $('.vouchers-3-1-1');
+                        for (var imgData in imgs) {
+                            html2canvas(imgs[imgData],
+                                {
+                                    onrendered: function (canvas) {
+
+                                        var img = document.createElement('img');
+                                        img.src = canvas.toDataURL("image/png");
+                                        img.id="downImg";
+                                        var doc = new jsPDF();
+                                        doc.addImage(img,'png',0,0,0,0);
+                                        doc.save(Date.now()+'.pdf')
+                                    }
+                                }
+                            );
                         }
-                    );
+                    }else {
+
+//                        当前浏览器环境不支持保存图片功能，请手动保存优惠码。
+                        html2canvas(imgs[imgData],
+                            {
+                                onrendered: function (canvas) {
+                                    var a = document.createElement('a');
+                                    // toDataURL defaults to png, so we need to request a jpeg, then convert for file download.
+                                    a.href = canvas.toDataURL("image/png");
+                                    console.log(a.href)
+                                    a.download = 'filename-'+Date.now()+'.png';
+                                    a.onclick=function click(){}
+                                    a.click();
+                                }
+                            }
+                        );
+                    }
+
                 }
             }
         }

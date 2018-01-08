@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet"media="screen"  href="public/css/particles-style.css">
+    <style>
+        .sendMsg{
+            background: none;
+            outline: none;
+            border: 0px;
+            line-height: 44px;
+            height: 44px;
+            width: 460px;
+            margin-top: 31px;
+            font-size: 15px;
+            color: #797777;
+
+            position: absolute;
+            width: 200px;
+            border: 1px solid #d9d9d9;
+            right: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="particles-js"></div>
+<script src="public/js/particles.js"></script>
+<script src="public/js/particles-app.js"></script>
+<div class="wrap login" id="app">
+    <Modal v-model="modal1" :footer-hide="true" width="900">
+        <div class="component-modal-auth">
+            <div class="modal-1">
+                <div class="add-employ-container" style="height:700px; margin:20px; overflow-y: auto;">
+                    <pre style="padding: 0 10px;white-space: pre-line;">    青岛英网资讯股份有限公司（简称“甲方”，也称“小职了”）为全国小职了猎头合伙人创业园的运营机构；乙方（“入驻方”）为入驻该园区的猎头产业合伙人；
+    双方就乙方入驻园区获得甲方创业服务支持，在甲乙双方平等合作的基础上，经甲乙双方友好协商一致同意后签订本协议；本协议甲方盖章签字及乙方签字后即立即生效。
+    一、	服务内容
+    1.	乙方以猎头合伙人身份入驻甲方小职了猎头合伙人创业园，并获得甲方全套创业服务；乙方同时也是甲方劳务外包合作的劳务公司所辖劳务人员，受劳务公司管理与委派，负责甲方的企业猎头服务业务的劳务外包承接工作；乙方不是甲方的员工；
+    2.	乙方作为入驻的合伙人创业者，服务期内可以同时从事“猎头服务”和“招商服务”2类工作；猎头服务是指独立开展企业猎头的签单及人才交付等工作，并享受相关猎头服务收益；招商服务是指独立开展创业园入驻猎手的招募招商工作，并享受相关招商奖励收益；相关收益，详见“三、劳务费计算”部分。
+    3.	服务期限：签订日期起1年。1年期后，如双方没有出现严重违背本协议内容侵害对方利益，或者违背国家法律的行为，本协议则在每次到期后自动递延一年。
+    4.	甲方提供乙方如下创业支持服务：
+    授权乙方以甲方名义开展业务、签订合同、交易支付、向乙方服务企业开具发票、网络服务、代缴社保、文印服务、提供办公场所、电话服务；其他猎头相关的高级创业服务：人才提供、职位提供、信用评价和背书、简历管理工具、同业协作平台、猎头作业平台、大数据和人工智能配置工具、大数据和人工智能客服工具等（以上高级服务的部分内容，达到一定业绩等级的创业者获得授权后方可使用，具体由甲方网站使用规定为准）；以上服务内容，除本协议中有特别说明的之外，全部免费提供；
+    5.	乙方借助甲方创业支持服务，独立完成猎头业务的签单、人才寻访、人才交付、款项催收、入职人才保岗期的客户服务等全部业务环节；
+    6.	为维护创业园区平台服务的标准统一性，乙方对外开展业务时须遵循甲方提供的统一客户服务合同格式，价格标准，服务规范等；
+    7.	乙方获得的甲方授权的创业服务相关的所有身份、账户、密码、门禁卡、钥匙、数据等由乙方自行负责保管；乙方应当对使用以上授权内容的所有活动和事件负法律责任；
+    8.	用户不应将其以上任何授权内容转让或出借予他人使用。如用户发现其以上授权内容遭他人非法使用，应立即通知甲方。因黑客行为或乙方的保管疏忽导致帐号、密码遭他人非法使用，甲方不承担任何责任；
+    9.	乙方不得将在甲方平台获取的任何信息告知第三方（信息包括但不限于甲方的客户信息，甲方平台上的职位信息，平台上的简历信息等）；乙方不得利用甲方名义从事有违法律、道德、伤害甲方声誉的事情，终止服务关系时甲方有权收回以上所有服务内容的授权；
+    10.	如乙方违反以上规则造成甲方经济损失或被第三方索赔的，甲方可无条件立即解除本协议并拒绝支付乙方任何费用，同时乙方应三倍补偿甲方一切费用(包括但不限于各种赔偿费、诉讼代理费及为此支出的其它合理费用)。
+    11.	如出现企业方在猎头服务费缴纳方面违约的情况，甲方应积极给予乙方法律支持，配合乙方开展面对用人企业的法律追偿工作，相关法律费用首先从追偿回款中扣除；如有不足，则剩余法律费用部分由甲方：乙方按照3:7比例负担。
+    二、服务细则
+    1.	付款方式及时限:
+    甲方应支付乙方的总费用称为劳务费，每月24号起至月末的工作日为付款日，付款日内，乙方当月20号前（含20号）符合付款结算条件的款项对应的劳务费将打入乙方指定的如下收款银行账户：
+    户  名：        开户行：                     账号：                   。
+    20号后的符合付款结算条件的结算款项顺延至下月结算。
+    付款结算条件可参照本协议“二、服务细则之3，即付款条件”；
+    甲方应支付乙方的劳务费可参考本协议“三、劳务费计算”。
+    2.	如乙方委托甲方为其缴纳社保五险一金，其劳务费将在扣除个人及公司应缴五险一金部分后计算；
+    如果当期应支付劳务费不足以支付当期社保五险一金的，乙方须将当月应缴社保及五险一金（包含个人及公司应缴纳部分）不晚于当月15 日（不含）前最后一个工作日支付至甲方如下账户：
+    户名：青岛英网资讯股份有限公司
+    开户行：建设银行青岛香港中路远洋广场支行
+    账号：37101985410051004190
+    默认社保及五险一金缴纳基数为当地最低工资标准，具体费用以实际社保收取为准。
+    3.	付款结算条件：乙方与客户所签合同中无退款条件的款项可予以付款；有退款条件的款项，须在退款条件消除后才能进行付款；如退款条件为部分退款，则以已确认的无退款风险及争议的回款部分为基数，计算支付乙方的佣金。
+    4.	办公场地及电话系统的支持：
+    2017年9月30日前签约的入驻对象，免费提供签约之日起北京或青岛1年的办公场地，总额北京50人，青岛150人，额满为止；
+    如需另行租赁，价格为：北京办公室1000元/月/工位；青岛办公室500元/月/工位，月付；电话系统：按电信公司实际计价，月付。
+    5.	甲方有权根据需要修改本协议，如本协议有任何变更，甲方将提前1个月在甲方网站上以公告形式通知乙方或通过微信群、QQ群、微信公众号等途径通知乙方。如乙方不同意相关变更，须在通知发布之日起1个月内以书面通知的方式要求终止本协议；反之，视为乙方已经同意相关修改，相关通知视为本协议的有效补充附件。
+    三、劳务费计算
+    1：乙方猎头净有效业绩的70%计提为乙方劳务费，其余部分记为甲方创业服务费。
+    2：乙方有权邀请好友入驻园区，并可获得2级的好友邀请奖励，奖励期限为2级好友签订入驻协议之日起1年内。
+    乙方所邀请入驻的好友每月度净有效业绩的1.5%作为一级招商劳务奖励；好友再邀请好友时，所有二级好友当月净有效业绩总额大于等于6万时，乙方可获得二级好友月度有效业绩的0.5%作为二级招商劳务奖励。
+    净业绩：归属于乙方所创造的总服务费刨除6%增值税之后的部分
+    四、隐私保护
+    甲方保证乙方个人信息的保密性，对于乙方提供的个人信息（包含个人身份证件等）及专属候选人简历，未经乙方允许甲方绝不会透露给任何第三方机构，更不会用作与任何其他用途。
+    五、法律相关
+    乙方所提供的个人信息将作为双方联络信息，如有更改须及时书面通知甲方更改；
+    本协议的订立、执行和解释及争议的解决均应适用中国法律；
+    如双方就本协议内容或其执行发生任何争议，双方应尽量友好协商解决；协商不成时，任何一方均可向青岛市人民法院提起诉讼。
+    六、其他：本合同壹式贰份。甲乙双方各执壹份，具有同等的法律效力。
+    </pre>
+                </div>
+            </div>
+        </div>
+    </Modal>
+    <div class="login-1">
+        <img src="public/images/login/logo.png">
+    </div>
+    <div class="login-2">
+        <span class="login-2-txtBigger">注册</span>
+        <span>/Sign Up</span>
+    </div>
+    <div class="login-3">
+        <div class="login-3-1 signUp-1">
+            <span>已有账号？</span>
+            <span class="login4-active">立即登录</span>
+        </div>
+        <div class="login-company">
+            <div class="login-3-2 bottomLine">
+                <input placeholder="身份证号" id="login-company-input1">
+            </div>
+            <div class="sce_line" id="login-company-sce_line-1"></div>
+            <div class="login-3-2 bottomLine">
+                <input placeholder="手机号"  id="login-company-input2">
+            </div>
+            <div class="sce_line" id="login-company-sce_line-2"></div>
+            <div class="login-3-2 bottomLine">
+                <input placeholder=" 请输入由字母和数字组成的6-16位密码"  id="login-company-input3" type="password">
+            </div>
+            <div class="sce_line" id="login-company-sce_line-3"></div>
+            <div class="login-3-2 bottomLine" style="position: relative;">
+                <input placeholder="验证码"  id="login-company-input4">
+                <button type="button" class="sendMsg auth-code">发送验证码</button>
+            </div>
+
+            <div class="login-3-2" style="height: 0;font-size: 12px; padding: 15px 0;">
+                <input type="checkbox" name="" checked id="checkbox" style="
+                width: 20px;
+                vertical-align: middle;
+                margin-top: 0;
+                ">
+                <label for="checkbox">已同意《<a href="javascript:void(0)" @click.prevent="handleRule">用户注册协议</a>》</label>
+            </div>
+        </div>
+    </div>
+    <div class="login-5" style="margin-top: 50px;margin-bottom: 100px;">注册</div>
+
+</div>
+<script src="public/js/send_code.js"></script>
+<script>
+    var Main = {
+        data(){
+            return {
+                modal1:false
+            }
+        },
+        methods:{
+            handleRule(){
+                this.modal1 =!this.modal1;
+            }
+        }
+    }
+    var component = Vue.extend(Main)
+    new component().$mount('#app')
+</script>
+<script>
+    $('#login-company-input1').on('focus',function () {
+        $("#login-company-sce_line-1").css("width","100%");
+    })
+    $('#login-company-input1').on('blur',function () {
+        $("#login-company-sce_line-1").css("width","0");
+    })
+    $('#login-company-input2').on('focus',function () {
+        $("#login-company-sce_line-2").css("width","100%");
+    })
+    $('#login-company-input2').on('blur',function () {
+        $("#login-company-sce_line-2").css("width","0");
+    })
+    $('#login-company-input3').on('focus',function () {
+        $("#login-company-sce_line-3").css("width","100%");
+    })
+    $('#login-company-input3').on('blur',function () {
+        $("#login-company-sce_line-3").css("width","0");
+    })
+</script>
+</body>
+</html>

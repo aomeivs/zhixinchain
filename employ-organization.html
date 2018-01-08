@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://cdn.bootcss.com/babel-polyfill/6.26.0/polyfill.min.js"></script>
     <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
     <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
@@ -35,149 +36,50 @@
  -->
 
 <div class="wrap" id="app">
-    <!--component-Modal 申请获得授权/Application Authorization-->
-    <Modal v-model="modal1" :footer-hide="true" width="900">
-    <div class="component-modal-auth">
-        <div class="modal-1">
-            <div class="add-employ-container">
-                <div class="add-employ-head">
-                    <div class="add-employ-title">
-                        <span class="e-title-1">申请获得授权</span><span class="e-title-2">/Newly Increased</span>
-                    </div>
-                </div>
 
-                <div class="add-employ-body text-center">
-                    <div class="body-1">
-                        <i-input placeholder="请输入身份证号" size="large" style="width: 360px;"></i-input>
-                    </div>
-                    <div class="body-2">
-                        <i-button type="primary" size="large" style="width: 360px;">立即申请</i-button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</Modal>
-    <Modal v-model="modal2" :footer-hide="true" width="900">
-        <div class="component-modal-auth">
-            <div class="modal-2">
-                <div class="add-employ-container">
-                    <div class="add-employ-head">
-                        <div class="add-employ-title">
-                            <div class="e-title-1">
-                                <Icon type="android-checkmark-circle"></Icon>
-                            </div>
-                            <div class="e-title-2">授权申请发送成功！</div>
-                        </div>
-                    </div>
-
-                    <div class="add-employ-body text-center">
-                        <div class="body-1">
-                            <span>
-                                授权申请已发送，请等待该员工处理。处理完毕后，您可以在消息中看到结果。
-                            </span>
-                        </div>
-                        <div class="body-2">
-                            <i-button type="primary" size="large" style="width: 360px;">确定</i-button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </Modal>
-    <Modal v-model="modal3" :footer-hide="true" width="900">
-        <div class="component-modal-auth">
-            <div class="modal-3">
-                <div class="add-employ-container">
-                    <div class="add-employ-head">
-                        <div class="add-employ-title">
-                            <div class="e-title-1">
-                                <Icon type="android-alert"></Icon>
-                            </div>
-                            <div class="e-title-2">授权申请发送失败！</div>
-                        </div>
-                    </div>
-
-                    <div class="add-employ-body text-center">
-                        <div class="body-1">
-                            <span>
-                                该员工不存在于职信链中，我们将再次发送短信申请。
-                            </span>
-                        </div>
-                        <div class="body-3">
-                            <i-input placeholder="请输入手机号码" size="large" style="width: 360px;"></i-input>
-                        </div>
-                        <div class="body-2">
-                            <i-button type="primary" size="large" style="width: 360px;">立即申请</i-button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </Modal>
-    <Modal v-model="modal4" :footer-hide="true" width="900">
-    <div class="component-modal-auth">
-        <div class="modal-4">
-            <div class="add-employ-container">
-                <div class="add-employ-head">
-                    <div class="add-employ-title">
-                        <span class="e-title-1">授权发送中</span><span class="e-title-2">/Send In</span>
-                    </div>
-                </div>
-
-                <div class="add-employ-body text-center">
-                    <div class="body-1">
-                        <i-progress :percent="percent"></i-progress>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</Modal>
     <div class="c-header">
-    <div class="c-head-logo">
-        <img src="public/images/logo.png" width="334" alt="职信链LOGO">
-    </div>
-    <div class="c-head-menu">
-        <ul class="head-menu-ul">
-            <li>
-                <a href="">购买</a>
-            </li>
-            <li>
-                <a href="#">职信在线搜索</a>
-                <!--<img src="public/images/head-search.png" width="26" alt="职信链搜索按钮">-->
-            </li>
-            <li>
-                <div>
-                    <!--badge count代表消息数 默认99封顶-->
-                    <badge count="1">
-                        <a href="#" class="head-message-badge"><img src="public/images/head-mail.png" width="26" alt="消息(0)"></a>
-                    </badge>
-                </div>
-            </li>
-            <li>
-                <div class="c-head-user">
-                    <div class="user-photo">
-                        <a href=""><img src="public/images/head-photo.png" width="39" alt="用户头像">
-                            <span>董兴海</span></a>
-                    </div>
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu">
+            <ul class="head-menu-ul">
+                <li>
+                    <a href="">购买</a>
+                </li>
+                <li>
+                    <a href="#">职信在线搜索</a>
+                    <!--<img src="public/images/head-search.png" width="26" alt="职信链搜索按钮">-->
+                </li>
+                <li>
                     <div>
-                        <img src="public/images/head-line.png" width="2" alt="">
+                        <!--badge count代表消息数 默认99封顶-->
+                        <badge count="1">
+                            <a href="#" class="head-message-badge"><img src="public/images/head-mail.png" width="26" alt="消息(0)"></a>
+                        </badge>
                     </div>
-                    <div class="user-logOut">
-                        <img src="public/images/head-exit.png" style="cursor: pointer;" width="26" alt="退出">
+                </li>
+                <li>
+                    <div class="c-head-user">
+                        <div class="user-photo">
+                            <a href=""><img src="public/images/head-photo.png" width="39" alt="用户头像">
+                                <span>董兴海</span></a>
+                        </div>
+                        <div>
+                            <img src="public/images/head-line.png" width="2" alt="">
+                        </div>
+                        <div class="user-logOut">
+                            <img src="public/images/head-exit.png" style="cursor: pointer;" width="26" alt="退出">
+                        </div>
                     </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-</div>
-    <div class="c-body">
+    <div class="c-body" v-bind:style="{'margin-left':marginLeft}">
         <div class="c-body-left left">
+            <div class="c-accordion" v-on:click="accordionToggle">
+                <Icon type="arrow-left-b" class="icon-c-accordion" v-bind:class="{active:!accordionOpen}"></Icon>
+            </div>
             <div class="body-left-search">
                 <auto-complete
                         v-model="value"
@@ -195,13 +97,13 @@
                 <!--在职员工-->
                 <div class="tree-employ employ-on">
                     <div class="employ-on-block">
-                        <img class="employ-icon" src="public/images/tree-employ.png" width="23" alt="在职员工">
+                        <span class="employ-icon" width="23" alt="在职员工"></span>
                         <span class="employ-title">
-                        在职员工
-                    </span>
+                        组织结构
+                        </span>
                         <span class="employ-count">
                         (3)
-                    </span>
+                        </span>
                     </div>
                 </div>
 
@@ -210,174 +112,156 @@
                     <component-tree v-bind:tree='treeData'></component-tree>
                 </div>
 
-                <!--添加部门-->
+<!--                &lt;!&ndash;添加部门&ndash;&gt;
                 <div class="tree-addGroup">
                     <icon type="plus-round"></icon><span>添加部门</span>
-                </div>
+                </div>-->
 
-                <!--系统设置-->
-                <div class="tree-setting">
-                    <icon type="gear-a"></icon><span>系统设置</span>
-                </div>
-
-                <!--离职员工-->
-                <div class="tree-employ employ-off">
-                    <div class="employ-on-block">
-                        <img class="employ-icon" src="public/images/tree-employ-off.png" width="23" height="23" alt="离职员工">
-                        <span class="employ-title">
-                        已离职员工
-                    </span>
-                        <span class="employ-count">
-                        (1)
-                    </span>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="c-body-container clearFix">
+            <!--登录后的 员工 页面   组件部分  -->
+            <div class="component-employ">
+                <div class="employ-container">
 
+                    <!--评价-->
+                    <div class="employ-assess">
+                        <div class="assess-info overflow" style="padding-top: 0;">
+                            <tabs v-model="name" v-on:on-click="tabsToggle(name)">
+                                <tab-pane name="1" label="上传本地已填好的员工信息表" icon="document-text">
+                                    <div v-show="name==1" class="component-assess-info-base" v-bind:class="{'tab-active':name==1}">
+                                        <div v-show="assessInfoBase" class="edit-assess-info-base">
+                                            <Card style="width: 100%;">
+                                                <i-form ref="formValidate" :model="formCustom" :rules="ruleCustom" :label-width="0" :show-message="showMessage">
+                                                    <div class="edit-1" style="margin-top: 60px;">
+                                                        <Icon type="android-alert" style="color:#ffbf00; font-size: 18px;margin-right: 8px;"></Icon>至少填写了姓名及手机号的员工才可上传成功
+                                                    </div>
+                                                    <div class="text-center">
+                                                        <upload
+                                                                style="min-width:200px;max-width: 400px;margin: 80px auto 30px;"
+                                                                multiple
+                                                                type="drag"
+                                                                max-size="1"
+                                                                :on-exceeded-size="sizeError"
+                                                                action="//jsonplaceholder.typicode.com/posts/">
+                                                            <div style="padding: 20px 0">
+                                                                <icon type="ios-cloud-upload" size="52" style="color: #3399ff"></icon>
+                                                                <p>点击添加</p>
+                                                            </div>
+                                                        </upload>
+                                                        <div style="font-size: 12px;
+                                                                        padding-right: 12px;
+                                                                        color: rgb(138, 138, 138);
+                                                                        text-align: center;
+                                                                        padding-bottom: 12px;">
+                                                            ( 附件大小限10M以内 )
+                                                        </div>
+                                                    </div>
 
-            <!--添加员工 组件部分-->
-            <div class="component-employ-add">
-                <div class="add-employ-container">
-                    <div class="add-employ-head">
-                        <div class="add-employ-title">
-                            <span class="e-title-1">新增员工职信</span><span class="e-title-2">/Newly Increased</span>
-                        </div>
-                        <div class="add-employ-waring">
-                            新增员工职信需要获得员工本人授权 <i-button type="primary" size="large" v-on:click="modalAuth">点此申请获得授权</i-button>
-                        </div>
-                        <div>
-                            <img src="public/images/employ/icon-assess-dashLine.png" width="412" alt="">
-                        </div>
-                        <div class="add-employ-contact">
-                            <span>如有问题请联系客服：</span><span class="employ-contact-phone">400-6190828</span>
-                        </div>
-                        <div class="splite">
-                            <!--分割线-->
-                        </div>
+                                                <div class="edit-7">
+                                                    <div>
+                                                        <i-button type="primary" size="large" style="width:400px;" v-on:click="validata('formValidate1')">提交</i-button>
 
-                    </div>
-
-                    <div class="add-employ-body clearFix">
-                        <Card style="width: 100%;">
-                            <i-form ref="formCustom" :model="formCustom" :rules="ruleCustom" :label-width="0">
-
-
-                            <div class="body-1">
-                                <div class="edit-info edit-2">
-                                    <div class="edit-info-1">
-                                        <i-button type="ghost" v-on:click="tishi">提示切换</i-button>
-                                        <div>姓名 ：</div>
-                                        <div>
-                                            <tooltip :disabled="visible" placement="right" :always='true' :transfer="true">
-                                                <form-item label="" :label-width="0" prop="user">
-                                                    <i-input type="text" v-model="formCustom.user" class="form-el" placeholder="请输入" value=""></i-input>
-                                                </form-item>
-                                                <div slot="content">
-                                                    <p style="max-width: 100px; word-wrap: break-word; white-space: normal;">{{ruleCustom.user[0].message}}</p>
+                                                    </div>
+                                                    <div>
+                                                        <i-button type="ghost" size="large" style="width:400px; margin-top: 40px; margin-bottom: 100px;">下载模板</i-button>
+                                                    </div>
                                                 </div>
-                                            </tooltip>
+                                                </i-form>
+                                            </Card>
+                                        </div>
+                                    </div>
+                                </tab-pane>
+                                <tab-pane name="2" :disabled="false" label="导入企业微信通讯录" icon="document-text">
+                                    <div v-show="name==2" class="component-assess-info-base" v-bind:class="{'tab-active':name==2}">
+                                        <div v-show="assessInfoBase" class="edit-assess-info-base">
+                                            <Card style="width: 100%;">
+                                                <i-form ref="formValidate" :model="formCustom" :rules="ruleCustom" :label-width="0" :show-message="showMessage">
+                                                    <div class="edit-1" style="margin-top: 60px;">
+                                                        <Icon type="android-alert" style="color:#ffbf00; font-size: 18px;margin-right: 8px;"></Icon>至少填写了姓名及手机号的员工才可上传成功
+                                                    </div>
+                                                    <div class="text-center">
+                                                        <upload
+                                                                style="min-width:200px;max-width: 400px;margin: 80px auto 30px;"
+                                                                multiple
+                                                                type="drag"
+                                                                max-size="1"
+                                                                :on-exceeded-size="sizeError"
+                                                                action="//jsonplaceholder.typicode.com/posts/">
+                                                            <div style="padding: 20px 0">
+                                                                <icon type="ios-cloud-upload" size="52" style="color: #3399ff"></icon>
+                                                                <p>点击添加</p>
+                                                            </div>
+                                                        </upload>
+                                                        <div style="font-size: 12px;
+                                                                        padding-right: 12px;
+                                                                        color: rgb(138, 138, 138);
+                                                                        text-align: center;
+                                                                        padding-bottom: 12px;">
+                                                            ( 附件大小限10M以内 )
+                                                        </div>
+                                                    </div>
 
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>性别 ： </div>
-                                        <div>
-                                            <tooltip placement="right" :always='false'>
-                                            <i-select v-model="model1" class="form-el" placeholder="请选择">
-                                                <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
-                                            </i-select>
-                                                <div slot="content">
-                                                    <p style="max-width: 100px; word-wrap: break-word; white-space: normal;">显示多行信息显示多行信息显示多行信息</p>
-                                                </div>
-                                            </tooltip>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="edit-info edit-3">
-                                    <div class="edit-info-1">
-                                        <div>身份证号 ：</div>
-                                        <div>
-                                            <i-input class="form-el" :disabled="true" placeholder="请输入" value="371327199001016415"></i-input>
-                                        </div>
-                                    </div>
-                                    <div>
-                                        <div>手机号 ：</div>
-                                        <div>
-                                            <i-input class="form-el" placeholder="请输入" value="15805322430"></i-input>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center" style="margin-top: 50px;">
-                                <img src="public/images/employ/icon-assess-dashLine.png" width="700" height="1" alt="">
-                            </div>
-                            <div class="body-2">
-                                <div class="edit-info edit-2">
-                                    <div>职位：</div>
-                                    <div>
-                                        <i-input placeholder="请输入" class="form-el"></i-input>
-                                    </div>
-                                </div>
-                                <div class="edit-info edit-3">
-                                    <div>部门：</div>
-                                    <div>
-                                        <i-select v-model="model1" class="form-el">
-                                            <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
-                                        </i-select>
-                                        <div>
+                                                    <div class="edit-7">
+                                                        <div>
+                                                            <i-button type="primary" size="large" style="width:400px; margin-bottom: 100px;" v-on:click="validata('formValidate1')">提交</i-button>
 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="edit-info edit-4">
-                                    <div>薪资：</div>
-                                    <div>
-                                        <div>
-                                            <i-input placeholder="请输入" class="form-el"></i-input>
-                                            <span>元/月</span>
-                                        </div>
-                                        <div style="margin-top: 15px;">
-                                            <i-switch size="large">
-                                                <span slot="open">显示</span>
-                                                <span slot="close">隐藏</span>
-                                            </i-switch>
-                                            该员工的职信被在线搜索查看时，薪资是否显示
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="edit-info edit-5">
-                                    <div>新增劳动合同起止时间：</div>
-                                    <div>
-                                        <row class="form-el">
-                                            <i-col span="12">
-                                                <date-picker type="daterange" placement="top-end" placeholder="选择日期" style="width: 260px;font-size: 12px;"></date-picker>
-                                            </i-col>
-                                        </row>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center" style="margin-top: 50px;">
-                                <img src="public/images/employ/icon-assess-dashLine.png" width="700" height="1" alt="">
-                            </div>
+                                                        </div>
 
+                                                    </div>
+                                                </i-form>
+                                            </Card>
+                                        </div>
+                                    </div>
+                                </tab-pane>
+                                <tab-pane name="3" label="导入钉钉通讯录" icon="document-text">
+                                    <div v-show="name==3" class="component-assess-info-base" v-bind:class="{'tab-active':name==3}">
+                                        <div v-show="assessInfoBase" class="edit-assess-info-base">
+                                            <Card style="width: 100%;">
+                                                <i-form ref="formValidate" :model="formCustom" :rules="ruleCustom" :label-width="0" :show-message="showMessage">
+                                                    <div class="edit-1" style="margin-top: 60px;">
+                                                        <Icon type="android-alert" style="color:#ffbf00; font-size: 18px;margin-right: 8px;"></Icon>至少填写了姓名及手机号的员工才可上传成功
+                                                    </div>
+                                                    <div class="text-center">
+                                                        <upload
+                                                                style="min-width:200px;max-width: 400px;margin: 80px auto 30px;"
+                                                                multiple
+                                                                type="drag"
+                                                                max-size="1"
+                                                                :on-exceeded-size="sizeError"
+                                                                action="//jsonplaceholder.typicode.com/posts/">
+                                                            <div style="padding: 20px 0">
+                                                                <icon type="ios-cloud-upload" size="52" style="color: #3399ff"></icon>
+                                                                <p>点击添加</p>
+                                                            </div>
+                                                        </upload>
+                                                        <div style="font-size: 12px;
+                                                                        padding-right: 12px;
+                                                                        color: rgb(138, 138, 138);
+                                                                        text-align: center;
+                                                                        padding-bottom: 12px;">
+                                                            ( 附件大小限10M以内 )
+                                                        </div>
+                                                    </div>
 
-                            <div class="edit-7">
-                                <div>
-                                    <i-button type="ghost" class="edit-7-cancel" v-on:click="assessInfoShow('6')">取消</i-button>
-                                    <i-button type="primary" class="edit-7-ok">保存</i-button>
-                                </div>
-                            </div>
-                            </i-form>
-                        </Card>
+                                                    <div class="edit-7">
+                                                        <div>
+                                                            <i-button type="primary" size="large" style="width:400px; margin-bottom: 100px;" v-on:click="validata('formValidate1')">提交</i-button>
+
+                                                        </div>
+                                                    </div>
+                                                </i-form>
+                                            </Card>
+                                        </div>
+                                    </div>
+                                </tab-pane>
+                            </tabs>
+                        </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
 </div>
 
 
@@ -385,9 +269,56 @@
 <script type="html/x-template" id="component-tree">
 
     <div class="employ-group">
+        <Modal v-model="modal1" :footer-hide="true" width="900">
+            <div class="component-modal-auth">
+                <div class="modal-1">
+                    <div class="add-employ-container">
+                        <div class="add-employ-head">
+                            <div class="add-employ-title">
+                                <span class="e-title-1">申请获得授权</span><span class="e-title-2">/Newly Increased</span>
+                            </div>
+                        </div>
 
+                        <div class="add-employ-body text-center">
+                            <div class="body-1">
+                                <i-input placeholder="请输入身份证号" size="large" style="width: 360px;"></i-input>
+                            </div>
+                            <div class="body-1" style="margin-top: 30px;">
+                                <i-input placeholder="请输入手机号" size="large" style="width: 360px;"></i-input>
+                            </div>
+                            <div class="body-2">
+                                <i-button type="primary" size="large" style="width: 360px;">立即申请</i-button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </Modal>
+        <Modal v-model="modal2" :footer-hide="true" width="600">
+            <div class="component-modal-auth">
+                <div class="modal-1">
+                    <div class="add-employ-container">
+                        <div class="add-employ-head">
+                            <div class="add-employ-title">
+                                <div class="e-title-1">
+                                    <Icon type="android-alert" style="font-size: 28px;color: #ffbf00; margin-right: 12px;"></Icon><span style="font-size: 24px;">购买服务后才可转移通讯录中的成员!</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="add-employ-body text-center">
+                            <div class="body-2">
+                                <i-button type="primary" size="large" style="width: 360px;">购买</i-button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </Modal>
         <!--忽略根节点,输出目录-->
-        <div v-if="!tree.root" class="box group-box member-box">
+        <div v-if="!tree.root" class="box group-box member-box" style="position: relative;">
             <!--目录ico逻辑-->
             <div class="box-icon" v-on:click="click" openValue="openValue">
                 <!--部门icon-->
@@ -398,28 +329,70 @@
                 <template v-else>
                     <img src="public/images/tree-group.png" width="19" alt="图标">
                     <img class="arrow-rotate-none" v-bind:class="{'arrow-rotate':open}" src="public/images/tree-arrow.png" style="margin-left: 4px;" width="7" alt="">
+
                 </template>
             </div>
             <!--部门和员工名称-->
-            <div v-if="!editStatus" v-on:click="edit" class="box-content">
+            <div v-if="!editStatus" v-on:click="click" class="box-content">
                 <span>{{tree.title}}</span>
             </div>
             <!--编辑状态-->
-            <div v-else class="box-content"><i-input v-model="groupName" placeholder="请输入..." size="small" style="width: 100px;"></i-input><span v-on:click.stop="save(tree.id)"><img
-                    src="public/images/tree-group-edit.png" width="16" style="margin-left: 8px;margin-top: -2px;" alt=""></span></div>
+            <div v-else class="box-content"><i-input v-model="groupName" placeholder="请输入..." size="small" style="width: 100px;"></i-input>
+
+                <span v-on:click.stop="save(tree.id)">
+                    <Icon type="checkmark-round" style="margin-left: 8px;margin-top: -2px; color: #607D8B;cursor: pointer;"></Icon>
+                </span>
+                <span v-on:click.stop="save(tree.id)">
+                    <Icon type="arrow-return-right" style="margin-left: 8px;margin-top: -2px; color: #607D8B;cursor: pointer;"></Icon>
+                </span>
+            </div>
             <!--控制状态-->
             <div v-if="tree.dataList && !tree.root && !editStatus" class="box-control">
-                <dropdown @on-click="dropDown" placement="bottom-end">
+                <dropdown @on-click="dropDown" placement="bottom-end" trigger="click">
                     <a href="javascript:void(0)">
-                        添加
-                        <icon type="arrow-down-b"></icon>
+                        <Icon type="plus-round" style="font-size: 16px;"></Icon>
+                        <!--<icon type="arrow-down-b"></icon>-->
                     </a>
                     <dropdown-menu slot="list">
-                        <dropdown-item name="E">员工</dropdown-item>
-                        <dropdown-item name="G">部门</dropdown-item>
+                        <dropdown-item name="DG">删除部门</dropdown-item>
+                        <dropdown-item :disabled="true" name="DG">
+                            <div>
+                                <tooltip content="部门下有员工，不可删除！" placement="right" :transfer="true">
+                                    删除部门
+                                    <div slot="content">
+                                        <p>部门下有员工，不可删234234除!</p>
+                                    </div>
+                                </tooltip>
+                            </div>
+                        </dropdown-item>
                     </dropdown-menu>
                 </dropdown>
             </div>
+            <template v-else>
+                <div class="user-auth-status" style="position: absolute;
+    left: 45px;
+    top: 24px;
+    font-size: 12px;
+    color: rgb(102, 102, 102);
+    transform: scale(0.8);">
+                    {{tree.status}}
+                </div>
+                <div class="box-control">
+                    <dropdown @on-click="dropDown" placement="bottom-end" trigger="click">
+                        <a href="javascript:void(0)">
+                            <!--<img src="public/images/user-status-auth.png" height="16" style="margin-right: 10px;vertical-align: middle;    margin-top: -3px;" alt="">-->
+                            <Icon type="more" style="font-size: 16px;"></Icon>
+                        </a>
+                        <dropdown-menu slot="list">
+                            <dropdown-item name="E">删除员工</dropdown-item>
+                            <dropdown-item name="alert">申请授权</dropdown-item>
+                            <dropdown-item name="D">转移至职信链</dropdown-item>
+
+                        </dropdown-menu>
+                    </dropdown>
+                </div>
+            </template>
+
         </div>
         <!--递归树-->
         <component-tree v-show="open" v-bind:tree="tree" v-for="tree in tree.dataList" key="tree.id"></component-tree>
@@ -466,35 +439,6 @@
     </div>
 </script>
 
-<!--下面暂时不用-->
-<script type="html/x-template" id="component-modal-auth">
-
-    <div class="component-modal-auth">
-        <div class="modal-1">
-            <div class="add-employ-container">
-                <div class="add-employ-head">
-                    <div class="add-employ-title">
-                        <span class="e-title-1">申请获得授权</span><span class="e-title-2">/Newly Increased</span>
-                    </div>
-                </div>
-
-                <div class="add-employ-body text-center">
-                    <div style="margin-top: 66px;">
-                        <i-input placeholder="请输入身份证号" size="large" style="width: 360px;"></i-input>
-                    </div>
-                    <div style="margin-top: 44px; margin-bottom: 88px;">
-                        <i-button type="primary" size="large" style="width: 360px;">立即申请</i-button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</script>
-
-
-
 <script>
 //    tree-item component
 
@@ -522,6 +466,8 @@
                 tempName:'',
                 // 编辑状态
                 editStatus:false,
+                modal1:false,
+                modal2:false
             }
         },
         computed:{
@@ -547,16 +493,6 @@
                     var isGroup= type=='G'?true:false;
                     if(isGroup){
                         var _this = this;
-
-                        render: (h, params) => {
-                            return h('div', [
-                                h('component-assess-add-tip',{
-                                    props:{
-                                        data:this.data2[params.index]
-                                    }
-                                })
-                            ]);
-                        }
                         this.$Modal.confirm({
                             render:function(h){
                                 return h('Input',{
@@ -627,7 +563,14 @@
                 this.editStatus=false;
             },
             dropDown:function (v) {
-               this.add(v)
+                if(v==='alert'){
+                    this.modal1=true;
+                }else if(
+                    v==='D'
+                ){
+                    this.modal2=true;
+                }
+
             }
         }
     })
@@ -650,22 +593,8 @@
             }
         }
     })
-/**
- * 组件-modal-授权
- *
- *
- */
-Vue.component('ComponentModalAuth',{
-    template:'#component-modal-auth',
-    data:function () {
-        return{
 
-        }
-    },
-    methods:{
 
-    }
-})
 
 
 
@@ -683,6 +612,7 @@ Vue.component('ComponentModalAuth',{
                         {
                             id:'11',
                             title:'创始人-老总',
+                            status:'已授权',
                             photo:'public/images/tree-photo1.png'
                         }
                     ]
@@ -695,11 +625,13 @@ Vue.component('ComponentModalAuth',{
                         {
                             id:'3',
                             title:'周蕾',
+                            status:'未授权',
                             photo:'public/images/tree-photo2.png'
                         },
                         {
                             id:'4',
                             title:'李文静',
+                            status:'等待授权...',
                             photo:'public/images/tree-photo3.png'
                         },
                         {
@@ -722,6 +654,7 @@ Vue.component('ComponentModalAuth',{
                         {
                             id:'10',
                             title:'庞丁畅',
+                            status:'未授权',
                             photo:'public/images/tree-photo1.png'
                         }
                     ]
@@ -733,6 +666,7 @@ Vue.component('ComponentModalAuth',{
                         {
                             id:'9',
                             title:'衣晶晶',
+                            status:'已授权',
                             photo:'public/images/tree-photo1.png'
                         }
                     ]
@@ -775,22 +709,24 @@ Vue.component('ComponentModalAuth',{
                 value:'',
                 data:[],
                 treeData:treeData,
+                accordionOpen:true,
+
 
 
 
 
                 //不当在这里，属于年度总评组件内属性。
 
-
-                name:"2",//被选中Tab
-                assessInfoBase:false,//第一个tab开关状态
+                pactShow:false,//合同纠纷问题
+                name:"1",//被选中Tab
+                assessInfoBase:true,//第一个tab开关状态
                 assessInfoBase2:true,//第2个tab开关状态
                 assessInfoBase3:false,//第3个tab开关状态
                 assessInfoBase4:false,//第4个tab开关状态
-                assessInfoBase5:true,//年度总评开关状态
+                assessInfoBase5:false,//年度总评开关状态
                 assessInfoBase6:true,//基础信息编辑开关状态
 
-                percent: 80,
+                percent: 0,
                 dropdown2_text:'职信链科技有限公司',
 
                 columns1: [
@@ -984,10 +920,7 @@ Vue.component('ComponentModalAuth',{
                     }
                 ],
                 model1: '',
-                modal1:false,
-                modal2:false,
-                modal3:false,
-                modal4:false,
+                editPunish:false,
                 formCustom:{
                     user: '',
                 },
@@ -996,25 +929,23 @@ Vue.component('ComponentModalAuth',{
                         { required: true, message: '请填写用户名', trigger: 'blur' }
                     ]
                 },
-                visible:true
-//
+                visible:false,
+                showMessage:true,
+                modal1:false
+            }
+        },
+        computed:{
+            marginLeft:function () {
+                if(!this.accordionOpen){
+                    return '-320px'
+                }else{
+                    return '0'
+                }
             }
         },
         methods: {
-            tishi:function () {
-                this.visible=!this.visible
-            },
-            handleSubmit (name) {
-                this.$refs[name].validate((valid) => {
-                    if (valid) {
-                        this.$Message.success('提交成功!');
-                    } else {
-                        this.$Message.error('表单验证失败!');
-                    }
-                })
-            },
-            handleReset (name) {
-                this.$refs[name].resetFields();
+            sizeError:function (file) {
+                this.$Message.error('每个附件大小限10M以内');
             },
             handleSearch : function(value) {
                 this.data = !value ? [] : [
@@ -1063,8 +994,27 @@ Vue.component('ComponentModalAuth',{
                 }
 
             },
-            modalAuth:function () {
-                this.modal1=!this.modal1
+            addPunish(){
+                this.editPunish=!this.editPunish;
+            },
+            accordionToggle:function () {
+                this.accordionOpen = !this.accordionOpen;
+            },
+            tabsToggle(name){
+//                return this.name = 1;
+//                this.name=1;
+//                return;
+//                this.$refs['formValidate'].resetFields();
+//                this.showMessage = false;
+            },
+            validata(vform){
+                this.$refs['formValidate'].validate(valid=>{
+                    if (valid) {
+//                        this.$Message.success('验证成功!');
+                    } else {
+//                        this.$Message.error('验证失败');
+                    }
+                })
             }
 
         }
