@@ -318,7 +318,7 @@
             </div>
         </Modal>
         <!--忽略根节点,输出目录-->
-        <div v-if="!tree.root" class="box group-box member-box" style="position: relative;">
+        <div v-if="!tree.root" class="box group-box member-box">
             <!--目录ico逻辑-->
             <div class="box-icon" v-on:click="click" openValue="openValue">
                 <!--部门icon-->
@@ -369,12 +369,7 @@
                 </dropdown>
             </div>
             <template v-else>
-                <div class="user-auth-status" style="position: absolute;
-    left: 45px;
-    top: 24px;
-    font-size: 12px;
-    color: rgb(102, 102, 102);
-    transform: scale(0.8);">
+                <div class="user-auth-status org">
                     {{tree.status}}
                 </div>
                 <div class="box-control">
