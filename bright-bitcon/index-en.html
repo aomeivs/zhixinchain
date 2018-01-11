@@ -14,7 +14,7 @@
             width: 310px;
         }
     </style>
-    <![end if]-->
+    <![endif]-->
 </head>
 <body>
 <div class="wrap">
@@ -92,10 +92,76 @@
                 </div>
             </div>
         </div>
+        <div class="scrollToApp body-app">
+            <div class="title">
+                Application Scenarios
+            </div>
+            <div class="subTitle">
+                The Real-name authenticated mechanism of Bright Bitcoin determines that it has the attributes of user
+                <br>uniqueness, authentication and traceability. It defines the property right and further realizes the operation of financial assets.
+                <br>It will have broad application space in the fields of digital money and electronic finance in the future.
+            </div>
+            <div class="body">
+                <img src="public/images/en/appScreen.png" width="1018" alt="">
+            </div>
+        </div>
         <div class="scrollToRoadmap body-roadmap">
             <div class="title">ROADMAP</div>
             <div class="body">
                 <img src="public/images/en/roadmap-text.png" alt="" width="1006">
+            </div>
+        </div>
+        <div class="scrollToBuy body-buy">
+            <div class="title">Early buying ways</div>
+            <div class="subTitle">
+                You can contact with the related personnel of the foundation to sign a contract of the Early-bird period public financing agreement, which agrees on the amount of the agreement and the number of BBTC obtained. And the accounts for the BBTC foundation are listed as following.
+            </div>
+            <div class="body">
+                <div class="body-1-title">
+                    The account and wallet address for BBTC fundation
+                </div>
+                <div class="body-table">
+                    <table>
+                        <tr>
+                            <td>Bitcoin wallet address</td>
+                            <td>19X8LkM1Xy8vajBdFkf5NxZzWJ2dNi5X7e</td>
+                            <td><img class="imgCopyBtn" src="public/images/copy-icon.png" width="14" alt="copy" data-clipboard-text="19X8LkM1Xy8vajBdFkf5NxZzWJ2dNi5X7e"><div class="noSuportCopy en">Manually copy ！</div></td>
+                        </tr>
+                        <tr>
+                            <td>Litecoin wallet address</td>
+                            <td>19X8LkM1Xy8vajBdFkf5NxZzWJ2dNi5X7e</td>
+                            <td>
+                                <img class="imgCopyBtn" src="public/images/copy-icon.png" width="14" alt="copy" data-clipboard-text="19X8LkM1Xy8vajBdFkf5NxZzWJ2dNi5X7e"><div class="noSuportCopy en">Manually copy ！</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ETH wallet address</td>
+                            <td>19X8LkM1Xy8vajBdFkf5NxZzWJ2dNi5X7e</td>
+                            <td><img class="imgCopyBtn" src="public/images/copy-icon.png" width="14" alt="copy" data-clipboard-text="19X8LkM1Xy8vajBdFkf5NxZzWJ2dNi5X7e">
+                                <div class="noSuportCopy en">Manually copy ！</div></td>
+                        </tr>
+                        <tr>
+                            <td>RMB account</td>
+                            <td>
+                                <span>
+                                    Wenchao Li Qingdao Ningxia Road branch of China EverBright Bank  6226661001077746
+                                </span>
+                                <br>
+                                <span class="span-rmb">
+                                    And the RMB account of BBTC Foundation is commissioned by the treasury staff to receive payments.
+                                </span>
+                            </td>
+                            <td><img class="imgCopyBtn" src="public/images/copy-icon.png" width="14" alt="copy" data-clipboard-text="Wenchao Li Qingdao Ningxia Road branch of China EverBright Bank  6226661001077746"><div class="noSuportCopy en">Manually copy ！</div></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                CONSULTING HOTLINE：0532-80913319
+                                <span style="display: inline-block;margin-left: 10px;"></span>
+                                WeChat：ying15306429771
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="scrollToFaq body-faq">
@@ -313,17 +379,46 @@
         </div>
     </div>
     <div class="footer">
-        <span style="padding-right: 20px;">
-            Copyright <span style="font-size: 16px; display: inline-block;vertical-align: middle; margin-top: -4px;">&copy;</span> 2017 Bright Bitcoin All rights reserved
-        </span>
-        <span>
-            CONTACT US:service@brightbtc.org
-        </span>
+        <div class="f-f1">
+            Copyright <span>&copy;</span> 2017 Bright Bitcoin All rights reserved
+        </div>
+        <div class="f-f2">
+            <span>CONTACT US：service@brightbtc.org</span>
+            <span>PHONE：0532-80913319</span>
+            <span>WECHAT：ying15306429771</span>
+        </div>
     </div>
 </div>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="https://cdn.bootcss.com/layer/3.0.3/layer.min.js"></script>
 <script>
     $(function () {
+        try{
+            if(Clipboard.isSupported()){
+                var clipboard = new Clipboard('.imgCopyBtn');
+
+                clipboard.on('success', function(e) {
+                    console.info('Action:', e.action);
+                    console.info('Text:', e.text);
+                    console.info('Trigger:', e.trigger);
+                    layer.msg('Copy successfully！')
+                    e.clearSelection();
+                });
+
+                clipboard.on('error', function(e) {
+                    layer.msg('The current browser does not support the paste board, please manually copy！')
+                    console.error('Action:', e.action);
+                    console.error('Trigger:', e.trigger);
+                });
+            }else{
+                $('.noSuportCopy').show()
+            }
+        }catch (err){
+            $('.noSuportCopy').show()
+        }
+
+
         var $lis = $('.header .menu>div:first-child li');
         $lis.on('click',function () {
             var id = this.id;

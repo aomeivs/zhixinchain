@@ -102,19 +102,108 @@ a {
           width: 180px;
           margin-right: 0;
           margin-left: 100px; }
-  .wrap .body-wrap .body-roadmap {
-    background: #7058a0 url(../images/content-block2-bg.png) center top no-repeat;
-    height: 620px;
+  .wrap .body-wrap .body-app {
+    background: #442577;
     min-width: 1200px; }
-    .wrap .body-wrap .body-roadmap .title {
-      padding-top: 100px;
+    .wrap .body-wrap .body-app .title {
+      padding-top: 120px;
       font-size: 32px;
       text-align: center;
       color: #ffffff;
       font-weight: bold; }
+    .wrap .body-wrap .body-app .subTitle {
+      padding-top: 50px;
+      font-size: 18px;
+      text-align: center;
+      color: #ffffff;
+      font-weight: bold;
+      line-height: 36px; }
+    .wrap .body-wrap .body-app .body {
+      margin-top: 100px;
+      text-align: center;
+      padding-bottom: 130px; }
+  .wrap .body-wrap .body-roadmap {
+    background: #F5F5F5 url(../images/content-block2-bg.png) center 200px no-repeat;
+    height: 700px;
+    min-width: 1200px; }
+    .wrap .body-wrap .body-roadmap .title {
+      padding-top: 120px;
+      font-size: 32px;
+      text-align: center;
+      color: #333333;
+      font-weight: bold; }
     .wrap .body-wrap .body-roadmap .body {
       margin-top: 160px;
       text-align: center; }
+  .wrap .body-wrap .body-buy {
+    min-width: 1200px; }
+    .wrap .body-wrap .body-buy .title {
+      padding-top: 120px;
+      font-size: 32px;
+      text-align: center;
+      color: #333;
+      font-weight: bold; }
+    .wrap .body-wrap .body-buy .subTitle {
+      padding-top: 50px;
+      font-size: 18px;
+      text-align: center;
+      color: #333;
+      line-height: 36px; }
+    .wrap .body-wrap .body-buy .body {
+      margin-top: 80px;
+      text-align: center;
+      padding-bottom: 30px; }
+      .wrap .body-wrap .body-buy .body .body-1-title {
+        font-size: 22px;
+        text-align: center;
+        color: #333;
+        font-weight: bold; }
+      .wrap .body-wrap .body-buy .body .body-table {
+        border: 1px solid #7058A0;
+        width: 900px;
+        margin: 50px auto 0; }
+        .wrap .body-wrap .body-buy .body .body-table table {
+          width: 100%;
+          border-spacing: 0;
+          border-collapse: collapse; }
+          .wrap .body-wrap .body-buy .body .body-table table tr td {
+            height: 60px;
+            padding: 10px 0;
+            vertical-align: middle;
+            border-bottom: 1px solid #d9d9d9;
+            text-align: left;
+            padding-left: 60px;
+            position: relative; }
+            .wrap .body-wrap .body-buy .body .body-table table tr td img {
+              cursor: pointer; }
+            .wrap .body-wrap .body-buy .body .body-table table tr td .noSuportCopy {
+              display: none;
+              position: absolute;
+              font-size: 12px;
+              white-space: nowrap;
+              left: 20px;
+              top: 60px; }
+              .wrap .body-wrap .body-buy .body .body-table table tr td .noSuportCopy.en {
+                left: 0; }
+            .wrap .body-wrap .body-buy .body .body-table table tr td .span-rmb {
+              font-size: 14px;
+              color: #666; }
+            .wrap .body-wrap .body-buy .body .body-table table tr td:first-child {
+              text-align: center;
+              background: #F7F7F7;
+              width: 200px;
+              padding-left: 0; }
+            .wrap .body-wrap .body-buy .body .body-table table tr td:last-child {
+              text-align: center;
+              width: 100px;
+              padding-left: 0; }
+          .wrap .body-wrap .body-buy .body .body-table table tr:last-child td {
+            border-bottom: none;
+            padding-left: 0;
+            font-weight: bold; }
+            .wrap .body-wrap .body-buy .body .body-table table tr:last-child td:first-child {
+              text-align: center;
+              background: none; }
   .wrap .body-wrap .body-faq {
     margin-top: 150px; }
     .wrap .body-wrap .body-faq .title {
@@ -163,11 +252,25 @@ a {
         vertical-align: middle; }
   .wrap .footer {
     margin-top: 160px;
-    height: 70px;
     text-align: center;
-    font-size: 16px;
     background: #f5f5f5;
     color: #9b9b9b;
-    line-height: 70px; }
+    padding: 20px 0; }
+    .wrap .footer .f-f1 {
+      font-size: 14px;
+      padding-right: 20px;
+      padding-bottom: 10px; }
+      .wrap .footer .f-f1 span {
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -4px; }
+    .wrap .footer .f-f2 span {
+      font-size: 14px;
+      display: inline-block;
+      border-left: 1px solid #d9d9d9;
+      padding: 0 12px; }
+      .wrap .footer .f-f2 span:first-child {
+        border-left: none; }
 
 /*# sourceMappingURL=main.css.map */

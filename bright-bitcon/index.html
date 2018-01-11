@@ -14,7 +14,7 @@
             width: 310px;
         }
     </style>
-    <![end if]-->
+    <![endif]-->
 </head>
 <body>
 <div class="wrap">
@@ -91,10 +91,75 @@
                 </div>
             </div>
         </div>
+        <div class="scrollToApp body-app">
+            <div class="title">
+                应用场景
+            </div>
+            <div class="subTitle">
+                阳光比特币的实名认证机制，决定了其具有用户唯一性、可认证、可追溯等属性，明确了物权属性，进一步实现金融资产操作，
+                <br>在未来数字货币以及电子金融领域，必将有广阔的应用空间。
+            </div>
+            <div class="body">
+                <img src="public/images/zh/appScreen.png" width="1018" alt="">
+            </div>
+        </div>
         <div class="scrollToRoadmap body-roadmap">
             <div class="title">路线图</div>
             <div class="body">
                 <img src="public/images/zh/roadmap-text.png" alt="" width="1006">
+            </div>
+        </div>
+        <div class="scrollToBuy body-buy">
+            <div class="title">早期购买办法</div>
+            <div class="subTitle">
+                联系基金会相关人员，签订早鸟期众筹协议，协议中约定金额及获得的阳光比特币数量。打款基金会收款账号即可。
+            </div>
+            <div class="body">
+                <div class="body-1-title">
+                    基金会收款地址或账户
+                </div>
+                <div class="body-table">
+                    <table>
+                        <tr>
+                            <td>比特币地址</td>
+                            <td>19X8LkM1Xy8vajBdFkf5NxZzWJ2dNi5X7e</td>
+                            <td><img class="imgCopyBtn" src="public/images/copy-icon.png" width="14" alt="点击复制" data-clipboard-text="19X8LkM1Xy8vajBdFkf5NxZzWJ2dNi5X7e"><div class="noSuportCopy">请手动复制！</div></td>
+                        </tr>
+                        <tr>
+                            <td>莱特币地址</td>
+                            <td>19X8LkM1Xy8vajBdFkf5NxZzWJ2dNi5X7e</td>
+                            <td>
+                                <img class="imgCopyBtn" src="public/images/copy-icon.png" width="14" alt="点击复制" data-clipboard-text="19X8LkM1Xy8vajBdFkf5NxZzWJ2dNi5X7e"><div class="noSuportCopy">请手动复制！</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>以太币地址</td>
+                            <td>19X8LkM1Xy8vajBdFkf5NxZzWJ2dNi5X7e</td>
+                            <td><img class="imgCopyBtn" src="public/images/copy-icon.png" width="14" alt="点击复制" data-clipboard-text="19X8LkM1Xy8vajBdFkf5NxZzWJ2dNi5X7e">
+                            <div class="noSuportCopy">请手动复制！</div></td>
+                        </tr>
+                        <tr>
+                            <td>人民币账户</td>
+                            <td>
+                                <span>
+                                    李文超 光大银行青岛宁夏路支行 6226661001077746
+                                </span>
+                                <br>
+                                <span class="span-rmb">
+                                    人民币账户，基金会委托通过财务人员以个人账户收款。
+                                </span>
+                            </td>
+                            <td><img class="imgCopyBtn" src="public/images/copy-icon.png" width="14" alt="点击复制" data-clipboard-text="李文超 光大银行青岛宁夏路支行 6226661001077746"><div class="noSuportCopy">请手动复制！</div></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                咨询热线：0532-80913319
+                                <span style="display: inline-block;margin-left: 10px;"></span>
+                                微信：ying15306429771
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
         <div class="scrollToFaq body-faq">
@@ -311,17 +376,50 @@
         </div>
     </div>
     <div class="footer">
-        <span style="padding-right: 20px;">
-            Copyright <span style="font-size: 16px; display: inline-block;vertical-align: middle; margin-top: -4px;">&copy;</span> 2017 Bright Bitcoin All rights reserved
-        </span>
-        <span>
-            联系我们: service@brightbtc.org
-        </span>
+        <div class="f-f1">
+            Copyright <span>&copy;</span> 2017 Bright Bitcoin All rights reserved
+        </div>
+        <div class="f-f2">
+            <span>联系我们：service@brightbtc.org</span>
+            <span>电话：0532-80913319</span>
+            <span>微信：ying15306429771</span>
+        </div>
     </div>
 </div>
 <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="https://cdn.bootcss.com/layer/3.0.3/layer.min.js"></script>
 <script>
     $(function () {
+
+        try{
+            if(Clipboard.isSupported()){
+                var clipboard = new Clipboard('.imgCopyBtn');
+
+                clipboard.on('success', function(e) {
+                    console.info('Action:', e.action);
+                    console.info('Text:', e.text);
+                    console.info('Trigger:', e.trigger);
+                    layer.msg('复制成功！')
+                    e.clearSelection();
+                });
+
+                clipboard.on('error', function(e) {
+                    layer.msg('当前浏览器不支持粘贴板，请手动复制！')
+                    console.error('Action:', e.action);
+                    console.error('Trigger:', e.trigger);
+                });
+            }else{
+                $('.noSuportCopy').show()
+            }
+        }catch (err){
+            $('.noSuportCopy').show()
+        }
+
+
+
+
+
         var $lis = $('.header .menu>div:first-child li');
         $lis.on('click',function () {
             var id = this.id;
