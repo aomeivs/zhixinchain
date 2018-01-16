@@ -9,7 +9,6 @@
     <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
     <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
-    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
     <script src="http://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
     <!--[if lt ie 9]>
     <script src="public/js/ie-lte9.js"></script>
@@ -17,26 +16,45 @@
     <link rel="stylesheet" href="public/css/outdatedBrowser.min.css">
     <script src="public/js/outdatedBrowser.min.js"></script>
     <link rel="stylesheet" href="public/css/app.css">
-    <link href="https://cdn.bootcss.com/Swiper/4.0.7/css/swiper.css" rel="stylesheet">
-    <script src="https://cdn.bootcss.com/Swiper/4.0.7/js/swiper.min.js"></script>
+    <link href="https://cdn.bootcss.com/Swiper/2.7.5/idangerous.swiper.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/Swiper/2.7.5/idangerous.swiper.js"></script>
     <script src="public/js/jquery.fadethis.min.js"></script>
     <style>
         .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 {
             width: 389px;
         }
-
         .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1:last-child {
             background: none;
         }
-        .guji1>div,.guji2>div,#page9>div{
-            margin-top: 200px;
+    </style>
+    <style type="text/css">
+        .pagination {
+            position: absolute;
+            z-index: 20;
+            bottom: 20px;
+            width: 10px;
+            top: 50%;
+            right: 20px;
+            margin-top: -30px;
         }
-        .wrap .component-index #page9{
-            padding-top: 150px;
+        .swiper-pagination-switch {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background: #555;
+            margin: 0 5px;
+            opacity: 0.8;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+        .swiper-active-switch {
+            background: #2d8cf0;
         }
     </style>
 </head>
 <body>
+
 <div class="wrap" id="app">
     <div class="component-index">
         <!--头部-->
@@ -47,12 +65,10 @@
                 </a>
                 <ul id="menu" class="menu zi18">
 
-<!--                    <li data-menuanchor="index" class="cur select" id="home1">首页</li>-->
-
-                    <li data-menuanchor="about" id="home2" class="select">关于职信链</li>
+                    <li data-menuanchor="about" id="home2" class="cur select">关于职信链</li>
 
                     <li data-menuanchor="technical" id="home6" class="select">应用场景</li>
-                    <li data-menuanchor="technical" id="home7" class="select">团队成员</li>
+                    <li data-menuanchor="technical" id="home7" class="select">我们的优势</li>
 
                     <li data-menuanchor="technical" id="home3" class="select">常见问题</li>
 
@@ -134,7 +150,7 @@
         <!--首页介绍内容-->
         <div id="text_lt">
 
-            <div id="content1">
+            <div class="block-content1" id="content1">
                 <!--index 结束 头部 大banner-->
                 <div class="section" id="index"
                      style="background:url(public/images/index/s1-banner.jpg) center top no-repeat;">
@@ -152,90 +168,210 @@
                 </div>
             </div>
 
-            <div id="content2">
+            <div class="block-content2" id="content2">
                 <!-- 添加区块数据统计部分-->
                 <div class="qk_jiedianNum">
                     <div class="qk_jiedianNum_1"><img src="public/images/index/jiedian_1.png">
-                        <div class="qk_jiedianNum_1_1"><p id="jk_heightNum" class="p1">17</p>
-                            <p class="p2">区块高度</p></div>
+                        <div class="qk_jiedianNum_1_1">
+                            <p class="p2">区块高度</p><p id="jk_heightNum" class="p1">53,217</p>
+                            </div>
                     </div>
                     <div class="qk_jiedianNum_1"><img src="public/images/index/jiedian_2.png">
-                        <div class="qk_jiedianNum_1_1"><p id="jk_nodeNum" class="p1">8</p>
-                            <p class="p2">节点数</p></div>
+                        <div class="qk_jiedianNum_1_1">
+                            <p class="p2">节点数</p><p id="jk_nodeNum" class="p1">68</p>
+                            </div>
                     </div>
                     <div sytle="background:none" class="qk_jiedianNum_1"><img src="public/images/index/jiedian_3.png">
-                        <div class="qk_jiedianNum_1_1"><p id="jk_userNum" class="p1">2</p>
-                            <p class="p2">用户量</p></div>
+                        <div class="qk_jiedianNum_1_1">
+                            <p class="p2">用户量</p><p id="jk_userNum" class="p1">2,142</p></div>
                     </div>
                 </div>
 
-                <div id="about" class="section">
-                    <div class="title "><img src="public/images/index/title-l.png">
-                        <p class="zi48">职信是什么</p> <img src="public/images/index/title-r.png"></div>
-                    <div class="title2 zi18 "><p>
-                        职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等
-                    </p>
+
+
+            </div>
+
+            <div id="about" class="section block-content3">
+                <div class="title "><img src="public/images/index/title-l.png">
+                    <p class="zi48">职信链是什么</p> <img src="public/images/index/title-r.png"></div>
+                <div class="title2 zi18 "><p>
+                    职信链是一款基于区块链技术的职业信用平台，是一个人的职场行为客观记录仪，<br>记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等，包括了4个方面价值定位：
+                </p>
+                    <div class="title3">
+                        <img src="public/images/block1-img-1.png" width="872" alt="">
                     </div>
-                    <div class="bkColor-1 ">
-                        <div class="part-2 guji1">
-                            <div class="part-2-1" style="margin-right: 40px; width: 460px;padding-left: 40px;"><p class="zi24">
-                                对企业来说，职信是奇效的<br><span>管人工具</span>和<span>阅人工具</span></p>
-                                <div class="part-2-2">
-                                    <p class="zi14">
-                                        在职信链中，由企业方记录员工的职业履历信息，例如员工岗位信息、工作成绩、奖惩记录等等。员工在更换工作单位后，这些信息会跟随员工到下一家工作单位。由于区块链底层技术的性质，决定着这些信息永远不可篡改。
-                                    </p>
-                                </div>
-                                <div class="part-2-2">
-                                    <p class="zi14">
-                                        通过职信链，企业可全方位准确、真实地了解员工的工作经历等。
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="part-2-1" >
-
-                                <!-- Swiper -->
-                                <div class="swiper-container" style="height: 511px;    width: 600px;">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide">
-                                            <img src="public/images/index/m-e-1.png" alt="">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="public/images/index/m-e-2.png" alt="">
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <img src="public/images/index/m-e-3.png" alt="">
-                                        </div>
-                                    </div>
-                                    <!-- Add Pagination -->
-                                    <div class="swiper-pagination"></div>
-                                </div>
-                                
-                                
-                            </div>
-                            <div style="clear: both"></div>
-                        </div>
-                    </div>
-
-
-                    <div class="part-2 guji2">
-                        <div class="part-2-1" style="margin-right: 40px;width: 460px;"><p class="zi24">
-                            对员工来说，<br>职信是可信的个人<span>数字资产</span></p>
+                </div>
+                <div>
+                    <div class="part-2 guji1">
+                        <div class="part-2-1" style="margin-right: 40px; width: 460px;padding-left: 40px;"><p class="zi24">职信链由企业为员工每月记录
+                            职场<br>信用资产，<span>解决企业管人难刚需</span></p>
                             <div class="part-2-2">
                                 <p class="zi14">
-                                    职信链是功德本。员工努力工作就是积攒信用，为明天积累，为未来打好基础。职信就是自己未来价值最好的凭证。
+                                    在职信链中，由企业方记录员工的职业履历信息，例如员工岗位信息、工作成绩、奖惩记录等等。员工在更换工作单位后，这些信息会跟随员工到下一家工作单位。由于区块链底层技术的性质，决定着这些信息永远不可篡改。
+                                </p>
+                            </div>
+                            <div class="part-2-2">
+                                <p class="zi14">
+                                    通过职信链，企业可全方位准确、真实地了解员工的工作经历等。
                                 </p>
                             </div>
                         </div>
-                        <div class="part-2-1" style="margin-left: 40px;">
-                            <img src="public/images/index/m-a-1.png">
+                        <div class="part-2-1" >
+
+                            <!-- Swiper -->
+                            <div class="swiper-container" style="height: 421px;    width: 520px;">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="public/images/index/m-e-1.png" width="460" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="public/images/index/m-e-2.png" width="460" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="public/images/index/m-e-3.png" width="460" alt="">
+                                    </div>
+                                </div>
+                                <!-- Add Pagination -->
+                                <div class="pagination"></div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+
+
+
                         </div>
                         <div style="clear: both"></div>
                     </div>
+                </div>
 
+
+                <div class="part-2 guji2">
+                    <div class="part-2-1" style="margin-left: 40px;">
+                        <img src="public/images/index/m-a-1.png" width="460">
+                    </div>
+                    <div class="part-2-1 g2-1"><p class="zi24">
+                        对员工来说，<br>职信是可信的个人<span>数字资产</span></p>
+                        <div class="part-2-2">
+                            <p class="zi14">
+                                帮员工积攒过去散落丢失的宝贵信用数字资产
+                                未来必备标配的个人职业信用数字资产平台。
+                                <br>
+                                职信链是功德本。员工努力工作就是积攒信用，为明天积累，为未来打好基础。职信就是自己未来价值最好的凭证。
+                            </p>
+                        </div>
+                    </div>
+
+                    <div style="clear: both"></div>
                 </div>
 
             </div>
-            <div id="page9" class="section ">
+
+            <div class="section block-content4">
+                <div class="title"><img src="public/images/index/title-l.png">
+                    <p class="zi48">应用场景</p><img src="public/images/index/title-r.png"></div>
+                <div class="part-9">
+                    <div class="subTitle">
+                        以企业为单位普及到众人的快速普及性，将可能使职信链成为第一个承担了社会范围内区块链普及和服务体验的产品，一个区块链里程碑和标杆性产品。
+                    </div>
+                    <img src="public/images/block2-img-1.png" width="650" alt="">
+                    <div class="subTitle sub2">
+                        职信链目前已经在中国 4 个城市被应用于当地城市诚信社会建设和普及区块链社会认知的典范项目:
+                    </div>
+                    <img src="public/images/block4-img-1.png" width="956" alt="">
+                    <div class="subTitle sub2" style="margin-top: 40px;">
+                        <img src="public/images/block2-img-2.png" width="1167" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section block-content6">
+                <div class="title">
+                    <img src="public/images/index/title_l.png" />
+                    <p class="zi48">数据动态</p>
+                    <img src="public/images/index/title_r.png" />
+                </div>
+                <div class="part-9">
+
+                    <div class="qk_numShow">
+                        <table cellpadding="0" cellspacing="0" class="qk_numShow_table" id="table_jknum">
+                            <tr class="qk_numShow_title_tr">
+                                <th class="qk_numShow_title_th" width="150">区块高度</th>
+                                <th width="150">交易数</th>
+                                <th>区块哈希</th>
+                                <th width="123">时间</th>
+                            </tr>
+                            <tr class="qk_numShow_tr">
+                                <td class="color_blue">8088518</td>
+                                <td>3</td>
+                                <td>A6281C33EEA8F69F15AA18F7D8CDFA36C43765B02B1CE0B06D00134F8A18596D</td>
+                                <td>564042950</td>
+                            </tr>
+                            <tr class="qk_numShow_tr">
+                                <td class="color_blue">8088518</td>
+                                <td>3</td>
+                                <td>A6281C33EEA8F69F15AA18F7D8CDFA36C43765B02B1CE0B06D00134F8A18596D</td>
+                                <td>564042950</td>
+                            </tr>
+                            <tr class="qk_numShow_tr">
+                                <td class="color_blue">8088518</td>
+                                <td>3</td>
+                                <td>A6281C33EEA8F69F15AA18F7D8CDFA36C43765B02B1CE0B06D00134F8A18596D</td>
+                                <td>564042950</td>
+                            </tr>
+                            <tr class="qk_numShow_tr">
+                                <td class="color_blue">8088518</td>
+                                <td>3</td>
+                                <td>A6281C33EEA8F69F15AA18F7D8CDFA36C43765B02B1CE0B06D00134F8A18596D</td>
+                                <td>564042950</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section block-content7">
+                <div class="title"><img src="public/images/index/title-l.png">
+                    <p class="zi48">我们的优势</p><img src="public/images/index/title-r.png"></div>
+                <div class="subTitle" style="font-size: 24px; padding: 50px 0;">
+
+                    <img src="public/images/block7-img-2.png" width="747" alt="">
+
+                </div>
+                <div class="subTitle">
+                    <h3 style="font-size: 24px;">
+                        团队核心成员
+                    </h3>
+                </div>
+                <div class="subTitle">
+                    团队中技术开发人员占60%以上，团队内有专业的区块链架构和开发专家，从底层区块链技术到
+                    <br>
+                    业务系统再到面向用户的前端表达，团队内人才类型丰富且都具有丰富的开发实践经验。
+                </div>
+                <div class="part-9">
+                    <img src="public/images/block7-img-1.png" width="1192" alt="" style="margin-top: 90px;">
+                </div>
+
+            </div>
+
+
+            <div class="section block-content8">
+                <div class="title"><img src="public/images/index/title-l.png">
+                    <p class="zi48">进度规划</p><img src="public/images/index/title-r.png"></div>
+                <div class="part-9">
+                    <img src="public/images/block8-img-1.png" width="1010" alt="" style="margin-top: 90px;">
+                </div>
+
+            </div>
+
+            <div class="section block-content9">
+                <div class="title"><img src="public/images/index/title-l.png">
+                    <p class="zi48">入驻平台资费</p><img src="public/images/index/title-r.png"></div>
+                <div class="part-9">
+                    <img src="public/images/block9-img-1.png" width="1200" alt="" style="margin-top: 90px;">
+                </div>
+            </div>
+
+
+            <div id="page9" class="section block-content5">
                 <div class="title"><img src="public/images/index/title-l.png">
                     <p class="zi48">常见问题</p><img src="public/images/index/title-r.png"></div>
                 <div class="part-9">
@@ -333,44 +469,53 @@
                         </li>
                     </ul>
                 </div>
-                <div class="backBase">
-                    <div class="tabAll">
-                        <div class="tabOne" style="float: left; width: 432px; height: 100%;">
-                            <div class="imgSpace" style="padding-top: 40px;"><img
-                                    src="public/images/index/footer/tel.png"
-                                    class="img"> <span>全国客服电话</span></div>
-                            <div class="textSpace"><p>400-6190828</p>
-                                <p>0532-80913319（总部）</p>
-                                <p>010-56136755（北京）</p></div>
-                            <div class="imgSpace"><img src="public/images/index/footer/time.png" class="img">
-                                <span>服务时间</span></div>
-                            <div class="textSpace"><span>周一至周日 09:00-18:00</span></div>
-                            <div class="imgSpace"><img src="public/images/index/footer/qq.png" class="img">
-                                <span>QQ客服</span>
-                            </div>
-                            <div class="textSpace"><span><a target="_blank"
-                                                            href="http://wpa.qq.com/msgrd?v=3&amp;uin=1458210635&amp;site=qq&amp;menu=yes">QQ号:1458210635</a></span>
+
+            </div>
+            <div class="section block-content10">
+                <a href="mailto:contact@zhixinchain.com" title="contact@zhixinchain.com"><img src="public/images/block10-link1.png" width="48" alt=""></a>
+                <a href="https://t.me/zhixinchain" title="Telegram"><img src="public/images/block10-link2.png" width="48" alt=""></a>
+                <a href="https://twitter.com/zhixinchain" title="Twitter"><img src="public/images/block10-link3.png" width="48" alt=""></a>
+                <a href="https://www.facebook.com/zhixin.chain" title="Facebook"><img src="public/images/block10-link4.png" width="48" alt=""></a>
+                <a href="https://medium.com/@zhixinchain" title="Medium"><img src="public/images/block10-link5.png" width="48" alt=""></a>
+            </div>
+
+            <div id="footer" class="backBase">
+                <div class="tabAll">
+                    <div class="tabOne" style="float: left; width: 432px; height: 100%;">
+                        <div class="imgSpace" style="padding-top: 40px;"><img
+                                src="public/images/index/footer/tel.png"
+                                class="img"> <span>全国客服电话</span></div>
+                        <div class="textSpace"><p>400-6190828</p>
+                            <p>0532-80913319（总部）</p>
+                            <p>010-56136755（北京）</p></div>
+                        <div class="imgSpace"><img src="public/images/index/footer/time.png" class="img">
+                            <span>服务时间</span></div>
+                        <div class="textSpace"><span>周一至周日 09:00-18:00</span></div>
+                        <div class="imgSpace"><img src="public/images/index/footer/qq.png" class="img">
+                            <span>QQ客服</span>
+                        </div>
+                        <div class="textSpace"><span><a target="_blank"
+                                                        href="http://wpa.qq.com/msgrd?v=3&amp;uin=1458210635&amp;site=qq&amp;menu=yes">QQ号:1458210635</a></span>
+                        </div>
+                    </div>
+                    <div class="tabTwo" style="float: left; width: 414px; margin-top: 22px;">
+                        <div class="imgSpace"><img src="public/images/index/footer/add.png" class="img">
+                            <span>总部服务中心</span></div>
+                        <div class="textSpace"><p>青岛市新疆路8号中联自由港湾A座4楼中英金融科技孵化器</p></div>
+                        <div class="imgSpace" style="margin-top: 30px;"><img
+                                src="public/images/index/footer/add.png"
+                                class="img"> <span>北京分公司</span></div>
+                        <div class="textSpace"><p>北京市朝阳区光华路9号世贸天阶南区A座5楼国际大学创新联盟一带一路合作中心</p></div>
+                    </div>
+                    <div class="tabThree" style="float: left; width: 430px; height: 100%;">
+                        <div class="imgSpace"><img src="public/images/index/footer/logo2.png">
+                            <div style="padding-left: 60px; padding-top: 20px; color: rgb(223, 223, 223); font-size: 14px;">
+                                鲁ICP备17055140号-1
                             </div>
                         </div>
-                        <div class="tabTwo" style="float: left; width: 414px; margin-top: 22px;">
-                            <div class="imgSpace"><img src="public/images/index/footer/add.png" class="img">
-                                <span>总部服务中心</span></div>
-                            <div class="textSpace"><p>青岛市新疆路8号中联自由港湾A座4楼中英金融科技孵化器</p></div>
-                            <div class="imgSpace" style="margin-top: 30px;"><img
-                                    src="public/images/index/footer/add.png"
-                                    class="img"> <span>北京分公司</span></div>
-                            <div class="textSpace"><p>北京市朝阳区光华路9号世贸天阶南区A座5楼国际大学创新联盟一带一路合作中心</p></div>
-                        </div>
-                        <div class="tabThree" style="float: left; width: 430px; height: 100%;">
-                            <div class="imgSpace"><img src="public/images/index/footer/logo2.png">
-                                <div style="padding-left: 60px; padding-top: 20px; color: rgb(223, 223, 223); font-size: 14px;">
-                                    鲁ICP备17055140号-1
-                                </div>
-                            </div>
-                            <div class="imgFloat" style="display: none;"><img
-                                    src="public/images/index/footer/weixin.jpg"
-                                    style="width: 80px;"> <span>微信公众号</span>
-                            </div>
+                        <div class="imgFloat"><img
+                                src="public/images/qr.png"
+                                style="width: 80px;"> <span>微信公众号</span>
                         </div>
                     </div>
                 </div>
@@ -383,44 +528,18 @@
 <!--js部分滚动条监听事件-->
 <script>
 
-    //    异步模块化导入import？猜测如下：
-    //    import sync_module from "sync_module";
-    //    var  _module = async ()=>await sync_module;
-
-
-    //webpack require-ensure
-    //var _module = require.ensure([],(require)=>require('sync_module'),'common_ensure');
-
     var Main = {
-        data () {
+        data:function(){
             return {
                 visible: false
             }
         },
         methods: {
-            handleOpen () {
+            handleOpen :function() {
                 this.visible = !this.visible;
             },
-            closeModal(){
+            closeModal:function(){
                 this.visible = false;
-            },
-            downloadImageAll(){
-                var imgs = document.querySelectorAll('.vouchers-3-1-1');
-                for (var imgData=0;imgData<imgs.length;imgData++) {
-                    html2canvas(imgs[imgData],
-                        {
-                            onrendered: function (canvas) {
-                                var a = document.createElement('a');
-                                // toDataURL defaults to png, so we need to request a jpeg, then convert for file download.
-                                a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
-                                a.download = 'somefilename-' + Date.now() + '.jpg';
-                                a.onclick = function click() {
-                                }
-                                a.click();
-                            }
-                        }
-                    );
-                }
             }
         }
     }
@@ -430,7 +549,7 @@
 
 
     var $aside = $("#header>ul>.select");
-    var $section_pos = $("#content1,#content2,#page9");
+    var $section_pos = $("#content1,.block-content4,.block-content7,.block-content5");
     $aside.each(function (index) {
         $(this).on("click", function () {
             var pox = $($section_pos[index]);
@@ -442,10 +561,9 @@
     /**scroll even**/
 
     var p1 = $("#content1");
-    var p2 = $("#content2");
-    var p3 = $("#page9");
-    var p4 = $(".guji1");
-    var p5 = $(".guji2");
+    var p2 = $(".block-content4");
+    var p3 = $(".block-content7");
+    var p4 = $(".block-content5");
 
 
     $(window).scroll(function () {
@@ -459,41 +577,38 @@
         if ($(window).scrollTop() >= p2.position().top && $(window).scrollTop() < p3.position().top) {
             $($aside[1]).siblings().stop().removeClass("cur");
             $($aside[1]).addClass("cur");
-            p3.children('div').stop().animate({marginTop:'0px'})
-
-        }
-        if ($(window).scrollTop() >= p3.position().top) {
-            $($aside[2]).siblings().removeClass("cur");
-            $($aside[2]).addClass("cur");
-
         }
 
         if ($(window).scrollTop() >= p3.position().top && $(window).scrollTop() < p4.position().top) {
 
-            $($aside[1]).siblings().stop().removeClass("cur");
-            $($aside[1]).addClass("cur");
+            $($aside[2]).siblings().stop().removeClass("cur");
+            $($aside[2]).addClass("cur");
         }
+        if ($(window).scrollTop() >= p4.position().top) {
 
-
-        if ($(window).scrollTop()+$(window).height() >= p4.position().top && $(window).scrollTop()+$(window).height() < p5.position().top) {
-            p4.children('div').stop().animate({marginTop:'0px'})
-        }
-        if ($(window).scrollTop()+$(window).height()-200 >= p5.position().top) {
-            p5.children('div').stop().animate({marginTop:'0px'})
+            $($aside[3]).siblings().stop().removeClass("cur");
+            $($aside[3]).addClass("cur");
         }
     });
 
 </script>
 
 <script>
+//    .Swiper2
     var swiper = new Swiper('.swiper-container', {
-        direction: 'vertical',
-        mousewheel:true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
+//        direction: 'vertical',
+//        mousewheel:true,
+//        loop : true,
+        mode : 'vertical',
+        mousewheelControl : true,
+        pagination : '.pagination',
+        paginationClickable :true,
+//        pagination: {
+//            el: '.swiper-pagination',
+//            clickable: true,
+//        },
     });
+
 </script>
 </body>
 </html>
