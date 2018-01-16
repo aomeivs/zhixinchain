@@ -47,18 +47,23 @@
                 </a>
                 <ul id="menu" class="menu zi18">
 
-                    <li data-menuanchor="index" class="cur select" id="home1">首页</li>
+<!--                    <li data-menuanchor="index" class="cur select" id="home1">首页</li>-->
 
                     <li data-menuanchor="about" id="home2" class="select">关于职信链</li>
+
+                    <li data-menuanchor="technical" id="home6" class="select">应用场景</li>
+                    <li data-menuanchor="technical" id="home7" class="select">团队成员</li>
 
                     <li data-menuanchor="technical" id="home3" class="select">常见问题</li>
 
 
-                    <li data-menuanchor="buy" id="home5"><span class="buy" style="color: #ff500a;">购买</span></li>
-                    <li data-menuanchor="team" id="home4">试用</li>
 
 
-                    <li style="display: block; width: 120px;">
+                    <li data-menuanchor="buy" class="menu-buy" id="home5">购 买</li>
+                    <li data-menuanchor="team" class="menu-try" id="home4">试 用</li>
+
+
+                    <li class="SignIn" style="display: none;">
                         <!--企业-->
                         <dropdown trigger="click" :visible="visible" style="margin-left: 20px ;">
                             <a href="javascript:void(0)" @click.stop="handleOpen()">
@@ -117,7 +122,7 @@
                         </dropdown>
                     </li>
 
-                    <li class="loginAndSignIn" style="width: 205px; display: none;">
+                    <li class="loginAndSignIn" style="display: block;">
                         <span class="span1">登录</span>
                         <span class="span2">注册</span>
                     </li>
