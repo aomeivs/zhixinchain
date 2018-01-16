@@ -1939,8 +1939,6 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
 .wrap .component-index {
   /* 头部 */
   /*第二屏开始*/
-  /*标题*/
-  /*小标题*/
   /*内容*/
   /*第二屏结束*/
   /*第三屏*/
@@ -1974,9 +1972,6 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     white-space: nowrap; }
   .wrap .component-index .head-menu-userInfo .span-hand {
     cursor: pointer; }
-  .wrap .component-index .zi18 {
-    font-size: 18px;
-    margin-bottom: 133px; }
   .wrap .component-index a {
     text-decoration: none; }
   .wrap .component-index .head_fixed {
@@ -1996,22 +1991,27 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       padding-top: 14px;
       padding-right: 60px; }
     .wrap .component-index #header .menu {
-      float: left; }
+      float: left;
+      width: 950px;
+      font-size: 16px; }
       .wrap .component-index #header .menu li {
         float: left;
-        margin: 0 24px;
+        margin-left: 40px;
         list-style-type: none;
-        padding-top: 34px;
-        width: 100px;
+        padding-top: 40px;
         text-align: center; }
         .wrap .component-index #header .menu li.cur {
           height: 99px;
           border-bottom: 2px solid #FE8C5F; }
-        .wrap .component-index #header .menu li.buy {
-          cursor: pointer;
-          width: 100%;
-          display: block;
-          color: #FF500A; }
+        .wrap .component-index #header .menu li.menu-try {
+          width: 64px;
+          color: #FF500A;
+          margin-left: 24px;
+          cursor: pointer; }
+        .wrap .component-index #header .menu li.menu-buy {
+          width: 64px;
+          color: #FF500A;
+          cursor: pointer; }
         .wrap .component-index #header .menu li.select {
           cursor: pointer; }
         .wrap .component-index #header .menu li a {
@@ -2019,11 +2019,16 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
           cursor: pointer;
           width: 100%;
           display: block; }
+        .wrap .component-index #header .menu li.loginAndSignIn {
+          width: 205px;
+          padding-top: 26px; }
+        .wrap .component-index #header .menu li.SignIn {
+          width: 120px; }
   .wrap .component-index #index {
     height: 524px;
     min-width: 1400px; }
     .wrap .component-index #index .banner-1 {
-      padding-top: 178px;
+      padding-top: 160px;
       text-align: center;
       color: white;
       font-size: 64px; }
@@ -2049,21 +2054,25 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
         color: white;
         cursor: pointer; }
   .wrap .component-index .zi48 {
-    font-size: 48px;
+    font-size: 36px;
     color: #40BEFF;
     line-height: 48px;
     display: inline-block;
     margin: 0 auto;
     padding: 0 80px; }
-  .wrap .component-index .title {
-    height: 140px;
-    /*块内元素居中*/
-    text-align: center;
-    margin-top: 133px; }
-  .wrap .component-index .title2 {
-    text-align: center;
-    padding-top: 20px;
-    line-height: 28px; }
+  .wrap .component-index #about {
+    /*标题*/
+    /*小标题*/ }
+    .wrap .component-index #about .title {
+      /*块内元素居中*/
+      text-align: center;
+      margin-top: 100px; }
+    .wrap .component-index #about .title2 {
+      text-align: center;
+      padding-top: 44px;
+      line-height: 28px; }
+    .wrap .component-index #about .title3 {
+      margin-top: 60px; }
   .wrap .component-index .title3 {
     text-align: justify;
     padding-top: 20px;
@@ -2073,10 +2082,15 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
   .wrap .component-index .bkColor-1 {
     background-color: #f5f5f4; }
   .wrap .component-index .part-2 {
-    width: 1200px;
+    width: 1100px;
     margin: 0 auto;
-    padding-top: 136px;
-    padding-bottom: 144px; }
+    padding-top: 100px; }
+    .wrap .component-index .part-2.guji2 {
+      padding-top: 0; }
+      .wrap .component-index .part-2.guji2 .part-2-1.g2-1 {
+        margin-right: 40px;
+        width: 440px;
+        padding-top: 80px; }
   .wrap .component-index .part-2-1 {
     width: 560px;
     height: 501px;
@@ -2085,21 +2099,21 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     .wrap .component-index .part-2-1 span {
       color: #40BEFF; }
     .wrap .component-index .part-2-1 .zi24 {
-      width: 360px;
+      width: 460px;
       text-align: left;
-      margin-top: 50px;
-      margin-bottom: 50px;
+      margin-bottom: 0px;
       line-height: 40px; }
   .wrap .component-index .zi24 {
     font-size: 24px;
     color: #4A4A4A; }
   .wrap .component-index .part-2-2 {
     text-align: left;
-    margin-top: 40px; }
+    margin-top: 30px; }
     .wrap .component-index .part-2-2 .zi14 {
-      width: 300px;
+      width: 400px;
+      font-size: 16px;
       text-align: justify;
-      line-height: 20px;
+      line-height: 1.5;
       display: inline-block; }
     .wrap .component-index .part-2-2 img {
       padding-right: 20px;
@@ -2175,8 +2189,9 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       color: #ffffff;
       cursor: pointer; }
   .wrap .component-index #page9 {
-    background-color: #f5f5f4;
     padding-top: 1px; }
+    .wrap .component-index #page9 .title {
+      text-align: center; }
   .wrap .component-index .part-9 {
     margin: 60px auto;
     text-align: center;
@@ -2261,7 +2276,8 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     text-align: center;
     font-size: 12px;
     float: left;
-    margin: 100px 60px; }
+    margin-top: 120px;
+    margin-left: 20px; }
   .wrap .component-index .backBase a {
     text-decoration: none;
     out-line: none;
@@ -2282,36 +2298,43 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
   .wrap .component-index #index {
     position: relative; }
   .wrap .component-index #content2 {
-    padding-top: 95px; }
+    position: relative; }
   .wrap .component-index .qk_jiedianNum {
     width: 1186px;
-    margin: 0 auto;
     border-radius: 4px;
     background-color: #ffffff;
     box-shadow: 0 0 6px 0 #55a4ff;
-    border: 4px solid #5FADFF; }
+    border: 2px solid #5FADFF;
+    margin: 0 auto;
+    margin-top: -50px; }
     .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 {
       background: url(../../public/images/index/jiedian_line.png) right center no-repeat;
       width: 292px;
-      margin-top: 26px;
-      margin-bottom: 20px;
+      margin-top: 14px;
+      margin-bottom: 14px;
       overflow: hidden;
       display: inline-block; }
       .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 img {
         display: inline-block;
-        vertical-align: top;
-        margin-left: 36px; }
+        /* vertical-align: top; */
+        margin-left: 36px;
+        vertical-align: middle; }
       .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 .qk_jiedianNum_1_1 {
-        display: inline-block; }
+        display: inline-block;
+        vertical-align: middle; }
       .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 .p1 {
         font-size: 24px;
         color: #1B7DE2;
-        margin-left: 33px; }
+        display: inline-block;
+        margin-left: 33px;
+        vertical-align: middle; }
       .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 .p2 {
         font-size: 16px;
         color: #4a4a4a;
+        display: inline-block;
+        font-weight: bold;
         margin-left: 33px;
-        margin-top: 9px; }
+        vertical-align: middle; }
     .wrap .component-index .qk_jiedianNum .qk_jiedianNum_2 {
       background: none; }
   .wrap .component-index .qk_numShow {
@@ -2368,6 +2391,61 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     border-radius: 6px;
     margin-left: 12px;
     cursor: pointer; }
+  .wrap .component-index #text_lt .block-content2 {
+    position: relative;
+    z-index: 1; }
+  .wrap .component-index #text_lt .block-content4 {
+    padding-top: 60px;
+    background-color: #fbfbfb; }
+    .wrap .component-index #text_lt .block-content4 .title {
+      text-align: center; }
+    .wrap .component-index #text_lt .block-content4 .subTitle {
+      font-size: 16px;
+      color: #141414;
+      padding-bottom: 60px; }
+      .wrap .component-index #text_lt .block-content4 .subTitle.sub2 {
+        margin-top: 100px; }
+    .wrap .component-index #text_lt .block-content4 .part-9 {
+      margin-top: 60px; }
+  .wrap .component-index #text_lt .block-content5 .part-9 {
+    margin-bottom: 0; }
+  .wrap .component-index #text_lt .block-content6 .title {
+    text-align: center; }
+  .wrap .component-index #text_lt .block-content7 {
+    padding-top: 80px;
+    background-color: #fbfbfb; }
+    .wrap .component-index #text_lt .block-content7 .title, .wrap .component-index #text_lt .block-content7 .subTitle {
+      text-align: center; }
+    .wrap .component-index #text_lt .block-content7 .subTitle {
+      margin-top: 40px; }
+    .wrap .component-index #text_lt .block-content7 .part-9 {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 120px; }
+  .wrap .component-index #text_lt .block-content8 {
+    background-color: #fbfbfb; }
+    .wrap .component-index #text_lt .block-content8 .title, .wrap .component-index #text_lt .block-content8 .subTitle {
+      text-align: center; }
+    .wrap .component-index #text_lt .block-content8 .subTitle {
+      margin-top: 40px; }
+    .wrap .component-index #text_lt .block-content8 .part-9 {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 60px; }
+  .wrap .component-index #text_lt .block-content9 {
+    padding-top: 60px; }
+    .wrap .component-index #text_lt .block-content9 .title, .wrap .component-index #text_lt .block-content9 .subTitle {
+      text-align: center; }
+    .wrap .component-index #text_lt .block-content9 .subTitle {
+      margin-top: 40px; }
+    .wrap .component-index #text_lt .block-content9 .part-9 {
+      margin-top: 0; }
+  .wrap .component-index #text_lt .block-content10 {
+    padding: 15px;
+    text-align: center; }
+    .wrap .component-index #text_lt .block-content10 a {
+      display: inline-block;
+      padding: 15px 40px; }
 
 .wrap .kefu-lt {
   position: absolute;
