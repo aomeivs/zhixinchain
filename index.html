@@ -556,6 +556,8 @@
     });
 
 
+
+
     /**scroll even**/
 
     var p1 = $("#content1");
@@ -607,6 +609,16 @@
 //        },
     });
 
+//    classname=以下值
+//        #content1,.block-content4,.block-content7,.block-content5
+
+function scrollToPositionBlock(className){
+    var pox = $('.'+className+',#'+className);
+    $('html,body').stop().animate({scrollTop: pox.position().top}, 200);
+}
+if(location.search.split('=')[1]!=''){
+    scrollToPositionBlock(location.search.split('=')[1]);
+}
 </script>
 </body>
 </html>

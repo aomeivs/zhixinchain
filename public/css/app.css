@@ -1868,6 +1868,100 @@ html .wrap .c-body .component-account .employ-info-single .component-account-sea
     font-size: 18px; }
   html .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-noResult-1, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult .search-noResult-1, .wrap.search-result .search-noResult-1 {
     margin-top: 27px; }
+  html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer, .wrap.search-result #footer {
+    margin-top: 40px;
+    text-align: center;
+    background: #f5f5f5;
+    color: #9b9b9b;
+    /*底部*/ }
+    html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer a, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer a, .wrap.search-result #footer a {
+      color: white; }
+    html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer .f-f1, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer .f-f1, .wrap.search-result #footer .f-f1 {
+      font-size: 14px;
+      padding-right: 20px;
+      padding-bottom: 10px; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer .f-f1 span, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer .f-f1 span, .wrap.search-result #footer .f-f1 span {
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -4px; }
+    html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer .f-f2 span, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer .f-f2 span, .wrap.search-result #footer .f-f2 span {
+      font-size: 14px;
+      display: inline-block;
+      border-left: 1px solid #d9d9d9;
+      padding: 0 12px; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer .f-f2 span:first-child, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer .f-f2 span:first-child, .wrap.search-result #footer .f-f2 span:first-child {
+        border-left: none; }
+    html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase, .wrap.search-result #footer.backBase {
+      background: #343d50;
+      color: white;
+      height: 300px;
+      margin-left: -90px; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabAll, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabAll, .wrap.search-result #footer.backBase .tabAll {
+        text-align: left;
+        margin: 0 auto;
+        width: 1278px;
+        font-size: 13px; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabOne .imgSpace, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabOne .imgSpace, .wrap.search-result #footer.backBase .tabOne .imgSpace {
+        padding-left: 145px;
+        padding-top: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        color: white; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabOne .textSpace, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabOne .textSpace, .wrap.search-result #footer.backBase .tabOne .textSpace {
+        padding-left: 170px;
+        padding-top: 6px;
+        font-weight: 100; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabTwo .imgSpace, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabTwo .imgSpace, .wrap.search-result #footer.backBase .tabTwo .imgSpace {
+        padding-left: 71px;
+        padding-top: 20px;
+        font-size: 14px;
+        font-weight: bold;
+        color: white; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabTwo .textSpace, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabTwo .textSpace, .wrap.search-result #footer.backBase .tabTwo .textSpace {
+        padding-left: 96px;
+        padding-top: 6px;
+        font-weight: 100; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabThree .imgSpace, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabThree .imgSpace, .wrap.search-result #footer.backBase .tabThree .imgSpace {
+        padding-left: 50px;
+        padding-top: 100px;
+        font-size: 14px;
+        color: white;
+        float: left; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .img, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .img, .wrap.search-result #footer.backBase .img {
+        vertical-align: middle;
+        margin-right: 8px; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .textSpace p, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .textSpace p, .wrap.search-result #footer.backBase .textSpace p {
+        padding: 0px;
+        margin: 2px;
+        width: 70%; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabTwo, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .tabTwo, .wrap.search-result #footer.backBase .tabTwo {
+        border-left: 1px solid #4c5565;
+        border-right: 1px solid #4c5565; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .imgFloat, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .imgFloat, .wrap.search-result #footer.backBase .imgFloat {
+        width: 94px;
+        text-align: center;
+        font-size: 12px;
+        float: left;
+        margin-top: 120px;
+        margin-left: 20px; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .backBase a, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .backBase a, .wrap.search-result #footer.backBase .backBase a {
+        text-decoration: none;
+        out-line: none;
+        color: white; }
+      html .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .buyNow, body .wrap .c-body .component-account .employ-info-single .component-account-searchResult #footer.backBase .buyNow, .wrap.search-result #footer.backBase .buyNow {
+        width: 174px;
+        line-height: 40px;
+        text-align: center;
+        border-style: solid;
+        border-width: 2px;
+        border-color: white;
+        border-radius: 6px;
+        color: white;
+        cursor: pointer;
+        margin-left: 65%;
+        display: inline-block;
+        margin-left: 50px; }
 
 .wrap {
   /*
