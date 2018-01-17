@@ -65,12 +65,12 @@
                 </a>
                 <ul id="menu" class="menu zi18">
 
-                    <li data-menuanchor="about" id="home2" class="cur select">关于职信链</li>
+                    <li data-menuanchor="about" id="home2" class="cur select"><a href="#block-content1">关于职信链</a></li>
 
-                    <li data-menuanchor="technical" id="home6" class="select">应用场景</li>
-                    <li data-menuanchor="technical" id="home7" class="select">团队优势</li>
+                    <li data-menuanchor="technical" id="home6" class="select"><a href="#block-content4">应用场景</a></li>
+                    <li data-menuanchor="technical" id="home7" class="select"><a href="#block-content7">团队优势</a></li>
 
-                    <li data-menuanchor="technical" id="home3" class="select">常见问题</li>
+                    <li data-menuanchor="technical" id="home3" class="select"><a href="#block-content5">常见问题</a></li>
 
 
 
@@ -79,9 +79,9 @@
                     <li data-menuanchor="team" class="menu-try" id="home4">试 用</li>
 
 
-                    <li class="SignIn" style="display: none;">
+                    <li class="SignIn" style="display: block; width: auto;">
                         <!--企业-->
-                        <dropdown trigger="click" :visible="visible" style="margin-left: 20px ;">
+                        <dropdown trigger="click" :visible="visible">
                             <a href="javascript:void(0)" @click.stop="handleOpen()">
                                 控制台
                                 <icon type="arrow-down-b"></icon>
@@ -138,7 +138,7 @@
                         </dropdown>
                     </li>
 
-                    <li class="loginAndSignIn" style="display: block;">
+                    <li class="loginAndSignIn" style="display: none;">
                         <span class="span1">登录</span>
                         <span class="span2">注册</span>
                     </li>
@@ -149,7 +149,7 @@
         </div>
         <!--首页介绍内容-->
         <div id="text_lt">
-
+            <a name="block-content1" style="display: inline-block;width: 100%;clear: both;height: 1px;"></a>
             <div class="block-content1" id="content1">
                 <!--index 结束 头部 大banner-->
                 <div class="section" id="index"
@@ -262,8 +262,8 @@
                 </div>
 
             </div>
-
             <div class="section block-content4">
+                <a name="block-content4" style="display: inline-block;width: 100%;margin-top: -100px;height: 100px;"></a>
                 <div class="title"><img src="public/images/index/title-l.png">
                     <p class="zi48">应用场景</p><img src="public/images/index/title-r.png"></div>
                 <div class="part-9">
@@ -325,8 +325,8 @@
                     </div>
                 </div>
             </div>
-
             <div class="section block-content7">
+                <a name="block-content7" style="display: inline-block;width: 100%;margin-top: -100px;height: 100px;"></a>
                 <div class="title"><img src="public/images/index/title-l.png">
                     <p class="zi48">我们的优势</p><img src="public/images/index/title-r.png"></div>
                 <div class="subTitle" style="font-size: 24px; padding: 50px 0;">
@@ -350,7 +350,6 @@
 
             </div>
 
-
             <div class="section block-content8">
                 <div class="title"><img src="public/images/index/title-l.png">
                     <p class="zi48">进度规划</p><img src="public/images/index/title-r.png"></div>
@@ -370,6 +369,7 @@
 
 
             <div id="page9" class="section block-content5">
+                <a name="block-content5" style="display: inline-block;width: 100%;margin-top: -100px;height: 100px;"></a>
                 <div class="title"><img src="public/images/index/title-l.png">
                     <p class="zi48">常见问题</p><img src="public/images/index/title-r.png"></div>
                 <div class="part-9">
@@ -548,12 +548,12 @@
 
     var $aside = $("#header>ul>.select");
     var $section_pos = $("#content1,.block-content4,.block-content7,.block-content5");
-    $aside.each(function (index) {
-        $(this).on("click", function () {
-            var pox = $($section_pos[index]);
-            $('html,body').stop().animate({scrollTop: pox.position().top}, 200);
-        })
-    });
+//    $aside.each(function (index) {
+//        $(this).on("click", function () {
+//            var pox = $($section_pos[index]);
+//            $('html,body').stop().animate({scrollTop: pox.position().top-100}, 200);
+//        })
+//    });
 
 
 
@@ -568,26 +568,28 @@
 
     $(window).scroll(function () {
 
-        if ($(window).scrollTop() >= p1.position().top && $(window).scrollTop() < p2.position().top) {
-            $($aside[0]).siblings().removeClass("cur");
+        if ($(window).scrollTop() >= p1.position().top-10 && $(window).scrollTop() < p2.position().top) {
             $($aside[0]).addClass("cur");
 
+            $($aside[0]).siblings().removeClass("cur");
+
 
         }
-        if ($(window).scrollTop() >= p2.position().top && $(window).scrollTop() < p3.position().top) {
-            $($aside[1]).siblings().stop().removeClass("cur");
+        if ($(window).scrollTop() >= p2.position().top-150 && $(window).scrollTop() < p3.position().top) {
             $($aside[1]).addClass("cur");
+
+            $($aside[1]).siblings().stop().removeClass("cur");
         }
 
-        if ($(window).scrollTop() >= p3.position().top && $(window).scrollTop() < p4.position().top) {
+        if ($(window).scrollTop() >= p3.position().top-150 && $(window).scrollTop() < p4.position().top) {
+            $($aside[2]).addClass("cur");
 
             $($aside[2]).siblings().stop().removeClass("cur");
-            $($aside[2]).addClass("cur");
         }
-        if ($(window).scrollTop() >= p4.position().top) {
+        if ($(window).scrollTop() >= p4.position().top-150) {
+            $($aside[3]).addClass("cur");
 
             $($aside[3]).siblings().stop().removeClass("cur");
-            $($aside[3]).addClass("cur");
         }
     });
 
@@ -612,13 +614,18 @@
 //    classname=以下值
 //        #content1,.block-content4,.block-content7,.block-content5
 
-function scrollToPositionBlock(className){
-    var pox = $('.'+className+',#'+className);
-    $('html,body').stop().animate({scrollTop: pox.position().top}, 200);
-}
-if(location.search.split('=')[1]!=''){
-    scrollToPositionBlock(location.search.split('=')[1]);
-}
+//function scrollToPositionBlock(className){
+//    var pox = $('.'+className+',#'+className);
+//    if(className=='block-content7'||className=='block-content5'){
+//        $('html,body').stop().animate({scrollTop: pox.position().top-100}, 200);
+//
+//    }else{
+//        $('html,body').stop().animate({scrollTop: pox.position().top}, 200);
+//    }
+//}
+//if(location.search.split('=').length==2){
+//    scrollToPositionBlock(location.search.split('=')[1]);
+//}
 </script>
 </body>
 </html>

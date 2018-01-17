@@ -2501,8 +2501,10 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
         margin-top: 100px; }
     .wrap .component-index #text_lt .block-content4 .part-9 {
       margin-top: 60px; }
-  .wrap .component-index #text_lt .block-content5 .part-9 {
-    margin-bottom: 0; }
+  .wrap .component-index #text_lt .block-content5 {
+    padding-top: 80px; }
+    .wrap .component-index #text_lt .block-content5 .part-9 {
+      margin-bottom: 0; }
   .wrap .component-index #text_lt .block-content6 .title {
     text-align: center; }
   .wrap .component-index #text_lt .block-content7 {
@@ -2533,7 +2535,8 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     .wrap .component-index #text_lt .block-content9 .subTitle {
       margin-top: 40px; }
     .wrap .component-index #text_lt .block-content9 .part-9 {
-      margin-top: 0; }
+      margin-top: 0;
+      margin-bottom: 0; }
   .wrap .component-index #text_lt .block-content10 {
     padding: 15px;
     text-align: center; }
