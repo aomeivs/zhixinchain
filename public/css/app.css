@@ -2408,6 +2408,8 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       margin-bottom: 14px;
       overflow: hidden;
       display: inline-block; }
+      .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1:last-child {
+        background: none; }
       .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 img {
         display: inline-block;
         /* vertical-align: top; */

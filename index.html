@@ -21,10 +21,8 @@
     <script src="public/js/jquery.fadethis.min.js"></script>
     <style>
         .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 {
+            background: url(public/images/index/jiedian_line.png) right center no-repeat;
             width: 389px;
-        }
-        .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1:last-child {
-            background: none;
         }
     </style>
     <style type="text/css">
@@ -119,7 +117,7 @@
                             </dropdown-menu>
                         </dropdown>
                         <!--个人-->
-                        <dropdown trigger="custom" :visible="visible" style="margin-left: 20px ;display: none">
+                        <dropdown trigger="click" :visible="visible" style="margin-left: 20px ;display: none">
                             <a href="javascript:void(0)" @click.stop="handleOpen()">
                                 控制台
                                 <icon type="arrow-down-b"></icon>
@@ -485,7 +483,7 @@
                                 class="img"> <span>全国客服电话</span></div>
                         <div class="textSpace"><p>400-6190828</p>
                             <p>0532-80913319（总部）</p>
-                            <p>010-56136755（北京）</p></div>
+                            <p>010-57493123（北京）</p></div>
                         <div class="imgSpace"><img src="public/images/index/footer/time.png" class="img">
                             <span>服务时间</span></div>
                         <div class="textSpace"><span>周一至周日 09:00-18:00</span></div>
