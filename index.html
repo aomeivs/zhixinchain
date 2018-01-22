@@ -66,6 +66,7 @@
                     <li data-menuanchor="about" id="home2" class="cur select"><a href="#block-content1">关于职信链</a></li>
 
                     <li data-menuanchor="technical" id="home6" class="select"><a href="#block-content4">应用场景</a></li>
+                    <li class="select"><a href="#block-content11">技术介绍</a></li>
                     <li data-menuanchor="technical" id="home7" class="select"><a href="#block-content7">团队优势</a></li>
 
                     <li data-menuanchor="technical" id="home3" class="select"><a href="#block-content5">常见问题</a></li>
@@ -73,8 +74,8 @@
 
 
 
-                    <li data-menuanchor="buy" class="menu-buy" id="home5">购 买</li>
-                    <li data-menuanchor="team" class="menu-try" id="home4">试 用</li>
+<!--                    <li data-menuanchor="buy" class="menu-buy" id="home5">购 买</li>-->
+                    <li data-menuanchor="team" class="menu-try" id="home4" style="margin-left: 40px;">试 用</li>
 
 
                     <li class="SignIn" style="display: block; width: auto;">
@@ -279,32 +280,9 @@
                 </div>
             </div>
 
-
-
-            <!--technical 开始-->
-            <div class="section" id="technical">
-                <!--标题-->
-                <div class="title text-center">
-                    <img src="public/images/index/title_l.png" />
-                    <p class="zi48">职信业务介绍</p>
-                    <img src="public/images/index/title_r.png" />
-                </div>
-                <!--小标题-->
-                <div class="title3 zi18">
-                    <p>
-                        职业信用是指受信人从事某一职业或担任某一职位时，所表现出来的关于职业技能、 职业道德和各方面素质的综合记录和评估，简单的说职业信用就是指职业人在诚信度、 合规度、 履约度方面的信誉和能力。 在企业中，员工普遍自我驱动力弱，企业需要花成本做管理，效果却往往不尽如人意。职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。
-                    </p>
-                </div>
-                <!--内容-->
-                <div class="part3">
-                    <img src="public/images/index/mode1.png"/>
-                </div>
-
-            </div>
-            <!--technical 结束-->
-
             <!--page4 开始-->
-            <div class="section" id="page4">
+            <div class="section block-content11">
+                <a name="block-content11" style="display: inline-block;width: 100%;margin-top: -100px;height: 100px;"></a>
                 <!--标题-->
                 <div class="title text-center">
                     <img src="public/images/index/title_l.png" />
@@ -321,7 +299,13 @@
                     </p>
                 </div>
                 <!--内容-->
-                <div class="title4 zi18">
+                <div class="title4 zi18 text-center" style="    border: 1px dashed #E8E8E8;
+    text-align: justify;
+    width: 810px;
+    margin: 0 auto;
+    line-height: 28px;
+    margin-top: 50px;
+    padding: 30px 60px;">
                     <p>
                         职信链是一套自主迭代研发的独立区块链，实现了去中心化数据数据管理的底层<br />
                         原始代码fork了Hyperledger fabric，在此基础上结合自身承载应用的特性和未来生态建设的考量，进行了大量的开发和扩展形成了职信系统专属的区块链。
@@ -603,7 +587,7 @@
 
 
     var $aside = $("#header>ul>.select");
-    var $section_pos = $("#content1,.block-content4,.block-content7,.block-content5");
+    var $section_pos = $("#content1,.block-content4,.block-content11,.block-content7,.block-content5");
     //    $aside.each(function (index) {
     //        $(this).on("click", function () {
     //            var pox = $($section_pos[index]);
@@ -618,8 +602,10 @@
 
     var p1 = $("#content1");
     var p2 = $(".block-content4");
+    var p11 = $(".block-content11");
     var p3 = $(".block-content7");
     var p4 = $(".block-content5");
+
 
 
     $(window).scroll(function () {
@@ -631,21 +617,26 @@
 
 
         }
-        if ($(window).scrollTop() >= p2.position().top-150 && $(window).scrollTop() < p3.position().top) {
+        if ($(window).scrollTop() >= p2.position().top-150 && $(window).scrollTop() < p11.position().top) {
             $($aside[1]).addClass("cur");
 
             $($aside[1]).siblings().stop().removeClass("cur");
         }
-
-        if ($(window).scrollTop() >= p3.position().top-150 && $(window).scrollTop() < p4.position().top) {
+        if ($(window).scrollTop() >= p11.position().top-150 && $(window).scrollTop() < p3.position().top) {
             $($aside[2]).addClass("cur");
 
             $($aside[2]).siblings().stop().removeClass("cur");
         }
-        if ($(window).scrollTop() >= p4.position().top-150) {
+
+        if ($(window).scrollTop() >= p3.position().top-150 && $(window).scrollTop() < p4.position().top) {
             $($aside[3]).addClass("cur");
 
             $($aside[3]).siblings().stop().removeClass("cur");
+        }
+        if ($(window).scrollTop() >= p4.position().top-150) {
+            $($aside[4]).addClass("cur");
+
+            $($aside[4]).siblings().stop().removeClass("cur");
         }
     });
 
