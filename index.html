@@ -172,12 +172,12 @@
                     <div class="qk_jiedianNum_1"><img src="public/images/index/jiedian_1.png">
                         <div class="qk_jiedianNum_1_1">
                             <p class="p2">区块高度</p><p id="jk_heightNum" class="p1">53,217</p>
-                            </div>
+                        </div>
                     </div>
                     <div class="qk_jiedianNum_1"><img src="public/images/index/jiedian_2.png">
                         <div class="qk_jiedianNum_1_1">
                             <p class="p2">节点数</p><p id="jk_nodeNum" class="p1">68</p>
-                            </div>
+                        </div>
                     </div>
                     <div sytle="background:none" class="qk_jiedianNum_1"><img src="public/images/index/jiedian_3.png">
                         <div class="qk_jiedianNum_1_1">
@@ -279,6 +279,63 @@
                 </div>
             </div>
 
+
+
+            <!--technical 开始-->
+            <div class="section" id="technical">
+                <!--标题-->
+                <div class="title text-center">
+                    <img src="public/images/index/title_l.png" />
+                    <p class="zi48">职信业务介绍</p>
+                    <img src="public/images/index/title_r.png" />
+                </div>
+                <!--小标题-->
+                <div class="title3 zi18">
+                    <p>
+                        职业信用是指受信人从事某一职业或担任某一职位时，所表现出来的关于职业技能、 职业道德和各方面素质的综合记录和评估，简单的说职业信用就是指职业人在诚信度、 合规度、 履约度方面的信誉和能力。 在企业中，员工普遍自我驱动力弱，企业需要花成本做管理，效果却往往不尽如人意。职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。
+                    </p>
+                </div>
+                <!--内容-->
+                <div class="part3">
+                    <img src="public/images/index/mode1.png"/>
+                </div>
+
+            </div>
+            <!--technical 结束-->
+
+            <!--page4 开始-->
+            <div class="section" id="page4">
+                <!--标题-->
+                <div class="title text-center">
+                    <img src="public/images/index/title_l.png" />
+                    <p class="zi48">技术介绍</p>
+                    <img src="public/images/index/title_r.png" />
+                </div>
+                <!--小标题-->
+                <div class="title2 zi18 text-center" style="margin-top:40px;">
+                    <p>
+                        底层技术框架：Hyperledger   Fabric   联盟链
+                    </p>
+                    <p>
+                        共识机制：PoS+PoCW（Proof of Credit Work）
+                    </p>
+                </div>
+                <!--内容-->
+                <div class="title4 zi18">
+                    <p>
+                        职信链是一套自主迭代研发的独立区块链，实现了去中心化数据数据管理的底层<br />
+                        原始代码fork了Hyperledger fabric，在此基础上结合自身承载应用的特性和未来生态建设的考量，进行了大量的开发和扩展形成了职信系统专属的区块链。
+                    </p>
+
+                </div>
+                <div class="part3">
+                    <img src="public/images/index/mode2.png"/>
+                </div>
+            </div>
+            <!--page4 结束-->
+
+
+
             <div class="section block-content6">
                 <div class="title">
                     <img src="public/images/index/title_l.png" />
@@ -323,6 +380,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="section block-content7">
                 <a name="block-content7" style="display: inline-block;width: 100%;margin-top: -100px;height: 100px;"></a>
                 <div class="title"><img src="public/images/index/title-l.png">
@@ -546,12 +604,12 @@
 
     var $aside = $("#header>ul>.select");
     var $section_pos = $("#content1,.block-content4,.block-content7,.block-content5");
-//    $aside.each(function (index) {
-//        $(this).on("click", function () {
-//            var pox = $($section_pos[index]);
-//            $('html,body').stop().animate({scrollTop: pox.position().top-100}, 200);
-//        })
-//    });
+    //    $aside.each(function (index) {
+    //        $(this).on("click", function () {
+    //            var pox = $($section_pos[index]);
+    //            $('html,body').stop().animate({scrollTop: pox.position().top-100}, 200);
+    //        })
+    //    });
 
 
 
@@ -594,7 +652,7 @@
 </script>
 
 <script>
-//    .Swiper2
+    //    .Swiper2
     var swiper = new Swiper('.swiper-container', {
 //        direction: 'vertical',
 //        mousewheel:true,
@@ -609,21 +667,21 @@
 //        },
     });
 
-//    classname=以下值
-//        #content1,.block-content4,.block-content7,.block-content5
+    //    classname=以下值
+    //        #content1,.block-content4,.block-content7,.block-content5
 
-//function scrollToPositionBlock(className){
-//    var pox = $('.'+className+',#'+className);
-//    if(className=='block-content7'||className=='block-content5'){
-//        $('html,body').stop().animate({scrollTop: pox.position().top-100}, 200);
-//
-//    }else{
-//        $('html,body').stop().animate({scrollTop: pox.position().top}, 200);
-//    }
-//}
-//if(location.search.split('=').length==2){
-//    scrollToPositionBlock(location.search.split('=')[1]);
-//}
+    //function scrollToPositionBlock(className){
+    //    var pox = $('.'+className+',#'+className);
+    //    if(className=='block-content7'||className=='block-content5'){
+    //        $('html,body').stop().animate({scrollTop: pox.position().top-100}, 200);
+    //
+    //    }else{
+    //        $('html,body').stop().animate({scrollTop: pox.position().top}, 200);
+    //    }
+    //}
+    //if(location.search.split('=').length==2){
+    //    scrollToPositionBlock(location.search.split('=')[1]);
+    //}
 </script>
 </body>
 </html>
