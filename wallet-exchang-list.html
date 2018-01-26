@@ -1,0 +1,181 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/layout.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/app.css.map">
+</head>
+<body>
+
+
+<!--职信链，样式头为 c (chain小写) 例
+
+头部 c-header
+底部 c-footer
+组件 c-component-组件名（公用部分）
+
+无特别意义的逻辑结构以 相对有意义模块名 后，层级数字标识
+例： c-component-组件名 下
+
+组件名1>组件名1-1.
+
+或
+
+组件名-head>组件名-head-top>（组件名-head-top-1+组件名-head-top-2+组件名-head-top-3）
+
+ -->
+
+<div class="wrap" id="app">
+    <div class="c-header">
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu" style="float: left; margin-left: 80px;">
+            <ul class="head-menu-ul">
+                <li class="active">
+                    <a href="#">创建钱包</a>
+                </li>
+                <li>
+                    <a href="#">查看钱包</a>
+                </li>
+                <li>
+                    <a href="#">交易转账</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="c-body">
+        <!--保存私钥-->
+        <div class="component-wallet">
+            <div class="wallet-exchange-list">
+                <Card class="wallet-exchange-header">
+                    <div>
+                    <span>
+                        账户余额：
+                    </span>
+                        <span>
+                        10 ETH
+                    </span>
+                        <a href="#" style="margin-left: 40px;font-size: 14px;">
+                            交易历史
+                        </a>
+                        <span style="float: right;">
+                        账户地址：0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4
+                    </span>
+                    </div>
+                </Card>
+                <Card class="wallet-exchange-body">
+                    <div class="wallet-container">
+                        <!--基础信息-->
+                        <div class="wallet-title">
+                            <span class="wallet-title-1-txtBigger">发送职信币</span>
+                            <span> / Send ZXC & Tokens</span>
+                        </div>
+                        <div>
+                            <table align="center">
+                                <tr>
+                                    <td width="200">Hash</td>
+                                    <td width="100">交易时间</td>
+                                    <td width="200">发出地址</td>
+                                    <td width="200">到达地址</td>
+                                    <td width="100">数量</td>
+                                </tr>
+                                <tr v-for="item in items">
+                                    <td>{{item.hash}}</td>
+                                    <td align="center">{{item.date}}</td>
+                                    <td>{{item.send}}</td>
+                                    <td>{{item.resive}}</td>
+                                    <td align="center">{{item.count}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </Card>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    new Vue({
+        data: function () {
+            return {
+                password:'',
+                items:[
+                    {
+                        hash:'0xd5515bd5700dae0xd5515bd5700dae',
+                        date:'39 秒 前',
+                        send:'0xd5515bd5700dae0xd5515bd5700dae',
+                        resive:'0xd5515bd5700dae0xd5515bd5700dae',
+                        count:'1357'
+                    },
+                    {
+                        hash:'0xd5515bd5700dae0xd5515bd5700dae',
+                        date:'39 秒 前',
+                        send:'0xd5515bd5700dae0xd5515bd5700dae',
+                        resive:'0xd5515bd5700dae0xd5515bd5700dae',
+                        count:'1357'
+                    },
+                    {
+                        hash:'0xd5515bd5700dae0xd5515bd5700dae',
+                        date:'39 秒 前',
+                        send:'0xd5515bd5700dae0xd5515bd5700dae',
+                        resive:'0xd5515bd5700dae0xd5515bd5700dae',
+                        count:'1357'
+                    },
+                    {
+                        hash:'0xd5515bd5700dae0xd5515bd5700dae',
+                        date:'39 秒 前',
+                        send:'0xd5515bd5700dae0xd5515bd5700dae',
+                        resive:'0xd5515bd5700dae0xd5515bd5700dae',
+                        count:'1357'
+                    },
+                    {
+                        hash:'0xd5515bd5700dae0xd5515bd5700dae',
+                        date:'39 秒 前',
+                        send:'0xd5515bd5700dae0xd5515bd5700dae',
+                        resive:'0xd5515bd5700dae0xd5515bd5700dae',
+                        count:'1357'
+                    },
+                    {
+                        hash:'0xd5515bd5700dae0xd5515bd5700dae',
+                        date:'39 秒 前',
+                        send:'0xd5515bd5700dae0xd5515bd5700dae',
+                        resive:'0xd5515bd5700dae0xd5515bd5700dae',
+                        count:'1357'
+                    },
+                    {
+                        hash:'0xd5515bd5700dae0xd5515bd5700dae',
+                        date:'39 秒 前',
+                        send:'0xd5515bd5700dae0xd5515bd5700dae',
+                        resive:'0xd5515bd5700dae0xd5515bd5700dae',
+                        count:'1357'
+                    },
+                    {
+                        hash:'0xd5515bd5700dae0xd5515bd5700dae',
+                        date:'39 秒 前',
+                        send:'0xd5515bd5700dae0xd5515bd5700dae',
+                        resive:'0xd5515bd5700dae0xd5515bd5700dae',
+                        count:'1357'
+                    }
+                ]
+            }
+        },
+        methods: {
+
+        }
+    }).$mount('#app')
+</script>
+
+
+</body>
+</html>

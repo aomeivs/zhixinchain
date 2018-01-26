@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/layout.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/app.css.map">
+    <style>
+        html .wrap .c-header .c-head-menu .head-menu-ul li.active a{
+            color: #ffff00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+
+<!--职信链，样式头为 c (chain小写) 例
+
+头部 c-header
+底部 c-footer
+组件 c-component-组件名（公用部分）
+
+无特别意义的逻辑结构以 相对有意义模块名 后，层级数字标识
+例： c-component-组件名 下
+
+组件名1>组件名1-1.
+
+或
+
+组件名-head>组件名-head-top>（组件名-head-top-1+组件名-head-top-2+组件名-head-top-3）
+
+ -->
+
+<div class="wrap" id="app">
+    <div class="c-header">
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu" style="float: left; margin-left: 80px;">
+            <ul class="head-menu-ul">
+                <li>
+                    <a href="#">创建钱包</a>
+                </li>
+                <li class="active">
+                    <a href="#">查看钱包</a>
+                </li>
+                <li>
+                    <a href="#">交易转账</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="c-body">
+        <!--保存私钥-->
+        <div class="component-wallet">
+            <div class="wallet-info">
+                <Card class="wallet-exchange-header">
+                    <div>
+                    <span>
+                        账户余额：
+                    </span>
+                        <span>
+                        10 ETH
+                    </span>
+                        <a href="#" style="margin-left: 40px;font-size: 14px;">
+                            交易历史
+                        </a>
+                        <span style="float: right;">
+                        账户地址：0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4
+                    </span>
+                    </div>
+                </Card>
+                <Card class="wallet-exchange-body">
+                    <div class="wallet-container">
+                        <!--基础信息-->
+                        <div class="wallet-title">
+                            <span class="wallet-title-1-txtBigger">查看钱包信息</span>
+                            <span> / View Wallet Info</span>
+                        </div>
+                        <div class="wallet-password">
+                            <div>你的地址：</div>
+                            <div class="copy-block">
+                                <div>
+                                    <i-input class="wallet-password-1" v-model="add" readOnly size="large" placeholder="输入" type="text">
+                                    </i-input>
+                                </div>
+                                <div class="wallet-key-copy add" data-clipboard-text="addXXX" v-on:click="copyCode(1)">
+                                    <img src="public/images/wallet/icon-copy.png" width="16" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="wallet-btn">
+                            <div style="margin-bottom: 20px;">Keystore File (UTC / JSON · 推荐加密的)：</div>
+                            <i-button size="large" class="wallet-btn-1" type="primary" v-on:click="download">下载</i-button>
+                        </div>
+
+                        <div class="wallet-password">
+                            <div>私钥（未加密）：</div>
+                            <div class="copy-block">
+                                <div>
+                                    <i-input class="wallet-password-1" v-model="password" size="large" readOnly placeholder="输入" :type="btnType">
+                            <span slot="append" style="cursor: pointer;" v-on:click="showEyeHandler">
+                                <template v-if="showEye">
+                                    <Icon type="ios-eye-outline" style="margin: 0 15px;font-size: 24px;"></Icon>
+                                </template>
+                                <template v-else>
+                                    <Icon type="ios-eye-outline" style="margin: 0 15px;font-size: 24px; color: #2d8cf0;"></Icon>
+                                </template>
+                            </span>
+                                    </i-input>
+                                </div>
+                                <div v-on:click="copyCode(2)"  data-clipboard-text="keyXXX" class="wallet-key-copy key">
+                                    <img src="public/images/wallet/icon-copy.png" width="16" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </Card>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="https://cdn.bootcss.com/layer/3.0.3/layer.min.js"></script>
+<script>
+
+
+    new Vue({
+        data: function () {
+            return {
+                password:'0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4',
+                add:'0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4',
+                showEye:true,
+                btnType:'password'
+            }
+        },
+        methods: {
+            showEyeHandler(){
+                if(!this.showEye){
+                    this.btnType='password'
+                }else{
+                    this.btnType='text'
+                }
+                this.showEye=!this.showEye;
+            },
+            copyCode(v){
+                if(v===1){
+                    var clipboard = new Clipboard('.wallet-key-copy.add');
+                    clipboard.on('success', function(e) {
+                        layer.msg('复制成功！')
+                        console.info('Action:', e.action);
+                        console.info('Text:', e.text);
+                        console.info('Trigger:', e.trigger);
+
+                        e.clearSelection();
+                    });
+
+                    clipboard.on('error', function(e) {
+                        layer.msg('复制失败，请手动复制！')
+                        console.error('Action:', e.action);
+                        console.error('Trigger:', e.trigger);
+                    });
+                }else{
+                    var clipboard = new Clipboard('.wallet-key-copy.key');
+                    clipboard.on('success', function(e) {
+                        layer.msg('复制成功！')
+                        console.info('Action:', e.action);
+                        console.info('Text:', e.text);
+                        console.info('Trigger:', e.trigger);
+
+                        e.clearSelection();
+                    });
+
+                    clipboard.on('error', function(e) {
+                        layer.msg('复制失败，请手动复制！')
+                        console.error('Action:', e.action);
+                        console.error('Trigger:', e.trigger);
+                    });
+                }
+            },
+            download(){
+                window.location.href='d.zip'
+            }
+        }
+    }).$mount('#app')
+</script>
+
+
+</body>
+</html>

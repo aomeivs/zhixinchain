@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/layout.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/app.css.map">
+    <style>
+        html .wrap .c-header .c-head-menu .head-menu-ul li.active a{
+            color: #ffff00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+
+<!--职信链，样式头为 c (chain小写) 例
+
+头部 c-header
+底部 c-footer
+组件 c-component-组件名（公用部分）
+
+无特别意义的逻辑结构以 相对有意义模块名 后，层级数字标识
+例： c-component-组件名 下
+
+组件名1>组件名1-1.
+
+或
+
+组件名-head>组件名-head-top>（组件名-head-top-1+组件名-head-top-2+组件名-head-top-3）
+
+ -->
+
+<div class="wrap" id="app">
+    <div class="c-header">
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu" style="float: left; margin-left: 80px;">
+            <ul class="head-menu-ul">
+                <li>
+                    <a href="#">创建钱包</a>
+                </li>
+                <li>
+                    <a href="#">查看钱包</a>
+                </li>
+                <li class="active">
+                    <a href="#">交易转账</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="c-body">
+        <!--保存私钥-->
+        <div class="component-wallet">
+            <div class="wallet-exchange">
+                <Card class="wallet-exchange-header">
+                    <div>
+                    <span>
+                        账户余额：
+                    </span>
+                        <span>
+                        10 ETH
+                    </span>
+                        <a href="#" style="margin-left: 40px;font-size: 14px;">
+                            交易历史
+                        </a>
+                        <span style="float: right;">
+                        账户地址：0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4
+                    </span>
+                    </div>
+                </Card>
+                <Card class="wallet-exchange-body">
+                    <div class="wallet-container">
+                        <!--基础信息-->
+                        <div class="wallet-title">
+                            <span class="wallet-title-1-txtBigger">发送职信币</span>
+                            <span> / Send ZXC & Tokens</span>
+                        </div>
+                        <div class="wallet-password">
+                            <div>发送到：</div>
+                            <i-input class="wallet-password-1" v-model="password" size="large" placeholder="输入" type="text">
+                            </i-input>
+                        </div>
+
+                        <div class="wallet-password">
+                            <div>转账数额：</div>
+                            <i-input class="wallet-password-1" v-model="password" size="large" placeholder="输入" type="text">
+                            </i-input>
+                        </div>
+
+                        <div class="wallet-password">
+                            <div>备注：</div>
+                            <i-input class="wallet-password-1" v-model="password" size="large" placeholder="输入" type="text">
+                            </i-input>
+                        </div>
+
+                        <div class="wallet-btn">
+                            <i-button size="large" class="wallet-btn-1" type="primary">进入我的钱包</i-button>
+                        </div>
+                    </div>
+                </Card>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        data: function () {
+            return {
+                password:''
+            }
+        },
+        methods: {
+
+        }
+    }).$mount('#app')
+</script>
+
+
+</body>
+</html>

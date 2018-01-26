@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/layout.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/app.css.map">
+    <style>
+        html .wrap .c-header .c-head-menu .head-menu-ul li.active a{
+            color: #ffff00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+
+<!--职信链，样式头为 c (chain小写) 例
+
+头部 c-header
+底部 c-footer
+组件 c-component-组件名（公用部分）
+
+无特别意义的逻辑结构以 相对有意义模块名 后，层级数字标识
+例： c-component-组件名 下
+
+组件名1>组件名1-1.
+
+或
+
+组件名-head>组件名-head-top>（组件名-head-top-1+组件名-head-top-2+组件名-head-top-3）
+
+ -->
+<style>
+    .component-wallet .tabs .tab {
+        background: url('public/images/wallet/icon-check-outline.png') 0 4px no-repeat;
+    }
+    .component-wallet .tabs .tab.active {
+        background: url('public/images/wallet/icon-check-fill.png') 0 4px no-repeat;
+    }
+</style>
+<div class="wrap" id="app">
+    <div class="c-header">
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu" style="float: left; margin-left: 80px;">
+            <ul class="head-menu-ul">
+                <li>
+                    <a href="#">创建钱包</a>
+                </li>
+                <li>
+                    <a href="#">查看钱包</a>
+                </li>
+                <li class="active">
+                    <a href="#">交易转账</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="c-body">
+        <!--保存私钥-->
+        <div class="component-wallet">
+
+            <div class="tabs">
+                <div class="tab" v-bind:class="{'active':active===1}" v-on:click="walletTab(1)">
+                    使用密码（推荐）
+                </div>
+                <div class="tab" v-bind:class="{'active':active===2}" v-on:click="walletTab(2)">
+                    使用私钥
+                </div>
+            </div>
+            <Card class="wallet-user-validate">
+                <div v-if="active===1" class="wallet-container">
+                    <!--基础信息-->
+                    <div class="wallet-title">
+                        <span class="wallet-title-1-txtBigger">发送职信币</span>
+                        <span> / Send ZXC & Tokens</span>
+                    </div>
+
+                    <div class="wallet-btn">
+                        <div style="margin-bottom: 20px; text-align: left;">
+                            选择你的钱包文件：
+                        </div>
+                        <label for="uploadFile">
+                        <div class="wallet-btn-1" type="primary">{{filename}}</div></label>
+                        <input style="display: none;" type="file" name="" id="uploadFile" ref="filename" v-on:change="fileHandler">
+                    </div>
+                    <template v-if="show">
+                        <div class="wallet-key">
+                            <div class="wallet-key-1">
+                                你的钱包被加密，请输入密码：
+                            </div>
+                            <div class="wallet-key-2">
+                                <i-form ref="form" :model="form" :rules="rules" inline>
+                                    <form-item prop="password" style="width: 460px;">
+                                <i-input class="wallet-password-1" v-model="form.password" size="large" placeholder="密码" type="password">
+                                </i-input>
+                                    </form-item>
+                                </i-form>
+                            </div>
+                        </div>
+                        <div class="wallet-btn">
+                            <i-button size="large" class="wallet-btn-1" type="primary" style="background: #00C99C; border: 1px solid #00C99C;" v-on:click="handleSubmit('noform')">解锁</i-button>
+                        </div>
+                    </template>
+                </div>
+                <div v-if="active===2" class="wallet-container">
+                    <!--基础信息-->
+                    <div class="wallet-title">
+                        <span class="wallet-title-1-txtBigger">发送职信币</span>
+                        <span> / Send ZXC & Tokens</span>
+                    </div>
+
+                    <div class="wallet-key">
+                        <div class="wallet-key-1">
+                            请输入您的私钥：
+                        </div>
+                        <div class="wallet-key-2">
+                            <i-input class="wallet-password-1" v-model="password" size="large" placeholder="密码" type="password">
+                            </i-input>
+                        </div>
+                    </div>
+                    <div class="wallet-btn">
+                        <i-button size="large" class="wallet-btn-1" type="primary" style="background: #00C99C; border: 1px solid #00C99C;">解锁</i-button>
+                    </div>
+
+                </div>
+            </Card>
+        </div>
+    </div>
+</div>
+
+<script>
+    new Vue({
+        data: function () {
+            return {
+                form:{
+                    password:'',
+                },
+                rules:{
+                    password: [
+                        { required: true, message: '密码不能为空', trigger: 'blur' },
+                        { type: 'string', min: 8, message: '长度不能少于8位', trigger: 'blur' }
+                    ]
+                },
+                password:'',
+                show:false,
+                filename:''||'选择钱包文件...',
+                active:2
+            }
+        },
+        methods: {
+            fileHandler(){
+                this.filename=this.$refs.filename.value;
+                console.log(this.$refs.filename.files[0])
+                if(!this.$refs.filename.value){
+                    this.filename='选择钱包文件...'
+                }else{
+                    var myfile = this.$refs.filename.files[0];
+                    /**
+                     * @name
+                     * @size
+                     * @type
+                     *
+                     * 自己判断逻辑
+                     */
+                    if(true){
+                        this.show=true;
+                    }else{
+                        this.filename='选择钱包文件...'
+                        return;
+                    }
+                }
+            },
+            walletTab(v){
+                if(v===1){
+                    this.active=1;
+                }else{
+                    this.active=2;
+                }
+                this.password=''
+            },
+            handleSubmit(name) {
+                if(name=='form'){
+                    this.$refs[name].validate((valid) => {
+                        if (valid) {
+//                        this.$Message.success('成功!');
+                        } else {
+//                        this.$Message.error('失败!');
+                        }
+                    })
+                }else{
+                    //Send ZXC & Tokens
+                }
+
+            }
+        }
+    }).$mount('#app')
+</script>
+
+
+</body>
+</html>

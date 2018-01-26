@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/layout.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/app.css.map">
+    <style>
+        html .wrap .c-header .c-head-menu .head-menu-ul li.active a{
+            color: #ffff00;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+
+<!--职信链，样式头为 c (chain小写) 例
+
+头部 c-header
+底部 c-footer
+组件 c-component-组件名（公用部分）
+
+无特别意义的逻辑结构以 相对有意义模块名 后，层级数字标识
+例： c-component-组件名 下
+
+组件名1>组件名1-1.
+
+或
+
+组件名-head>组件名-head-top>（组件名-head-top-1+组件名-head-top-2+组件名-head-top-3）
+
+ -->
+
+<div class="wrap" id="app">
+    <div class="c-header">
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu" style="float: left; margin-left: 80px;">
+            <ul class="head-menu-ul">
+                <li class="active">
+                    <a href="#">创建钱包</a>
+                </li>
+                <li>
+                    <a href="#">查看钱包</a>
+                </li>
+                <li>
+                    <a href="#">交易转账</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="c-body">
+        <!--生成钱包-->
+        <div class="component-wallet">
+            <Card class="wallet-create">
+                <div class="wallet-container">
+                    <!--基础信息-->
+                    <div class="wallet-title">
+                        <span class="wallet-title-1-txtBigger">生成钱包</span>
+                        <span> / New Wallet</span>
+                    </div>
+                    <div class="wallet-subTitle">
+                        输入一个强密码（至少8位）
+                    </div>
+                    <div class="wallet-password">
+                        <i-form ref="form" :model="form" :rules="rules" inline>
+                            <form-item prop="password" style="width: 520px;">
+                                <i-input class="wallet-password-1" v-model="form.password" size="large" placeholder="不要忘记保存！" :type="btnType">
+                                    <span slot="append" style="cursor: pointer;" v-on:click="showEyeHandler">
+                                        <template v-if="showEye">
+                                            <Icon type="ios-eye-outline" style="margin: 0 15px;font-size: 24px;"></Icon>
+                                        </template>
+                                        <template v-else>
+                                            <Icon type="ios-eye-outline" style="margin: 0 15px;font-size: 24px; color: #2d8cf0;"></Icon>
+                                        </template>
+                                    </span>
+                                </i-input>
+                            </form-item>
+                        </i-form>
+                    </div>
+                    <div class="wallet-btn">
+                        <i-button size="large" class="wallet-btn-1" type="primary" @click="handleSubmit('form')">生成钱包</i-button>
+                    </div>
+                </div>
+            </Card>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    new Vue({
+        data: function () {
+            return {
+                form:{
+                    password:'',
+                },
+                rules:{
+                    password: [
+                        { required: true, message: '密码不能为空', trigger: 'blur' },
+                        { type: 'string', min: 8, message: '长度不能少于8位', trigger: 'blur' }
+                    ]
+                },
+                showEye:true,
+                btnType:'password'
+            }
+        },
+        methods: {
+            showEyeHandler(){
+                if(!this.showEye){
+                    this.btnType='password'
+                }else{
+                    this.btnType='text'
+                }
+                this.showEye=!this.showEye;
+            },
+            handleSubmit(name) {
+                this.$refs[name].validate((valid) => {
+                    if (valid) {
+//                        this.$Message.success('成功!');
+                    } else {
+//                        this.$Message.error('失败!');
+                    }
+                })
+            }
+        }
+    }).$mount('#app')
+</script>
+
+
+</body>
+</html>
