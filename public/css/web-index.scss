@@ -32,19 +32,22 @@
       position: fixed;width: 100%; height: 99px; z-index: 3; background: #ffffff;
     }
     #header{
+
       width: 1200px;
       min-width: 1200px;
       height: 99px;
       background:#ffffff;
       margin: 0 auto;
+
       .logo{
         float: left;
         padding-top: 14px;
         padding-right: 60px;
       }
       .menu{
+        position: relative;
         float: left;
-        width: 950px;
+        //width: 950px;
         font-size: 16px;
         li{
           float: left;
@@ -84,6 +87,25 @@
           }
           &.SignIn{
             width: 120px;
+          }
+        }
+        .lang{
+          position: absolute;
+          right: -140px;
+          top: 42px;
+          font-size: 14px;
+          color: #333;
+          span{
+            display: inline-block;
+            padding: 0 12px;
+            border-left:1px solid #d9d9d9;
+
+            font-weight: bold;
+
+            cursor: pointer;
+            &:first-child{
+              border-left: none;
+            }
           }
         }
       }

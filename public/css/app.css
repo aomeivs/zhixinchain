@@ -2085,8 +2085,8 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       padding-top: 14px;
       padding-right: 60px; }
     .wrap .component-index #header .menu {
+      position: relative;
       float: left;
-      width: 950px;
       font-size: 16px; }
       .wrap .component-index #header .menu li {
         float: left;
@@ -2118,6 +2118,20 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
           padding-top: 26px; }
         .wrap .component-index #header .menu li.SignIn {
           width: 120px; }
+      .wrap .component-index #header .menu .lang {
+        position: absolute;
+        right: -140px;
+        top: 42px;
+        font-size: 14px;
+        color: #333; }
+        .wrap .component-index #header .menu .lang span {
+          display: inline-block;
+          padding: 0 12px;
+          border-left: 1px solid #d9d9d9;
+          font-weight: bold;
+          cursor: pointer; }
+          .wrap .component-index #header .menu .lang span:first-child {
+            border-left: none; }
   .wrap .component-index #index {
     height: 524px;
     min-width: 1400px; }
@@ -2585,5 +2599,382 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     cursor: pointer; }
   .wrap .kefu-lt .kefu-lt-1-right img {
     cursor: pointer; }
+
+.component-wallet .wallet-create {
+  width: 1080px;
+  margin: 100px auto 0; }
+  .component-wallet .wallet-create .wallet-container {
+    padding: 100px 0;
+    text-align: center; }
+    .component-wallet .wallet-create .wallet-container .wallet-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 500;
+      color: #1c2438;
+      letter-spacing: -0.8px; }
+      .component-wallet .wallet-create .wallet-container .wallet-title .wallet-title-1-txtBigger {
+        font-size: 40px; }
+    .component-wallet .wallet-create .wallet-container .wallet-subTitle {
+      color: #495060;
+      text-align: center;
+      font-size: 20px;
+      margin-top: 50px; }
+    .component-wallet .wallet-create .wallet-container .wallet-password {
+      width: 800px;
+      margin: 50px auto 0; }
+      .component-wallet .wallet-create .wallet-container .wallet-password .wallet-password-1 input {
+        height: 54px;
+        font-size: 20px; }
+    .component-wallet .wallet-create .wallet-container .wallet-btn {
+      margin-top: 90px; }
+      .component-wallet .wallet-create .wallet-container .wallet-btn .wallet-btn-1 {
+        width: 240px;
+        height: 60px;
+        font-size: 20px; }
+.component-wallet .wallet-save-key {
+  width: 1080px;
+  margin: 100px auto 0; }
+  .component-wallet .wallet-save-key .wallet-container {
+    padding: 100px 0;
+    text-align: center; }
+    .component-wallet .wallet-save-key .wallet-container .wallet-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 500;
+      color: #1c2438;
+      letter-spacing: -0.8px; }
+      .component-wallet .wallet-save-key .wallet-container .wallet-title .wallet-title-1-txtBigger {
+        font-size: 40px; }
+    .component-wallet .wallet-save-key .wallet-container .wallet-key {
+      width: 460px;
+      margin: 40px auto 0;
+      font-size: 18px;
+      color: #495060;
+      position: relative;
+      text-align: left; }
+      .component-wallet .wallet-save-key .wallet-container .wallet-key > div {
+        display: inline-block; }
+      .component-wallet .wallet-save-key .wallet-container .wallet-key .wallet-key-1 {
+        font-size: 18px; }
+      .component-wallet .wallet-save-key .wallet-container .wallet-key .wallet-key-2 {
+        margin-top: 30px; }
+        .component-wallet .wallet-save-key .wallet-container .wallet-key .wallet-key-2 .wallet-key-code {
+          background: #f8f8f8;
+          border: 1px solid #dcdcdc;
+          padding: 15px;
+          width: 100%;
+          word-break: break-all; }
+        .component-wallet .wallet-save-key .wallet-container .wallet-key .wallet-key-2 .wallet-key-copy {
+          position: absolute;
+          right: -40px;
+          top: 50%;
+          margin-top: 12px; }
+          .component-wallet .wallet-save-key .wallet-container .wallet-key .wallet-key-2 .wallet-key-copy img {
+            cursor: pointer; }
+    .component-wallet .wallet-save-key .wallet-container .wallet-agree {
+      text-align: left;
+      width: 460px;
+      margin: 40px auto 0;
+      color: #495060; }
+    .component-wallet .wallet-save-key .wallet-container .wallet-btn {
+      margin-top: 40px; }
+      .component-wallet .wallet-save-key .wallet-container .wallet-btn .wallet-btn-1 {
+        width: 460px;
+        height: 60px;
+        font-size: 20px; }
+.component-wallet .tabs {
+  font-size: 24px;
+  color: #4A4A4A;
+  width: 500px;
+  margin: 100px auto 50px; }
+  .component-wallet .tabs .tab {
+    display: inline-block;
+    background: url("../images/wallet/icon-check-outline.png") 0 4px no-repeat;
+    padding-left: 45px;
+    cursor: pointer; }
+    .component-wallet .tabs .tab.active {
+      color: #000000;
+      background: url("../images/wallet/icon-check-fill.png") 0 4px no-repeat; }
+    .component-wallet .tabs .tab:last-child {
+      margin-left: 60px; }
+.component-wallet .wallet-user-validate {
+  width: 1080px;
+  margin: 0px auto 0; }
+  .component-wallet .wallet-user-validate .wallet-container {
+    padding: 100px 0; }
+    .component-wallet .wallet-user-validate .wallet-container .wallet-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 500;
+      color: #1c2438;
+      letter-spacing: -0.8px; }
+      .component-wallet .wallet-user-validate .wallet-container .wallet-title .wallet-title-1-txtBigger {
+        font-size: 40px; }
+    .component-wallet .wallet-user-validate .wallet-container .wallet-key {
+      width: 460px;
+      margin: 40px auto 0;
+      font-size: 18px;
+      color: #495060;
+      position: relative;
+      text-align: left; }
+      .component-wallet .wallet-user-validate .wallet-container .wallet-key .wallet-key-2 {
+        margin-top: 30px; }
+        .component-wallet .wallet-user-validate .wallet-container .wallet-key .wallet-key-2 .wallet-password-1 input {
+          height: 54px;
+          font-size: 20px; }
+        .component-wallet .wallet-user-validate .wallet-container .wallet-key .wallet-key-2 .wallet-key-copy {
+          position: absolute;
+          right: -40px;
+          top: 50%;
+          margin-top: 12px; }
+          .component-wallet .wallet-user-validate .wallet-container .wallet-key .wallet-key-2 .wallet-key-copy img {
+            cursor: pointer; }
+    .component-wallet .wallet-user-validate .wallet-container .wallet-agree {
+      text-align: left;
+      width: 460px;
+      margin: 40px auto 0;
+      color: #495060; }
+    .component-wallet .wallet-user-validate .wallet-container .wallet-btn {
+      width: 460px;
+      margin: 40px auto 0;
+      font-size: 20px; }
+      .component-wallet .wallet-user-validate .wallet-container .wallet-btn label .wallet-btn-1 {
+        background: #298cff;
+        color: #ffffff;
+        line-height: 60px;
+        margin: 0 auto;
+        text-align: center; }
+      .component-wallet .wallet-user-validate .wallet-container .wallet-btn .wallet-btn-1 {
+        width: 460px;
+        height: 60px;
+        font-size: 20px; }
+.component-wallet .wallet-save-key {
+  width: 1080px;
+  margin: 100px auto 0; }
+  .component-wallet .wallet-save-key .wallet-container {
+    padding: 100px 0;
+    text-align: center; }
+    .component-wallet .wallet-save-key .wallet-container .wallet-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 500;
+      color: #1c2438;
+      letter-spacing: -0.8px; }
+      .component-wallet .wallet-save-key .wallet-container .wallet-title .wallet-title-1-txtBigger {
+        font-size: 40px; }
+    .component-wallet .wallet-save-key .wallet-container .wallet-key {
+      width: 460px;
+      margin: 40px auto 0;
+      font-size: 18px;
+      color: #495060;
+      position: relative;
+      text-align: left; }
+      .component-wallet .wallet-save-key .wallet-container .wallet-key > div {
+        display: inline-block; }
+      .component-wallet .wallet-save-key .wallet-container .wallet-key .wallet-key-1 {
+        font-size: 18px; }
+      .component-wallet .wallet-save-key .wallet-container .wallet-key .wallet-key-2 {
+        margin-top: 30px; }
+        .component-wallet .wallet-save-key .wallet-container .wallet-key .wallet-key-2 .wallet-key-code {
+          background: #f8f8f8;
+          border: 1px solid #dcdcdc;
+          padding: 15px;
+          width: 100%;
+          word-break: break-all; }
+        .component-wallet .wallet-save-key .wallet-container .wallet-key .wallet-key-2 .wallet-key-copy {
+          position: absolute;
+          right: -40px;
+          top: 50%;
+          margin-top: 12px; }
+          .component-wallet .wallet-save-key .wallet-container .wallet-key .wallet-key-2 .wallet-key-copy img {
+            cursor: pointer; }
+    .component-wallet .wallet-save-key .wallet-container .wallet-agree {
+      text-align: left;
+      width: 460px;
+      margin: 40px auto 0;
+      color: #495060; }
+    .component-wallet .wallet-save-key .wallet-container .wallet-btn {
+      margin-top: 40px; }
+      .component-wallet .wallet-save-key .wallet-container .wallet-btn .wallet-btn-1 {
+        width: 460px;
+        height: 60px;
+        font-size: 20px; }
+.component-wallet .wallet-exchange {
+  width: 1080px;
+  margin: 0 auto; }
+  .component-wallet .wallet-exchange .wallet-exchange-header {
+    margin: 40px auto;
+    padding: 15px;
+    font-size: 16px; }
+  .component-wallet .wallet-exchange .wallet-exchange-body {
+    width: 1080px;
+    margin: 0px auto 0; }
+    .component-wallet .wallet-exchange .wallet-exchange-body .wallet-container {
+      padding: 100px 0; }
+      .component-wallet .wallet-exchange .wallet-exchange-body .wallet-container .wallet-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        color: #1c2438;
+        letter-spacing: -0.8px; }
+        .component-wallet .wallet-exchange .wallet-exchange-body .wallet-container .wallet-title .wallet-title-1-txtBigger {
+          font-size: 40px; }
+      .component-wallet .wallet-exchange .wallet-exchange-body .wallet-container .wallet-password {
+        width: 520px;
+        margin: 30px auto 0;
+        font-size: 20px; }
+        .component-wallet .wallet-exchange .wallet-exchange-body .wallet-container .wallet-password .wallet-password-1 input {
+          height: 54px;
+          font-size: 20px;
+          margin-top: 20px; }
+      .component-wallet .wallet-exchange .wallet-exchange-body .wallet-container .wallet-btn {
+        width: 520px;
+        margin: 50px auto 0;
+        font-size: 20px; }
+        .component-wallet .wallet-exchange .wallet-exchange-body .wallet-container .wallet-btn .wallet-btn-1 {
+          width: 520px;
+          height: 60px;
+          font-size: 20px; }
+.component-wallet .wallet-info {
+  width: 1080px;
+  margin: 0 auto; }
+  .component-wallet .wallet-info .wallet-exchange-header {
+    margin: 40px auto;
+    padding: 15px;
+    font-size: 16px; }
+  .component-wallet .wallet-info .wallet-exchange-body {
+    width: 1080px;
+    margin: 0px auto 0; }
+    .component-wallet .wallet-info .wallet-exchange-body .wallet-container {
+      padding: 100px 0; }
+      .component-wallet .wallet-info .wallet-exchange-body .wallet-container .wallet-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        color: #1c2438;
+        letter-spacing: -0.8px; }
+        .component-wallet .wallet-info .wallet-exchange-body .wallet-container .wallet-title .wallet-title-1-txtBigger {
+          font-size: 40px; }
+      .component-wallet .wallet-info .wallet-exchange-body .wallet-container .wallet-password {
+        width: 520px;
+        margin: 30px auto 0;
+        font-size: 20px; }
+        .component-wallet .wallet-info .wallet-exchange-body .wallet-container .wallet-password .wallet-password-1 {
+          margin-top: 20px; }
+        .component-wallet .wallet-info .wallet-exchange-body .wallet-container .wallet-password .wallet-password-1 input {
+          height: 54px;
+          font-size: 20px; }
+        .component-wallet .wallet-info .wallet-exchange-body .wallet-container .wallet-password .copy-block {
+          position: relative; }
+          .component-wallet .wallet-info .wallet-exchange-body .wallet-container .wallet-password .copy-block > div {
+            width: 520px;
+            display: inline-block; }
+            .component-wallet .wallet-info .wallet-exchange-body .wallet-container .wallet-password .copy-block > div.wallet-key-copy {
+              width: auto;
+              position: absolute;
+              right: -40px;
+              top: 50%;
+              margin-top: -8px; }
+              .component-wallet .wallet-info .wallet-exchange-body .wallet-container .wallet-password .copy-block > div.wallet-key-copy img {
+                cursor: pointer; }
+      .component-wallet .wallet-info .wallet-exchange-body .wallet-container .wallet-btn {
+        width: 520px;
+        margin: 50px auto 0;
+        font-size: 20px; }
+        .component-wallet .wallet-info .wallet-exchange-body .wallet-container .wallet-btn .wallet-btn-1 {
+          width: 520px;
+          height: 60px;
+          font-size: 20px; }
+.component-wallet .wallet-exchange-info {
+  width: 1080px;
+  margin: 0 auto; }
+  .component-wallet .wallet-exchange-info .wallet-exchange-header {
+    margin: 40px auto;
+    padding: 15px;
+    font-size: 16px; }
+  .component-wallet .wallet-exchange-info .wallet-exchange-body {
+    width: 1080px;
+    margin: 0px auto 0; }
+    .component-wallet .wallet-exchange-info .wallet-exchange-body .wallet-container {
+      padding: 100px 0; }
+      .component-wallet .wallet-exchange-info .wallet-exchange-body .wallet-container .wallet-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        color: #1c2438;
+        letter-spacing: -0.8px; }
+        .component-wallet .wallet-exchange-info .wallet-exchange-body .wallet-container .wallet-title .wallet-title-1-txtBigger {
+          font-size: 40px; }
+      .component-wallet .wallet-exchange-info .wallet-exchange-body .wallet-container table {
+        margin: 40px auto;
+        font-size: 16px;
+        width: 700px;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-left: #d9d9d9 1px solid;
+        border-top: #d9d9d9 1px solid; }
+        .component-wallet .wallet-exchange-info .wallet-exchange-body .wallet-container table tr:nth-child(2n+1) td {
+          background: #f8f8f8; }
+        .component-wallet .wallet-exchange-info .wallet-exchange-body .wallet-container table td {
+          padding: 22px 45px;
+          border-right: #d9d9d9 1px solid;
+          border-bottom: #d9d9d9 1px solid; }
+          .component-wallet .wallet-exchange-info .wallet-exchange-body .wallet-container table td:first-child {
+            text-align: center; }
+      .component-wallet .wallet-exchange-info .wallet-exchange-body .wallet-container .exchange-warning {
+        text-align: center;
+        font-size: 20px;
+        color: #ff4a60; }
+      .component-wallet .wallet-exchange-info .wallet-exchange-body .wallet-container .exchange-submit {
+        text-align: center;
+        margin-top: 60px; }
+        .component-wallet .wallet-exchange-info .wallet-exchange-body .wallet-container .exchange-submit .cancel {
+          width: 280px;
+          height: 60px;
+          font-size: 20px; }
+        .component-wallet .wallet-exchange-info .wallet-exchange-body .wallet-container .exchange-submit .submit {
+          width: 280px;
+          height: 60px;
+          font-size: 20px;
+          margin-left: 60px; }
+.component-wallet .wallet-exchange-list {
+  width: 1080px;
+  margin: 0 auto; }
+  .component-wallet .wallet-exchange-list .wallet-exchange-header {
+    margin: 40px auto;
+    padding: 15px;
+    font-size: 16px; }
+  .component-wallet .wallet-exchange-list .wallet-exchange-body {
+    width: 1080px;
+    margin: 0px auto 0; }
+    .component-wallet .wallet-exchange-list .wallet-exchange-body .wallet-container {
+      padding: 100px 0; }
+      .component-wallet .wallet-exchange-list .wallet-exchange-body .wallet-container .wallet-title {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 500;
+        color: #1c2438;
+        letter-spacing: -0.8px; }
+        .component-wallet .wallet-exchange-list .wallet-exchange-body .wallet-container .wallet-title .wallet-title-1-txtBigger {
+          font-size: 40px; }
+      .component-wallet .wallet-exchange-list .wallet-exchange-body .wallet-container table {
+        margin: 40px auto;
+        font-size: 14px;
+        width: 1000px;
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-left: #d9d9d9 1px solid;
+        border-top: #d9d9d9 1px solid; }
+        .component-wallet .wallet-exchange-list .wallet-exchange-body .wallet-container table tr:first-child td {
+          text-align: center;
+          font-weight: bold; }
+        .component-wallet .wallet-exchange-list .wallet-exchange-body .wallet-container table tr:nth-child(2n+1) td {
+          background: #f8f8f8; }
+        .component-wallet .wallet-exchange-list .wallet-exchange-body .wallet-container table td {
+          border-right: #d9d9d9 1px solid;
+          border-bottom: #d9d9d9 1px solid;
+          word-break: break-all;
+          padding: 12px 18px; }
 
 /*# sourceMappingURL=app.css.map */

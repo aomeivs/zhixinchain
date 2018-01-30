@@ -58,11 +58,15 @@
         <!--头部-->
         <div class="head_fixed" id="nav-container">
             <div id="header">
+
                 <a href="Homepage.html">
                     <img src="public/images/index/logo.png" alt="" class="logo" style="border: 0px;"/>
                 </a>
                 <ul id="menu" class="menu zi18">
-
+                    <div class="lang">
+                        <span onclick="window.location.href='#'">中文</span>
+                        <span onclick="window.location.href='#'">EN</span>
+                    </div>
                     <li data-menuanchor="about" id="home2" class="cur select"><a href="#block-content1">关于职信链</a></li>
 
                     <li data-menuanchor="technical" id="home6" class="select"><a href="#block-content4">应用场景</a></li>
@@ -78,7 +82,7 @@
                     <li data-menuanchor="team" class="menu-try" id="home4" style="margin-left: 40px;">试 用</li>
 
 
-                    <li class="SignIn" style="display: block; width: auto;">
+                    <li class="SignIn" style="display: none; width: auto;">
                         <!--企业-->
                         <dropdown trigger="click" :visible="visible">
                             <a href="javascript:void(0)" @click.stop="handleOpen()">
@@ -137,10 +141,11 @@
                         </dropdown>
                     </li>
 
-                    <li class="loginAndSignIn" style="display: none;">
+                    <li class="loginAndSignIn" style="display: block;">
                         <span class="span1">登录</span>
                         <span class="span2">注册</span>
                     </li>
+
 
                 </ul>
                 <div style="clear: both"></div>
