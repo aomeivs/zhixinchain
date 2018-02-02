@@ -81,16 +81,16 @@
                 <Icon type="arrow-left-b" class="icon-c-accordion" v-bind:class="{active:!accordionOpen}"></Icon>
             </div>
             <div class="body-left-search">
-                <auto-complete
+                <!--<auto-complete
                         v-model="value"
                         icon="ios-search"
                         :data="data"
                         placeholder="搜索员工"
                         @on-search="handleSearch"
                         style="width:290px">
-                </auto-complete>
+                </auto-complete>-->
             </div>
-            <div class="body-left-CName">
+            <div class="body-left-CName" style="background: none;color: #333333;font-weight: bold;">
                 职信链科技有限公司
             </div>
             <div class="left-body-container">
@@ -317,6 +317,34 @@
                 </div>
             </div>
         </Modal>
+        <Modal v-model="modal3" :footer-hide="true" width="500">
+            <div class="component-modal-auth">
+                <div class="modal-1">
+                    <div class="add-employ-container">
+                        <div class="add-employ-head">
+                            <div class="add-employ-title">
+                                <div class="e-title-1">
+                                    <Icon type="android-alert" style="font-size: 18px;color: #ffbf00; margin-right: 12px;"></Icon><span style="font-size: 16px;">请选择要转移到的部门!</span>
+
+                                </div>
+                                <div style="margin-top:20px;">
+                                    <i-select v-model="model1" style="width:200px">
+                                        <i-option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</i-option>
+                                    </i-select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="add-employ-body text-center">
+                            <div class="body-2">
+                                <i-button type="primary" size="large" style="width: 200px;">确定</i-button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </Modal>
         <!--忽略根节点,输出目录-->
         <div v-if="!tree.root" class="box group-box member-box">
             <!--目录ico逻辑-->
@@ -462,7 +490,34 @@
                 // 编辑状态
                 editStatus:false,
                 modal1:false,
-                modal2:false
+                modal2:false,
+                modal3:false,
+                cityList: [
+                    {
+                        value: 'New York',
+                        label: 'New York'
+                    },
+                    {
+                        value: 'London',
+                        label: 'London'
+                    },
+                    {
+                        value: 'Sydney',
+                        label: 'Sydney'
+                    },
+                    {
+                        value: 'Ottawa',
+                        label: 'Ottawa'
+                    },
+                    {
+                        value: 'Paris',
+                        label: 'Paris'
+                    },
+                    {
+                        value: 'Canberra',
+                        label: 'Canberra'
+                    }
+                ],
             }
         },
         computed:{
