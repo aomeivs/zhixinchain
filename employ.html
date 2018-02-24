@@ -96,7 +96,8 @@
                 <!--在职员工-->
                 <div class="tree-employ employ-on">
                     <div class="employ-on-block">
-                        <img class="employ-icon" src="public/images/tree-employ.png" width="23" alt="在职员工">
+                        <span class="employ-icon"></span>
+                        <!--<img class="employ-icon" src="public/images/tree-employ.png" width="23" alt="在职员工">-->
                         <span class="employ-title">
                         在职员工
                     </span>
@@ -124,7 +125,8 @@
                 <!--离职员工-->
                 <div class="tree-employ employ-off">
                     <div class="employ-on-block">
-                        <img class="employ-icon" src="public/images/tree-employ-off.png" width="23" height="23" alt="离职员工">
+                        <span class="employ-icon"></span>
+                        <!--<img class="employ-icon" src="public/images/tree-employ-off.png" width="23" height="23" alt="离职员工">-->
                         <span class="employ-title">
                         已离职员工
                     </span>
@@ -602,18 +604,34 @@
                                                     </div>
 
                                                     <div class="edit-info">
-                                                        <div>上传附件：</div>
+                                                        <div>
+                                                           <div>
+                                                               上传附件：
+                                                           </div>
+                                                            <!--<div style="font-size: 12px;padding-right: 12px;color: rgb(138, 138, 138);">
+                                                                ( 附件大小限10M以内 )
+                                                            </div>-->
+                                                        </div>
                                                         <div>
                                                             <upload
                                                                     style="min-width:200px;"
                                                                     multiple
                                                                     type="drag"
+                                                                    max-size="1"
+                                                                    :on-exceeded-size="sizeError"
                                                                     action="//jsonplaceholder.typicode.com/posts/">
                                                                 <div style="padding: 20px 0">
                                                                     <icon type="ios-cloud-upload" size="52" style="color: #3399ff"></icon>
                                                                     <p>点击添加</p>
                                                                 </div>
                                                             </upload>
+                                                            <div style="font-size: 12px;
+    padding-right: 12px;
+    color: rgb(138, 138, 138);
+    text-align: center;
+    padding-bottom: 12px;">
+                                                                ( 附件大小限10M以内 )
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -672,6 +690,16 @@
                                                             <div class="time"><span class="icon-time-line-arrow"></span>业绩突出，奖励1万元，业绩突出，奖励1万元,业绩突出，奖励1万元,业绩突出，奖励1万元业绩突出，奖励1万元业绩突出，奖励1万元业绩突出，奖励1万元业绩突出，奖励1万元，业绩突出，奖励1万元,业绩突出，奖励1万元,业绩突出</div>
                                                         </timeline-item>
                                                     </timeline>
+                                                </div>
+
+                                                <div class="month-table-4" row-class-name="table4_hide_head">
+                                                    <div class="table-title">附件下载：</div>
+                                                    <div>
+                                                        <a href="#">方正下载.word</a>
+                                                    </div>
+                                                    <div>
+                                                        <a href="#">方正下载2.word</a>
+                                                    </div>
                                                 </div>
 
                                             </div>
@@ -783,7 +811,37 @@
                                                         <i-input type="textarea" :rows="10" style="width: 520px;" placeholder="请填写评语，500字以内" :maxlength="500"></i-input>
                                                     </div>
                                                 </div>
-
+                                                <div class="edit-info">
+                                                    <div>
+                                                        <div>
+                                                            上传附件：
+                                                        </div>
+                                                        <!--<div style="font-size: 12px;padding-right: 12px;color: rgb(138, 138, 138);">
+                                                            ( 附件大小限10M以内 )
+                                                        </div>-->
+                                                    </div>
+                                                    <div>
+                                                        <upload
+                                                                style="min-width:200px;"
+                                                                multiple
+                                                                type="drag"
+                                                                max-size="1"
+                                                                :on-exceeded-size="sizeError"
+                                                                action="//jsonplaceholder.typicode.com/posts/">
+                                                            <div style="padding: 20px 0">
+                                                                <icon type="ios-cloud-upload" size="52" style="color: #3399ff"></icon>
+                                                                <p>点击添加</p>
+                                                            </div>
+                                                        </upload>
+                                                        <div style="font-size: 12px;
+    padding-right: 12px;
+    color: rgb(138, 138, 138);
+    text-align: center;
+    padding-bottom: 12px;">
+                                                            ( 附件大小限10M以内 )
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="edit-7">
                                                     <div>
                                                         <i-button type="ghost" class="edit-7-cancel" v-on:click="assessInfoShow(name)">取消</i-button>
@@ -1720,6 +1778,9 @@
             }
         },
         methods: {
+            sizeError:function (file) {
+                this.$Message.error('每个附件大小限10M以内');
+            },
             handleSearch : function(value) {
                 this.data = !value ? [] : [
                     value,

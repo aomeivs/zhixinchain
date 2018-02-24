@@ -37,6 +37,40 @@
 
 <div class="wrap" id="app">
 
+    <Modal v-model="modal10" :footer-hide="true" width="600">
+        <div class="component-modal-auth">
+            <div class="modal-3">
+                <div class="add-employ-container">
+                    <div class="add-employ-head">
+                        <div class="add-employ-title">
+
+                            <div class="e-title-2" style="font-size: 24px;">使用帮助</div>
+                        </div>
+                    </div>
+
+                    <div class="add-employ-body text-center">
+                        <div class="body-1">
+                            <ul style="text-align: left; width: 520px; margin: 0 auto;">
+                                <li style="margin-bottom: 20px;">1、组织架构可重复导入。每次新导入后，之前的“组织架构导入”列表都会被清除；
+                                    <div style="font-size: 12px; margin-left: 12px; color: red;">（ "在职员工"列表与"组织架构导入"列表互相独立，两者的结构不会因对方的改变而改变；）</div>
+                                </li>
+
+                                <li style="margin-bottom: 20px;">
+                                    2、导入成功后，您可以向员工申请获得授权；
+                                </li>
+                                <li style="margin-bottom: 60px;">
+                                    3、员工同意授权后，您可以将员工转移至“在职员工”并新增职信；
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </Modal>
+
     <div class="c-header">
         <div class="c-head-logo">
             <img src="public/images/logo.png" width="334" alt="职信链LOGO">
@@ -89,8 +123,9 @@
                         @on-search="handleSearch"
                         style="width:290px">
                 </auto-complete>-->
+
             </div>
-            <div class="body-left-CName" style="background: none;color: #333333;font-weight: bold;">
+            <div class="body-left-CName">
                 职信链科技有限公司
             </div>
             <div class="left-body-container">
@@ -99,7 +134,7 @@
                     <div class="employ-on-block">
                         <span class="employ-icon" width="23" alt="在职员工"></span>
                         <span class="employ-title">
-                        组织结构
+                        组织架构导入
                         </span>
                         <span class="employ-count">
                         (3)
@@ -110,6 +145,11 @@
                 <!--组件-树-->
                 <div class="component-tree">
                     <component-tree v-bind:tree='treeData'></component-tree>
+                </div>
+                <!--系统设置-->
+
+                <div class="tree-setting" @click="model10click">
+                    <!--<Icon style="font-size: 18px;" type="document-text"></Icon>--><span>使用帮助</span>
                 </div>
 
 <!--                &lt;!&ndash;添加部门&ndash;&gt;
@@ -132,10 +172,20 @@
                                     <div v-show="name==1" class="component-assess-info-base" v-bind:class="{'tab-active':name==1}">
                                         <div v-show="assessInfoBase" class="edit-assess-info-base">
                                             <Card style="width: 100%;">
+                                                <Alert type="warning" style="width:460px; margin: 20px auto 0;" show-icon>
+
+                                                    导入说明：文件必须为xls或xlsx格式
+                                                    <template slot="desc">
+                                                        至少填写了姓名及手机号的员工才可上传成功
+                                                    </template>
+                                                    <i-button style="margin-left:50px;position: absolute;
+    top: 20px;">下载模板</i-button>
+
+                                                </Alert>
                                                 <i-form ref="formValidate" :model="formCustom" :rules="ruleCustom" :label-width="0" :show-message="showMessage">
-                                                    <div class="edit-1" style="margin-top: 60px;">
+                                                    <!--<div class="edit-1" style="margin-top: 30px;">
                                                         <Icon type="android-alert" style="color:#ffbf00; font-size: 18px;margin-right: 8px;"></Icon>至少填写了姓名及手机号的员工才可上传成功
-                                                    </div>
+                                                    </div>-->
                                                     <div class="text-center">
                                                         <upload
                                                                 style="min-width:200px;max-width: 400px;margin: 80px auto 30px;"
@@ -163,9 +213,9 @@
                                                         <i-button type="primary" size="large" style="width:400px;" v-on:click="validata('formValidate1')">提交</i-button>
 
                                                     </div>
-                                                    <div>
+                                                    <!--<div>
                                                         <i-button type="ghost" size="large" style="width:400px; margin-top: 40px; margin-bottom: 100px;">下载模板</i-button>
-                                                    </div>
+                                                    </div>-->
                                                 </div>
                                                 </i-form>
                                             </Card>
@@ -260,6 +310,8 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
     </div>
 </div>
@@ -489,6 +541,8 @@
                 tempName:'',
                 // 编辑状态
                 editStatus:false,
+                model1:true,
+                value:1,
                 modal1:false,
                 modal2:false,
                 modal3:false,
@@ -634,7 +688,8 @@
         props:['data'],
         data:function () {
             return {
-                visible: false
+                visible: false,
+
             }
         },
         methods:{
@@ -760,7 +815,7 @@
                 data:[],
                 treeData:treeData,
                 accordionOpen:true,
-
+                modal10:false,
 
 
 
@@ -994,6 +1049,9 @@
             }
         },
         methods: {
+            model10click:function () {
+                this.modal10=true;
+            },
             sizeError:function (file) {
                 this.$Message.error('每个附件大小限10M以内');
             },
