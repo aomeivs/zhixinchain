@@ -449,7 +449,7 @@
                 </dropdown>
             </div>
             <template v-else>
-                <div class="user-auth-status org">
+                <div class="user-auth-status org" v-bind:class="{complete:tree.status==='已授权',wait:tree.status==='等待授权...'}">
                     {{tree.status}}
                 </div>
                 <div class="box-control">
