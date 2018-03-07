@@ -107,13 +107,15 @@
                 <!--标题-->
                 <div class="title text-center">
                     <img src="public/images/index/title_l.png" />
-                    <p class="zi48">Token的运行机制</p>
+                    <p class="zi48">技术介绍</p>
                     <img src="public/images/index/title_r.png" />
                 </div>
                 <!--小标题-->
-                <div class="title2 zi18 text-center" style="margin-top:80px;">
+                <div class="title2 zi18 text-center" style="margin-top:80px;line-height: 2;">
                     <p>
-                        职信链的Token是职信币（ZXC），它是职信链生态发布的数字资产通证，是职信链生态中的价值媒介单位，一定数量的ZXC，代表着一定数量的职信链生态使用权。
+                        底层技术框架：Hyperledger   Fabric 联盟链
+                        <br>
+                        共识机制：PoCR（Proof of Credit Resume）+ PoC（Proof of Credit）+ PoS（Proof of Stake）
                     </p>
 
                 </div>
@@ -122,16 +124,23 @@
         border: 1px dashed #E8E8E8;
         text-align: justify;
         width: 810px;
+        background: #FFFDF6;
         margin: 50px auto;
-        line-height: 28px;
+        line-height: 1.8;
         padding: 30px 60px;">
                     <p>
-                        ZXC的存在，可使整个平台所有的交易行为、价值转移和信息传递同步进行，并受智能合约管控。不同的需求方，如用户、投资者、管理者等，需持有不同数量的ZXC，需求会激励 ZXC良性流动和循环。
+                        职信链是一套自主迭代研发的独立区块链，实现了去中心化数据数据管理的底层
+                        原始代码fork了Hyperledger fabric，在此基础上结合自身承载应用的特性和未来生态建设的考量，进行了大量的开发和扩展
+                        <br>
+                        技术参数：交易速度：5000 tps，区块容量：5M，区块产生规则：每10条交易产生一个区块，单位时间内如果不到10条交易也会生成一个区块，没有交易则不生成区块，“单位时间”底层设置为2秒，职信链应用层设置为10分钟。
                     </p>
 
                 </div>
+                <div style="width: 900px;margin: 0 auto; line-height: 1.5;">
+                    联盟链依靠节点的业务共识实现业务、数据统一，联盟节点会有严格的审核机制和数量限制，并非所有人或所有机构都可以加入节点，节点之间的数据基于区块链技术进行同步，并非所有节点都有写入权限，可以保证职信链的安全性和工作效率。链上所有的交易由联盟节点随机进行记账，并给予记账的节点token奖励，这部分奖励由职信链总量的30%生态激励和职信币交易过程中产生的手续费组成，目前有8个联盟节点，未来会持续增加联盟节点。
+                </div>
                 <div class="part3 text-center" style="padding-bottom: 100px; padding-top: 50px;">
-                    <img src="public/images/investment/block2/block1.png" width="958"/>
+                    <img src="public/images/investment/block4/Bitmap.png"/>
                 </div>
             </div>
 
