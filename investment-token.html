@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>平台首页</title>
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+    <!--[if lt ie 9]>
+    <script src="public/js/ie-lte9.js"></script>
+    <![endif ]-->
+    <link rel="stylesheet" href="public/css/outdatedBrowser.min.css">
+    <script src="public/js/outdatedBrowser.min.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+    <style>
+        #block-content1{
+            background: url(public/images/investment/block1/block1-banner.png) center no-repeat;
+            min-width: 1200px;
+            height:620px;
+        }
+        .block3-button a{
+            display: inline-block;
+            padding: 12px 24px;
+            color: #2d8cf0;
+            border:1px solid #2d8cf0;
+            width: 240px;
+            border-radius:4px;
+        }
+        .block3-button a:hover{
+            text-decoration: none;
+            color: #2d8cf0;
+        }
+        .wrap .component-index #header .menu li.cur a{
+            color: #FE8C5F;
+            font-weight: bold;
+        }
+        .wrap .component-index #header .menu {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap" id="app">
+    <div class="component-index">
+        <!--头部-->
+        <div class="head_fixed" id="nav-container" style="overflow: hidden; box-shadow:0 1px 4px rgba(100,100,100,0.1)">
+            <div id="header">
+                <a href="Homepage.html">
+                    <img src="public/images/index/logo.png" alt="" class="logo" style="border: 0px;"/>
+                </a>
+                <ul id="menu" class="menu zi18">
+                    <li class="select"><a href="investment-index.html">关于职信链</a></li>
+                    <li class="cur select"><a href="investment-token.html">TOKEN运行机制</a></li>
+                    <li class="select"><a href="investment-screen.html">平台介绍</a></li>
+                    <li class="select"><a href="investment-advantage.html">我们的优势</a></li>
+                    <li class="select"><a href="investment-faq.html">FAQ</a></li>
+                    <li class="select"><a href="investment-schedule.html">进度规划</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--首页介绍内容-->
+        <div id="text_lt">
+            <a name="block-content1" style="display: inline-block;width: 100%;clear: both;height: 1px;"></a>
+            <div class="block-content1" id="block-content1">
+                <!--index 结束 头部 大banner-->
+            </div>
+            <!--about-->
+
+            <!--技术介绍 开始-->
+            <div class="section block-content11" style="padding: 100px 0;">
+
+                <!--标题-->
+                <div class="title text-center">
+                    <img src="public/images/index/title_l.png" />
+                    <p class="zi48">Token的运行机制</p>
+                    <img src="public/images/index/title_r.png" />
+                </div>
+                <!--小标题-->
+                <div class="title2 zi18 text-center" style="margin-top:40px;">
+                    <p>
+                        职信链的Token是职信币（ZXC），它是职信链生态发布的数字资产通证，是职信链生态中的价值媒介单位，一定数量的ZXC，代表着一定数量的职信链生态使用权。
+                    </p>
+
+                </div>
+                <!--内容-->
+                <div class="title4 zi18 text-center" style="
+        border: 1px dashed #E8E8E8;
+        text-align: justify;
+        width: 810px;
+        margin: 50px auto;
+        line-height: 28px;
+        padding: 30px 60px;">
+                    <p>
+                        ZXC的存在，可使整个平台所有的交易行为、价值转移和信息传递同步进行，并受智能合约管控。不同的需求方，如用户、投资者、管理者等，需持有不同数量的ZXC，需求会激励 ZXC良性流动和循环。
+                    </p>
+
+                </div>
+                <div class="part3 text-center">
+                    <img src="public/images/investment/block2/block1.png" width="958"/>
+                </div>
+            </div>
+
+            <!--关于-->
+           <div class="section text-center" style="background: #fafafa; padding: 100px 0;">
+               <div>
+                   <h3>职信币的使用场景</h3>
+               </div>
+               <div style="white-space: pre-wrap; width: 900px;margin: 0 auto; font-size: 16px; line-height: 2 " class="text-left">
+
+1.	平台代币总量的30%主要是用来自动奖励职信评分优秀者的，企业可以单独购买职信币作为福利额外奖励给自己的职信优秀员工；
+2.	月度职信评分优秀者通过智能合约自动获得来自平台和来自企业的对优秀者的职信币奖励；
+3.	员工和企业主会进一步通过投资持有更多职信币实现资产的保值升值
+4.	基于职信币的增值和税收优势，企业对员工的奖金等会采用职信币进行发放。其中税收优势是基于当前多数政府视代币为商品而非货币。随着各国政策的不断调整，该项优势也会逐步调整；
+5.	生态对职信优秀者的奖励、社区贡献突出者的奖励用职信币进行奖励等；
+6.	生态中各类数据查询、调用、获取的场景中都可以通过职信币完成支付交易；
+7.	大多数对于生态成员的衍生服务，例如招聘求职、猎头、背景调查、信贷服务、保险服务、健康服务、培训服务、电商服务、社交服务，等等的获取也可以通过职信币支付交易；
+8.	平台个人代币发行服务开通后，数量众多的个人代币的初始募集锚定代币也是职信币，会产生大量的职信币需求，类似以太坊ERC20协议代币发行时对以太币的需求。
+企业和平台将Token应用到优秀员工的代币奖励场景，承载、彰显，也借力了人类社会最深层次、最具普遍性的共识力之一：好人好报因果律；职信链呈现的这种天然的社会共识力，将极大提高职信链、职信币的参与人的广度、深度、热度和持久度。
+职信微币（GAS）代表着职信链的更小的价值媒介代币单位，职信链上的应用操作，需要消耗一定的职信微币（GAS），例如查询一次职信数据等需要消耗职信链资源的操作，当然，在很多场景中社群用户也可以获得GAS的收益，例如：数据拥有着，资源输入者，或者职信高分者。
+职信微币（GAS）本质上是职信币（ZXC）的一个小单位计量方式。
+1职信币=1x108职信微币
+               </div>
+           </div>
+            <!--关于-->
+            <div class="section text-center" style="padding: 100px 0;">
+                <div>
+                    <h3>职信币的获取场景</h3>
+                </div>
+                <div style="white-space: pre-wrap; width: 900px;margin: 0 auto; font-size: 16px; line-height: 2 " class="text-left">
+
+1.	企业用户可获得一定的早期非公开兑换投资额度，以较低价格获得一定的代币，用于对自己职信优秀员工的月度奖励；
+2.	企业通过二级市场购入代币，或者将企业年度服务费转化为代币模式获得代币，或以社区建设突出贡献者模式获得代币，代币用于对自己优秀员工的奖励、奖金福利；
+3.	其他合格投资人可以通过早期非公开兑换投资获得；
+4.	其他投资人可通过二级市场交易获得；
+5.	职信评分优秀个人可通过智能合约模式自动获得来自平台和企业的代币奖励；
+6.	企业将福利奖金等通过职信币方式发放员工，员工获得代币；
+7.	任何用户可通过交易自己的信息数据或职信数字资产获得代币；
+8.	通过基于职信链生态提供各种应用开发、应用提供等获得：如招聘求职、猎头、背景调查、信贷服务、保险服务、健康服务、培训服务、电商服务、社交服务等。
+9.	个人代币发行服务开通后，数量众多的个人代币的初始募集锚定代币也是职信币，类似以太坊ERC20协议代币发行时对以太币的募集所得。
+ZXC总量是恒定的，不增发，不回收销毁。随着使用场景、使用人数和使用数量的快速持续增加，它的价值会呈现快速持续增长。
+
+
+                </div>
+            </div>
+
+
+<!--FOOTER2-->
+            <div id="footer" class="backBase">
+                <div class="tabAll">
+                    <div class="tabOne" style="float: left; width: 432px; height: 100%;">
+                        <div class="imgSpace" style="padding-top: 40px;"><img
+                                src="public/images/index/footer/tel.png"
+                                class="img"> <span>全国客服电话</span></div>
+                        <div class="textSpace"><p>400-6190828</p>
+                            <p>0532-80913319（总部）</p>
+                            <p>010-57493123（北京）</p></div>
+                        <div class="imgSpace"><img src="public/images/index/footer/time.png" class="img">
+                            <span>服务时间</span></div>
+                        <div class="textSpace"><span>周一至周日 09:00-18:00</span></div>
+                        <div class="imgSpace"><img src="public/images/index/footer/qq.png" class="img">
+                            <span>QQ客服</span>
+                        </div>
+                        <div class="textSpace"><span><a target="_blank"
+                                                        href="http://wpa.qq.com/msgrd?v=3&amp;uin=1458210635&amp;site=qq&amp;menu=yes">QQ号:1458210635</a></span>
+                        </div>
+                    </div>
+                    <div class="tabTwo" style="float: left; width: 414px; margin-top: 22px;">
+                        <div class="imgSpace"><img src="public/images/index/footer/add.png" class="img">
+                            <span>总部服务中心</span></div>
+                        <div class="textSpace"><p>青岛市新疆路8号中联自由港湾A座4楼中英金融科技孵化器</p></div>
+                        <div class="imgSpace" style="margin-top: 30px;"><img
+                                src="public/images/index/footer/add.png"
+                                class="img"> <span>北京分公司</span></div>
+                        <div class="textSpace"><p>北京市朝阳区光华路9号世贸天阶南区A座5楼国际大学创新联盟一带一路合作中心</p></div>
+                    </div>
+                    <div class="tabThree" style="float: left; width: 430px; height: 100%;">
+                        <div class="imgSpace"><img src="public/images/index/footer/logo2.png">
+                            <div style="padding-left: 60px; padding-top: 20px; color: rgb(223, 223, 223); font-size: 14px;">
+                                鲁ICP备17055140号-1
+                            </div>
+                        </div>
+                        <div class="imgFloat"><img
+                                src="public/images/qr.png"
+                                style="width: 80px;"> <span>微信公众号</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>平台首页</title>
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+    <!--[if lt ie 9]>
+    <script src="public/js/ie-lte9.js"></script>
+    <![endif ]-->
+    <link rel="stylesheet" href="public/css/outdatedBrowser.min.css">
+    <script src="public/js/outdatedBrowser.min.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+    <style>
+        #block-content1{
+            background: url(public/images/investment/block1/block1-banner.png) center no-repeat;
+            min-width: 1200px;
+            height:620px;
+        }
+        .block3-button a{
+            display: inline-block;
+            padding: 12px 24px;
+            color: #2d8cf0;
+            border:1px solid #2d8cf0;
+            width: 240px;
+            border-radius:4px;
+        }
+        .block3-button a:hover{
+            text-decoration: none;
+            color: #2d8cf0;
+        }
+        .wrap .component-index #header .menu li.cur a{
+            color: #FE8C5F;
+            font-weight: bold;
+        }
+        .wrap .component-index #header .menu {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrap" id="app">
+    <div class="component-index">
+        <!--头部-->
+        <div class="head_fixed" id="nav-container" style="overflow: hidden; box-shadow:0 1px 4px rgba(100,100,100,0.1)">
+            <div id="header">
+
+                <a href="Homepage.html">
+                    <img src="public/images/index/logo.png" alt="" class="logo" style="border: 0px;"/>
+                </a>
+                <ul id="menu" class="menu zi18">
+                    <li class="cur select"><a href="investment-index.html">关于职信链</a></li>
+                    <li class="select"><a href="investment-token.html">TOKEN运行机制</a></li>
+                    <li class="select"><a href="investment-screen.html">平台介绍</a></li>
+                    <li class="select"><a href="investment-advantage.html">我们的优势</a></li>
+                    <li class="select"><a href="investment-faq.html">FAQ</a></li>
+                    <li class="select"><a href="investment-schedule.html">进度规划</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--首页介绍内容-->
+        <div id="text_lt">
+            <a name="block-content1" style="display: inline-block;width: 100%;clear: both;height: 1px;"></a>
+            <div class="block-content1" id="block-content1">
+                <!--index 结束 头部 大banner-->
+            </div>
+
+            <style>
+                .investment-index-title{
+                    background: url(public/images/investment/block1/content-block-title1.png) center no-repeat;
+                    width: 959px;
+                    height: 81px;
+                    line-height: 81px;
+                    margin: 50px auto 10px;
+                    font-size: 20px;
+                }
+                .investment-index-title.block2{
+                    background: none;
+                }
+            </style>
+            <!--关于-->
+           <div class="section text-center">
+               <h1 style="padding-top: 100px;font-weight: normal;">职信链是什么</h1>
+               <div class="investment-index-title">
+                   职信链是一款基于区块链技术的职业信用数字资产平台
+               </div>
+               <div style="margin-bottom: 50px;">
+                   包括了6个方面价值定位：
+               </div>
+               <img src="public/images/investment/block1/content-block-invest-index-block1.png" width="1089" alt="" style="margin-bottom: 100px;margin-top: 50px;">
+           </div>
+
+            <!--关于2-->
+            <div class="section text-center" style="background: #fafafa;">
+                <h1 style="padding-top: 100px;font-weight: normal;">职信链整体生态</h1>
+                <div class="investment-index-title block2">
+                    （个人代币发行系统、各类职数据应用子系统、职数据生成共同组成职链整体生态）
+                </div>
+                <img src="public/images/investment/block1/content-block-invest-index-block2.png"  alt="" style="margin-top: 50px; margin-bottom: 50px;">
+
+                <div class="block3-button" style="padding-bottom: 150px; padding-top: 50px;">
+                    <a href="javascript:0;" class="click_detail">了解详细</a>
+                </div>
+            </div>
+
+            <!--关于3-->
+            <div class="section text-center" style="background: #442577;">
+                <img src="public/images/investment/block1/block4.png" width="1200" alt="">
+            </div>
+
+            <!--关于3-->
+            <div class="section text-center">
+                <img src="public/images/investment/block1/block5.png" width="1200" alt="">
+            </div>
+            <!--关于3-->
+            <div class="section text-center" style="background: #F5F5F5;">
+                <img src="public/images/investment/block1/block6.png" width="1200px" alt="">
+            </div>
+
+            <!--关于3-->
+            <div class="section text-center">
+                <img src="public/images/investment/block1/block7.png" width="1200" alt="">
+            </div>
+            <!--关于3-->
+            <div class="section text-center">
+                <img src="public/images/investment/block1/block8.png" width="1200" alt="">
+            </div>
+
+<!--FOOTER2-->
+            <div id="footer" class="backBase">
+                <div class="tabAll">
+                    <div class="tabOne" style="float: left; width: 432px; height: 100%;">
+                        <div class="imgSpace" style="padding-top: 40px;"><img
+                                src="public/images/index/footer/tel.png"
+                                class="img"> <span>全国客服电话</span></div>
+                        <div class="textSpace"><p>400-6190828</p>
+                            <p>0532-80913319（总部）</p>
+                            <p>010-57493123（北京）</p></div>
+                        <div class="imgSpace"><img src="public/images/index/footer/time.png" class="img">
+                            <span>服务时间</span></div>
+                        <div class="textSpace"><span>周一至周日 09:00-18:00</span></div>
+                        <div class="imgSpace"><img src="public/images/index/footer/qq.png" class="img">
+                            <span>QQ客服</span>
+                        </div>
+                        <div class="textSpace"><span><a target="_blank"
+                                                        href="http://wpa.qq.com/msgrd?v=3&amp;uin=1458210635&amp;site=qq&amp;menu=yes">QQ号:1458210635</a></span>
+                        </div>
+                    </div>
+                    <div class="tabTwo" style="float: left; width: 414px; margin-top: 22px;">
+                        <div class="imgSpace"><img src="public/images/index/footer/add.png" class="img">
+                            <span>总部服务中心</span></div>
+                        <div class="textSpace"><p>青岛市新疆路8号中联自由港湾A座4楼中英金融科技孵化器</p></div>
+                        <div class="imgSpace" style="margin-top: 30px;"><img
+                                src="public/images/index/footer/add.png"
+                                class="img"> <span>北京分公司</span></div>
+                        <div class="textSpace"><p>北京市朝阳区光华路9号世贸天阶南区A座5楼国际大学创新联盟一带一路合作中心</p></div>
+                    </div>
+                    <div class="tabThree" style="float: left; width: 430px; height: 100%;">
+                        <div class="imgSpace"><img src="public/images/index/footer/logo2.png">
+                            <div style="padding-left: 60px; padding-top: 20px; color: rgb(223, 223, 223); font-size: 14px;">
+                                鲁ICP备17055140号-1
+                            </div>
+                        </div>
+                        <div class="imgFloat"><img
+                                src="public/images/qr.png"
+                                style="width: 80px;"> <span>微信公众号</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        .mask-investment{
+            position: fixed;
+            left:0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
+            z-index:9;
+        }
+        .mask-investment .mask-body{
+            position: absolute;
+            padding: 45px;
+            background: #ffffff;
+
+            line-height: 1.5;
+            width: 900px;
+
+            left: 50%;
+            margin-left: -450px;
+            top: 100px;
+
+
+        }
+        .mask-investment .mask-body .content{
+            height: 550px;
+            overflow-y: auto;
+        }
+
+        .body-no-scroll{
+            overflow: hidden;
+        }
+    </style>
+    <div class="mask-investment" style="display: none;">
+        <div class="mask-body">
+
+            <div>
+                <h2 style="float: left;">职信链整体生态</h2>
+                <div class="investment-close" style="float: right; padding: 24px;font-size: 28px; margin-top: -14px;cursor: pointer;">
+                    X
+                </div>
+                <div class="clearFix"></div>
+            </div>
+
+            <div class="content">
+                <div>
+                    <h4>生态第一部分：职信数据生成</h4>
+                    <p>
+                        数据由企业发布产生。职信链企业用户，每月由企业方根据企业自身的评价体系和评价标准对员工做出职业表现和成效评价；在获得员工同意后，由企业相关职信链负责人员，将员工的当月职业履历信息，职业评价结果等发布到职信链上，形成企业的员工职业档案记录，例如员工基本信息、岗位信息、工作成绩、奖惩记录等等。
+                        通过企业给员工构建区块链信用档案，实现企业管理向员工自我管理的转变，极大提高企业管理效率。
+                    </p>
+                </div>
+
+                <div>
+                    <h4>生态第二部分：各类职信数据应用子系统</h4>
+                    <p>
+                        累积的可信个人职业信用数据，会成为个人宝贵的、影响一辈子的信用资产。
+                        这些信用数据和数字资产会在未来的求职、交友、求偶、信用贷款、保险、寻求合伙伙伴等等众多场合中起到极其重要的信用背书、增信作用，良好的职信链上的信用资产，会成为一个人一辈子的通行证、一辈子受用无穷的信用数字资产。
+
+                    </p>
+                </div>
+
+                <div>
+                    <h4>生态第三部分：个人代币发行系统</h4>
+                    <p>
+                        随着社会对token经济的接受度提高及监管政策的到位，社会必将迎来人人代币的自金融时代。
+                        就如同以太坊的ERC20协议代币发放环境支撑一样，优秀的个人将基于职信链上个人职场历史的信用数据背书，发放自己的个人代币token，获得前所未有的个人自金融服务。
+                        同时，其个人基于职信链对未来职场信用的呈现，也将成为其个人代币币值管理的重要依据和手段。
+                        职信链个人代币发行优于以太坊的地方在于，以太坊ERC20协议只提供了代币发行、登记和基于钱包地址的P2P交易；
+                        职信链个人代币发行基于个人过去职信和未来职信情况提供了类似股票上市中的会计师、律师、券商的信用背书和媒体披露。
+                        基于职信链的个人代币自金融，首先打破了过去金融中心化垄断，只要个人信用被认可，自己的代币就具备了被认可的基础，自己便具备了独立获得金融支持的能力；
+                        同时更重要的是，将真正彰显人的价值，打破个人由于家庭等造成的先天性资源不平等，呈现“人本”高于“资本”的人类价值新图景。
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //body-no-scroll
+    $('a.click_detail').on('click',function (e) {
+        e.stopPropagation();
+        $('.mask-investment').show();
+        $('body').addClass('body-no-scroll')
+    })
+    $('.mask-investment,.investment-close').on('click',function (e) {
+        e.stopPropagation();
+        $('.mask-investment').hide();
+        $('body').removeClass('body-no-scroll')
+    })
+    $('.mask-investment .mask-body').on('click',function (e) {
+        e.stopPropagation();
+    })
+
+
+</script>
+</body>
+</html>

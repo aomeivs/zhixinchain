@@ -67,13 +67,14 @@
                         <span onclick="window.location.href='#'">中文</span>
                         <span onclick="window.location.href='#'">EN</span>
                     </div>
-                    <li data-menuanchor="about" id="home2" class="cur select"><a href="#block-content1">关于职信链</a></li>
+                    <li data-menuanchor="about" id="home2" class="cur select"><a href="#block-content1">首页</a></li>
+                    <li class="select none"><a href="javascript:0;">关于职信链</a></li>
 
-                    <li data-menuanchor="technical" id="home6" class="select"><a href="#block-content4">应用场景</a></li>
-                    <li class="select"><a href="#block-content11">技术介绍</a></li>
-                    <li data-menuanchor="technical" id="home7" class="select"><a href="#block-content7">团队优势</a></li>
+                    <li data-menuanchor="technical" id="home6" class="select"><a href="#block-content4">应用</a></li>
+                    <li class="select"><a href="#block-content11">技术</a></li>
+                    <li data-menuanchor="technical" id="home7" class="select"><a href="#block-content7">我们的优势</a></li>
 
-                    <li data-menuanchor="technical" id="home3" class="select"><a href="#block-content5">常见问题</a></li>
+                    <li data-menuanchor="technical" id="home3" class="select"><a href="#block-content5">FAQ</a></li>
 
 
 
@@ -592,7 +593,7 @@
     new Component().$mount('#app')
 
 
-    var $aside = $("#header>ul>.select");
+    var $aside = $("#header>ul>.select").not('.none');
     var $section_pos = $("#content1,.block-content4,.block-content11,.block-content7,.block-content5");
     //    $aside.each(function (index) {
     //        $(this).on("click", function () {
