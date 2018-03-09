@@ -139,7 +139,17 @@
                                     <span><a href="http://bj.news.163.com/18/0209/16/DA7F2VNM043897TC.html">网易网•北京</a></span>
                                 </div>
                             </div>
-
+                            <div class="report-box">
+                                <div class="report">
+                                    <div class="report-img">
+                                        <img src="public/images/investment/reproted/21.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="report-title">
+                                    <span class="left">报道媒体</span>
+                                    <span><a href="http://www.jinse.com/blockchain/154277.html">金色财经•财经</a></span>
+                                </div>
+                            </div>
                             <div class="report-box">
                                 <div class="report">
                                     <div class="report-img">
@@ -343,28 +353,7 @@
                                     <span><a href="http://www.jinniu.cn/coinage-zxc-super-strong-landing-decision-gold-content/">金牛财经•财经</a></span>
                                 </div>
                             </div>
-                            <div class="report-box">
-                                <div class="report">
-                                    <div class="report-img">
-                                        <img src="public/images/investment/reproted/20.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="report-title">
-                                    <span class="left">报道媒体</span>
-                                    <span><a href="http://hy.stock.cnfol.com/bankuaijujiao/20180227/26066928.shtml">环球财富网•财经</a></span>
-                                </div>
-                            </div>
-                            <div class="report-box">
-                                <div class="report">
-                                    <div class="report-img">
-                                        <img src="public/images/investment/reproted/21.png" alt="">
-                                    </div>
-                                </div>
-                                <div class="report-title">
-                                    <span class="left">报道媒体</span>
-                                    <span><a href="http://www.jinse.com/blockchain/154277.html">金色财经•财经</a></span>
-                                </div>
-                            </div>
+
 
                             <div class="report-box">
                                 <div class="report">
@@ -442,6 +431,9 @@
             </div>
 
             <script>
+                $('.report-box a').on('click',function (e) {
+                    e.preventDefault();
+                })
                 $('.report-box').on('click',function () {
                     var link = $(this).find('a').attr('href');
                     window.open(link);
