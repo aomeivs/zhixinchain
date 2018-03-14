@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="public/js/rem.js"></script>
+    <link href="https://cdn.bootcss.com/Swiper/4.1.6/css/swiper.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="wrap">
+    <div class="header">
+        <div class="menu">
+            <div class="menu-control">
+                <img src="public/images/more.png" width="100%" alt="">
+            </div>
+            <div class="menu-area" style="display: none;">
+                <div data-href="investors-about.html">
+                    关于职信链
+                </div>
+                <div data-href="investors-report.html#report">
+                    媒体报道
+                </div>
+                <div data-href="investors-token.html#token">
+                    TOKEN机制
+                </div>
+                <div class="selected" data-href="investors-screen.html#screen">
+                    应用介绍
+                </div>
+                <div data-href="investors-advantage.html#advantage">
+                    优势
+                </div>
+                <div data-href="investors-faq.html#faq">
+                    FAQ
+                </div>
+                <div data-href="investors-schdule.html#schdule">
+                    进度
+                </div>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="public/images/logo.png" width="100%" alt="">
+        </div>
+    </div>
+
+    <div class="body screen" style="background: #ffffff;">
+
+        <img src="public/images/banner.png" width="100%" alt="">
+        <a href="#" name="screen"></a>
+        <div>
+            <img src="public/screen/screen-1.png" width="100%" alt="">
+        </div>
+        <div>
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="public/screen/m-e-1.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="public/screen/m-e-2.png" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="public/screen/m-e-3.png" alt="">
+                    </div>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <!--<div class="swiper-button-prev"></div>-->
+                <!--<div class="swiper-button-next"></div>-->
+
+                <!-- If we need scrollbar -->
+                <!--<div class="swiper-scrollbar"></div>-->
+            </div>
+        </div>
+
+        <div>
+            <img src="public/screen/screen-2.png" width="100%" alt="">
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <img src="public/images/footer-qr.png" alt="">
+        <p>
+            官方微信
+        </p>
+    </div>
+</div>
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/Swiper/4.1.6/js/swiper.min.js"></script>
+<script>
+    $(function () {
+//        控制菜单显示 与 隐藏
+        $('.menu-control').on('click',function () {
+            if($('.menu-area').css('display')=='block'){
+                $('.menu-area').hide()
+            }else{
+                $('.menu-area').show()
+            }
+        })
+
+        $('.menu-area div').on('click',function () {
+            $(this).addClass('selected');
+            $(this).siblings().removeClass('selected');
+            var _link=$(this).data('href');
+            window.location.href=_link;
+        })
+
+
+
+//        点击弹出职信链生态
+
+        $('.block1-2 .button').on('click',function () {
+            $('.mask').show();
+            $('body').css('position','fixed')
+        })
+        $('.mask .close').on('click',function () {
+            $(this).parents('.mask').hide();
+            $('body').css('position','static')
+        })
+
+        //initialize swiper when document ready
+        var mySwiper = new Swiper ('.swiper-container', {
+            // Optional parameters
+//            direction: 'vertical',
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+            }
+        })
+    })
+</script>
+</body>
+</html>
