@@ -44,10 +44,13 @@
 <div class="wrap" id="app">
     <div class="c-header">
         <div class="c-head-logo">
-            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+            <img src="public/images/wallet/logo2.png" alt="职信链LOGO">
         </div>
         <div class="c-head-menu" style="float: left; margin-left: 80px;">
             <ul class="head-menu-ul">
+                <li>
+                    <a href="#">职信链首页</a>
+                </li>
                 <li class="active">
                     <a href="#">创建钱包</a>
                 </li>
@@ -57,8 +60,14 @@
                 <li>
                     <a href="#">交易转账</a>
                 </li>
+
+                <li>
+                    <a href="#">安全退出</a>
+                </li>
+
             </ul>
         </div>
+
     </div>
     <div class="c-body">
         <!--生成钱包-->
@@ -76,16 +85,29 @@
                     <div class="wallet-password">
                         <i-form ref="form" :model="form" :rules="rules" inline>
                             <form-item prop="password" style="width: 520px;">
-                                <i-input class="wallet-password-1" v-model="form.password" size="large" placeholder="不要忘记保存！" :type="btnType">
-                                    <span slot="append" style="cursor: pointer;" v-on:click="showEyeHandler">
+                                <i-input class="wallet-password-1" v-model="form.password" size="large" placeholder="输入一个强密码（至少8位）！" :type="btnType">
+                                    <!--<span slot="append" style="cursor: pointer;" v-on:click="showEyeHandler">
                                         <template v-if="showEye">
                                             <Icon type="ios-eye-outline" style="margin: 0 15px;font-size: 24px;"></Icon>
                                         </template>
                                         <template v-else>
                                             <Icon type="ios-eye-outline" style="margin: 0 15px;font-size: 24px; color: #2d8cf0;"></Icon>
                                         </template>
-                                    </span>
+                                    </span>-->
                                 </i-input>
+
+                            </form-item>
+                            <form-item prop="password2" style="width: 520px;">
+                            <i-input class="wallet-password-1" v-model="form.password2" size="large" placeholder="请确认密码！" :type="btnType" style="margin-top:40px;">
+                                <!--<span slot="append" style="cursor: pointer;" v-on:click="showEyeHandler">
+                                    <template v-if="showEye">
+                                        <Icon type="ios-eye-outline" style="margin: 0 15px;font-size: 24px;"></Icon>
+                                    </template>
+                                    <template v-else>
+                                        <Icon type="ios-eye-outline" style="margin: 0 15px;font-size: 24px; color: #2d8cf0;"></Icon>
+                                    </template>
+                                </span>-->
+                            </i-input>
                             </form-item>
                         </i-form>
                     </div>
@@ -102,14 +124,27 @@
 <script>
     new Vue({
         data: function () {
+            const validatePassCheck = (rule, value, callback) => {
+                if (value === '') {
+                    callback(new Error('密码不能为空'));
+                } else if (value !== this.form.password) {
+                    callback(new Error('两次密码不相同'));
+                } else {
+                    callback();
+                }
+            };
             return {
                 form:{
                     password:'',
+                    password2:'',
                 },
                 rules:{
                     password: [
                         { required: true, message: '密码不能为空', trigger: 'blur' },
                         { type: 'string', min: 8, message: '长度不能少于8位', trigger: 'blur' }
+                    ],
+                    password2: [
+                        { validator: validatePassCheck, trigger: 'blur' }
                     ]
                 },
                 showEye:true,

@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>平台首页</title>
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
     <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
     <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
@@ -75,14 +75,15 @@
                     <li data-menuanchor="technical" id="home7" class="select"><a href="#block-content7">我们的优势</a></li>
 
                     <li data-menuanchor="technical" id="home3" class="select"><a href="#block-content5">FAQ</a></li>
+                    <li class="select" ><a href="#"style="position: relative;">钱包<div style="position: absolute; top: -16px; right: -8px;"><img src="public/images/nicon.png" alt=""></div></a></li>
 
 
 
 <!--                    <li data-menuanchor="buy" class="menu-buy" id="home5">购 买</li>-->
-                    <li data-menuanchor="team" class="menu-try" id="home4" style="margin-left: 40px;">试 用</li>
+                    <!--<li data-menuanchor="team" class="menu-try" id="home4" style="margin-left: 40px;">试 用</li>-->
 
 
-                    <li class="SignIn" style="display: none; width: auto;">
+                    <li class="SignIn" style="display: block; width: auto;">
                         <!--企业-->
                         <dropdown trigger="click" :visible="visible">
                             <a href="javascript:void(0)" @click.stop="handleOpen()">
@@ -141,11 +142,10 @@
                         </dropdown>
                     </li>
 
-                    <li class="loginAndSignIn" style="display: block;">
+                    <li class="loginAndSignIn" style="display: none;">
                         <span class="span1">登录</span>
                         <span class="span2">注册</span>
                     </li>
-
 
                 </ul>
                 <div style="clear: both"></div>
