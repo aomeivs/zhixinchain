@@ -100,10 +100,11 @@
                         <div class="wallet-password">
                             <div>你的地址：</div>
                             <div class="copy-block">
-                                <div>
-                                    <i-input class="wallet-password-1" v-model="add" readOnly size="large" placeholder="输入" type="text">
-                                    </i-input>
+                                <div style="border: 1px solid #d9d9d9; padding: 15px 8px; border-radius: 4px; margin-top: 20px;">
+                                    {{add}}
                                 </div>
+                                <!--<i-input class="wallet-password-1" v-model="add" readOnly size="large" placeholder="输入" type="text">-->
+                                <!--</i-input>-->
                                 <div class="wallet-key-copy add" data-clipboard-text="addXXX" v-on:click="copyCode(1)">
                                     <img src="public/images/wallet/icon-copy.png" width="16" style="cursor: pointer;" alt="">
                                 </div>
