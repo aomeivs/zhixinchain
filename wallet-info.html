@@ -67,38 +67,27 @@
         <!--保存私钥-->
         <div class="component-wallet">
             <div class="wallet-info">
-                <Card class="wallet-exchange-header" style="padding: 5px 15px;">
+                <Card class="wallet-exchange-header" style="padding-bottom: 0px;">
                     <div>
                     <span>
                         账户余额：
                     </span>
                     <span>
                         10 ETH
+                        <a href="#" style="font-size: 14px; margin-left: 40px;">
+                            交易历史
+                        </a>
                     </span>
                     <span style="float: right;">
                         钱包地址：0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4
+                                <div class="wallet-key-copy add" style="display: inline-block;" data-clipboard-text="addXXX" v-on:click="copyCode(1)">
+                                    <img src="public/images/wallet/icon-copy.png" width="16" style="margin-top:-4px;" alt="">
+                                </div>
                     </span>
                     </div>
 
                     <div style="margin-top: 10px;">
 
-                        <a href="#" style="font-size: 14px;">
-                            交易历史
-                        </a>
-                        <span style="float: right; font-size: 14px;">
-                            <a href="javascript:;" v-on:click="download" style="margin-right: 40px;">保存钱包文件</a>
-                            <span v-if="showEye">
-                                <a href="javascript:0;" v-on:click="showEyeHandler">查看私钥</a>
-                            </span>
-                            <span v-else>
-                                <a href="javascript:;" v-on:click="showEyeHandler">隐藏私钥</a>
-                                <input style="border: none; width: 340px; text-align: right" readonly v-model="password" />
-                                <div class="wallet-key-copy add" style="display: inline-block;" data-clipboard-text="addXXX" v-on:click="copyCode(1)">
-                                    <img src="public/images/wallet/icon-copy.png" width="12" style="margin-top:-4px;" alt="">
-                                </div>
-                            </span>
-
-                        </span>
                     </div>
                 </Card>
                 <Card class="wallet-exchange-body">
@@ -120,34 +109,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!--<div class="wallet-btn">
-                            <div style="margin-bottom: 20px;">保存钱包文件：</div>
-                            <i-button size="large" class="wallet-btn-1" type="primary" v-on:click="download">保存钱包文件</i-button>
-                        </div>-->
-
-                        <!--<div class="wallet-password">
-                            <div>私钥：</div>
-                            <div class="copy-block">
-                                <div>
-                                    <i-input class="wallet-password-1" v-model="password" size="large" readOnly placeholder="输入" :type="btnType">
-                            <span slot="append" style="cursor: pointer;" v-on:click="showEyeHandler">
-                                <template v-if="showEye">
-                                    <Icon type="ios-eye-outline" style="margin: 0 15px;font-size: 24px;"></Icon>
-                                </template>
-                                <template v-else>
-                                    <Icon type="ios-eye-outline" style="margin: 0 15px;font-size: 24px; color: #2d8cf0;"></Icon>
-                                </template>
-                            </span>
-                                    </i-input>
-                                </div>
-                                <div v-on:click="copyCode(2)"  data-clipboard-text="keyXXX" class="wallet-key-copy key">
-                                    <img src="public/images/wallet/icon-copy.png" width="16" alt="">
-                                </div>
-                            </div>
-
-                        </div>-->
-
 
                     </div>
                 </Card>
