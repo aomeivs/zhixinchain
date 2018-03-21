@@ -51,7 +51,7 @@ html .wrap .c-body .c-body-left .left-body-container .component-tree, body .wrap
         html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box > div.user-auth-status.org.wait, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box > div.user-auth-status.org.wait {
           color: #f44336; }
         html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box > div.user-auth-status.org.complete, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box > div.user-auth-status.org.complete {
-          color: #2196F3 !important; }
+          color: #2196F3; }
     html .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-icon, body .wrap .c-body .c-body-left .left-body-container .component-tree .employ-group .box .box-icon {
       float: left;
       width: 50px; }
@@ -1168,7 +1168,7 @@ html, body {
   html .wrap, body .wrap {
     width: 100%;
     height: 100%;
-    min-width: 1350px;
+    min-width: 1440px;
     /*公共头,菜单,搜索,退出,logo,*/
     /*body,left-tree,right-content*/ }
     html .wrap .c-header, body .wrap .c-header {
