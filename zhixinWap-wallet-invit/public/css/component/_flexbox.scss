@@ -1,0 +1,32 @@
+.flex-box{
+  @include flex-box;
+  flex-wrap: wrap;
+}
+.align-items{
+  @include align-items(center)
+}
+.justify-content{
+  @include justify-content(center);
+}
+.justify-content-end{
+  @include justify-content(flex-end);
+}
+.align-content{
+  @include align-content(center)
+}
+.flex1{
+  @include flex(1);
+}
+.flex2{
+  @include flex(2);
+}
+.flex4{
+  @include flex(4);
+}
+.flex6{
+  @include flex(6);
+}
+
+.flex100{
+  @include flex(3.2rem);
+}

@@ -1,0 +1,32 @@
+//flexbox
+@mixin flex-box{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+}
+
+//注意，align-items,justify-content 为交叉轴X，Y对齐方法。而align-content为 多列内容后，子内容对齐图片管理。
+
+//x轴的纵向对齐，也是就EL和最高的flexbox对齐,对flex,flexbox操作
+@mixin align-items($arg:center){
+  -webkit-align-items: $arg;
+  align-items: $arg;
+}
+//x轴，对单flexbox、组flexbox，上下预留空白的操作
+@mixin align-content($arg:center){
+  -webkit-align-content: $arg;
+  align-content: $arg;
+}
+//y轴
+@mixin justify-content($arg:center){
+  -webkit-justify-content: $arg;
+  justify-content: $arg;
+  justify-content: $arg;
+}
+
+//列，缩放，拓展
+@mixin flex($grow:1,$shrink:0,$basis:0){
+  -webkit-box-flex:$grow $shrink $basis;
+  -webkit-flex:$grow $shrink $basis;
+  flex:$grow $shrink $basis;
+}

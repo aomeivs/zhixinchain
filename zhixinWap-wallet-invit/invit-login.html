@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="public/js/rem.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+
+    <div class="body register">
+        <div class="banner">
+            <img src="public/images/invite/invite-regist-1.png" width="100%" alt="">
+        </div>
+        <form action="" id="myform">
+            <div class="register">
+            <div style="margin-top: 10px;">
+                <input type="text" class="input fill" name="_card" placeholder="请输入身份证号码" value="" />
+            </div>
+            <div style="margin-top: 20px;">
+                <input type="text" class="input fill" name="_pwd" placeholder="请输入密码">
+            </div>
+
+
+            <div class="flex-box register-form5">
+                <div class="flex2 argee2">
+                    <a href="#">找回密码</a>
+                </div>
+                <div class="flex2 argee2">
+                    <a href="#">直接登录</a>
+                </div>
+            </div>
+            <div class="register-form6">
+                <button class="button" id="_rule" type="button">登录</button>
+            </div>
+        </div>
+        </form>
+    </div>
+
+
+</div>
+
+<div class="mask" style="display: none;">
+    <div class="mask-contaner">
+        <div class="header">
+            职信链整体生态
+            <div class="close">
+                X
+            </div>
+        </div>
+        <div class="body">
+            <div class="text-area">
+                <div class="title">
+                    生态第一部分：职信数据生成
+                </div>
+                <div class="des">
+                    数据由企业发布产生。职信链企业用户，每月由企业方根据企业自身的评价体系和评价标准对员工做出职业表现和成效评价；在获得员工同意后，由企业相关职信链负责人员，将员工的当月职业履历信息，职业评价结果等发布到职信链上，形成企业的员工职业档案记录，例如员工基本信息、岗位信息、工作成绩、奖惩记录等等。
+                    通过企业给员工构建区块链信用档案，实现企业管理向员工自我管理的转变，极大提高企业管理效率。
+
+                </div>
+            </div>
+            <div class="text-area">
+                <div class="title">
+                    生态第二部分：各类职信数据应用子系统
+                </div>
+                <div class="des">
+                    累积的可信个人职业信用数据，会成为个人宝贵的、影响一辈子的信用资产。
+                    这些信用数据和数字资产会在未来的求职、交友、求偶、信用贷款、保险、寻求合伙伙伴等等众多场合中起到极其重要的信用背书、增信作用，良好的职信链上的信用资产，会成为一个人一辈子的通行证、一辈子受用无穷的信用数字资产。
+                </div>
+            </div>
+            <div class="text-area">
+                <div class="title">
+                    生态第三部分：个人代币发行系统
+                </div>
+                <div class="des">
+                    随着社会对token经济的接受度提高及监管政策的到位，社会必将迎来人人代币的自金融时代。
+                    就如同以太坊的ERC20协议代币发放环境支撑一样，优秀的个人将基于职信链上个人职场历史的信用数据背书，发放自己的个人代币token，获得前所未有的个人自金融服务。
+                    同时，其个人基于职信链对未来职场信用的呈现，也将成为其个人代币币值管理的重要依据和手段。
+                    职信链个人代币发行优于以太坊的地方在于，以太坊ERC20协议只提供了代币发行、登记和基于钱包地址的P2P交易；
+                    职信链个人代币发行基于个人过去职信和未来职信情况提供了类似股票上市中的会计师、律师、券商的信用背书和媒体披露。
+                    基于职信链的个人代币自金融，首先打破了过去金融中心化垄断，只要个人信用被认可，自己的代币就具备了被认可的基础，自己便具备了独立获得金融支持的能力；
+                    同时更重要的是，将真正彰显人的价值，打破个人由于家庭等造成的先天性资源不平等，呈现“人本”高于“资本”的人类价值新图景。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery-validate/1.15.0/jquery.validate.js"></script>
+<script src="https://cdn.bootcss.com/layer/3.1.0/mobile/layer.js"></script>
+<script>
+    //    封装layer mobile
+    layer.msg=function(content){
+        layer.open({
+            content: content
+            ,skin: 'msg'
+            ,time: 2 //2秒后自动关闭
+        });
+    }
+
+    $(function () {
+
+//        点击弹出职信链生态
+
+        $('.block1-2 .button').on('click',function () {
+            $('.mask').show();
+            $('body').css('position','fixed')
+        })
+        $('.mask .close').on('click',function () {
+            $(this).parents('.mask').hide();
+            $('body').css('position','static')
+        })
+
+    })
+    $(function(){
+
+        // 联系电话(手机/电话/邮箱皆可)验证
+
+        jQuery.validator.addMethod("IDCARD", function (value, element) {
+            return this.optional(element) ||/^\d{18}$|^\d{17}(x|X)$/.test(value);
+        }, "请填写合法的身份证号!");
+        jQuery.validator.addMethod("PHONE", function (value, element) {
+            return this.optional(element) ||/^\d{11}$/.test(value);
+        }, "请填写合法的手机号!");
+        jQuery.validator.addMethod("PWD", function (value, element) {
+            return this.optional(element) ||(value.length>=6&&value.length<=16);
+        }, "密码长度不正确!");
+
+        //验证规则
+        var my_r = {
+            '_card': {required: true,IDCARD:true},
+            '_pwd': {required: true,PWD:true},
+        }
+        //提示信息
+        var my_m = {
+            '_card': {required: '身份证不能为空',IDCARD:'身份证格式不正确'},
+            '_pwd': {required: '密码不能为空',PWD:'密码长度不正确'},
+        }
+        var validator = myValidate('#myform', my_r, my_m);
+
+        $('#_rule').click(function(){
+            if(validator.form()){
+                $.ajax({
+                    type: 'POST',
+                    url: '#',
+                    dataType: "json",
+                    data: $('#myform').serialize(),
+                    success: function (data) {
+                        if (data.validate) {
+                            location.href = data.url;
+                        } else {
+                            layer.msg(data.message)
+                        }
+                    },
+                    error: function () {
+                        layer.msg('我去，怎么出这个错，快刷新试试！')
+                    }
+                })
+            }
+//            }
+        })
+
+        //    form非submit验证ajax实现，据说是官方标准
+        function myValidate(form, my_r, my_m) {
+            return $(form).validate({
+                //        debug:true,
+                //        onsubmit: false,
+                onkeyup: false,
+                onclick: false,
+                onfocusout: false,
+                invalidHandler: function () {
+                    return false;
+                },
+                submitHandler: function (form) {
+                    return false;//阻止表单提交
+                },
+                rules: my_r,//规则验证开启
+                messages: my_m,//提示信息
+                showErrors: function (errorMap, errorList) {
+                    //console.log(errorList.length)
+                    !errorList.length || layer.msg(errorList[0].message);
+                }
+            });
+        }
+    })
+</script>
+</body>
+</html>

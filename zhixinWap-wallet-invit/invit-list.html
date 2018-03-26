@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="public/js/rem.js"></script>
+</head>
+<body style="background:#F1F1F1;">
+
+<div class="wrap">
+
+    <div class="header flex-box align-items">
+        <div class="back-arrow" onclick="history.back()">
+            <img src="public/images/invite/invite-arrow-left.png" width="12" alt="">
+        </div>
+        <div class="title text-center flex1">
+            收支明细
+        </div>
+    </div>
+
+    <div class="body invite">
+        <div class="record-coin">
+            <div class="record-list">
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+            </div>
+            <div class="text-center click-more" style="padding-top: 10px;">
+                点击查看更多
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="https://cdn.bootcss.com/layer/3.1.0/mobile/layer.js"></script>
+<script>
+    //    封装layer mobile
+    layer.msg=function(content){
+        layer.open({
+            content: content
+            ,skin: 'msg'
+            ,time: 2 //2秒后自动关闭
+        });
+    }
+    
+    $(function () {
+
+        $('.click-more').on('click',function () {
+
+            $.ajax({
+                url:'data.json',
+                method:'POST',
+                data:{},
+                dataType:'json'
+            }).done(function (result) {
+
+                if(result.type==='success'&&result.data.length){
+                    var html="";
+                    for(var i=0;i<result.data.length;i++){
+                        html+='<div class="item flex-box">' +
+                            '<div class="i-type flex1">'+result.data[i].key+'</div>' +
+                            '<div class="i-count flex1">'+result.data[i].value+'</div>' +
+                            '<div class="i-date flex1 text-right">'+result.data[i].date+'</div>' +
+                            '</div>'
+                    }
+                    $('.record-list').append(html)
+                    if(result.data.length<10){
+                        $('.click-more').text('没有更多')
+                    }else{
+                        $('.click-more').text('点击获取更多')
+                    }
+                }else{
+                    $('.click-more').text('没有更多')
+                }
+
+            }).fail(function (err) {
+                console.log(err)
+            })
+
+
+        })
+//        $(window).scroll(function () {
+//            return;
+//            var wH = $(window).height();
+//            var listH = $('.record-list').height();
+//            var wScrollTop = $(window).scrollTop();
+//            if(listH-wScrollTop+50<=wH){
+//
+//            }
+//        })
+    })
+</script>
+</body>
+</html>

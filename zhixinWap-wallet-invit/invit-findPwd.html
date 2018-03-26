@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="public/js/rem.js"></script>
+</head>
+<body>
+
+<div class="wrap">
+
+
+    <div class="body register">
+        <div class="banner">
+            <img src="public/images/invite/invite-regist-1.png" width="100%" alt="">
+        </div>
+        <form action="" id="myform">
+        <div class="register">
+            <div style="margin: 20px auto 30px;">
+                <input type="text" class="input fill" name="_phone" placeholder="请输入注册时使用的手机号" value="" />
+            </div>
+            <div class="register-form6">
+                <button class="button" type="button" id="_rule">找回密码</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery-validate/1.15.0/jquery.validate.js"></script>
+<script src="https://cdn.bootcss.com/layer/3.1.0/mobile/layer.js"></script>
+<script>
+    //    封装layer mobile
+    layer.msg=function(content){
+        layer.open({
+            content: content
+            ,skin: 'msg'
+            ,time: 2 //2秒后自动关闭
+        });
+    }
+    $(function () {
+
+//        点击弹出职信链生态
+
+        $('.block1-2 .button').on('click',function () {
+            $('.mask').show();
+            $('body').css('position','fixed')
+        })
+        $('.mask .close').on('click',function () {
+            $(this).parents('.mask').hide();
+            $('body').css('position','static')
+        })
+    })
+
+    $(function(){
+
+        // 联系电话(手机/电话/邮箱皆可)验证
+        jQuery.validator.addMethod("PHONE", function (value, element) {
+            return this.optional(element) ||/^\d{11}$/.test(value);
+        }, "请填写合法的手机号!");
+
+        //验证规则
+        var my_r = {
+            '_phone': {required: true,PHONE:true},
+        }
+        //提示信息
+        var my_m = {
+            '_phone': {required: '手机号不能为空',PHONE:'手机号格式不正确'},
+        }
+        var validator = myValidate('#myform', my_r, my_m);
+
+        $('#_rule').click(function(){
+            if(validator.form()){
+                $.ajax({
+                    type: 'POST',
+                    url: '#',
+                    dataType: "json",
+                    data: $('#myform').serialize(),
+                    success: function (data) {
+                        if (data.validate) {
+                            location.href = data.url;
+                        } else {
+                            layer.msg(data.message)
+                        }
+                    },
+                    error: function () {
+                        layer.msg('我去，怎么出这个错，快刷新试试！')
+                    }
+                })
+            }
+//            }
+        })
+
+        //    form非submit验证ajax实现，据说是官方标准
+        function myValidate(form, my_r, my_m) {
+            return $(form).validate({
+                //        debug:true,
+                //        onsubmit: false,
+                onkeyup: false,
+                onclick: false,
+                onfocusout: false,
+                invalidHandler: function () {
+                    return false;
+                },
+                submitHandler: function (form) {
+                    return false;//阻止表单提交
+                },
+                rules: my_r,//规则验证开启
+                messages: my_m,//提示信息
+                showErrors: function (errorMap, errorList) {
+                    //console.log(errorList.length)
+                    !errorList.length || layer.msg(errorList[0].message);
+                }
+            });
+        }
+    })
+</script>
+</body>
+</html>

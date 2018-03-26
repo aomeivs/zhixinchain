@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="public/js/rem.js"></script>
+</head>
+<body style="background:#F1F1F1;">
+
+<div class="wrap">
+
+    <div class="header flex-box align-items">
+        <div class="back-arrow">
+            <img src="public/images/invite/invite-arrow-left.png" width="12" alt="">
+        </div>
+        <div class="title text-center flex1">
+            我的职信币
+        </div>
+    </div>
+
+    <div class="body invite">
+        <div class="zxc-total text-center">
+            <div style="padding-top: 0.35rem;">
+                职信币总数
+            </div>
+            <div class="my-total">
+                90ZXC
+            </div>
+        </div>
+        <div class="zxc-inviteCode text-center">
+            <div class="inviteCode-1">
+                我的邀请链接
+            </div>
+            <div class="flex-box align-items">
+                <div class="button flex-box  align-items justify-content">
+                    <span>https://etu.io/i/yoOdEYdV</span>
+                </div>
+                <div class="flex1">
+                    <img src="public/images/invite/invite-code-copy.png" width="14" alt="" class="invite-key-copy"  data-clipboard-text="https://etu.io/i/yoOdEYdV">
+                </div>
+            </div>
+
+            <div class="inviteCode-3">
+                分享此链接邀请好友注册职信链，每成功注册一位便可领取20 ZXC，奖励叠加无上限！
+            </div>
+        </div>
+        <div class="record-coin">
+            <div class="record-head flex-box">
+                <div class="flex1">收支明细</div>
+                <div class="flex1 text-right" onclick="location.href='invit-list.html'">更多</div>
+            </div>
+            <div class="record-list">
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+                <div class="item flex-box">
+                    <div class="i-type flex1">注册</div>
+                    <div class="i-count flex1">+50ZXC</div>
+                    <div class="i-date flex1 text-right">2018-03-20</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="qr-code text-center">
+            <div class="qr-code1">
+                <img src="public/images/invite/weixin-qr-code.png" width="92" alt="">
+            </div>
+            <div class="qr-code2">
+                扫描二维码关注“职信链”微信公众号，更多福利活动同步进行中
+                <br>
+                活动时间：2018年3月20日——2018年3月26日
+                <br>
+                本活动最终解释权归职信链基金会所有，活动细则请参看官方微信公众号公告
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mask" style="display: block;">
+    <div class="mask-contaner">
+        <div class="header">
+            <div class="close">
+                <img src="public/images/invite/invite-layer-close.png" width="20" alt="">
+            </div>
+        </div>
+        <div class="body">
+            <div class="text-area text-center">
+                <div class="body-1">
+                    <img src="public/images/invite/invite-layer-tip.png" alt="">
+                </div>
+                <div class="body-2">
+                    50ZXC
+                </div>
+                <div class="body-3">
+                    小小心意，已存入您的职信链账户
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="https://cdn.bootcss.com/layer/3.1.0/mobile/layer.js"></script>
+<script>
+    //    封装layer mobile
+    layer.msg=function(content){
+        layer.open({
+            content: content
+            ,skin: 'msg'
+            ,time: 2 //2秒后自动关闭
+        });
+    }
+
+    $(function () {
+
+//        点击弹出职信链生态
+
+        $('.block1-2 .button').on('click',function () {
+            $('.mask').show();
+            $('body').css('position','fixed')
+        })
+        $('.mask .close').on('click',function () {
+            $(this).parents('.mask').hide();
+            $('body').css('position','static')
+        })
+
+
+        $('.invite-key-copy').on('click',function () {
+            var clipboard = new Clipboard('.invite-key-copy');
+            clipboard.on('success', function(e) {
+                console.log(0)
+                layer.msg('复制成功！')
+                console.info('Action:', e.action);
+                console.info('Text:', e.text);
+                console.info('Trigger:', e.trigger);
+
+                e.clearSelection();
+                clipboard.destroy();
+            });
+
+            clipboard.on('error', function(e) {
+                layer.msg('复制失败，请手动复制！')
+                console.error('Action:', e.action);
+                console.error('Trigger:', e.trigger);
+                clipboard.destroy();
+            });
+        })
+
+    })
+</script>
+</body>
+</html>
