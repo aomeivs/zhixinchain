@@ -122,6 +122,8 @@
 <script src="http://cdn.bootcss.com/jquery-validate/1.15.0/jquery.validate.js"></script>
 <script src="https://cdn.bootcss.com/layer/3.1.0/mobile/layer.js"></script>
 <script src="public/js/send_code.js"></script>
+<!-- 引入 gt.js，既可以使用其中提供的 initGeetest 初始化函数 -->
+<script src="public/js/libs/gt.js"></script>
 <script>
 //    封装layer mobile
     layer.msg=function(content){
@@ -202,12 +204,9 @@
 //                $('#myform').submit();
 //            }
         })
-        //send-code
-        $ht_yanzheng.click(function(){
-            if(validator.element("#_phone")){
-                sendMessage();
-            }
-        })
+
+
+
         //    form非submit验证ajax实现，据说是官方标准
         function myValidate(form, my_r, my_m) {
             return $(form).validate({
@@ -230,8 +229,95 @@
                 }
             });
         }
-    })
 
+
+
+
+        //    极验证
+        $.ajax({
+            url: "http://192.168.8.241:9977/gt/register-click?t=" + (new Date()).getTime(), // 加随机数防止缓存
+            type: "get",
+            dataType: "json",
+            success: function (data) {
+
+                // 调用 initGeetest 进行初始化
+                // 参数1：配置参数
+                // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它调用相应的接口
+                initGeetest({
+                    // 以下 4 个配置参数为必须，不能缺少
+                    gt: data.gt,
+                    challenge: data.challenge,
+                    offline: !data.success, // 表示用户后台检测极验服务器是否宕机
+                    new_captcha: data.new_captcha, // 用于宕机时表示是新验证码的宕机
+
+                    product: "bind", // 产品形式，包括：float，popup
+                    width: "300px"
+                    // 更多前端配置参数说明请参见：http://docs.geetest.com/install/client/web-front/
+                }, handler);
+            }
+        });
+
+        var handler = function (captchaObj) {
+            captchaObj.appendTo('#captcha');
+            captchaObj.onReady(function () {
+            });
+
+            //send-code
+            $ht_yanzheng.click(function(){
+                if(validator.element("#_phone")){
+                    captchaObj.verify();
+                }
+            })
+
+            captchaObj.onSuccess(function () {
+                var result = captchaObj.getValidate();
+                if (!result) {
+                    return alert('请完成验证');
+                }
+                // 用户验证成功后，进行实际的提交行为
+                $.ajax({
+                    url: 'http://192.168.8.241:9977/gt/validate-click',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: {
+                        username: $('#username2').val(),
+                        password: $('#password2').val(),
+                        geetest_challenge: result.geetest_challenge,
+                        geetest_validate: result.geetest_validate,
+                        geetest_seccode: result.geetest_seccode
+                    },
+                    success: function (data) {
+                        if (data.status === 'success') {
+                            alert('正在请求验证码发送~~');
+
+//                        验证成功后，再干点什么好呢~发送接口肯定不能写在这里了
+                            $.ajax({
+                                type: 'POST',
+                                url: '#',
+                                dataType: "json",
+                                data: $('#myform').serialize(),
+                                success: function (data) {
+                                    if (data.validate) {
+                                        location.href = data.url;
+                                    } else {
+                                        layer.msg(data.message)
+                                    }
+                                },
+                                error: function () {
+                                    layer.msg('我去，怎么出这个错，快刷新试试！')
+                                }
+                            })
+
+
+                        } else if (data.status === 'fail') {
+                            alert('登录失败，请完成验证');
+                            captchaObj.reset();
+                        }
+                    }
+                });
+            })
+        };
+    })
 </script>
 </body>
 </html>
