@@ -51,13 +51,13 @@
         </div>
         <div class="c-head-menu" style="float: left; margin-left: 80px;">
             <ul class="head-menu-ul">
-                <li>
+                <li v-on:click="addClass(1)" :class="{'active':addActive==1}">
                     <a href="#">创建钱包</a>
                 </li>
-                <li class="active">
+                <li v-on:click="addClass(2)"  :class="{'active':addActive==2}">
                     <a href="#">查看钱包</a>
                 </li>
-                <li>
+                <li v-on:click="addClass(3)" :class="{'active':addActive==3}">
                     <a href="#">交易转账</a>
                 </li>
             </ul>
@@ -65,8 +65,15 @@
     </div>
     <div class="c-body">
         <!--保存私钥-->
+        <Alert show-icon style="width: 1080px; margin: 30px auto;">
+            提醒:
+            <span slot="desc">
+                    请使用电脑浏览器使用本钱包，暂不支持在手机上使用，APP版本钱包会在近期开放。
+                </span>
+        </Alert>
         <div class="component-wallet">
             <div class="wallet-info">
+
                 <Card class="wallet-exchange-header" style="padding-bottom: 0px;">
                     <div>
                     <span>
@@ -111,6 +118,38 @@
                             </div>
                         </div>
 
+                        <div style="width: 520px; margin: 20px auto;">
+                            <a href="javascript:;" v-on:click="showEyeHandler">备份钱包文件及私钥</a>
+
+                        </div>
+                        <div style="width: 520px; margin: 20px auto; border:1px dashed #d9d9d9; padding: 15px;" v-if="!showEye">
+
+                            <div style="margin-top: 20px;">
+                                <table>
+                                    <tr>
+                                        <td>输入密码： </td>
+                                        <td><input type="password" placeholder="请输入密码" style="border: 1px solid #d9d9d9; padding:10px;" v-model="password"></td>
+                                        <td>
+                                            <button type="button" style="padding: 10px;border: none;background: #2d8cf0; color: #fff;" v-on:click="downloadValidate()">
+                                                下载钱包文件
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div style="margin-top: 20px;margin-bottom: 20px;">
+                                <table>
+                                    <tr>
+                                        <td>查看私钥： </td>
+                                        <td>{{add}}</td>
+                                        <td>
+                                            <img src="public/images/wallet/icon-copy.png" width="16" style="cursor: pointer;margin-left: 8px;" alt="" class="wallet-key-copy key"  data-clipboard-text="addXXX" v-on:click="copyCode(2)">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
                     </div>
                 </Card>
             </div>
@@ -128,7 +167,9 @@
                 password:'0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4',
                 add:'0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4',
                 showEye:true,
-                btnType:'password'
+                btnType:'password',
+                addActive:2,
+                password:''
             }
         },
         methods: {
@@ -144,18 +185,21 @@
                 if(v===1){
                     var clipboard = new Clipboard('.wallet-key-copy.add');
                     clipboard.on('success', function(e) {
+                        console.log(0)
                         layer.msg('复制成功！')
                         console.info('Action:', e.action);
                         console.info('Text:', e.text);
                         console.info('Trigger:', e.trigger);
 
                         e.clearSelection();
+                        clipboard.destroy();
                     });
 
                     clipboard.on('error', function(e) {
                         layer.msg('复制失败，请手动复制！')
                         console.error('Action:', e.action);
                         console.error('Trigger:', e.trigger);
+                        clipboard.destroy();
                     });
                 }else{
                     var clipboard = new Clipboard('.wallet-key-copy.key');
@@ -166,22 +210,44 @@
                         console.info('Trigger:', e.trigger);
 
                         e.clearSelection();
+                        clipboard.destroy();
                     });
 
                     clipboard.on('error', function(e) {
                         layer.msg('复制失败，请手动复制！')
                         console.error('Action:', e.action);
                         console.error('Trigger:', e.trigger);
+                        clipboard.destroy();
                     });
                 }
             },
             download(){
                 window.location.href='d.zip'
+            },
+            downloadValidate(){
+              if(this.password==123456789){
+                  this.download()
+              }else{
+                  this.password='';
+                  this.$Message.info('This is a info tip');
+              }
+            },
+            addClass(v){
+               this.addActive=v;
+
             }
+        },
+        mouted:function () {
+
         }
     }).$mount('#app')
 </script>
-
+<script>
+//    $('.head-menu-ul li').on('click',function () {
+//        $(this).addClass('active');
+//        $(this).siblings().removeClass('active');
+//    })
+</script>
 
 </body>
 </html>
