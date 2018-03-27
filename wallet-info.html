@@ -122,32 +122,45 @@
                             <a href="javascript:;" v-on:click="showEyeHandler">备份钱包文件及私钥</a>
 
                         </div>
-                        <div style="width: 520px; margin: 20px auto; border:1px dashed #d9d9d9; padding: 15px;" v-if="!showEye">
-
-                            <div style="margin-top: 20px;">
-                                <table>
-                                    <tr>
-                                        <td>输入密码： </td>
-                                        <td><input type="password" placeholder="请输入密码" style="border: 1px solid #d9d9d9; padding:10px;" v-model="password"></td>
-                                        <td>
-                                            <button type="button" style="padding: 10px;border: none;background: #2d8cf0; color: #fff;" v-on:click="downloadValidate()">
-                                                下载钱包文件
-                                            </button>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
+                        <div style="width: 520px; margin: 20px auto; border:1px dashed #d9d9d9; padding: 15px;" v-if="showEye">
                             <div style="margin-top: 20px;margin-bottom: 20px;">
                                 <table>
                                     <tr>
-                                        <td>查看私钥： </td>
+                                        <td>私钥： </td>
                                         <td>{{add}}</td>
                                         <td>
-                                            <img src="public/images/wallet/icon-copy.png" width="16" style="cursor: pointer;margin-left: 8px;" alt="" class="wallet-key-copy key"  data-clipboard-text="addXXX" v-on:click="copyCode(2)">
+                                            <img src="public/images/wallet/icon-copy.png" width="16" style="cursor: pointer;margin-left: 8px;   " alt="" class="wallet-key-copy key"  data-clipboard-text="addXXX" v-on:click="copyCode(2)">
                                         </td>
                                     </tr>
                                 </table>
                             </div>
+                            <div style="margin-top: 20px;">
+                                <table>
+                                    <tr>
+                                        <td>密码： </td>
+                                        <td colspan="2"><input type="password" placeholder="请输入密码" style="border: 1px solid #d9d9d9; padding:10px; width: 100%;" v-model="password"></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="password" placeholder="请输入密码" style="    margin-top: 20px;border: 1px solid #d9d9d9; padding:10px;    width: 200px;" v-model="password2"></td>
+                                        <td>
+                                            <button type="button" style="    margin-top: 20px;padding: 10px;border: none;background: #2d8cf0; color: #fff;" v-on:click="downloadValidate()">
+                                                重新生成钱包文件
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td colspan="2">
+                                            <div style="color:#c9302c; font-size: 14px; margin-top: 20px; width: 340px;">
+                                                如果您丢失了钱包文件，可以在这里重新生成和备份钱包文件，请牢记密码
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                            </div>
+
                         </div>
 
                     </div>
@@ -169,7 +182,8 @@
                 showEye:true,
                 btnType:'password',
                 addActive:2,
-                password:''
+                password:'',
+                password2:''
             }
         },
         methods: {
@@ -229,6 +243,7 @@
                   this.download()
               }else{
                   this.password='';
+                  this.password2='';
                   this.$Message.warning('密码不正确');
               }
             },
