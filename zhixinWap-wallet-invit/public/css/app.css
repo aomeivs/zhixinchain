@@ -154,6 +154,12 @@ html, body {
   .wrap .body.invite {
     background: #f1f1f1;
     padding-bottom: .15rem; }
+    .wrap .body.invite .my-invite-code {
+      display: inline-block;
+      width: 2.8rem;
+      padding: 10px 0;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     .wrap .body.invite .zxc-total {
       background: url("../images/invite/invite-my-bg.png") 0 0 no-repeat;
       background-size: 3.75rem 1.54rem;
