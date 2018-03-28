@@ -111,6 +111,13 @@ html,body{
       }
     }
     &.invite{
+      .my-invite-code{
+        display: inline-block;
+        width: 2.8rem;
+        padding: 10px 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
       background: #f1f1f1;
       padding-bottom: .15rem;
       .zxc-total{
