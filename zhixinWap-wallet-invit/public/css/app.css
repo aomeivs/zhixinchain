@@ -119,6 +119,7 @@ html, body {
     .wrap .header .back-arrow {
       position: absolute;
       width: .4rem;
+      top: .13rem;
       text-align: center; }
     .wrap .header .title {
       color: #ffffff;
@@ -160,6 +161,18 @@ html, body {
       padding: 10px 0;
       overflow: hidden;
       text-overflow: ellipsis; }
+    .wrap .body.invite .exchange-btn {
+      background: rgba(255, 255, 255, 0);
+      border: 1px solid #E5B86D;
+      border-radius: 2px;
+      width: .88rem;
+      height: .30rem;
+      position: absolute;
+      color: #E5B86D;
+      right: .2rem;
+      top: 50%;
+      margin-top: -0.15rem;
+      font-size: .13em; }
     .wrap .body.invite .zxc-total {
       background: url("../images/invite/invite-my-bg.png") 0 0 no-repeat;
       background-size: 3.75rem 1.54rem;
@@ -210,6 +223,35 @@ html, body {
         width: 3.2rem;
         margin: 0 auto;
         text-align: left; }
+  .wrap .body.exchange .body-1 {
+    border: 1px dashed #d9d9d9;
+    width: 3rem;
+    margin: 0 auto;
+    padding: .15rem;
+    font-size: .14rem;
+    line-height: 1.5;
+    margin-top: 20px; }
+  .wrap .body.exchange .body-2 {
+    width: 3.3rem;
+    margin: 0 auto; }
+    .wrap .body.exchange .body-2 .b2-wallet-title {
+      padding: .15rem 0; }
+    .wrap .body.exchange .body-2 .b2-wallet-add textarea {
+      border: 1px solid #E5B86D;
+      border-radius: 4px;
+      width: 3rem;
+      padding: .15rem; }
+    .wrap .body.exchange .body-2 .b2-wallet-add .desc {
+      padding: .15rem 0; }
+    .wrap .body.exchange .body-2 .b2-wallet-btn button {
+      background: rgba(255, 255, 255, 0);
+      border: 1px solid #E5B86D;
+      border-radius: 2px;
+      font-size: 16px;
+      color: #000000;
+      text-align: center;
+      width: 3.3rem;
+      height: .48rem; }
 
 .mask {
   position: fixed;
