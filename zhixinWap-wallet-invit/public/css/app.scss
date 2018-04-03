@@ -53,6 +53,16 @@ html,body{
       color: #ffffff;
       font-size: 17px;
     }
+    .records{
+      position: absolute;
+      width: .8rem;
+      top: .13rem;
+      right: .1rem;
+      text-align: center;
+      color: #ffffff;
+      font-size: 14px;
+      padding-top: .04rem;
+    }
   }
 
   .body{
@@ -137,7 +147,7 @@ html,body{
       .zxc-total{
         background: url('../images/invite/invite-my-bg.png') 0 0 no-repeat;
         background-size:3.75rem 1.54rem;
-        height: 1.54rem;
+        height: 1.19rem;
         font-size: 14px;
         color: #ffffff;
         .my-total{
@@ -180,6 +190,18 @@ html,body{
             @include border(0,-1px);
             .i-date{
               font-size: .12rem;
+            }
+          }
+          &.item4cell{
+            .item{
+              .i-add{
+                width: 1rem;
+                word-wrap: break-word;
+              }
+              .i-type{
+                width: .8rem;
+                word-wrap: break-word;
+              }
             }
           }
         }
