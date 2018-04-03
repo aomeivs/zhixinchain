@@ -25,7 +25,7 @@
 }
 
 //列，缩放，拓展
-@mixin flex($grow:1,$shrink:0,$basis:0){
+@mixin flex($grow:1,$shrink:0,$basis:auto){
   -webkit-box-flex:$grow $shrink $basis;
   -webkit-flex:$grow $shrink $basis;
   flex:$grow $shrink $basis;
