@@ -2349,15 +2349,15 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     width: 1278px;
     font-size: 13px; }
   .wrap .component-index .tabOne .imgSpace {
-    padding-left: 145px;
-    padding-top: 20px;
     font-size: 14px;
     font-weight: bold;
-    color: white; }
+    color: white;
+    padding-top: 0px;
+    padding-left: 115px; }
   .wrap .component-index .tabOne .textSpace {
-    padding-left: 170px;
     padding-top: 6px;
-    font-weight: 100; }
+    font-weight: 100;
+    padding-left: 140px; }
   .wrap .component-index .tabTwo .imgSpace {
     padding-left: 71px;
     padding-top: 20px;
