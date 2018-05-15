@@ -1,0 +1,79 @@
+@import "common/common";
+html,body{
+  background: #FFFFFF;
+}
+
+.wrap{
+  width: 3.75rem;
+  max-width:3.75rem;
+  margin: 0 auto;
+  font-size: 0.16rem;
+
+  .bicon{
+    margin: 0 auto;
+    text-align: center;
+    width: 0.9rem;
+    color: #4A4A4A;
+    font-size: .19rem;
+    margin-top: 1rem;
+    .text-icon{
+      margin-top: .1rem;
+    }
+  }
+
+  $height:.6rem;
+
+  .text-content{
+    width:2.6rem;
+    height:$height;
+    font-size:.23rem;
+    line-height: $height;
+    color:#4A4A4A;
+    margin: .4rem auto;
+    text-align: center;
+    border-bottom: .01rem solid #F4F4F4;
+
+  }
+
+  $height:.5rem;
+
+  .btn-download{
+    width: 2.7rem;
+    height: $height;
+    background: #1B7DE2;
+    color: #FFFFFF;
+    margin: 0 auto;
+    font-size: .19rem;
+    text-align:center;
+    line-height:$height;
+    border-radius:$height/8;
+  }
+
+  #window-download{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    background-color:rgba(0,0,0,0.5);
+    z-index: 3;
+    top: 0;
+
+    .content{
+      width: 3rem;
+      height: 2rem;
+      margin: 0 auto;
+      padding-top: .4rem;
+
+      #close{
+        width: .17rem;
+        height: .17rem;
+        position: absolute;
+        top:.4rem;
+        left: .4rem;
+
+      }
+    }
+
+  }
+
+}

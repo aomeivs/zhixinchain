@@ -738,6 +738,20 @@
           padding:15px 40px;
         }
       }
+
+      $width:120px;
+
+      /*扫码下载app*/
+      #download{
+        width: 106px;
+        height: 128px;
+        background: #FFFFFF;
+        text-align: center;
+        position:fixed;
+        bottom: 80px;
+        right: $width;
+      }
+
     }
   }
 }
