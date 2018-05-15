@@ -2573,7 +2573,8 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       text-align: center;
       position: fixed;
       bottom: 80px;
-      right: 120px; }
+      right: 120px;
+      z-index: 7; }
 
 .wrap .kefu-lt {
   position: absolute;
