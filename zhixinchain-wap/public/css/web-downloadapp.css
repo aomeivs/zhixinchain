@@ -113,6 +113,8 @@ html, body {
     text-align: center;
     line-height: 0.5rem;
     border-radius: 0.0625rem; }
+    .wrap .btn-download.btn-ios {
+      background: #74B4FF; }
   .wrap #window-download {
     position: fixed;
     width: 100%;

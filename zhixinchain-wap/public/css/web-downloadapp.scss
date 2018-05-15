@@ -47,6 +47,9 @@ html,body{
     text-align:center;
     line-height:$height;
     border-radius:$height/8;
+    &.btn-ios{
+      background: #74B4FF;
+    }
   }
 
   #window-download{
