@@ -2506,64 +2506,74 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     border-radius: 6px;
     margin-left: 12px;
     cursor: pointer; }
-  .wrap .component-index #text_lt .block-content2 {
-    position: relative;
-    z-index: 1; }
-  .wrap .component-index #text_lt .block-content4 {
-    padding-top: 60px;
-    background-color: #fbfbfb; }
-    .wrap .component-index #text_lt .block-content4 .title {
+  .wrap .component-index #text_lt {
+    /*扫码下载app*/ }
+    .wrap .component-index #text_lt .block-content2 {
+      position: relative;
+      z-index: 1; }
+    .wrap .component-index #text_lt .block-content4 {
+      padding-top: 60px;
+      background-color: #fbfbfb; }
+      .wrap .component-index #text_lt .block-content4 .title {
+        text-align: center; }
+      .wrap .component-index #text_lt .block-content4 .subTitle {
+        font-size: 16px;
+        color: #141414;
+        padding-bottom: 60px; }
+        .wrap .component-index #text_lt .block-content4 .subTitle.sub2 {
+          margin-top: 100px; }
+      .wrap .component-index #text_lt .block-content4 .part-9 {
+        margin-top: 60px; }
+    .wrap .component-index #text_lt .block-content5 {
+      padding-top: 80px; }
+      .wrap .component-index #text_lt .block-content5 .part-9 {
+        margin-bottom: 0; }
+    .wrap .component-index #text_lt .block-content6 .title {
       text-align: center; }
-    .wrap .component-index #text_lt .block-content4 .subTitle {
-      font-size: 16px;
-      color: #141414;
-      padding-bottom: 60px; }
-      .wrap .component-index #text_lt .block-content4 .subTitle.sub2 {
-        margin-top: 100px; }
-    .wrap .component-index #text_lt .block-content4 .part-9 {
-      margin-top: 60px; }
-  .wrap .component-index #text_lt .block-content5 {
-    padding-top: 80px; }
-    .wrap .component-index #text_lt .block-content5 .part-9 {
-      margin-bottom: 0; }
-  .wrap .component-index #text_lt .block-content6 .title {
-    text-align: center; }
-  .wrap .component-index #text_lt .block-content7 {
-    padding-top: 80px;
-    background-color: #fbfbfb; }
-    .wrap .component-index #text_lt .block-content7 .title, .wrap .component-index #text_lt .block-content7 .subTitle {
+    .wrap .component-index #text_lt .block-content7 {
+      padding-top: 80px;
+      background-color: #fbfbfb; }
+      .wrap .component-index #text_lt .block-content7 .title, .wrap .component-index #text_lt .block-content7 .subTitle {
+        text-align: center; }
+      .wrap .component-index #text_lt .block-content7 .subTitle {
+        margin-top: 40px; }
+      .wrap .component-index #text_lt .block-content7 .part-9 {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 120px; }
+    .wrap .component-index #text_lt .block-content8 {
+      background-color: #fbfbfb; }
+      .wrap .component-index #text_lt .block-content8 .title, .wrap .component-index #text_lt .block-content8 .subTitle {
+        text-align: center; }
+      .wrap .component-index #text_lt .block-content8 .subTitle {
+        margin-top: 40px; }
+      .wrap .component-index #text_lt .block-content8 .part-9 {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 60px; }
+    .wrap .component-index #text_lt .block-content9 {
+      padding-top: 60px; }
+      .wrap .component-index #text_lt .block-content9 .title, .wrap .component-index #text_lt .block-content9 .subTitle {
+        text-align: center; }
+      .wrap .component-index #text_lt .block-content9 .subTitle {
+        margin-top: 40px; }
+      .wrap .component-index #text_lt .block-content9 .part-9 {
+        margin-top: 0;
+        margin-bottom: 0; }
+    .wrap .component-index #text_lt .block-content10 {
+      padding: 15px;
       text-align: center; }
-    .wrap .component-index #text_lt .block-content7 .subTitle {
-      margin-top: 40px; }
-    .wrap .component-index #text_lt .block-content7 .part-9 {
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-bottom: 120px; }
-  .wrap .component-index #text_lt .block-content8 {
-    background-color: #fbfbfb; }
-    .wrap .component-index #text_lt .block-content8 .title, .wrap .component-index #text_lt .block-content8 .subTitle {
-      text-align: center; }
-    .wrap .component-index #text_lt .block-content8 .subTitle {
-      margin-top: 40px; }
-    .wrap .component-index #text_lt .block-content8 .part-9 {
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-bottom: 60px; }
-  .wrap .component-index #text_lt .block-content9 {
-    padding-top: 60px; }
-    .wrap .component-index #text_lt .block-content9 .title, .wrap .component-index #text_lt .block-content9 .subTitle {
-      text-align: center; }
-    .wrap .component-index #text_lt .block-content9 .subTitle {
-      margin-top: 40px; }
-    .wrap .component-index #text_lt .block-content9 .part-9 {
-      margin-top: 0;
-      margin-bottom: 0; }
-  .wrap .component-index #text_lt .block-content10 {
-    padding: 15px;
-    text-align: center; }
-    .wrap .component-index #text_lt .block-content10 a {
-      display: inline-block;
-      padding: 15px 40px; }
+      .wrap .component-index #text_lt .block-content10 a {
+        display: inline-block;
+        padding: 15px 40px; }
+    .wrap .component-index #text_lt #download {
+      width: 106px;
+      height: 128px;
+      background: #FFFFFF;
+      text-align: center;
+      position: fixed;
+      bottom: 80px;
+      right: 120px; }
 
 .wrap .kefu-lt {
   position: absolute;
