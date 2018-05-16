@@ -2567,13 +2567,12 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
         display: inline-block;
         padding: 15px 40px; }
     .wrap .component-index #text_lt #download {
-      width: 106px;
-      height: 128px;
-      background: #FFFFFF;
+      width: 142px;
+      height: 164px;
       text-align: center;
       position: fixed;
-      bottom: 80px;
-      right: 120px;
+      bottom: 5px;
+      right: 20px;
       z-index: 7; }
 
 .wrap .kefu-lt {
