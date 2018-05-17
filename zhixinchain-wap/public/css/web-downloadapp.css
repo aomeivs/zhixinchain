@@ -101,8 +101,7 @@ html, body {
     line-height: 0.6rem;
     color: #4A4A4A;
     margin: .4rem auto;
-    text-align: center;
-    border-bottom: .01rem solid #F4F4F4; }
+    text-align: center; }
   .wrap .btn-download {
     width: 2.7rem;
     height: 0.5rem;
