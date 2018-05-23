@@ -2391,6 +2391,19 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     float: left;
     margin-top: 120px;
     margin-left: 20px; }
+  .wrap .component-index .imgWap {
+    width: 108px;
+    height: 36px;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 4px;
+    line-height: 36px;
+    text-align: center;
+    margin-left: 20px; }
+    .wrap .component-index .imgWap img {
+      vertical-align: middle;
+      position: relative;
+      margin-right: 8px; }
   .wrap .component-index .backBase a {
     text-decoration: none;
     out-line: none;
