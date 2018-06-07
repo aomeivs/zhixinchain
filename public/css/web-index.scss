@@ -511,6 +511,7 @@
        margin-right: 8px;
       }
     }
+
     .backBase a{
       text-decoration:none;
       out-line: none;
@@ -754,19 +755,21 @@
         }
       }
 
-      $width:20px;
 
-      /*扫码下载app*/
-      #download{
-        width: 142px;
-        height: 164px;
-        text-align: center;
-        position:fixed;
-        bottom: 5px;
-        right: $width;
-        z-index: 7;
-      }
 
     }
+  }
+
+  $width:20px;
+
+  /*扫码下载app*/
+  #download{
+    width: 142px;
+    height: 164px;
+    text-align: center;
+    position:fixed;
+    bottom: 5px;
+    right: $width;
+    z-index: 7;
   }
 }

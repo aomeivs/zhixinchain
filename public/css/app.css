@@ -2034,493 +2034,493 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     text-align: center;
     padding-top: 208px; }
 
-.wrap .component-index {
-  /* 头部 */
-  /*第二屏开始*/
-  /*内容*/
-  /*第二屏结束*/
-  /*第三屏*/
-  /*第三屏结束*/
-  /*第四屏*/
-  /*第四屏结束*/
-  /*第五屏*/
-  /*第五屏结束*/
-  /*page6*/
-  /*page6结束*/
-  /*buy*/
-  /*buy结束*/
-  /*page8 购买*/
-  /*page8结束*/
-  /*page9 常见问题*/
-  /*底部*/
-  /**
-   * 头部区块数据统计部分
-   */
-  /**
-  * 数据动态部分
-  */ }
-  .wrap .component-index .head-menu-userInfo .head-menu-company-diy {
-    font-size: 16px;
-    text-align: center; }
-  .wrap .component-index .head-menu-userInfo .head-menu-person-diy {
-    text-align: center;
-    font-size: 16px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap; }
-  .wrap .component-index .head-menu-userInfo .span-hand {
-    cursor: pointer; }
-  .wrap .component-index a {
-    text-decoration: none; }
-  .wrap .component-index .head_fixed {
-    position: fixed;
-    width: 100%;
-    height: 99px;
-    z-index: 3;
-    background: #ffffff; }
-  .wrap .component-index #header {
-    width: 1200px;
-    min-width: 1200px;
-    height: 99px;
-    background: #ffffff;
-    margin: 0 auto; }
-    .wrap .component-index #header .logo {
-      float: left;
-      padding-top: 14px;
-      padding-right: 60px; }
-    .wrap .component-index #header .menu {
-      position: relative;
-      float: left;
-      font-size: 16px; }
-      .wrap .component-index #header .menu li {
-        float: left;
-        margin-left: 40px;
-        list-style-type: none;
-        padding-top: 40px;
-        text-align: center; }
-        .wrap .component-index #header .menu li.cur {
-          height: 99px;
-          border-bottom: 2px solid #FE8C5F; }
-        .wrap .component-index #header .menu li.menu-try {
-          width: 64px;
-          color: #FF500A;
-          margin-left: 24px;
-          cursor: pointer; }
-        .wrap .component-index #header .menu li.menu-buy {
-          width: 64px;
-          color: #FF500A;
-          cursor: pointer; }
-        .wrap .component-index #header .menu li.select {
-          cursor: pointer; }
-        .wrap .component-index #header .menu li a {
-          color: #000000;
-          cursor: pointer;
-          width: 100%;
-          display: block; }
-        .wrap .component-index #header .menu li.loginAndSignIn {
-          width: 205px;
-          padding-top: 26px; }
-        .wrap .component-index #header .menu li.SignIn {
-          width: 120px; }
-      .wrap .component-index #header .menu .lang {
-        position: absolute;
-        right: -140px;
-        top: 42px;
-        font-size: 14px;
-        color: #333; }
-        .wrap .component-index #header .menu .lang span {
-          display: inline-block;
-          padding: 0 12px;
-          border-left: 1px solid #d9d9d9;
-          font-weight: bold;
-          cursor: pointer; }
-          .wrap .component-index #header .menu .lang span:first-child {
-            border-left: none; }
-  .wrap .component-index #index {
-    height: 524px;
-    min-width: 1400px; }
-    .wrap .component-index #index .banner-1 {
-      padding-top: 160px;
-      text-align: center;
-      color: white;
-      font-size: 64px; }
-    .wrap .component-index #index .banner-2 {
-      width: 840px;
-      height: 60px;
-      background-color: #62aeed;
-      margin: 0 auto;
-      margin-top: 64px;
-      border-radius: 2px; }
-      .wrap .component-index #index .banner-2 .banner-2-1 {
-        display: inline-block;
-        height: 60px;
-        border: none;
-        width: 696px;
-        padding-left: 8px; }
-      .wrap .component-index #index .banner-2 .banner-2-2 {
-        display: inline-block;
-        width: 134px;
-        text-align: center;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        color: white;
-        cursor: pointer; }
-  .wrap .component-index .zi48 {
-    font-size: 36px;
-    color: #40BEFF;
-    line-height: 48px;
-    display: inline-block;
-    margin: 0 auto;
-    padding: 0 80px; }
-  .wrap .component-index #about {
-    /*标题*/
-    /*小标题*/ }
-    .wrap .component-index #about .title {
-      /*块内元素居中*/
-      text-align: center;
-      margin-top: 100px; }
-    .wrap .component-index #about .title2 {
-      text-align: center;
-      padding-top: 44px;
-      line-height: 28px; }
-    .wrap .component-index #about .title3 {
-      margin-top: 60px; }
-  .wrap .component-index .title3 {
-    text-align: justify;
-    padding-top: 20px;
-    width: 930px;
-    margin: 0 auto;
-    line-height: 28px; }
-  .wrap .component-index .bkColor-1 {
-    background-color: #f5f5f4; }
-  .wrap .component-index .part-2 {
-    width: 1100px;
-    margin: 0 auto;
-    padding-top: 100px; }
-    .wrap .component-index .part-2.guji2 {
-      padding-top: 0; }
-      .wrap .component-index .part-2.guji2 .part-2-1.g2-1 {
-        margin-right: 40px;
-        width: 440px;
-        padding-top: 80px; }
-  .wrap .component-index .part-2-1 {
-    width: 560px;
-    height: 501px;
-    float: left;
-    margin-left: 20px; }
-    .wrap .component-index .part-2-1 span {
-      color: #40BEFF; }
-    .wrap .component-index .part-2-1 .zi24 {
-      width: 460px;
-      text-align: left;
-      margin-bottom: 0px;
-      line-height: 40px; }
-  .wrap .component-index .zi24 {
-    font-size: 24px;
-    color: #4A4A4A; }
-  .wrap .component-index .part-2-2 {
-    text-align: left;
-    margin-top: 30px; }
-    .wrap .component-index .part-2-2 .zi14 {
-      width: 400px;
+.wrap {
+  /*扫码下载app*/ }
+  .wrap .component-index {
+    /* 头部 */
+    /*第二屏开始*/
+    /*内容*/
+    /*第二屏结束*/
+    /*第三屏*/
+    /*第三屏结束*/
+    /*第四屏*/
+    /*第四屏结束*/
+    /*第五屏*/
+    /*第五屏结束*/
+    /*page6*/
+    /*page6结束*/
+    /*buy*/
+    /*buy结束*/
+    /*page8 购买*/
+    /*page8结束*/
+    /*page9 常见问题*/
+    /*底部*/
+    /**
+     * 头部区块数据统计部分
+     */
+    /**
+    * 数据动态部分
+    */ }
+    .wrap .component-index .head-menu-userInfo .head-menu-company-diy {
       font-size: 16px;
-      text-align: justify;
-      line-height: 1.5;
-      display: inline-block; }
-    .wrap .component-index .part-2-2 img {
-      padding-right: 20px;
-      vertical-align: top; }
-  .wrap .component-index .zi14 {
-    font-size: 14px;
-    color: #4A4A4A; }
-  .wrap .component-index .part3 {
-    width: 1200px;
-    margin: 0 auto;
-    margin-top: 50px; }
-  .wrap .component-index #technical {
-    height: 1310px; }
-  .wrap .component-index #page4 {
-    height: 1400px; }
-    .wrap .component-index #page4 .title4 {
-      border: 1px dashed #E8E8E8;
-      text-align: justify;
-      width: 810px;
-      margin: 0 auto;
-      line-height: 28px;
-      margin-top: 50px;
-      padding: 30px 60px; }
-  .wrap .component-index #team {
-    height: 620px; }
-  .wrap .component-index #page6 {
-    height: 2020px; }
-  .wrap .component-index .part-6 {
-    width: 1200px;
-    /*	display: flex;
-        justify-content: space-between;
-        align-content: flex-start;
-        flex-wrap:  wrap;*/
-    text-align: center; }
-    .wrap .component-index .part-6 img {
-      margin-bottom: 30px; }
-    .wrap .component-index .part-6 .part-6-2 {
-      margin: 0 auto;
-      width: 760px;
-      display: flex;
-      justify-content: space-between; }
-  .wrap .component-index #buy {
-    height: 630px; }
-  .wrap .component-index .part-7 {
-    margin-top: 80px; }
-  .wrap .component-index #goumai {
-    width: 100%;
-    height: 10px;
-    margin-top: 50px; }
-  .wrap .component-index #page8 {
-    height: 850px; }
-  .wrap .component-index .part-8 {
-    text-align: center;
-    margin: 0px auto;
-    margin-bottom: 50px; }
-    .wrap .component-index .part-8 .part-8-1 {
-      margin: 20px auto;
-      width: 1200px;
-      display: flex;
-      justify-content: space-between; }
-    .wrap .component-index .part-8 .part-8-2 {
-      margin: 20px auto;
-      width: 760px;
-      display: flex;
-      justify-content: space-between; }
-    .wrap .component-index .part-8 .part-8-3 {
-      margin: 30px auto;
-      width: 400px;
-      height: 76px;
-      background: #F57F23;
-      text-align: center;
-      line-height: 76px;
-      color: #ffffff;
-      cursor: pointer; }
-  .wrap .component-index #page9 {
-    padding-top: 1px; }
-    .wrap .component-index #page9 .title {
       text-align: center; }
-  .wrap .component-index .part-9 {
-    margin: 60px auto;
-    text-align: center;
-    width: 1200px; }
-    .wrap .component-index .part-9 ul {
-      width: 920px;
-      margin: 0 auto;
-      text-align: left; }
-      .wrap .component-index .part-9 ul li {
-        border-bottom: dashed 1px #d1d1d1;
-        padding-bottom: 30px; }
-        .wrap .component-index .part-9 ul li .question {
-          font-size: 18px;
-          color: #40beff;
-          font-weight: bold;
-          margin: 30px 0 20px; }
-          .wrap .component-index .part-9 ul li .question > div {
-            display: inline-block;
-            line-height: 36px; }
-            .wrap .component-index .part-9 ul li .question > div:first-child {
-              width: 60px;
-              vertical-align: top; }
-            .wrap .component-index .part-9 ul li .question > div:last-child {
-              width: 820px; }
-        .wrap .component-index .part-9 ul li .answer {
-          font-size: 16px; }
-          .wrap .component-index .part-9 ul li .answer > div {
-            line-height: 36px;
-            display: inline-block; }
-            .wrap .component-index .part-9 ul li .answer > div:first-child {
-              width: 60px;
-              vertical-align: top; }
-            .wrap .component-index .part-9 ul li .answer > div:last-child {
-              width: 820px; }
-  .wrap .component-index .backBase {
-    background: #343d50;
-    color: white;
-    height: 300px;
-    margin-left: -90px; }
-  .wrap .component-index .tabAll {
-    margin: 0 auto;
-    height: 300px;
-    width: 1278px;
-    font-size: 13px; }
-  .wrap .component-index .tabOne .imgSpace {
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    padding-top: 0px;
-    padding-left: 115px; }
-  .wrap .component-index .tabOne .textSpace {
-    padding-top: 6px;
-    font-weight: 100;
-    padding-left: 140px; }
-  .wrap .component-index .tabTwo .imgSpace {
-    padding-left: 71px;
-    padding-top: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    color: white; }
-  .wrap .component-index .tabTwo .textSpace {
-    padding-left: 96px;
-    padding-top: 6px;
-    font-weight: 100; }
-  .wrap .component-index .tabThree .imgSpace {
-    padding-left: 50px;
-    padding-top: 100px;
-    font-size: 14px;
-    color: white;
-    float: left; }
-  .wrap .component-index .img {
-    vertical-align: middle;
-    margin-right: 8px; }
-  .wrap .component-index .textSpace p {
-    padding: 0px;
-    margin: 2px;
-    width: 70%; }
-  .wrap .component-index .tabTwo {
-    border-left: 1px solid #4c5565;
-    border-right: 1px solid #4c5565; }
-  .wrap .component-index .imgFloat {
-    width: 94px;
-    text-align: center;
-    font-size: 12px;
-    float: left;
-    margin-top: 120px;
-    margin-left: 20px; }
-  .wrap .component-index .imgWap {
-    width: 108px;
-    height: 36px;
-    color: #FFFFFF;
-    border: 1px solid #FFFFFF;
-    border-radius: 4px;
-    line-height: 36px;
-    text-align: center;
-    margin-left: 20px; }
-    .wrap .component-index .imgWap img {
-      vertical-align: middle;
-      position: relative;
-      margin-right: 8px; }
-  .wrap .component-index .backBase a {
-    text-decoration: none;
-    out-line: none;
-    color: white; }
-  .wrap .component-index .buyNow {
-    width: 174px;
-    line-height: 40px;
-    text-align: center;
-    border-style: solid;
-    border-width: 2px;
-    border-color: white;
-    border-radius: 6px;
-    color: white;
-    cursor: pointer;
-    margin-left: 65%;
-    display: inline-block;
-    margin-left: 50px; }
-  .wrap .component-index #index {
-    position: relative; }
-  .wrap .component-index #content2 {
-    position: relative; }
-  .wrap .component-index .qk_jiedianNum {
-    width: 1186px;
-    border-radius: 4px;
-    background-color: #ffffff;
-    box-shadow: 0 0 6px 0 #55a4ff;
-    border: 2px solid #5FADFF;
-    margin: 0 auto;
-    margin-top: -50px; }
-    .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 {
-      background: url(../../public/images/index/jiedian_line.png) right center no-repeat;
-      width: 292px;
-      margin-top: 14px;
-      margin-bottom: 14px;
+    .wrap .component-index .head-menu-userInfo .head-menu-person-diy {
+      text-align: center;
+      font-size: 16px;
       overflow: hidden;
-      display: inline-block; }
-      .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1:last-child {
-        background: none; }
-      .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 img {
-        display: inline-block;
-        /* vertical-align: top; */
-        margin-left: 36px;
-        vertical-align: middle; }
-      .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 .qk_jiedianNum_1_1 {
-        display: inline-block;
-        vertical-align: middle; }
-      .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 .p1 {
-        font-size: 24px;
-        color: #1B7DE2;
-        display: inline-block;
-        margin-left: 33px;
-        vertical-align: middle; }
-      .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 .p2 {
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .wrap .component-index .head-menu-userInfo .span-hand {
+      cursor: pointer; }
+    .wrap .component-index a {
+      text-decoration: none; }
+    .wrap .component-index .head_fixed {
+      position: fixed;
+      width: 100%;
+      height: 99px;
+      z-index: 3;
+      background: #ffffff; }
+    .wrap .component-index #header {
+      width: 1200px;
+      min-width: 1200px;
+      height: 99px;
+      background: #ffffff;
+      margin: 0 auto; }
+      .wrap .component-index #header .logo {
+        float: left;
+        padding-top: 14px;
+        padding-right: 60px; }
+      .wrap .component-index #header .menu {
+        position: relative;
+        float: left;
+        font-size: 16px; }
+        .wrap .component-index #header .menu li {
+          float: left;
+          margin-left: 40px;
+          list-style-type: none;
+          padding-top: 40px;
+          text-align: center; }
+          .wrap .component-index #header .menu li.cur {
+            height: 99px;
+            border-bottom: 2px solid #FE8C5F; }
+          .wrap .component-index #header .menu li.menu-try {
+            width: 64px;
+            color: #FF500A;
+            margin-left: 24px;
+            cursor: pointer; }
+          .wrap .component-index #header .menu li.menu-buy {
+            width: 64px;
+            color: #FF500A;
+            cursor: pointer; }
+          .wrap .component-index #header .menu li.select {
+            cursor: pointer; }
+          .wrap .component-index #header .menu li a {
+            color: #000000;
+            cursor: pointer;
+            width: 100%;
+            display: block; }
+          .wrap .component-index #header .menu li.loginAndSignIn {
+            width: 205px;
+            padding-top: 26px; }
+          .wrap .component-index #header .menu li.SignIn {
+            width: 120px; }
+        .wrap .component-index #header .menu .lang {
+          position: absolute;
+          right: -140px;
+          top: 42px;
+          font-size: 14px;
+          color: #333; }
+          .wrap .component-index #header .menu .lang span {
+            display: inline-block;
+            padding: 0 12px;
+            border-left: 1px solid #d9d9d9;
+            font-weight: bold;
+            cursor: pointer; }
+            .wrap .component-index #header .menu .lang span:first-child {
+              border-left: none; }
+    .wrap .component-index #index {
+      height: 524px;
+      min-width: 1400px; }
+      .wrap .component-index #index .banner-1 {
+        padding-top: 160px;
+        text-align: center;
+        color: white;
+        font-size: 64px; }
+      .wrap .component-index #index .banner-2 {
+        width: 840px;
+        height: 60px;
+        background-color: #62aeed;
+        margin: 0 auto;
+        margin-top: 64px;
+        border-radius: 2px; }
+        .wrap .component-index #index .banner-2 .banner-2-1 {
+          display: inline-block;
+          height: 60px;
+          border: none;
+          width: 696px;
+          padding-left: 8px; }
+        .wrap .component-index #index .banner-2 .banner-2-2 {
+          display: inline-block;
+          width: 134px;
+          text-align: center;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          color: white;
+          cursor: pointer; }
+    .wrap .component-index .zi48 {
+      font-size: 36px;
+      color: #40BEFF;
+      line-height: 48px;
+      display: inline-block;
+      margin: 0 auto;
+      padding: 0 80px; }
+    .wrap .component-index #about {
+      /*标题*/
+      /*小标题*/ }
+      .wrap .component-index #about .title {
+        /*块内元素居中*/
+        text-align: center;
+        margin-top: 100px; }
+      .wrap .component-index #about .title2 {
+        text-align: center;
+        padding-top: 44px;
+        line-height: 28px; }
+      .wrap .component-index #about .title3 {
+        margin-top: 60px; }
+    .wrap .component-index .title3 {
+      text-align: justify;
+      padding-top: 20px;
+      width: 930px;
+      margin: 0 auto;
+      line-height: 28px; }
+    .wrap .component-index .bkColor-1 {
+      background-color: #f5f5f4; }
+    .wrap .component-index .part-2 {
+      width: 1100px;
+      margin: 0 auto;
+      padding-top: 100px; }
+      .wrap .component-index .part-2.guji2 {
+        padding-top: 0; }
+        .wrap .component-index .part-2.guji2 .part-2-1.g2-1 {
+          margin-right: 40px;
+          width: 440px;
+          padding-top: 80px; }
+    .wrap .component-index .part-2-1 {
+      width: 560px;
+      height: 501px;
+      float: left;
+      margin-left: 20px; }
+      .wrap .component-index .part-2-1 span {
+        color: #40BEFF; }
+      .wrap .component-index .part-2-1 .zi24 {
+        width: 460px;
+        text-align: left;
+        margin-bottom: 0px;
+        line-height: 40px; }
+    .wrap .component-index .zi24 {
+      font-size: 24px;
+      color: #4A4A4A; }
+    .wrap .component-index .part-2-2 {
+      text-align: left;
+      margin-top: 30px; }
+      .wrap .component-index .part-2-2 .zi14 {
+        width: 400px;
         font-size: 16px;
-        color: #4a4a4a;
-        display: inline-block;
-        font-weight: bold;
-        margin-left: 33px;
-        vertical-align: middle; }
-    .wrap .component-index .qk_jiedianNum .qk_jiedianNum_2 {
-      background: none; }
-  .wrap .component-index .qk_numShow {
-    text-align: center;
-    width: 1200px;
-    margin: 0 auto;
-    margin-top: 82px;
-    margin-bottom: 82px; }
-    .wrap .component-index .qk_numShow .qk_numShow_table {
+        text-align: justify;
+        line-height: 1.5;
+        display: inline-block; }
+      .wrap .component-index .part-2-2 img {
+        padding-right: 20px;
+        vertical-align: top; }
+    .wrap .component-index .zi14 {
+      font-size: 14px;
+      color: #4A4A4A; }
+    .wrap .component-index .part3 {
+      width: 1200px;
+      margin: 0 auto;
+      margin-top: 50px; }
+    .wrap .component-index #technical {
+      height: 1310px; }
+    .wrap .component-index #page4 {
+      height: 1400px; }
+      .wrap .component-index #page4 .title4 {
+        border: 1px dashed #E8E8E8;
+        text-align: justify;
+        width: 810px;
+        margin: 0 auto;
+        line-height: 28px;
+        margin-top: 50px;
+        padding: 30px 60px; }
+    .wrap .component-index #team {
+      height: 620px; }
+    .wrap .component-index #page6 {
+      height: 2020px; }
+    .wrap .component-index .part-6 {
+      width: 1200px;
+      /*	display: flex;
+          justify-content: space-between;
+          align-content: flex-start;
+          flex-wrap:  wrap;*/
+      text-align: center; }
+      .wrap .component-index .part-6 img {
+        margin-bottom: 30px; }
+      .wrap .component-index .part-6 .part-6-2 {
+        margin: 0 auto;
+        width: 760px;
+        display: flex;
+        justify-content: space-between; }
+    .wrap .component-index #buy {
+      height: 630px; }
+    .wrap .component-index .part-7 {
+      margin-top: 80px; }
+    .wrap .component-index #goumai {
+      width: 100%;
+      height: 10px;
+      margin-top: 50px; }
+    .wrap .component-index #page8 {
+      height: 850px; }
+    .wrap .component-index .part-8 {
+      text-align: center;
+      margin: 0px auto;
+      margin-bottom: 50px; }
+      .wrap .component-index .part-8 .part-8-1 {
+        margin: 20px auto;
+        width: 1200px;
+        display: flex;
+        justify-content: space-between; }
+      .wrap .component-index .part-8 .part-8-2 {
+        margin: 20px auto;
+        width: 760px;
+        display: flex;
+        justify-content: space-between; }
+      .wrap .component-index .part-8 .part-8-3 {
+        margin: 30px auto;
+        width: 400px;
+        height: 76px;
+        background: #F57F23;
+        text-align: center;
+        line-height: 76px;
+        color: #ffffff;
+        cursor: pointer; }
+    .wrap .component-index #page9 {
+      padding-top: 1px; }
+      .wrap .component-index #page9 .title {
+        text-align: center; }
+    .wrap .component-index .part-9 {
+      margin: 60px auto;
+      text-align: center;
       width: 1200px; }
-      .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_title_tr {
-        height: 50px;
-        background-color: #40beff;
-        font-size: 16px;
-        border: none;
-        color: #4a4a4a; }
-        .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_title_tr th {
+      .wrap .component-index .part-9 ul {
+        width: 920px;
+        margin: 0 auto;
+        text-align: left; }
+        .wrap .component-index .part-9 ul li {
+          border-bottom: dashed 1px #d1d1d1;
+          padding-bottom: 30px; }
+          .wrap .component-index .part-9 ul li .question {
+            font-size: 18px;
+            color: #40beff;
+            font-weight: bold;
+            margin: 30px 0 20px; }
+            .wrap .component-index .part-9 ul li .question > div {
+              display: inline-block;
+              line-height: 36px; }
+              .wrap .component-index .part-9 ul li .question > div:first-child {
+                width: 60px;
+                vertical-align: top; }
+              .wrap .component-index .part-9 ul li .question > div:last-child {
+                width: 820px; }
+          .wrap .component-index .part-9 ul li .answer {
+            font-size: 16px; }
+            .wrap .component-index .part-9 ul li .answer > div {
+              line-height: 36px;
+              display: inline-block; }
+              .wrap .component-index .part-9 ul li .answer > div:first-child {
+                width: 60px;
+                vertical-align: top; }
+              .wrap .component-index .part-9 ul li .answer > div:last-child {
+                width: 820px; }
+    .wrap .component-index .backBase {
+      background: #343d50;
+      color: white;
+      height: 300px;
+      margin-left: -90px; }
+    .wrap .component-index .tabAll {
+      margin: 0 auto;
+      height: 300px;
+      width: 1278px;
+      font-size: 13px; }
+    .wrap .component-index .tabOne .imgSpace {
+      font-size: 14px;
+      font-weight: bold;
+      color: white;
+      padding-top: 0px;
+      padding-left: 115px; }
+    .wrap .component-index .tabOne .textSpace {
+      padding-top: 6px;
+      font-weight: 100;
+      padding-left: 140px; }
+    .wrap .component-index .tabTwo .imgSpace {
+      padding-left: 71px;
+      padding-top: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      color: white; }
+    .wrap .component-index .tabTwo .textSpace {
+      padding-left: 96px;
+      padding-top: 6px;
+      font-weight: 100; }
+    .wrap .component-index .tabThree .imgSpace {
+      padding-left: 50px;
+      padding-top: 100px;
+      font-size: 14px;
+      color: white;
+      float: left; }
+    .wrap .component-index .img {
+      vertical-align: middle;
+      margin-right: 8px; }
+    .wrap .component-index .textSpace p {
+      padding: 0px;
+      margin: 2px;
+      width: 70%; }
+    .wrap .component-index .tabTwo {
+      border-left: 1px solid #4c5565;
+      border-right: 1px solid #4c5565; }
+    .wrap .component-index .imgFloat {
+      width: 94px;
+      text-align: center;
+      font-size: 12px;
+      float: left;
+      margin-top: 120px;
+      margin-left: 20px; }
+    .wrap .component-index .imgWap {
+      width: 108px;
+      height: 36px;
+      color: #FFFFFF;
+      border: 1px solid #FFFFFF;
+      border-radius: 4px;
+      line-height: 36px;
+      text-align: center;
+      margin-left: 20px; }
+      .wrap .component-index .imgWap img {
+        vertical-align: middle;
+        position: relative;
+        margin-right: 8px; }
+    .wrap .component-index .backBase a {
+      text-decoration: none;
+      out-line: none;
+      color: white; }
+    .wrap .component-index .buyNow {
+      width: 174px;
+      line-height: 40px;
+      text-align: center;
+      border-style: solid;
+      border-width: 2px;
+      border-color: white;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      margin-left: 65%;
+      display: inline-block;
+      margin-left: 50px; }
+    .wrap .component-index #index {
+      position: relative; }
+    .wrap .component-index #content2 {
+      position: relative; }
+    .wrap .component-index .qk_jiedianNum {
+      width: 1186px;
+      border-radius: 4px;
+      background-color: #ffffff;
+      box-shadow: 0 0 6px 0 #55a4ff;
+      border: 2px solid #5FADFF;
+      margin: 0 auto;
+      margin-top: -50px; }
+      .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 {
+        background: url(../../public/images/index/jiedian_line.png) right center no-repeat;
+        width: 292px;
+        margin-top: 14px;
+        margin-bottom: 14px;
+        overflow: hidden;
+        display: inline-block; }
+        .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1:last-child {
+          background: none; }
+        .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 img {
+          display: inline-block;
+          /* vertical-align: top; */
+          margin-left: 36px;
+          vertical-align: middle; }
+        .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 .qk_jiedianNum_1_1 {
+          display: inline-block;
+          vertical-align: middle; }
+        .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 .p1 {
+          font-size: 24px;
+          color: #1B7DE2;
+          display: inline-block;
+          margin-left: 33px;
+          vertical-align: middle; }
+        .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 .p2 {
+          font-size: 16px;
+          color: #4a4a4a;
+          display: inline-block;
+          font-weight: bold;
+          margin-left: 33px;
+          vertical-align: middle; }
+      .wrap .component-index .qk_jiedianNum .qk_jiedianNum_2 {
+        background: none; }
+    .wrap .component-index .qk_numShow {
+      text-align: center;
+      width: 1200px;
+      margin: 0 auto;
+      margin-top: 82px;
+      margin-bottom: 82px; }
+      .wrap .component-index .qk_numShow .qk_numShow_table {
+        width: 1200px; }
+        .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_title_tr {
+          height: 50px;
+          background-color: #40beff;
           font-size: 16px;
           border: none;
-          font-weight: 500;
           color: #4a4a4a; }
-      .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_tr {
-        height: 50px;
-        font-size: 14px;
-        color: #4a4a4a; }
-        .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_tr td {
-          border-bottom: solid 1px #e8e8e8; }
-        .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_tr .color_blue {
-          color: #40beff; }
-  .wrap .component-index .loginAndSignIn .span1 {
-    display: inline-block;
-    background-color: white;
-    width: 92px;
-    text-align: center;
-    height: 46px;
-    line-height: 43px;
-    color: #40beff;
-    border-color: #40beff;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 6px;
-    cursor: pointer; }
-  .wrap .component-index .loginAndSignIn .span2 {
-    display: inline-block;
-    background-color: #40beff;
-    width: 92px;
-    text-align: center;
-    height: 46px;
-    line-height: 43px;
-    color: white;
-    border-color: #40beff;
-    border-style: solid;
-    border-width: 2px;
-    border-radius: 6px;
-    margin-left: 12px;
-    cursor: pointer; }
-  .wrap .component-index #text_lt {
-    /*扫码下载app*/ }
+          .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_title_tr th {
+            font-size: 16px;
+            border: none;
+            font-weight: 500;
+            color: #4a4a4a; }
+        .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_tr {
+          height: 50px;
+          font-size: 14px;
+          color: #4a4a4a; }
+          .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_tr td {
+            border-bottom: solid 1px #e8e8e8; }
+          .wrap .component-index .qk_numShow .qk_numShow_table .qk_numShow_tr .color_blue {
+            color: #40beff; }
+    .wrap .component-index .loginAndSignIn .span1 {
+      display: inline-block;
+      background-color: white;
+      width: 92px;
+      text-align: center;
+      height: 46px;
+      line-height: 43px;
+      color: #40beff;
+      border-color: #40beff;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 6px;
+      cursor: pointer; }
+    .wrap .component-index .loginAndSignIn .span2 {
+      display: inline-block;
+      background-color: #40beff;
+      width: 92px;
+      text-align: center;
+      height: 46px;
+      line-height: 43px;
+      color: white;
+      border-color: #40beff;
+      border-style: solid;
+      border-width: 2px;
+      border-radius: 6px;
+      margin-left: 12px;
+      cursor: pointer; }
     .wrap .component-index #text_lt .block-content2 {
       position: relative;
       z-index: 1; }
@@ -2579,14 +2579,14 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       .wrap .component-index #text_lt .block-content10 a {
         display: inline-block;
         padding: 15px 40px; }
-    .wrap .component-index #text_lt #download {
-      width: 142px;
-      height: 164px;
-      text-align: center;
-      position: fixed;
-      bottom: 5px;
-      right: 20px;
-      z-index: 7; }
+  .wrap #download {
+    width: 142px;
+    height: 164px;
+    text-align: center;
+    position: fixed;
+    bottom: 5px;
+    right: 20px;
+    z-index: 7; }
 
 .wrap .kefu-lt {
   position: absolute;
