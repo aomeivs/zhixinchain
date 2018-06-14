@@ -3005,4 +3005,221 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
           word-break: break-all;
           padding: 12px 18px; }
 
+.component-explorer-index {
+  /**
+   * 块数据统计部分
+   */
+  /**
+  * 数据动态部分
+  */ }
+  .component-explorer-index a {
+    text-decoration: none; }
+  .component-explorer-index #index {
+    height: 524px;
+    min-width: 1400px; }
+    .component-explorer-index #index .banner-1 {
+      padding-top: 160px;
+      text-align: center;
+      color: white;
+      font-size: 64px; }
+      .component-explorer-index #index .banner-1 span {
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); }
+      .component-explorer-index #index .banner-1 .text-s {
+        font-size: 20px; }
+    .component-explorer-index #index .banner-2 {
+      width: 840px;
+      height: 60px;
+      background-color: #62aeed;
+      margin: 0 auto;
+      margin-top: 64px;
+      border-radius: 2px;
+      box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3); }
+      .component-explorer-index #index .banner-2 .banner-2-1 {
+        display: inline-block;
+        height: 60px;
+        border: none;
+        width: 696px;
+        padding-left: 10px;
+        border-radius: 4px 0px 0px 4px; }
+      .component-explorer-index #index .banner-2 .banner-2-2 {
+        display: inline-block;
+        width: 134px;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: white;
+        cursor: pointer; }
+  .component-explorer-index #index {
+    position: relative; }
+  .component-explorer-index #content2 {
+    position: relative; }
+  .component-explorer-index .qk_jiedianNum {
+    width: 1186px;
+    background-color: #ffffff;
+    margin: 50px auto; }
+    .component-explorer-index .qk_jiedianNum .qk_jiedianNum_1 {
+      background: url(../../public/images/index/jiedian_line.png) right center no-repeat;
+      width: 389px;
+      margin-top: 14px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      display: inline-block; }
+      .component-explorer-index .qk_jiedianNum .qk_jiedianNum_1:last-child {
+        background: none; }
+      .component-explorer-index .qk_jiedianNum .qk_jiedianNum_1 img {
+        display: inline-block;
+        /* vertical-align: top; */
+        margin-left: 36px;
+        vertical-align: middle; }
+      .component-explorer-index .qk_jiedianNum .qk_jiedianNum_1 .qk_jiedianNum_1_1 {
+        display: inline-block;
+        vertical-align: middle; }
+      .component-explorer-index .qk_jiedianNum .qk_jiedianNum_1 .p1 {
+        font-size: 24px;
+        color: #1B7DE2;
+        display: inline-block;
+        margin-left: 33px;
+        vertical-align: middle; }
+      .component-explorer-index .qk_jiedianNum .qk_jiedianNum_1 .p2 {
+        font-size: 16px;
+        color: #4a4a4a;
+        display: inline-block;
+        font-weight: bold;
+        margin-left: 33px;
+        vertical-align: middle; }
+    .component-explorer-index .qk_jiedianNum .qk_jiedianNum_2 {
+      background: none; }
+  .component-explorer-index .qk_numShow {
+    text-align: center;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 82px;
+    margin-bottom: 82px; }
+    .component-explorer-index .qk_numShow .qk_numShow_table {
+      width: 1200px; }
+      .component-explorer-index .qk_numShow .qk_numShow_table .qk_numShow_title_tr {
+        height: 50px;
+        background-color: #40beff;
+        font-size: 16px;
+        border: none;
+        color: #4a4a4a; }
+        .component-explorer-index .qk_numShow .qk_numShow_table .qk_numShow_title_tr th {
+          font-size: 16px;
+          border: none;
+          font-weight: 500;
+          color: #4a4a4a; }
+      .component-explorer-index .qk_numShow .qk_numShow_table .qk_numShow_tr {
+        height: 50px;
+        font-size: 14px;
+        color: #4a4a4a; }
+        .component-explorer-index .qk_numShow .qk_numShow_table .qk_numShow_tr td {
+          border-bottom: solid 1px #e8e8e8; }
+        .component-explorer-index .qk_numShow .qk_numShow_table .qk_numShow_tr .color_blue {
+          color: #40beff; }
+  .component-explorer-index .block-content3 .content-tab {
+    width: 1080px;
+    height: 68px;
+    border-bottom: 0.5px solid #D8D8D8;
+    font-size: 20px;
+    line-height: 68px;
+    text-align: center;
+    margin: 20px auto; }
+    .component-explorer-index .block-content3 .content-tab ul {
+      width: 420px;
+      margin: 0 auto; }
+      .component-explorer-index .block-content3 .content-tab ul li {
+        width: 100px;
+        height: 68px;
+        float: left;
+        margin: 0 20px; }
+        .component-explorer-index .block-content3 .content-tab ul li a {
+          color: #1C2438; }
+      .component-explorer-index .block-content3 .content-tab ul .tab-now {
+        border-bottom: 4px solid #3B99FF; }
+  .component-explorer-index .block-content3 .content-table {
+    width: 1080px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    padding-bottom: 40px;
+    margin-bottom: 40px; }
+    .component-explorer-index .block-content3 .content-table .table-1 {
+      font-size: 18px;
+      color: #4A4A4A;
+      padding-top: 45px;
+      margin-left: 65px;
+      margin-bottom: 38px; }
+      .component-explorer-index .block-content3 .content-table .table-1 span {
+        color: #1F1F1F;
+        font-weight: 500;
+        padding-left: 20px; }
+    .component-explorer-index .block-content3 .content-table .table-2 {
+      padding-bottom: 24px; }
+      .component-explorer-index .block-content3 .content-table .table-2 .table-2-1 {
+        width: 948px;
+        height: 58px;
+        border: 1px solid #D5D5D5;
+        margin: 0 auto; }
+      .component-explorer-index .block-content3 .content-table .table-2 table {
+        width: 900px;
+        margin: 0 auto;
+        font-size: 16px;
+        line-height: 58px;
+        color: #4A4A4A;
+        text-decoration: none;
+        border-collapse: collapse;
+        border-spacing: 0; }
+        .component-explorer-index .block-content3 .content-table .table-2 table tr {
+          height: 58px; }
+        .component-explorer-index .block-content3 .content-table .table-2 table .t1 {
+          background-color: #FBFBFB; }
+        .component-explorer-index .block-content3 .content-table .table-2 table .a3 {
+          text-align: right; }
+          .component-explorer-index .block-content3 .content-table .table-2 table .a3 span {
+            color: #000000; }
+        .component-explorer-index .block-content3 .content-table .table-2 table .a1 {
+          width: 160px;
+          text-align: center;
+          border-right: 1px solid #D5D5D5; }
+        .component-explorer-index .block-content3 .content-table .table-2 table .a2 {
+          text-align: left;
+          padding: 0 48px;
+          color: #000000;
+          vertical-align: bottom; }
+          .component-explorer-index .block-content3 .content-table .table-2 table .a2 img {
+            margin-top: -4px;
+            margin-right: 8px; }
+          .component-explorer-index .block-content3 .content-table .table-2 table .a2 p {
+            line-height: 22px;
+            padding: 8px 0; }
+      .component-explorer-index .block-content3 .content-table .table-2 .table-3-1 {
+        margin: 0 auto; }
+        .component-explorer-index .block-content3 .content-table .table-2 .table-3-1 table, .component-explorer-index .block-content3 .content-table .table-2 .table-3-1 tr, .component-explorer-index .block-content3 .content-table .table-2 .table-3-1 td {
+          border: 1px solid #D5D5D5;
+          vertical-align: middle; }
+        .component-explorer-index .block-content3 .content-table .table-2 .table-3-1 table {
+          width: 948px; }
+      .component-explorer-index .block-content3 .content-table .table-2 .table-2-2 {
+        width: 948px;
+        margin: 0 auto;
+        margin-top: -1px;
+        border: 1px solid #D5D5D5; }
+        .component-explorer-index .block-content3 .content-table .table-2 .table-2-2 p {
+          width: 900px;
+          color: #4A4A4A;
+          font-size: 14px;
+          line-height: 22px;
+          word-wrap: break-word;
+          margin: 40px auto; }
+  .component-explorer-index .block-content4 img {
+    display: block;
+    margin: 0 auto; }
+  .component-explorer-index .block-content4 p {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    color: #9B9B9B; }
+    .component-explorer-index .block-content4 p span {
+      color: #298CFF; }
+
 /*# sourceMappingURL=app.css.map */
