@@ -9,6 +9,31 @@
     <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
     <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
     <script src="public/js/rem.js"></script>
+    <style>
+        #window-download{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            background-color:rgba(0,0,0,0.5);
+            z-index: 3;
+            top: 0;
+        }
+
+        .content{
+            width: 3rem;
+            height: 2rem;
+            margin: 0 auto;
+            padding-top: .4rem;
+        }
+        #close{
+            width: .17rem;
+            height: .17rem;
+            position: absolute;
+            top:.4rem;
+            left: .4rem;
+        }
+    </style>
 </head>
 <body>
      <div class="wrap">
@@ -77,6 +102,19 @@
                  然后，期待爱情和约会基金像比特币一样，疯狂成长！
              </div>
          </div>
+
+
+         <div id="window-download">
+
+             <div class="content">
+
+                 <img src="public/images/open.png" width="100%">
+
+                 <img src="public/images/close.png" width="100%" id="close" >
+             </div>
+
+         </div>
+
      </div>
 
 </body>
