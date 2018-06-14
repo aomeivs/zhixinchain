@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+    <!--[if lt ie 9]>
+    <script src="public/js/ie-lte9.js"></script>
+    <![endif ]-->
+    <link rel="stylesheet" href="public/css/outdatedBrowser.min.css">
+    <script src="public/js/outdatedBrowser.min.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+    <link href="https://cdn.bootcss.com/Swiper/2.7.5/idangerous.swiper.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/Swiper/2.7.5/idangerous.swiper.js"></script>
+    <script src="public/js/jquery.fadethis.min.js"></script>
+    <style>
+        .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 {
+            background: url(public/images/index/jiedian_line.png) right center no-repeat;
+            width: 389px;
+        }
+    </style>
+    <style type="text/css">
+        .pagination {
+            position: absolute;
+            z-index: 20;
+            bottom: 20px;
+            width: 10px;
+            top: 50%;
+            right: 20px;
+            margin-top: -30px;
+        }
+        .swiper-pagination-switch {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background: #555;
+            margin: 0 5px;
+            opacity: 0.8;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+        .swiper-active-switch {
+            background: #2d8cf0;
+        }
+    </style>
+</head>
+
+<body>
+
+ <div class="wrap" id="app">
+    <div class="component-index">
+        <!--头部-->
+        <div class="head_fixed" id="nav-container">
+            <div id="header">
+
+                <a href="Homepage.html">
+                    <img src="public/images/index/logo.png" alt="" class="logo" style="border: 0px;"/>
+                </a>
+                <ul id="menu" class="menu zi18">
+                    <div class="lang">
+                        <span onclick="window.location.href='#'">中文</span>
+                        <span onclick="window.location.href='#'">EN</span>
+                    </div>
+                    <li data-menuanchor="about" id="home2" class="cur select"><a href="#block-content1">首页</a></li>
+                    <li class="select none"><a href="javascript:0;">关于职信链</a></li>
+
+                    <li data-menuanchor="technical" id="home6" class="select"><a href="#block-content4">应用</a></li>
+                    <li class="select"><a href="#block-content11">技术</a></li>
+                    <li data-menuanchor="technical" id="home7" class="select"><a href="#block-content7">我们的优势</a></li>
+
+                    <li data-menuanchor="technical" id="home3" class="select"><a href="#block-content5">FAQ</a></li>
+                    <li class="select" ><a href="#"style="position: relative;">钱包<div style="position: absolute; top: -16px; right: -8px;"><img src="public/images/nicon.png" alt=""></div></a></li>
+
+
+
+<!--                    <li data-menuanchor="buy" class="menu-buy" id="home5">购 买</li>-->
+                    <!--<li data-menuanchor="team" class="menu-try" id="home4" style="margin-left: 40px;">试 用</li>-->
+
+
+                    <li class="SignIn" style="display: block; width: auto;">
+                        <!--企业-->
+                        <dropdown trigger="click" :visible="visible">
+                            <a href="javascript:void(0)" @click.stop="handleOpen()">
+                                控制台
+                                <icon type="arrow-down-b"></icon>
+                            </a>
+                            <dropdown-menu slot="list">
+                                <div class="head-menu-userInfo">
+                                    <div class="clearFix head-menu-company-diy">
+                                        <span><a href="javascript:alert(0)"
+                                                 style="color:#1B7CE1;">青岛网络科技特别开心有限公司</a></span>
+                                    </div>
+                                    <div class="line head-menu-uline"></div>
+                                    <div class="clearFix head-menu-u1">
+                                        <span class="left h-m-u-1">支持员工数量</span>
+                                        <span class="right">40</span>
+                                    </div>
+                                    <div class="clearFix head-menu-u2">
+                                        <span class="left h-m-u-1">有效期至</span>
+                                        <span class="right">2018.11.19</span>
+                                    </div>
+                                    <div class="line head-menu-uline"></div>
+                                    <div class="clearFix head-menu-u3">
+                                    <span class="left">
+                                        <badge dot>
+                                            <a href="#" class="head-message-badge">我的优惠券</a>
+                                        </badge>
+                                    </span>
+                                        <span class="right">
+                                        <a href="#" class="head-message-badge">
+                                            <Icon type="android-exit"></Icon>
+                                            <span>退出</span>
+                                        </a>
+                                    </span>
+                                    </div>
+                                </div>
+                            </dropdown-menu>
+                        </dropdown>
+                        <!--个人-->
+                        <dropdown trigger="click" :visible="visible" style="margin-left: 20px ;display: none">
+                            <a href="javascript:void(0)" @click.stop="handleOpen()">
+                                控制台
+                                <icon type="arrow-down-b"></icon>
+                            </a>
+                            <dropdown-menu slot="list">
+                                <div class="head-menu-userInfo" style="width: 110px;">
+                                    <div class="clearFix head-menu-person-diy">
+                                        <span>周累了</span>
+                                    </div>
+                                    <div class="line head-menu-uline"></div>
+                                    <div class="clearFix head-menu-person-diy span-hand">
+                                        <span>退出</span>
+                                    </div>
+                                </div>
+                            </dropdown-menu>
+                        </dropdown>
+                    </li>
+
+                    <li class="loginAndSignIn" style="display: none;">
+                        <span class="span1">登录</span>
+                        <span class="span2">注册</span>
+                    </li>
+
+                </ul>
+                <div style="clear: both"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--浏览器页面开始-->
+    <div class="component-explorer-index">
+
+        <!--banner开始-->
+        <div id="text_lt">
+            <a name="block-content1" style="display: inline-block;width: 100%;clear: both;height: 1px;"></a>
+            <div class="block-content1" id="content1">
+                <!--index 结束 头部 大banner-->
+                <div class="section" id="index"
+                     style="background:url(public/images/explorer/s2-banner.png) center top no-repeat;">
+
+                    <div class="banner-1">
+                        <span >职信链区块链浏览器</span>
+                        <div class="text-s">提供区块、交易、钱包等查询功能</div>
+                    </div>
+
+                    <div class="banner-2">
+                        <input class="banner-2-1" type="text" placeholder="请在此输入区块高度、交易ID、钱包地址进行查询">
+                        <div class="banner-2-2">
+
+                            <img src="public/images/explorer/find.png" height="32" width="32"/></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!--banner结束-->
+
+        <!--数据统计-->
+            <div class="block-content2" id="content2" >
+                <!-- 添加区块数据统计部分-->
+                <div class="qk_jiedianNum">
+                    <div class="qk_jiedianNum_1"><img src="public/images/index/jiedian_1.png">
+                        <div class="qk_jiedianNum_1_1">
+                            <p class="p2">区块高度</p><p id="jk_heightNum" class="p1">53,217</p>
+                        </div>
+                    </div>
+                    <div class="qk_jiedianNum_1"><img src="public/images/index/jiedian_2.png">
+                        <div class="qk_jiedianNum_1_1">
+                            <p class="p2">节点数</p><p id="jk_nodeNum" class="p1">68</p>
+                        </div>
+                    </div>
+                    <div class="qk_jiedianNum_1"><img src="public/images/index/jiedian_3.png">
+                        <div class="qk_jiedianNum_1_1">
+                            <p class="p2">用户量</p><p id="jk_userNum" class="p1">2,142</p></div>
+                    </div>
+                </div>
+            </div>
+        <!--数据统计结束-->
+
+        <!--查询开始-->
+        <div class="block-content3" >
+
+            <!--查询-选项-->
+
+            <div class="content-tab" >
+                <ul>
+                <li class="tag-li tab-now" id="qukuai"><a >区块</a></li>
+                <li class="tag-li" id="jiaoyi"><a >交易</a></li>
+                <li class="tag-li" id="qianbao"><a >钱包</a></li>
+                </ul>
+            </div>
+
+            <!--查询-显示内容-->
+            <!--  查询区块-->
+            <div class="content-table qukuai" >
+                <div class="table-1" >
+                 <ul>
+                     <li>区块高度：<span>5,588,886</span></li>
+                     <li>交易时间：<span>2018-05-18  15:24:33</span></li>
+                     <li>区块哈希：<span>a19fd693745d19c8e6b1407e4b26ee865110cf5a092f31e77eb40d676a130d0b</span></li>
+                     <li>交易数量：<span>3</span></li>
+                 </ul>
+                </div>
+                <div class="table-2">
+                    <div class="table-2-1">
+                        <table>
+                            <tr class="t1">
+                                <td >2</td>
+                                <td class="a3">交易id：<span >0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4</span></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="table-2-2">
+                        <p>
+                            0xd5515bd5700dae0xd5515bd5700dae0xd5
+                            515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0
+                            xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515
+                            bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd57
+                            00dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700d
+                            ae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0
+                            xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5
+                            515bd5700dae0xd5515bd5700dae0xd5515bd5700dae
+                        </p>
+
+                    </div>
+
+                </div>
+                <div class="table-2">
+                    <div class="table-2-1">
+                        <table>
+                            <tr class="t1">
+                                <td >2</td>
+                                <td class="a3">交易id：<span >0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4</span></td>
+                            </tr>
+                        </table>
+
+                    </div>
+                    <div class="table-2-2">
+                        <p>
+                            0xd5515bd5700dae0xd5515bd5700dae0xd5
+                            515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0
+                            xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515
+                            bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd57
+                            00dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700d
+                            ae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0
+                            xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5
+                            515bd5700dae0xd5515bd5700dae0xd5515bd5700dae
+                        </p>
+
+                    </div>
+
+                </div>
+
+             </div>
+             <!--查询结束-->
+
+
+            <!--查询-显示内容-->
+            <!--  查询交易-->
+            <div class="content-table jiaoyi" >
+                <div class="table-1">
+                    <ul>
+                        <li>交易id：<span>a19fd693745d19c8e6b1407e4b26ee865110cf5a092f31e77eb40d676a130d0b</span></li>
+                        <li>交易时间：<span>2018-05-18  15:24:33</span></li>
+                    </ul>
+                </div>
+                <div class="table-2">
+                    <div class="table-2-2">
+                        <p>
+                            0xd5515bd5700dae0xd5515bd5700dae0xd5
+                            515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0
+                            xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515
+                            bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd57
+                            00dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700d
+                            ae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0
+                            xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5515bd5700dae0xd5
+                            515bd5700dae0xd5515bd5700dae0xd5515bd5700dae
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--查询结束-->
+
+
+            <!--查询-显示内容-->
+            <!--  查询钱包-->
+            <div class="content-table qianbao">
+                <div class="table-1">
+                    <ul>
+                        <li>钱包地址：<span>0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4</span></li>
+                        <li>账户余额：<span>10 ZTC</span></li>
+
+                    </ul>
+                </div>
+                <div class="table-2">
+                    <div class="table-3-1">
+                        <table>
+                            <tr class="t1">
+                                <td class="a1">From</td>
+                                <td class="a2">0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4</td>
+                            </tr>
+                            <tr class="t2">
+                                <td class="a1">To</td>
+                                <td class="a2">0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4</td>
+                            </tr>
+                            <tr class="t1">
+                                <td class="a1">金额</td>
+                                <td class="a2">
+                                    <img src="public/images/qukuailian/t-a.png" height="16" width="16"/>10 ZTC
+                                </td>
+                            </tr>
+                            <tr class="t2">
+                                <td class="a1">时间</td>
+                                <td class="a2">2018-05-10     15 : 20 : 11</td>
+                            </tr>
+                            <tr class="t1">
+                                <td class="a1">备注</td>
+                                <td class="a2"><p>请接收查币</p></td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--查询结束-->
+
+
+        </div>
+
+        <!--未找到-->
+        <div class="block-content4" id="content4">
+            <img src="public/images/qukuailian/non.png" height="171" width="166"/>
+            <p>
+                很抱歉，没有找到与
+                </br>
+                <span> 9572986 </span>
+                </br>
+                相关的信息，请更换关键词后重试
+            </p>
+
+
+
+
+        </div>
+        <!--未找到结束-->
+
+    <!--浏览器页面结束-->
+
+</div>
+ </div>
+<!--wrap结束-->
+
+
+<!--js部分滚动条监听事件-->
+<script>
+
+    var Main = {
+        data:function(){
+            return {
+                visible: false
+            }
+        },
+        methods: {
+            handleOpen :function() {
+                this.visible = !this.visible;
+            },
+            closeModal:function(){
+                this.visible = false;
+            }
+        }
+    }
+
+    var Component = Vue.extend(Main)
+    new Component().$mount('#app')
+
+
+    var $aside = $("#header>ul>.select").not('.none');
+    var $section_pos = $("#content1,.block-content4,.block-content11,.block-content7,.block-content5");
+    //    $aside.each(function (index) {
+    //        $(this).on("click", function () {
+    //            var pox = $($section_pos[index]);
+    //            $('html,body').stop().animate({scrollTop: pox.position().top-100}, 200);
+    //        })
+    //    });
+
+
+
+
+    /**scroll even**/
+
+    var p1 = $("#content1");
+    var p2 = $(".block-content4");
+    var p11 = $(".block-content11");
+    var p3 = $(".block-content7");
+    var p4 = $(".block-content5");
+
+
+
+    $(window).scroll(function () {
+
+        if ($(window).scrollTop() >= p1.position().top-10 && $(window).scrollTop() < p2.position().top) {
+            $($aside[0]).addClass("cur");
+
+            $($aside[0]).siblings().removeClass("cur");
+
+
+        }
+        if ($(window).scrollTop() >= p2.position().top-150 && $(window).scrollTop() < p11.position().top) {
+            $($aside[1]).addClass("cur");
+
+            $($aside[1]).siblings().stop().removeClass("cur");
+        }
+        if ($(window).scrollTop() >= p11.position().top-150 && $(window).scrollTop() < p3.position().top) {
+            $($aside[2]).addClass("cur");
+
+            $($aside[2]).siblings().stop().removeClass("cur");
+        }
+
+        if ($(window).scrollTop() >= p3.position().top-150 && $(window).scrollTop() < p4.position().top) {
+            $($aside[3]).addClass("cur");
+
+            $($aside[3]).siblings().stop().removeClass("cur");
+        }
+        if ($(window).scrollTop() >= p4.position().top-150) {
+            $($aside[4]).addClass("cur");
+
+            $($aside[4]).siblings().stop().removeClass("cur");
+        }
+    });
+
+</script>
+
+
+ <!--选项卡-->
+     <script type="text/javascript">
+         $(document).ready(function(){
+             $("li.tag-li").click(function(){
+                 $("li.tag-li").each(function () {
+                     $("li.tag-li").removeClass("tab-now");
+                 });
+                 $(this).addClass("tab-now");
+             });
+             $("#qukuai").click(function () {
+                 $(".qukuai").show();
+                 $(".jiaoyi").hide();
+                 $(".qianbao").hide();
+             });
+             $("#jiaoyi").click(function () {
+                 $(".qukuai").hide();
+                 $(".jiaoyi").show();
+                 $(".qianbao").hide();
+             });
+             $("#qianbao").click(function () {
+                 $(".qukuai").hide();
+                 $(".jiaoyi").hide();
+                 $(".qianbao").show();
+             });
+         });
+     </script>
+</body>
+</html>

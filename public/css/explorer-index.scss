@@ -1,0 +1,304 @@
+@charset "utf-8";
+//区块链浏览器
+.component-explorer-index{
+
+  a{text-decoration: none;}
+  //浏览器banner开始
+  #index{
+    height: 524px;
+    min-width:1400px;
+    .banner-1{
+      padding-top: 160px;
+      text-align: center;
+      color: white;
+      font-size: 64px;
+      span{
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+      .text-s{
+        font-size: 20px;
+      }
+    }
+    .banner-2{
+      width: 840px;
+      height: 60px;
+      background-color: #62aeed;
+      margin: 0 auto;
+      margin-top: 64px;
+      border-radius: 2px;
+      box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.3);
+      .banner-2-1{
+        display: inline-block;
+        height: 60px;
+        border: none;
+        width: 696px;
+        padding-left: 10px;
+        border-radius:4px 0px 0px 4px;
+      }
+      .banner-2-2{
+        display: inline-block;
+        width: 134px;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+
+
+  /**
+   * 块数据统计部分
+   */
+  #index{
+    position: relative;
+  }
+  #content2{
+    //margin-top: 95px;
+    //padding-top: 95px;
+    position: relative;
+  }
+  .qk_jiedianNum{
+    width: 1186px;
+    //border-radius: 4px;
+    background-color: #ffffff;
+    //box-shadow: 0 0 6px 0 #55a4ff;
+    //border: 2px solid #5FADFF;
+    margin: 50px auto;
+
+    .qk_jiedianNum_1{
+      background: url(../../public/images/index/jiedian_line.png) right center no-repeat;
+      width: 389px;
+      margin-top: 14px;
+      margin-bottom: 14px;
+      overflow: hidden;
+      display: inline-block;
+      &:last-child{
+        background: none;
+      }
+      img{
+        display: inline-block;
+        /* vertical-align: top; */
+        margin-left: 36px;
+        vertical-align: middle;
+      }
+      .qk_jiedianNum_1_1{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .p1{
+        font-size: 24px;
+        color: #1B7DE2;
+        display: inline-block;
+        margin-left: 33px;
+        vertical-align: middle;
+      }
+      .p2{
+        font-size: 16px;
+        color: #4a4a4a;
+        display: inline-block;
+        font-weight: bold;
+        margin-left: 33px;
+        vertical-align: middle;
+      }
+    }
+    .qk_jiedianNum_2{
+      background:none;
+    }
+  }
+
+  /**
+  * 数据动态部分
+  */
+  .qk_numShow{
+    text-align: center;
+    width: 1200px;
+    margin: 0 auto;
+    margin-top: 82px;
+    margin-bottom: 82px;
+    .qk_numShow_table{
+      width: 1200px;
+      .qk_numShow_title_tr{
+        height: 50px;
+        background-color: #40beff;
+        font-size: 16px;
+        border: none;
+        color: #4a4a4a;
+        th{
+          font-size: 16px;
+          border: none;
+          font-weight: 500;
+          color: #4a4a4a;
+        }
+      }
+      .qk_numShow_tr{
+        height: 50px;
+        font-size: 14px;
+        color: #4a4a4a;
+        td{
+          border-bottom: solid 1px #e8e8e8;
+        }
+        .color_blue{
+          color: #40beff;
+        }
+      }
+    }
+  }
+
+  //  查询
+  .block-content3{
+    $li-width:100px;
+    $li-height:68px;
+    .content-tab{
+      width: 1080px;
+      height: $li-height;
+      border-bottom: 0.5px solid #D8D8D8;
+      font-size: 20px;
+      line-height: $li-height;
+      text-align: center;
+      margin: 20px auto;
+
+      ul{
+        width: 420px;
+        margin: 0 auto;
+        li{
+          width: $li-width;
+          height: $li-height;
+          float: left;
+          margin:0 20px;
+          a{
+            color:#1C2438 ;
+          }
+        }
+        .tab-now{
+          border-bottom: 4px solid #3B99FF;
+        }
+      }
+    }
+
+    .content-table{
+      width:1080px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+      margin: 0 auto;
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+
+      .table-1{
+        font-size: 18px;
+        color: #4A4A4A;
+        padding-top: 45px;
+        margin-left: 65px;
+        margin-bottom: 38px;
+        span{
+          color:#1F1F1F ;
+          font-weight: 500;
+          padding-left: 20px;
+        }
+      }
+
+      .table-2{
+        padding-bottom: 24px;
+        .table-2-1{
+          width: 948px;
+          height: 58px;
+          border: 1px solid #D5D5D5;
+          margin:0 auto;
+        }
+
+        table{
+          width: 900px;
+          margin: 0 auto;
+          font-size: 16px;
+          line-height: 58px;
+          color: #4A4A4A;
+          text-decoration: none;
+          border-collapse: collapse;
+          border-spacing: 0;
+          tr{
+            height: 58px;
+          }
+          .t1{
+            background-color: #FBFBFB;
+          }
+          .a3{
+            text-align: right;
+            span{
+              color: #000000;
+            }
+          }
+          .a1{
+            width: 160px;
+            text-align: center;
+            border-right: 1px solid #D5D5D5;
+          }
+          .a2{
+            text-align: left;
+            padding: 0 48px;
+            color: #000000;
+            vertical-align:bottom;
+            img{
+              margin-top: -4px;
+              margin-right: 8px;
+            }
+            p{
+              line-height: 22px;
+              padding: 8px 0;
+            }
+          }
+        }
+
+        .table-3-1{
+          margin:0 auto;
+          table,tr,td{
+            border: 1px solid #D5D5D5;
+            vertical-align: middle;
+          }
+          table{
+            width: 948px;
+          }
+        }
+
+        .table-2-2{
+          width: 948px;
+          margin: 0 auto;
+          margin-top: -1px;
+          border: 1px solid #D5D5D5;
+          p{
+            width: 900px;
+            color: #4A4A4A;
+            font-size: 14px;
+            line-height: 22px;
+            word-wrap : break-word ;
+            margin: 40px auto;
+          }
+        }
+      }
+
+
+
+    }
+
+  }
+
+
+  // 未找到
+  .block-content4{
+    img{
+      display: block;
+      margin: 0 auto;
+    }
+    p{
+      margin: 0 auto;
+      text-align:center ;
+      font-size: 18px;
+      line-height: 40px;
+      color: #9B9B9B;
+      span{
+        color: #298CFF;
+      }
+    }
+  }
+
+
+}
