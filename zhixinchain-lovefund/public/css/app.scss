@@ -1,0 +1,100 @@
+@import "common/common";
+
+html{
+  font-size: 100px;
+  color: #EE5A8A;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+img {
+  border-style: none;
+
+}
+html, body,div,img{ margin:0; padding:0 }
+.wrap{
+  width: 3.75rem;
+  max-width:3.75rem;
+  margin: 0 auto;
+  font-size: 0.16rem;
+
+  .content-1{
+    width: 3.75rem;
+    height: 2.44rem;
+  }
+
+  .content-2{
+    width: 3.75rem;
+    height:1.14rem;
+    background: url( '../images/lovefund/lf2.png') no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    .content-2-1{
+      width:3.33rem ;
+      font-size: 0.09rem;
+      line-height: 0.14rem;
+      text-indent: 0.18rem;
+      letter-spacing:-0.004rem;
+
+      margin: 0 auto;
+    }
+  }
+  .content-3{
+    width: 3.75rem;
+    height:3.6rem;
+    background: url( '../images/lovefund/lf3.png') no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+    font-size: 0.13rem;
+    .content-3-1{
+      margin: 0 auto;
+      text-align: center;
+      padding: 0.08rem 0;
+
+      img{
+        width: 1.53rem;
+        height:0.01rem;
+      }
+      div{
+        margin-top: -0.10rem;
+      }
+    }
+    .content-3-2{
+      width: 3.3rem;
+      margin: 0 auto;
+      img{
+        width: 0.2rem;
+        height: 0.2rem;
+        float: left;
+      }
+      .content-3-2-1{
+        width: 2.9rem;
+        float: left;
+        margin-left: 0.1rem;
+      }
+      .c-button{
+        margin: 0 auto;
+        text-align: center;
+      }
+      button{
+        width: 2.0rem;
+        height: 0.27rem;
+        background:  #EE5A8A;
+        color: #FFFFFF;
+        border-radius: 0.27rem;
+        border:0;
+        margin:0.12rem auto;
+        text-align: center;
+      }
+    }
+    .content-3-3{
+      margin: 0.1rem auto;
+      text-align: center;
+
+    }
+    }
+
+
+
+}
