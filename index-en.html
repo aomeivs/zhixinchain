@@ -59,15 +59,101 @@
     <div class="component-index">
         <!--头部-->
         <div class="head_fixed" id="nav-container">
+
+            <!--新增公共及头部样式修改-->
+            <div class="head-note">
+                <div class="head-note-space">
+                    <img src="public/images/index/note.png" height="17" width="18"/>
+                    <span class="note">关于与FInsur战略合作的公告</span><span>>></span>
+                    <ul class="menu zi18">
+                        <div class="lang" style="position: absolute;top: 0px;right: 300px;">
+                            <span onclick="window.location.href='#'" >
+                                中文
+                                <icon type="arrow-down-b"></icon>
+                            </span>
+                            <span onclick="window.location.href='#'" style="display: none">
+                                EN
+                                <icon type="arrow-down-b"></icon>
+                            </span>
+                        </div>
+
+                        <li class="SignIn" style="display: none; width: auto;position: absolute;top: 5px;right: 400px;">
+                            <!--企业-->
+                            <dropdown trigger="click" :visible="visible">
+                                <a href="javascript:void(0)" @click.stop="handleOpen()" style="color: #000000;">
+                                    控制台
+                                    <icon type="arrow-down-b"></icon>
+                                </a>
+                                <dropdown-menu slot="list">
+                                    <div class="head-menu-userInfo">
+                                        <div class="clearFix head-menu-company-diy">
+                                        <span><a href="javascript:alert(0)"
+                                                 style="color:#1B7CE1;">青岛网络科技特别开心有限公司</a></span>
+                                        </div>
+                                        <div class="line head-menu-uline"></div>
+                                        <div class="clearFix head-menu-u1">
+                                            <span class="left h-m-u-1">支持员工数量</span>
+                                            <span class="right">40</span>
+                                        </div>
+                                        <div class="clearFix head-menu-u2">
+                                            <span class="left h-m-u-1">有效期至</span>
+                                            <span class="right">2018.11.19</span>
+                                        </div>
+                                        <div class="line head-menu-uline"></div>
+                                        <div class="clearFix head-menu-u3">
+                                    <span class="left">
+                                        <badge dot>
+                                            <a href="#" class="head-message-badge">我的优惠券</a>
+                                        </badge>
+                                    </span>
+                                            <span class="right">
+                                        <a href="#" class="head-message-badge">
+                                            <Icon type="android-exit"></Icon>
+                                            <span>退出</span>
+                                        </a>
+                                    </span>
+                                        </div>
+                                    </div>
+                                </dropdown-menu>
+                            </dropdown>
+                            <!--个人-->
+                            <dropdown trigger="click" :visible="visible" style="margin-left: 20px ;display: none">
+                                <a href="javascript:void(0)" @click.stop="handleOpen()" style="color: #000000;">
+                                    控制台
+                                    <icon type="arrow-down-b"></icon>
+                                </a>
+                                <dropdown-menu slot="list">
+                                    <div class="head-menu-userInfo" style="width: 110px;">
+                                        <div class="clearFix head-menu-person-diy">
+                                            <span>周累了</span>
+                                        </div>
+                                        <div class="line head-menu-uline"></div>
+                                        <div class="clearFix head-menu-person-diy span-hand">
+                                            <span>退出</span>
+                                        </div>
+                                    </div>
+                                </dropdown-menu>
+                            </dropdown>
+                        </li>
+
+                        <li class="loginAndSignIn" style="display:block;">
+                            <span class="span1">SIGN IN</span>
+                            <span class="span2">SIGN UP</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
             <div id="header">
                 <a href="Homepage.html">
                     <img src="public/images/index/logo.png" alt="" class="logo" style="border: 0px;"/>
                 </a>
                 <ul id="menu" class="menu zi18">
-                    <div class="lang">
-                        <span onclick="window.location.href='#'">中文</span>
-                        <span onclick="window.location.href='#'">EN</span>
-                    </div>
+                    <!--<div class="lang">-->
+                        <!--<span onclick="window.location.href='#'">中文</span>-->
+                        <!--<span onclick="window.location.href='#'">EN</span>-->
+                    <!--</div>-->
                     <li data-menuanchor="about" id="home2" class="cur select"><a href="#block-content1">ABOUT</a></li>
 
                     <li data-menuanchor="technical" id="home6" class="select"><a href="#block-content4">APPLICATION</a></li>
@@ -79,10 +165,10 @@
 
                     <li data-menuanchor="team" class="menu-try" id="home4" style="margin-left: 40px;">DEMO</li>
 
-                    <li class="loginAndSignIn" style="display: block;">
-                        <span class="span1">SIGN IN</span>
-                        <span class="span2">SIGN UP</span>
-                    </li>
+                    <!--<li class="loginAndSignIn" style="display: block;">-->
+                        <!--<span class="span1">SIGN IN</span>-->
+                        <!--<span class="span2">SIGN UP</span>-->
+                    <!--</li>-->
 
                 </ul>
                 <div style="clear: both"></div>
