@@ -25,6 +25,7 @@
             width: 389px;
         }
     </style>
+
     <style type="text/css">
         .pagination {
             position: absolute;
@@ -50,109 +51,176 @@
             background: #2d8cf0;
         }
     </style>
+    <style>
+        /*公告*/
+        .notice{
+            background-color: rgba(0,0,0,0.5);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 8;
+        }
+        .notice-bg{
+            width:633px;
+            height:668px;
+            background:url(public/images/mask-bg.png) center top no-repeat;
+            z-index:9;
+            margin:0 auto;
+            margin-top:120px;
+            text-align: center;
+        }
+        .notice-title{
+            font-size: 36px;
+            color: #298CFF;
+            text-align: center;
+            padding-top: 130px;
+        }
+        .notice-title2{
+            width:58px;
+            height:5px;
+            background-color:#94C6FF;
+            margin: 0 auto;
+            border-radius:5px;
+        }
+        .notice-content{
+            width: 387px;
+            font-size: 18px;
+            color: #333D50;
+            margin: 30px auto;
+            text-align: left;
+        }
+        .notice-btn{
+            font-size:24px;
+            color:#ffffff;
+            background-color:#50E3C2;
+            width:238px;
+            height:54px;
+            line-height:54px;
+            margin:20px auto;
+            border-radius:54px;
+            border:0;
+            box-shadow:0 5px 5px rgba(0,0,0,0.2);
+        }
+
+    </style>
+
 </head>
 <body>
-
-<div class="wrap" id="app">
-    <div class="component-index">
+    <div class="wrap" id="app">
+        <div class="component-index">
         <!--头部-->
-        <div class="head_fixed" id="nav-container">
+            <div class="head_fixed" id="nav-container">
+
+            <!--新增公共及头部样式修改-->
+            <div class="head-note">
+                <div class="head-note-space">
+                    <img src="public/images/index/note.png" height="17" width="18"/>
+                    <span class="note" style="color: #FE596D;font-weight: 600;">关于与FInsur战略合作的公告</span>
+                    <span style="color: #FE596D;padding-left: 10px;">>></span>
+                    <ul class="menu zi18">
+                        <div class="lang" style="position: absolute;top: 0px;right: 300px;">
+                            <span onclick="window.location.href='#'" >
+                                中文
+                                <icon type="arrow-down-b"></icon>
+                            </span>
+                            <span onclick="window.location.href='#'" style="display: none">
+                                EN
+                                <icon type="arrow-down-b"></icon>
+                            </span>
+                        </div>
+
+                        <li class="SignIn" style="display: none; width: auto;position: absolute;top: 5px;right: 400px;">
+                            <!--企业-->
+                            <dropdown trigger="click" :visible="visible">
+                                <a href="javascript:void(0)" @click.stop="handleOpen()" style="color: #000000;">
+                                    控制台
+                                    <icon type="arrow-down-b"></icon>
+                                </a>
+                                <dropdown-menu slot="list">
+                                    <div class="head-menu-userInfo">
+                                        <div class="clearFix head-menu-company-diy">
+                                        <span><a href="javascript:alert(0)"
+                                                 style="color:#1B7CE1;">青岛网络科技特别开心有限公司</a></span>
+                                        </div>
+                                        <div class="line head-menu-uline"></div>
+                                        <div class="clearFix head-menu-u1">
+                                            <span class="left h-m-u-1">支持员工数量</span>
+                                            <span class="right">40</span>
+                                        </div>
+                                        <div class="clearFix head-menu-u2">
+                                            <span class="left h-m-u-1">有效期至</span>
+                                            <span class="right">2018.11.19</span>
+                                        </div>
+                                        <div class="line head-menu-uline"></div>
+                                        <div class="clearFix head-menu-u3">
+                                    <span class="left">
+                                        <badge dot>
+                                            <a href="#" class="head-message-badge">我的优惠券</a>
+                                        </badge>
+                                    </span>
+                                            <span class="right">
+                                        <a href="#" class="head-message-badge">
+                                            <Icon type="android-exit"></Icon>
+                                            <span>退出</span>
+                                        </a>
+                                    </span>
+                                        </div>
+                                    </div>
+                                </dropdown-menu>
+                            </dropdown>
+                            <!--个人-->
+                            <dropdown trigger="click" :visible="visible" style="margin-left: 20px ;display: none">
+                                <a href="javascript:void(0)" @click.stop="handleOpen()" style="color: #000000;">
+                                    控制台
+                                    <icon type="arrow-down-b"></icon>
+                                </a>
+                                <dropdown-menu slot="list">
+                                    <div class="head-menu-userInfo" style="width: 110px;">
+                                        <div class="clearFix head-menu-person-diy">
+                                            <span>周累了</span>
+                                        </div>
+                                        <div class="line head-menu-uline"></div>
+                                        <div class="clearFix head-menu-person-diy span-hand">
+                                            <span>退出</span>
+                                        </div>
+                                    </div>
+                                </dropdown-menu>
+                            </dropdown>
+                        </li>
+
+                        <li class="loginAndSignIn" style="display:block;">
+                            <span class="span1">登录</span>
+                            <span class="span2">注册</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
             <div id="header">
 
                 <a href="Homepage.html">
                     <img src="public/images/index/logo.png" alt="" class="logo" style="border: 0px;"/>
                 </a>
                 <ul id="menu" class="menu zi18">
-                    <div class="lang">
-                        <span onclick="window.location.href='#'">中文</span>
-                        <span onclick="window.location.href='#'">EN</span>
-                    </div>
+
                     <li data-menuanchor="about" id="home2" class="cur select"><a href="#block-content1">首页</a></li>
                     <li class="select none"><a href="javascript:0;">关于职信链</a></li>
 
                     <li data-menuanchor="technical" id="home6" class="select"><a href="#block-content4">应用</a></li>
                     <li class="select"><a href="#block-content11">技术</a></li>
                     <li data-menuanchor="technical" id="home7" class="select"><a href="#block-content7">我们的优势</a></li>
-
                     <li data-menuanchor="technical" id="home3" class="select"><a href="#block-content5">FAQ</a></li>
                     <li class="select" ><a href="#"style="position: relative;">钱包<div style="position: absolute; top: -16px; right: -8px;"><img src="public/images/nicon.png" alt=""></div></a></li>
-
-
-
-<!--                    <li data-menuanchor="buy" class="menu-buy" id="home5">购 买</li>-->
-                    <!--<li data-menuanchor="team" class="menu-try" id="home4" style="margin-left: 40px;">试 用</li>-->
-
-
-                    <li class="SignIn" style="display: block; width: auto;">
-                        <!--企业-->
-                        <dropdown trigger="click" :visible="visible">
-                            <a href="javascript:void(0)" @click.stop="handleOpen()">
-                                控制台
-                                <icon type="arrow-down-b"></icon>
-                            </a>
-                            <dropdown-menu slot="list">
-                                <div class="head-menu-userInfo">
-                                    <div class="clearFix head-menu-company-diy">
-                                        <span><a href="javascript:alert(0)"
-                                                 style="color:#1B7CE1;">青岛网络科技特别开心有限公司</a></span>
-                                    </div>
-                                    <div class="line head-menu-uline"></div>
-                                    <div class="clearFix head-menu-u1">
-                                        <span class="left h-m-u-1">支持员工数量</span>
-                                        <span class="right">40</span>
-                                    </div>
-                                    <div class="clearFix head-menu-u2">
-                                        <span class="left h-m-u-1">有效期至</span>
-                                        <span class="right">2018.11.19</span>
-                                    </div>
-                                    <div class="line head-menu-uline"></div>
-                                    <div class="clearFix head-menu-u3">
-                                    <span class="left">
-                                        <badge dot>
-                                            <a href="#" class="head-message-badge">我的优惠券</a>
-                                        </badge>
-                                    </span>
-                                        <span class="right">
-                                        <a href="#" class="head-message-badge">
-                                            <Icon type="android-exit"></Icon>
-                                            <span>退出</span>
-                                        </a>
-                                    </span>
-                                    </div>
-                                </div>
-                            </dropdown-menu>
-                        </dropdown>
-                        <!--个人-->
-                        <dropdown trigger="click" :visible="visible" style="margin-left: 20px ;display: none">
-                            <a href="javascript:void(0)" @click.stop="handleOpen()">
-                                控制台
-                                <icon type="arrow-down-b"></icon>
-                            </a>
-                            <dropdown-menu slot="list">
-                                <div class="head-menu-userInfo" style="width: 110px;">
-                                    <div class="clearFix head-menu-person-diy">
-                                        <span>周累了</span>
-                                    </div>
-                                    <div class="line head-menu-uline"></div>
-                                    <div class="clearFix head-menu-person-diy span-hand">
-                                        <span>退出</span>
-                                    </div>
-                                </div>
-                            </dropdown-menu>
-                        </dropdown>
-                    </li>
-
-                    <li class="loginAndSignIn" style="display: none;">
-                        <span class="span1">登录</span>
-                        <span class="span2">注册</span>
-                    </li>
 
                 </ul>
                 <div style="clear: both"></div>
             </div>
-        </div>
+            </div>
         <!--首页介绍内容-->
-        <div id="text_lt">
+            <div id="text_lt">
             <a name="block-content1" style="display: inline-block;width: 100%;clear: both;height: 1px;"></a>
             <div class="block-content1" id="content1">
                 <!--index 结束 头部 大banner-->
@@ -597,12 +665,21 @@
             </div>
 
         </div>
+            <!--公告-->
+            <div class="notice">
+                <div class="notice-bg">
+                    <p class="notice-title">通知</p>
+                    <div class="notice-title2"></div>
+                    <p class="notice-content">
+                        为了使ZXC支持更多的应用场景，我们支持现有ZXC与ERC20 ZXC的映射迁移，映射迁移通道开放至2018-08-15，届时将关闭官方钱包功能，用户可使用支持ERC20的钱包管理ZXC，请尽快完成映射迁移。更多详情请见公告。
+                    </p>
+                    <button class="notice-btn">查看详情</button>
 
-
-
-    </div>
-
-</div>
+                </div>
+            </div>
+            <!--公告结束-->
+        </div>
+     </div>
 <!--js部分滚动条监听事件-->
 <script>
 
