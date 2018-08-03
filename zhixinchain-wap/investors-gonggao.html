@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="public/js/rem.js"></script>
+
+    <style>
+        html{
+            font-size: 100px;
+        }
+        html,body{
+            background: #ffffff;
+        }
+
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        img {
+            border-style: none;
+        }
+
+        html,body,div,img{ margin:0; padding:0; }
+
+        .wrap{
+            width: 3.75rem;
+            max-width:3.75rem;
+            margin: 0 auto;
+            font-size: 0.16rem;
+        }
+
+        img{
+            display:block;
+        }
+        .content-body{
+            padding: 0 0.32rem;
+        }
+        .content-1{
+            font-size: 0.11rem;
+            color: #333D50;
+            line-height: 0.11rem;
+            margin-top: 0.15rem;
+            margin-bottom: 0.3rem;
+        }
+        .content-1 div{
+            padding-top: 0.03rem;
+            margin-left: 0.2rem;
+        }
+        .content-2{
+            font-size: 0.19rem;
+            color: #000000;
+            line-height: 0.24rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .content-3{
+            font-size: 0.16rem;
+            color: #666666;
+            line-height: 0.22rem;
+        }
+
+    </style>
+</head>
+<body>
+     <div class="wrap" id="app">
+         <div>
+             <img src="public/images/gonggao/gonggao1.png" style="width: 3.75rem;max-width: 3.75rem;">
+         </div>
+         <div class="content-body">
+             <div class="content-1">
+                 <img src="public/images/gonggao/gonggao-time.png" style="width: 0.15rem; display: inline-block; float: left;"/>
+                 <div>{{time}}</div>
+             </div>
+             <div class="content-2">
+                {{title}}
+             </div>
+             <div class="content-3" v-html="content">
+             </div>
+
+         </div>
+         <div>
+             <img src="public/images/gonggao/gonggao2.png" style="width: 3.75rem;max-width: 3.75rem;">
+         </div>
+
+     </div>
+
+
+     <script>
+         new Vue({
+             data: function () {
+                 return {
+                     time:'星期四 2018-08-03 09:30',
+                     title:'关于与FInsur战略合作的公告关于与FInsur战略合作的公告',
+                     content:'为避免在交易所中出现简称重名，职信币简称ZXC（ZhiXin Coin）已更名为ZXT（ZhiXin Token）。<br>同时，为更方便交易所上线，我们将主链钱包升级为ERC20 协议钱包，并开始向新钱包的映射迁移。迁移期间，除迁移功能外，原钱包功能全部停用，所有交易功能请移步新ZXT钱包。ZXT新钱包：推荐使用imToken 2.0 最新版。下载：token.im<br>映射迁移通道开放至2018-08-15，届时将关闭原官方钱包功能，请周知。<br>永不止步！谢谢您的关注！'
+                 }
+             },
+             methods: {
+
+             }
+         }).$mount('#app')
+     </script>
+</body>
+</html>
