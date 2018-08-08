@@ -1,0 +1,159 @@
+html{
+  font-size: 100px;
+}
+html,body{
+  background: #ffffff;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  border-style: none;
+}
+
+html,body,div,img{ margin:0; padding:0; }
+
+.wrap{
+  width: 3.75rem;
+  max-width:3.75rem;
+  margin: 0 auto;
+  font-size: 0.16rem;
+}
+
+img{
+  display:block;
+}
+.content-body{
+  padding: 0 0.2rem;
+}
+.content-1{
+  font-size: 0.19rem;
+  color: #4A4A4A;
+  font-weight: 700;
+  line-height: 0.19rem;
+  text-align: center;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+.content-2{
+  width: 3.3rem;
+  height: 1rem;
+  border-radius: 0.04rem;
+  border: solid 1px #979797;
+  font-size: 0.15rem;
+  color: #495060;
+  line-height: 0.25rem;
+  text-align: center;
+  margin-bottom: 0.3rem;
+
+  p:first-of-type{
+  margin-top: 0.13rem;
+  }
+}
+
+
+.content-3{
+  font-size: 0.17rem;
+  color: #4A4A4A;
+  font-weight: 700;
+  line-height: 0.17rem;
+  margin-right: 0.1rem;
+  margin-bottom: 0.2rem;
+
+  div{
+  width: 0.05rem;
+  height: 0.17rem;
+  background-color: #7427e4;
+  display: inline-block;
+  }
+
+  p{
+    margin-left: 0.2rem;
+    margin-top: -0.18rem;
+  }
+}
+
+table
+{
+  border-collapse:collapse;
+}
+table, td, th
+{
+  border:1px solid #979797;
+}
+td,th{
+  padding:0.1rem;
+}
+
+.content-4 table{
+  width: auto;
+  color: #4a4a4a;
+  margin-bottom: 0.3rem;
+  th{
+    font-size: 0.15rem;
+  }
+  td{
+    font-size: 0.13rem;
+  }
+
+}
+.content-5{
+  font-size: 0.15rem;
+  color: #4A4A4A;
+  p{
+    margin-bottom: 0.2rem;
+  }
+}
+.content-6{
+  .content-6-1{
+    font-size: 0.15rem;
+    color: #222222;
+    margin-bottom: 0.3rem;
+    p:nth-of-type(2){
+      font-size: 0.14rem;
+      margin-bottom: 0.05rem;
+    }
+    .part-1{
+      font-size: 0.18rem;
+      color: #FF3824;
+      margin-top: 1px;
+      display: inline-block;
+      line-height: 0;
+      vertical-align: middle;
+    }
+  }
+  .input-text{
+    width: 3.2rem;
+    height: 0.4rem;
+    line-height:0.4rem;
+    vertical-align: top;
+    padding: 0 6px;
+    font-size: 0.15rem;
+    color: #222222;
+    background: #FFF;
+    border: 1px solid #C3C9D0;
+    border-radius: 4px;
+  }
+  .text-1{
+    display:inline-block;
+    margin-left:0.05rem;
+    margin-top: -0.1rem;
+    font-size: 0.15rem;
+    color: #4A4A4A;
+  }
+}
+.content-7{
+  margin-bottom: 0.5rem;
+  button{
+    width: 3.35rem;
+    height: 0.4rem;
+    font-size: 0.16rem;
+    color: #FFFFFF;
+    background-color: #1B7DE2;
+    border:0px;
+    border-radius: 4px;
+  }
+}
