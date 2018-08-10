@@ -141,8 +141,19 @@
              <div class="content-7">
                  <button>提交</button>
              </div>
-
          </div>
+
+         <!--成功提示--start-->
+         <div class="tips" v-show="isshow">
+             <div class="tips-bg">
+                 <img src="public/images/tips-close.png" class="tips-close" v-on:click="showclose">
+                 <img src="public/images/tips1.png" class="tips-imgSuccess">
+                 <p class="tips-title">提交成功</p>
+                 <p class="tips-title2">您已提交职信链社区“好人无忧”<br>健康福利登记表</p>
+
+             </div>
+         </div>
+         <!--提示-成功--end-->
 
      </div>
 
@@ -154,11 +165,14 @@
                      weixin: '',
                      phone:'',
                      zxt:'',
-                     idcard:''
+                     idcard:'',
+                     isshow:true
                  }
              },
              methods: {
-
+                 showclose:function () {
+                     this.isshow = !this.isshow
+                 }
              }
          }).$mount('#app')
      </script>
