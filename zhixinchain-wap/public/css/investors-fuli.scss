@@ -157,3 +157,57 @@ td,th{
     border-radius: 4px;
   }
 }
+
+ //提示-成功
+ .tips{
+   background-color: rgba(0,0,0,0.5);
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   right: 0;
+   left: 0;
+   z-index: 8;
+
+   .tips-bg{
+   width:2.6rem;
+   height:2.7rem;
+   background-color: #FFFFFF;
+   border-radius: 8px;
+   z-index:9;
+   margin:0 auto;
+   margin-top: 1.6rem;
+   text-align: center;
+   }
+
+   .tips-close{
+     width: 0.2rem;
+     height: 0.2rem;
+     padding:{
+       top: 0.1rem;
+       left: 2.25rem;
+     }
+   }
+
+   .tips-imgSuccess{
+     width: 0.54rem;
+     height: 0.55rem;
+     margin: 0 auto;
+     padding:{
+       top: 0.15rem;
+       bottom: 0.2rem;
+     }
+   }
+
+   .tips-title{
+     font-size: 0.2rem;
+     color: #000000;
+   }
+
+   .tips-title2{
+     font-size: 0.14rem;
+     color: #666666;
+     padding-top: 0.3rem;
+   }
+
+ }
+
