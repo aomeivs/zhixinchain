@@ -671,7 +671,7 @@
     #text_lt{
       .block-content2{
         position: relative;
-        z-index: 1;
+        z-index: 5;
       }
       .block-content4{
         padding-top: 60px;
@@ -772,4 +772,5 @@
     right: $width;
     z-index: 7;
   }
+
 }
