@@ -19,6 +19,8 @@
     <link href="https://cdn.bootcss.com/Swiper/2.7.5/idangerous.swiper.min.css" rel="stylesheet">
     <script src="https://cdn.bootcss.com/Swiper/2.7.5/idangerous.swiper.js"></script>
     <script src="public/js/jquery.fadethis.min.js"></script>
+    <!--头部轮播引入-->
+    <link rel="stylesheet" href="public/js/flexslider/2.6.1/flexslider.min.css"/>
     <style>
         .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 {
             background: url(public/images/index/jiedian_line.png) right center no-repeat;
@@ -51,6 +53,8 @@
             background: #2d8cf0;
         }
     </style>
+
+    <!--公共样式-->
     <style>
         /*公告*/
         .notice{
@@ -86,9 +90,11 @@
         }
         .notice-content{
             width: 387px;
+            height: 260px;
             font-size: 18px;
             color: #333D50;
             margin: 30px auto;
+            margin-bottom: 50px;
             text-align: left;
         }
         .notice-btn{
@@ -104,7 +110,53 @@
             box-shadow:0 5px 5px rgba(0,0,0,0.2);
             cursor:pointer;
         }
+        .test{
+              overflow: auto;
+              border: none;
+          }
 
+        .test-1::-webkit-scrollbar {/*滚动条整体样式*/
+            width: 10px;     /*高宽分别对应横竖滚动条的尺寸*/
+            height: 1px;
+        }
+        .test-1::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            background: #C2C2C2;
+        }
+        .test-1::-webkit-scrollbar-track {/*滚动条里面轨道*/
+            -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+            border-radius: 10px;
+            background: #f3f3f3;
+        }
+
+    </style>
+
+    <!--头部图片轮播样式-->
+    <style>
+        .flexslider{
+            overflow: hidden;
+            margin-bottom: 0px;
+            height: 495px;
+            border: 0px;
+        }
+        .flexslider ul li{
+            height: 495px;
+        }
+        .flex-direction-nav .flex-prev {
+            left: -50px;
+        }
+
+        .flex-direction-nav a, .flex-direction-nav a:before {
+            color: rgba(255, 255, 255, 0.8);
+            text-shadow: 1px 1px 0 rgba(255,255,255,.3);
+        }
+        .flex-direction-nav a {
+            margin: -20px 240px;
+        }
+        .flex-direction-nav a {
+            height: 60px;
+        }
     </style>
 
 </head>
@@ -222,23 +274,51 @@
             </div>
         <!--首页介绍内容-->
             <div id="text_lt">
-            <a name="block-content1" style="display: inline-block;width: 100%;clear: both;height: 1px;"></a>
-            <div class="block-content1" id="content1">
-                <!--index 结束 头部 大banner-->
-                <div class="section" id="index"
-                     style="background:url(public/images/index/s1-banner.jpg) center top no-repeat;">
+                <a name="block-content1" style="display: inline-block;width: 100%;clear: both;height: 1px;"></a>
+                <!--网页头部轮播替换--开始-->
+                <div class="block-content1" id="content1" style="margin-top: 70px;">
+                    <!--轮播图片--start-->
 
-                    <div class="banner-1">
-                        <span>职信链</span>
-                    </div>
+                    <div class="flexslider" style="overflow: hidden;">
+                        <ul class="slides">
+                            <li class="backImg-1" >
+                                <div class="section" id="index" style="background:url(public/images/index/s1-banner.jpg) center top no-repeat;">
 
-                    <div class="banner-2">
-                        <input class="banner-2-1" type="text" placeholder="不论您是企业还是个人，都可以在这里输入职业人的姓名或手机号，搜索TA的职信">
-                        <div class="banner-2-2">
-                            <span>立即搜索</span>
-                        </div>
+                                    <div class="banner-1">
+                                        <span>全球区块链落地应用典范</span>
+                                    </div>
+
+                                    <div class="banner-2">
+                                        <input class="banner-2-1" type="text" placeholder="不论您是企业还是个人，都可以在这里输入职业人的姓名或手机号，搜索TA的职信">
+                                        <div class="banner-2-2">
+                                            <span>立即搜索</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li onclick="window.open('https://www.allcoin.ca/imo_details/?id=2')" class="backImg-2" style="background: url(public/images/index/s2-banner.png) center no-repeat; cursor:pointer;">
+                            </li>
+                        </ul>
                     </div>
-                </div>
+                    <!--轮播图片--end-->
+
+            <!--<div class="block-content1" id="content1">-->
+                <!--&lt;!&ndash;index 结束 头部 大banner&ndash;&gt;-->
+                <!--<div class="section" id="index"-->
+                     <!--style="background:url(public/images/index/s1-banner.jpg) center top no-repeat;">-->
+
+                    <!--<div class="banner-1">-->
+                        <!--<span>职信链</span>-->
+                    <!--</div>-->
+
+                    <!--<div class="banner-2">-->
+                        <!--<input class="banner-2-1" type="text" placeholder="不论您是企业还是个人，都可以在这里输入职业人的姓名或手机号，搜索TA的职信">-->
+                        <!--<div class="banner-2-2">-->
+                            <!--<span>立即搜索</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+
             </div>
 
             <div class="block-content2" id="content2">
@@ -259,8 +339,6 @@
                             <p class="p2">用户量</p><p id="jk_userNum" class="p1">2,142</p></div>
                     </div>
                 </div>
-
-
 
             </div>
 
@@ -666,14 +744,25 @@
             </div>
 
         </div>
+
             <!--公告-->
-            <div class="notice">
+            <div class="notice" style="display: none;">
                 <div class="notice-bg">
                     <p class="notice-title">通知</p>
                     <div class="notice-title2"></div>
-                    <p class="notice-content">
-                        为了使ZXC支持更多的应用场景，我们支持现有ZXC与ERC20 ZXC的映射迁移，映射迁移通道开放至2018-08-15，届时将关闭官方钱包功能，用户可使用支持ERC20的钱包管理ZXC，请尽快完成映射迁移。更多详情请见公告。
-                    </p>
+                    <div class="notice-content test test-1">
+                        <p>
+                            为避免在交易所中出现简称重名，职信币简称ZXC（ZhiXin Coin）已更名为ZXT（ZhiXin Token）。
+                            同时，为更方便交易所上线，我们将主链钱包升级为ERC20 协议钱包，并开始向新钱包的映射迁移。
+                            迁移期间，除迁移功能外，原钱包功能全部停用，所有交易功能请移步新ZXT钱包。
+                        </p>
+                        <p></p>
+                        <p>ZXT新钱包：推荐使用imToken 2.0 最新版。下载：token.im</p>
+
+                        映射迁移通道开放至2018-08-15，届时将关闭原官方钱包功能，请周知。
+                        永不止步！谢谢您的关注！
+                    </div>
+
                     <button class="notice-btn">查看详情</button>
 
                 </div>
@@ -792,5 +881,19 @@
     //    scrollToPositionBlock(location.search.split('=')[1]);
     //}
 </script>
+
+    <!--头部轮播js--开始-->
+    <script src="public/js/flexslider/2.6.1/jquery.flexslider.min.js"></script>
+    <script>
+        $(function () {
+            $(".flexslider").flexslider({
+                slideshowSpeed: 4000, //展示时间间隔ms
+                animationSpeed: 400, //滚动时间ms
+//            touch: true //是否支持触屏滑动
+            });
+        });
+    </script>
+    <!--头部轮播js--结束-->
+
 </body>
 </html>
