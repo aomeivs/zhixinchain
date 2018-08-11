@@ -95,9 +95,27 @@
 
 
          <!--添加推荐人--start-->
-         <div class="tips" style="display: block;">
-             <div class="tips-bg" >
-                 <img src="public/images/tips-close.png" class="tips-close" >
+         <div class="tips" style="display: none;">
+             <div class="tips-bg" style="width: 3.2rem;height: 3.2rem;" >
+                 <img src="public/images/tips-close.png" class="tips-close" style="padding-left: 2.85rem;">
+                 <div>
+                     <div class="tuijian-title">
+                         <img src="public/images/tuijian-x.png" height="2" width="72"/>
+                         <p>添加被推荐人</p>
+                         <img src="public/images/tuijian-x.png" height="2" width="72"/>
+                     </div>
+                     <div>
+                         <div class="tuijian-content">
+                             <input type="text" class="input-text" placeholder="被推荐人姓名">
+                         </div>
+                         <div class="tuijian-content">
+                             <input type="text" class="input-text" placeholder="被推荐人电话">
+                         </div>
+                     </div>
+                     <div class="tuijian-btn">
+                         <button>保存</button>
+                     </div>
+                 </div>
 
 
              </div>
@@ -106,9 +124,19 @@
 
 
          <!--删除确认--start-->
-         <div class="tips" style="display: none;">
-             <div class="tips-bg" >
+         <div class="tips" style="display: block;">
+             <div class="tips-bg" style="height: 2rem;">
                  <img src="public/images/tips-close.png" class="tips-close" >
+                 <div>
+                     <div class="tuijian-title">
+                         <p>您确定要删除该推荐人</p>
+                     </div>
+                     <div class="confirm-btn">
+                         <button>返回</button>
+
+                         <button>确认</button>
+                     </div>
+                 </div>
 
              </div>
          </div>
