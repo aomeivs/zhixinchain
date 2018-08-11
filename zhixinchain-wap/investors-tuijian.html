@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/investors-fuli.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="public/js/rem.js"></script>
+</head>
+<body>
+     <div class="wrap tuijian-bg" id="app">
+         <div class="content-body">
+             <!--您的信息--start-->
+             <div>
+                 <div class="tuijian-title">
+                     <img src="public/images/tuijian-x.png" height="2" width="72"/>
+                     <p>您的信息</p>
+                     <img src="public/images/tuijian-x.png" height="2" width="72"/>
+                 </div>
+                 <div>
+                     <div class="tuijian-content">
+                         <textarea cols="30" rows="10" class="input-text" placeholder="您的钱包地址" style="height: 0.4rem;"></textarea>
+                     </div>
+                     <div class="tuijian-content">
+                         <input type="text" class="input-text" placeholder="您的姓名">
+                     </div>
+                     <div class="tuijian-content">
+                         <input type="text" class="input-text" placeholder="您的电话">
+                     </div>
+                 </div>
+                 <div class="tuijian-btn">
+                     <button>保存信息</button>
+                 </div>
+             </div>
+             <!--您的信息--end-->
+         </div>
+
+         <!--灰色空格-->
+         <div class="space"></div>
+         <div class="content-body">
+             <!--被推荐人--start-->
+             <div>
+                 <div class="tuijian-title" >
+                     <img src="public/images/tuijian-x.png" >
+                     <p>被推荐人</p>
+                     <img src="public/images/tuijian-x.png" >
+                 </div>
+
+                 <div class="tuijian-btn" style="border-bottom: 1px solid #e4e4e4;
+    width: 3.6rem; ">
+                     <button style="background-color:#09bb07; margin-top: 0.2rem;margin-bottom: 0.2rem;margin-left: -0.2rem;">添加被推荐人</button>
+                 </div>
+                 <div class="tuijianren-list">
+                     <ul>
+                         <li>
+                             <div class="content">
+                                 <img src="public/images/tuijian-edit.png" >
+                                 <img src="public/images/tuijian-delete.png" >
+                                 <p>姓名</p>
+                                 <p>电话</p>
+                             </div>
+                         </li>
+                         <li>
+                             <div class="content">
+                                 <img src="public/images/tuijian-edit.png" >
+                                 <img src="public/images/tuijian-delete.png" >
+                                 <p>姓名</p>
+                                 <p>电话</p>
+                             </div>
+                         </li>
+                     </ul>
+                 </div>
+             </div>
+             <!--被推荐人--end-->
+         </div>
+
+         <!--灰色空格-->
+         <div class="space" style="padding-bottom: 1rem"></div>
+
+
+         <!--成功提示--start-->
+         <div class="tips" style="display: none;">
+             <div class="tips-bg" style="height: 2rem;">
+                 <img src="public/images/tips-close.png" class="tips-close" >
+                 <img src="public/images/tips1.png" class="tips-imgSuccess">
+                 <p class="tips-title">提交成功</p>
+             </div>
+         </div>
+         <!--提示-成功--end-->
+
+
+         <!--添加推荐人--start-->
+         <div class="tips" style="display: block;">
+             <div class="tips-bg" >
+                 <img src="public/images/tips-close.png" class="tips-close" >
+
+
+             </div>
+         </div>
+         <!--添加推荐人--end-->
+
+
+         <!--删除确认--start-->
+         <div class="tips" style="display: none;">
+             <div class="tips-bg" >
+                 <img src="public/images/tips-close.png" class="tips-close" >
+
+             </div>
+         </div>
+         <!--删除确认--end-->
+
+
+     </div>
+
+
+</body>
+</html>
