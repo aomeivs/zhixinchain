@@ -3287,7 +3287,40 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
 
 .asset-header {
   margin: 40px auto;
-  padding: 15px;
   font-size: 16px; }
+  .asset-header .ivu-card-body {
+    padding-left: 0;
+    padding-right: 0; }
+  .asset-header .asset-header-1 {
+    border-bottom: solid 1px #eaeaea;
+    padding-bottom: 14px; }
+    .asset-header .asset-header-1 span:nth-of-type(1) {
+      margin-left: 48px; }
+    .asset-header .asset-header-1 span:nth-of-type(2) {
+      margin-left: 680px; }
+    .asset-header .asset-header-1 span:nth-of-type(3), .asset-header .asset-header-1 span:nth-of-type(4) {
+      margin-left: 60px; }
+  .asset-header .asset-header-2 {
+    color: #4a4a4a;
+    padding-top: 36px;
+    padding-bottom: 20px; }
+    .asset-header .asset-header-2 span:nth-of-type(1) {
+      margin-left: 48px;
+      font-size: 24px; }
+      .asset-header .asset-header-2 span:nth-of-type(1) img {
+        margin-top: -5px; }
+    .asset-header .asset-header-2 span:nth-of-type(2) {
+      float: right;
+      margin-right: 40px;
+      padding-top: 7px; }
+    .asset-header .asset-header-2 span:nth-of-type(3) {
+      float: right;
+      padding: 0 22px;
+      padding-top: 7px; }
+    .asset-header .asset-header-2 span:nth-of-type(4) {
+      float: right;
+      padding-top: 7px; }
+      .asset-header .asset-header-2 span:nth-of-type(4) img {
+        margin-top: -5px; }
 
 /*# sourceMappingURL=app.css.map */
