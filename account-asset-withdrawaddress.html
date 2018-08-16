@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-polyfill/6.26.0/polyfill.min.js"></script>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/layout.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+
+
+<!--403-->
+
+
+<!--职信链，样式头为 c (chain小写) 例
+
+头部 c-header
+底部 c-footer
+组件 c-component-组件名（公用部分）
+
+无特别意义的逻辑结构以 相对有意义模块名 后，层级数字标识
+例： c-component-组件名 下
+
+组件名1>组件名1-1.
+
+或
+
+组件名-head>组件名-head-top>（组件名-head-top-1+组件名-head-top-2+组件名-head-top-3）
+
+ -->
+
+<div class="wrap" id="app">
+    <div class="c-header">
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu">
+            <ul class="head-menu-ul">
+                <li>
+                    <a href="">首页</a>
+                </li>
+                <li>
+                    <a href="#">我的资产 <span>{{total}} ZXT</span></a>
+                </li>
+                <li>
+                    <div>
+                        <!--badge count代表消息数 默认99封顶-->
+                        <badge count="1">
+                            <a href="#" class="head-message-badge"><img src="public/images/head-mail.png" width="26" alt="消息(0)"></a>
+                        </badge>
+                    </div>
+                </li>
+                <li>
+                    <div class="c-head-user">
+                        <div class="user-photo">
+                            <a href=""><img src="public/images/head-photo.png" width="39" alt="用户头像">
+                                <span>董兴海</span></a>
+                        </div>
+                        <div>
+                            <img src="public/images/head-line.png" width="2" alt="">
+                        </div>
+                        <div class="user-logOut">
+                            <img src="public/images/head-exit.png" style="cursor: pointer;" width="26" alt="退出">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="c-body">
+        <div class="component-wallet">
+            <div class="wallet-info wallet-exchange-list">
+                <Card class="asset-header">
+                    <div class="asset-header-1">
+                        <span>总资产</span>
+                        <span><a href="">充值</a></span>
+                        <span><a href="">提现</a></span>
+                        <span><a href="">资产密码</a></span>
+                    </div>
+
+                    <div class="asset-header-2">
+                        <span>
+                            {{total}}  ZXT
+                            <a href="#" style="margin-left: 15px;">
+                            <img src="public/images/asset/asset1.png" height="14" width="20"/>
+                            </a>
+                        </span>
+                        <span >
+                            可用：{{usable}}
+                        </span>
+                        <span>/</span>
+                        <span >
+                            冻结：{{frozen}}
+                            <a href="#" style="margin-left: 15px;">
+                                <img src="public/images/asset/asset2.png" height="12" width="20"/>
+                            </a>
+                        </span>
+                    </div>
+                </Card>
+
+                <Card class="wallet-exchange-body asset-body">
+                    <div class="wallet-container">
+                        <!--基础信息-->
+                        <div class="wallet-title">
+                            <span class="wallet-title-1-txtBigger">新增提现地址 </span>
+                            <span> / New Withdraw Address</span>
+                        </div>
+                        <div class="asset-content">
+                            <div class="wallet-password" style="width: 540px">
+                                <i-input class="wallet-password-1" v-model="password" size="large" placeholder="请粘贴提现地址" type="text">
+                                </i-input>
+                            </div>
+                            <div class="wallet-btn" style="width: 540px">
+                                <i-button size="large" class="wallet-btn-1" type="primary" style="width: 540px">保存</i-button>
+                            </div>
+                        </div>
+
+                    </div>
+                </Card>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="https://cdn.bootcss.com/layer/3.0.3/layer.min.js"></script>
+<script>
+
+
+    new Vue({
+        data: function () {
+            const validatePassCheck = (rule, value, callback) => {
+                if (value === '') {
+                    callback(new Error('密码不能为空'));
+                } else if (value !== this.form.password) {
+                    callback(new Error('两次密码不相同'));
+                } else {
+                    callback();
+                }
+            };
+            return {
+                form:{
+                    password:'',
+                    password2:'',
+                },
+                rules:{
+                    password: [
+                        { required: true, message: '密码不能为空', trigger: 'blur' },
+                        { type: 'string', min: 8, message: '长度不能少于8位', trigger: 'blur' }
+                    ],
+                    password2: [
+                        { validator: validatePassCheck, trigger: 'blur' }
+                    ]
+                },
+                password:'0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4',
+                add:'0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4',
+                showEye:true,
+                btnType:'password',
+                addActive:2,
+                password:'',
+                password2:'',
+                total:'1000000001.00000000',
+                frozen:'1000000002.00000000',
+                usable:'1000000003.00000000',
+                imgid:'public/images/asset/img-deposit.png',
+                items: [
+                    {
+                        message: 'Foo'
+                    },
+                    {
+                        message: 'Bar'
+                    }
+                ]
+            }
+        },
+        methods: {
+            showEyeHandler(){
+                if(!this.showEye){
+                    this.btnType='password'
+                }else{
+                    this.btnType='text'
+                }
+                this.showEye=!this.showEye;
+            },
+            copyCode(v){
+                if(v===1){
+                    var clipboard = new Clipboard('.wallet-key-copy.add');
+                    clipboard.on('success', function(e) {
+                        console.log(0)
+                        layer.msg('复制成功！')
+                        console.info('Action:', e.action);
+                        console.info('Text:', e.text);
+                        console.info('Trigger:', e.trigger);
+
+                        e.clearSelection();
+                        clipboard.destroy();
+                    });
+
+                    clipboard.on('error', function(e) {
+                        layer.msg('复制失败，请手动复制！')
+                        console.error('Action:', e.action);
+                        console.error('Trigger:', e.trigger);
+                        clipboard.destroy();
+                    });
+                }else{
+                    var clipboard = new Clipboard('.wallet-key-copy.key');
+                    clipboard.on('success', function(e) {
+                        layer.msg('复制成功！')
+                        console.info('Action:', e.action);
+                        console.info('Text:', e.text);
+                        console.info('Trigger:', e.trigger);
+
+                        e.clearSelection();
+                        clipboard.destroy();
+                    });
+
+                    clipboard.on('error', function(e) {
+                        layer.msg('复制失败，请手动复制！')
+                        console.error('Action:', e.action);
+                        console.error('Trigger:', e.trigger);
+                        clipboard.destroy();
+                    });
+                }
+            },
+            download(){
+                window.location.href='d.zip'
+            },
+            downloadValidate(){
+                if(this.password==123456789){
+                    this.download()
+                }else{
+                    this.password='';
+                    this.password2='';
+                    this.$Message.warning('密码不正确');
+                }
+            },
+            addClass(v){
+                this.addActive=v;
+
+            }
+        },
+        mouted:function () {
+
+        }
+    }).$mount('#app')
+</script>
+
+</body>
+</html>
