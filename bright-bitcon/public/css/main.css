@@ -1,6 +1,6 @@
 @import "//cdn.bootcss.com/normalize/7.0.0/normalize.min.css";
 body {
-  font-family: 'Hiragino Sans GB', "microsoft yahei", "\5FAE\8F6F\96C5\9ED1", tahoma, arial, '\5b8b\4f53', sans-serif;
+  font-family: arial,'Hiragino Sans GB', "microsoft yahei", "\5FAE\8F6F\96C5\9ED1", tahoma, '\5b8b\4f53', sans-serif;
   -webkit-font-smoothing: antialiased; }
 
 ul, li {
