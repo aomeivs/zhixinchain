@@ -3346,6 +3346,10 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       .asset-body .asset-content .asset-content-2 p span {
         font-size: 16px;
         margin-left: 336px; }
+    .asset-body .asset-content .asset-content-2 .asset-content-deposit-1 {
+      text-align: center; }
+    .asset-body .asset-content .asset-content-2 .asset-content-deposit-2 {
+      margin-top: 34px; }
     .asset-body .asset-content .asset-content-2 .wallet-key-code {
       background: #f8f8f8;
       border: 1px solid #dcdcdc;
