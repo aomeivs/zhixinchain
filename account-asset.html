@@ -153,6 +153,12 @@
                             </table>
                         </div>
 
+                        <!--分页--start-->
+                        <div style="text-align: center;padding-top: 30px;">
+                            <page :total="100" show-elevator />
+                        </div>
+                        <!--分页--end-->
+
                     </div>
                 </Card>
             </div>
@@ -164,6 +170,13 @@
 <script src="https://cdn.bootcss.com/layer/3.0.3/layer.min.js"></script>
 <script>
 
+    <!--分页js--start-->
+    var Main = {
+
+    }
+
+    var Component = Vue.extend(Main)
+    <!--分页js--end-->
 
     new Vue({
         data: function () {
@@ -325,6 +338,16 @@
         }
     }).$mount('#app')
 </script>
+
+<!--<script>-->
+
+    <!--var Main = {-->
+
+    <!--}-->
+
+    <!--var Component = Vue.extend(Main)-->
+    <!--new Component().$mount('#app')-->
+<!--</script>-->
 
 </body>
 </html>
