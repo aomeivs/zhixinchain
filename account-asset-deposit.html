@@ -126,20 +126,23 @@
                             <span> / Deposit</span>
                         </div>
                         <div class="asset-content">
-                            <div class="asset-content-deposit-1">
-                                <img v-bind:src="imgid" class="img-deposit">
-                            </div>
-                            <div class="asset-content-deposit-2">
-                                <p>你的地址：</p>
-                                <div class="wallet-key-2" >
-                                    <div class="wallet-key-code">
-                                        {{depositid}}
-                                    </div>
-                                    <div class="wallet-key-copy2" data-clipboard-text="keyXXX" v-on:click="copyCode(2)">
-                                        <img src="public/images/wallet/icon-copy.png" width="16" alt="">
+                            <div class="asset-content-2">
+                                <div class="asset-content-deposit-1">
+                                    <img v-bind:src="imgid" class="img-deposit">
+                                </div>
+                                <div class="asset-content-deposit-2">
+                                    <p>你的地址：</p>
+                                    <div class="wallet-key-2" >
+                                        <div class="wallet-key-code">
+                                            {{depositid}}
+                                        </div>
+                                        <div class="wallet-key-copy2" data-clipboard-text="keyXXX" v-on:click="copyCode(2)">
+                                            <img src="public/images/wallet/icon-copy.png" width="16" alt="">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                         </div>
 
                     </div>
