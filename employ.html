@@ -42,6 +42,13 @@
         </div>
         <div class="c-head-menu">
             <ul class="head-menu-ul">
+                <!--资产部分头部修改-->
+                <li>
+                    <a href="">首页</a>
+                </li>
+                <li>
+                    <a href="#">我的资产 <span>{{total}} ZXT</span></a>
+                </li>
                 <li>
                     <a href="">购买</a>
                 </li>
@@ -1541,6 +1548,7 @@
     new Vue({
         data: function () {
             return {
+                total:'1000000001.00000000',
                 value:'',
                 data:[],
                 treeData:treeData,
