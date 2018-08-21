@@ -42,7 +42,6 @@
         }
         #content7{
             height: 674px;
-            width: 1920px;
         }
         #content8{
             background-color:#333D50;
@@ -52,16 +51,63 @@
 
 
     </style>
-    <style type="text/css">
-
+    <style type="text/css"></style>
+    <!--公共样式-->
+    <!--公告样式-->
+    <style>
+        .notice{
+            background-color: rgba(0,0,0,0.5);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 8;
+        }
+        .notice-bg{
+            width:633px;
+            height:668px;
+            background:url(public/images/mask-bg2.png) center top no-repeat;
+            z-index:9;
+            margin:0 auto;
+            margin-top:120px;
+            text-align: center;
+        }
+        .notice-bg img{
+            padding-left: 544px;
+            padding-top: 24px;
+        }
+        .notice-content{
+            width: 387px;
+            font-size: 22px;
+            color: #333D50;
+            margin: 0px auto;
+            text-align: center;
+            padding: 120px 0 30px;
+        }
+        .notice-content span{
+            color:#298cff;
+        }
+        .notice-btn{
+            font-size:22px;
+            color:#ffffff;
+            background-color:#50E3C2;
+            width:270px;
+            height:54px;
+            line-height:54px;
+            margin:20px auto;
+            border-radius:54px;
+            border:0;
+            box-shadow:0 5px 5px rgba(0,0,0,0.2);
+            cursor:pointer
+        }
     </style>
+    <!--公共样式结束-->
 </head>
 <body>
 
 <div class="wrap" id="app">
     <div class="component-index">
-
-
         <div id="text_lt">
             <div class="block-content" id="content1">
 
@@ -125,9 +171,21 @@
 
 
         </div>
+
+        <!--公告-->
+        <div class="notice" style="display: block;">
+            <div class="notice-bg">
+                <img src="public/images/close-white.png" height="36" width="36"/>
+                <div class="notice-content ">
+                    <p>
+                        职信链已正式启用新域名：<span>www.zhixinchain.io</span>，请牢记！
+                    </p>
+                </div>
+                <button class="notice-btn">进入职信链官网</button>
+            </div>
+        </div>
+        <!--公告结束-->
     </div>
-
-
 
 </div>
 
