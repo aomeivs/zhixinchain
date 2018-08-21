@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="public/css/outdatedBrowser.min.css">
     <script src="public/js/outdatedBrowser.min.js"></script>
     <!--<link rel="stylesheet" href="public/css/app.css">-->
-
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
     <style>
         .wrap .component-index .qk_jiedianNum .qk_jiedianNum_1 {
             background: url(public/images/index/jiedian_line.png) right center no-repeat;
@@ -74,8 +74,8 @@
             text-align: center;
         }
         .notice-bg img{
-            padding-left: 544px;
-            padding-top: 24px;
+            margin-left: 544px;
+            margin-top: 24px;
         }
         .notice-content{
             width: 387px;
@@ -173,9 +173,12 @@
         </div>
 
         <!--公告-->
-        <div class="notice" style="display: block;">
-            <div class="notice-bg">
-                <img src="public/images/close-white.png" height="36" width="36"/>
+        <div id="notice" class="notice" style="display: block;" >
+            <div class="notice-bg" >
+                <div id="close" >
+                    <img src="public/images/close-white.png" height="36" width="36"  style=" cursor: pointer">
+                </div>
+
                 <div class="notice-content ">
                     <p>
                         职信链已正式启用新域名：<span>www.zhixinchain.io</span>，请牢记！
@@ -190,8 +193,12 @@
     </div>
 
 </div>
-
-
-
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script>
+    //缩回弹窗
+    $('#close').click(function(){
+        $('.notice').css('display','none');
+    });
+</script>
 </body>
 </html>
