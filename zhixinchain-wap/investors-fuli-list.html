@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/investors-fuli.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="public/js/rem.js"></script>
+    <style>
+        html,body{
+            background: #F2F2F2;
+        }
+    </style>
+</head>
+<body>
+     <div class="wrap" id="app" >
+         <div class="list-banner-space">
+             <div class="list-banner">
+             <img src="public/images/list_banner.png" style="width: 3.4rem;max-width: 3.4rem;">
+             </div>
+         </div>
+         <div class="model-data">
+             <div class="content-data" style="border-right: 0.0005rem solid #EEEEEE">
+                 <p >{{people}}</p>
+                 <p>已加入人数(人)</p>
+             </div>
+             <div class="content-data">
+                 <p >{{amount}}</p>
+                 <p>已划拨保障金额(ZXT)</p>
+             </div>
+         </div>
+         <div class="blank-space"></div>
+         <div class="list-title">
+             <p>加入福利</p>
+         </div>
+         <div class="list-list">
+             <ul>
+                 <li>
+                     <div class="list-space">
+                         <div class="list-space-1">
+                             <img src="public/images/fuli_l1.png" >
+                         </div>
+                         <div class="list-space-2">
+                             <p>“好人无忧”终身健康福利保障</p>
+                             <p>全球区块链社区第一个全民终身健康保障！</p>
+                         </div>
+                         <a href=""><button>加人</button></a>
+
+                     </div>
+                 </li>
+             </ul>
+         </div>
+     </div>
+
+     <script>
+         new Vue({
+             data: function () {
+                 return {
+                     people:'68,088,888',
+                     amount:'888,888,888'
+                 }
+             }
+         }).$mount('#app')
+     </script>
+</body>
+</html>

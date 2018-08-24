@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app.css">
+    <link rel="stylesheet" href="public/css/investors-fuli.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="public/js/rem.js"></script>
+</head>
+<body>
+     <div class="wrap" id="app">
+         <div style="width: 3.75rem;height: 0.5rem;border-bottom: 0.0005rem solid #e4e4e4;">
+             <P style="color: #222222;font-size: 0.16rem;line-height:0.5rem;text-align: center;">职信链社区“好人无忧”健康福利登记表</P>
+         </div>
+         <div class="content-body">
+
+             <div class="content-6" style="margin-top: 0.3rem;">
+                 <div class="content-6-1">
+                     <p><strong>本人微信号</strong> <span class="part-1">*</span></p>
+                     <p class="part-2">是微信号，不是微信昵称，准确填写，防止后期联系不上</p>
+                     <input type="text" placeholder="请填写本人微信号" class="input-text" v-model="weixin" >
+                 </div>
+                 <div class="content-6-1">
+                     <p><strong>本人手机号</strong> <span class="part-1">*</span></p>
+                     <p class="part-2">准确填写，防止后期联系不上</p>
+                     <input type="text" placeholder="请填写本人手机号" class="input-text" v-model="phone">
+                 </div>
+                 <div class="content-6-1">
+                     <p><strong>职信链钱包地址</strong> <span class="part-1">*</span></p>
+                     <p class="part-2">非常重要，一定准确填写。钱包地址是这样的：1Lkfp4CcaRUEbLQT56Z8bttt5jPweggsai</p>
+                     <input type="text" placeholder="请填写职信链钱包地址" class="input-text" v-model="zxt">
+                 </div>
+                 <div class="content-6-1">
+                     <p><strong>福利等级</strong> <span class="part-1">*</span></p>
+                     <div>
+                         <input type="radio" style="width: 0.16rem;height: 0.16rem; margin-top: 0.05rem;vertical-align: text-bottom;">
+                         <span class="text-1" >福利A -10万元</span>
+                     </div>
+                     <div>
+                         <input type="radio" style="width: 0.16rem;height: 0.16rem; margin-top: 0.05rem;vertical-align: text-bottom;">
+                         <span class="text-1" >福利B -30万元</span>
+                     </div>
+                 </div>
+                 <div class="content-6-1">
+                     <p><strong>与受助人的关系 </strong> <span class="part-1">*</span></p>
+                     <div>
+                         <input type="radio" style="width: 0.16rem;height: 0.16rem; margin-top: 0.05rem;vertical-align: text-bottom;">
+                         <span class="text-1" >本人</span>
+                     </div>
+                     <div>
+                         <input type="radio" style="width: 0.16rem;height: 0.16rem; margin-top: 0.05rem;vertical-align: text-bottom;">
+                         <span class="text-1" >本人亲属</span>
+                     </div>
+                     <div>
+                         <input type="radio" style="width: 0.16rem;height: 0.16rem; margin-top: 0.05rem;vertical-align: text-bottom;">
+                         <span class="text-1" >员工</span>
+                     </div>
+                     <div>
+                         <input type="radio" style="width: 0.16rem;height: 0.16rem; margin-top: 0.05rem;vertical-align: text-bottom;">
+                         <span class="text-1" >好友</span>
+                     </div>
+                 </div>
+                 <div class="content-6-1">
+                     <p><strong>受助人身份证号</strong> <span class="part-1">*</span></p>
+                     <p class="part-2">限中国大陆居民，不超55周岁</p>
+                     <input type="text" placeholder="请填写受助人身份证号" class="input-text" v-model="idcard">
+                 </div>
+             </div>
+             <div style="height: 1rem"></div>
+             <div class="content-8">
+                 <a href="">
+                     <button>提交</button>
+                 </a>
+             </div>
+
+
+         <!--成功提示--start-->
+         <div class="tips" v-show="isshow">
+             <div class="tips-bg">
+                 <img src="public/images/tips-close.png" class="tips-close" v-on:click="showclose">
+                 <img src="public/images/tips1.png" class="tips-imgSuccess">
+                 <p class="tips-title">提交成功</p>
+                 <p class="tips-title2">您已提交职信链社区“好人无忧”<br>健康福利登记表</p>
+
+             </div>
+         </div>
+         <!--提示-成功--end-->
+         </div>
+
+     <script>
+         new Vue({
+             data: function () {
+                 return {
+                     weixin: '',
+                     phone:'',
+                     zxt:'',
+                     idcard:'',
+                     isshow:false
+                 }
+             },
+             methods: {
+                 showclose:function () {
+                     this.isshow = !this.isshow
+                 }
+             }
+         }).$mount('#app')
+     </script>
+</body>
+</html>
