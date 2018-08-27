@@ -24,6 +24,10 @@ li {
   margin: 0 auto;
   font-size: 0.16rem; }
 
+button {
+  border: 0;
+  background-color: none; }
+
 img {
   display: block; }
 
