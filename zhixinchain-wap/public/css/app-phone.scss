@@ -1,0 +1,29 @@
+@import "common/common";
+@import "find-index";
+
+html{
+  font-size: 100px;
+}
+html,body{
+  background: #ffffff;
+  width: 375px;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html,body,div,img{ margin:0; padding:0; }
+
+.wrap{
+  width: 3.75rem;
+  max-width:3.75rem;
+  margin: 0 auto;
+  font-size: 0.16rem;
+}
+
+img{
+  border-style: none;
+  display:block;
+}
