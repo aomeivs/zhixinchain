@@ -85,6 +85,7 @@
       }
       .asset-content-deposit-2{
         margin-top: 34px;
+        margin-left: 40px;
       }
       .wallet-key-code{
         background: #f8f8f8;
@@ -101,7 +102,7 @@
       }
       .wallet-key-copy2{
         position: absolute;
-        right: 20px;
+        right: 0px;
         top: 35%;
         img{
           cursor: pointer;
@@ -129,3 +130,8 @@
     }
   }
 }
+.component-wallet .wallet-exchange-list .wallet-exchange-body{
+  margin-bottom: 70px !important;
+}
+
+
