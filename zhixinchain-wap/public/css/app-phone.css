@@ -77,17 +77,20 @@ html, body {
   -webkit-flex: 3.2rem 0 0;
   flex: 3.2rem 0 0; }
 
-.component-find-index .list-content {
-  margin-top: 0.15rem; }
+.component-find-index .list-content ul {
+  padding-top: 0.15rem; }
 .component-find-index .list-c1 {
   width: 3.4rem;
   height: 1.24rem;
   margin: 0 auto;
-  margin-bottom: 0.15rem; }
+  margin-bottom: 0.15rem;
+  position: relative; }
   .component-find-index .list-c1 .tip {
     width: 0.75rem;
     height: 0.26rem;
-    position: fixed; }
+    position: absolute;
+    top: 0;
+    left: 0; }
   .component-find-index .list-c1 img {
     width: 3.4rem;
     height: 1.24rem;
@@ -116,5 +119,8 @@ html, body, div, img {
 img {
   border-style: none;
   display: block; }
+
+li {
+  list-style: none; }
 
 /*# sourceMappingURL=app-phone.css.map */
