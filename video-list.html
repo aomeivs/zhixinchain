@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="http://cdn.bootcss.com/jquery/1.12.2/jquery.min.js"></script>
+    <!--[if lt ie 9]>
+    <script src="public/js/ie-lte9.js"></script>
+    <![endif ]-->
+    <link rel="stylesheet" href="public/css/outdatedBrowser.min.css">
+    <script src="public/js/outdatedBrowser.min.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+    <link href="https://cdn.bootcss.com/Swiper/2.7.5/idangerous.swiper.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/Swiper/2.7.5/idangerous.swiper.js"></script>
+    <script src="public/js/jquery.fadethis.min.js"></script>
+    <!--头部轮播引入-->
+    <link rel="stylesheet" href="public/js/flexslider/2.6.1/flexslider.min.css"/>
+
+</head>
+<body>
+    <div class="wrap" id="app">
+        <div class="component-index">
+        <!--头部-->
+            <div class="head_fixed" id="nav-container">
+
+            <!--新增公共及头部样式修改-->
+                <div class="head-note">
+                <div class="head-note-space">
+                    <img src="public/images/index/note.png" height="17" width="18"/>
+                    <span class="note" style="color: #FE596D;font-weight: 600;">关于与FInsur战略合作的公告</span>
+                    <span style="color: #9B9B9B;font-weight: 100;padding-left: 9px;">[2018-09-03]</span>
+                    <ul class="menu zi18">
+                        <div class="lang" style="position: absolute;top: 0px;right: 300px;">
+                            <span onclick="window.location.href='#'" >
+                                中文
+                                <icon type="arrow-down-b"></icon>
+                            </span>
+                            <span onclick="window.location.href='#'" style="display: none">
+                                EN
+                                <icon type="arrow-down-b"></icon>
+                            </span>
+                        </div>
+
+                        <li class="SignIn" style="display: none; width: auto;position: absolute;top: 5px;right: 400px;">
+                            <!--企业-->
+                            <dropdown trigger="click" :visible="visible">
+                                <a href="javascript:void(0)" @click.stop="handleOpen()" style="color: #000000;">
+                                    控制台
+                                    <icon type="arrow-down-b"></icon>
+                                </a>
+                                <dropdown-menu slot="list">
+                                    <div class="head-menu-userInfo">
+                                        <div class="clearFix head-menu-company-diy">
+                                        <span><a href="javascript:alert(0)"
+                                                 style="color:#1B7CE1;">青岛网络科技特别开心有限公司</a></span>
+                                        </div>
+                                        <div class="line head-menu-uline"></div>
+                                        <div class="clearFix head-menu-u1">
+                                            <span class="left h-m-u-1">支持员工数量</span>
+                                            <span class="right">40</span>
+                                        </div>
+                                        <div class="clearFix head-menu-u2">
+                                            <span class="left h-m-u-1">有效期至</span>
+                                            <span class="right">2018.11.19</span>
+                                        </div>
+                                        <div class="line head-menu-uline"></div>
+                                        <div class="clearFix head-menu-u3">
+                                    <span class="left">
+                                        <badge dot>
+                                            <a href="#" class="head-message-badge">我的优惠券</a>
+                                        </badge>
+                                    </span>
+                                            <span class="right">
+                                        <a href="#" class="head-message-badge">
+                                            <Icon type="android-exit"></Icon>
+                                            <span>退出</span>
+                                        </a>
+                                    </span>
+                                        </div>
+                                    </div>
+                                </dropdown-menu>
+                            </dropdown>
+                            <!--个人-->
+                            <dropdown trigger="click" :visible="visible" style="margin-left: 20px ;display: none">
+                                <a href="javascript:void(0)" @click.stop="handleOpen()" style="color: #000000;">
+                                    控制台
+                                    <icon type="arrow-down-b"></icon>
+                                </a>
+                                <dropdown-menu slot="list">
+                                    <div class="head-menu-userInfo" style="width: 110px;">
+                                        <div class="clearFix head-menu-person-diy">
+                                            <span>周累了</span>
+                                        </div>
+                                        <div class="line head-menu-uline"></div>
+                                        <div class="clearFix head-menu-person-diy span-hand">
+                                            <span>退出</span>
+                                        </div>
+                                    </div>
+                                </dropdown-menu>
+                            </dropdown>
+                        </li>
+
+                        <li class="loginAndSignIn" style="display:block;">
+                            <span class="span1">登录</span>
+                            <span class="span2">注册</span>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+                <div id="header">
+
+                <a href="Homepage.html">
+                    <img src="public/images/index/logo.png" alt="" class="logo" style="border: 0px;"/>
+                </a>
+                <ul id="menu" class="menu zi18">
+
+                    <li data-menuanchor="about" id="home2" class="cur select"><a href="#block-content1">首页</a></li>
+                    <li class="select none"><a href="javascript:0;">关于职信链</a></li>
+
+                    <li data-menuanchor="technical" id="home6" class="select"><a href="#block-content4">应用</a></li>
+                    <li class="select"><a href="#block-content11">技术</a></li>
+                    <li data-menuanchor="technical" id="home7" class="select"><a href="#block-content7">我们的优势</a></li>
+                    <li data-menuanchor="technical" id="home3" class="select"><a href="#block-content5">FAQ</a></li>
+                    <li class="select" ><a href="#"style="position: relative;">钱包<div style="position: absolute; top: -16px; right: -8px;"><img src="public/images/nicon.png" alt=""></div></a></li>
+                    <li class="select" ><a href="#"style="position: relative;">职信村夜话</a></li>
+
+                </ul>
+                <div style="clear: both"></div>
+            </div>
+            </div>
+        <!--页面内容-->
+            <div >
+                <!--video 列表-->
+                <div class="video-list">
+                   <ul>
+                       <li>
+                           <a href="">
+                               <div class="list-list">
+                                   <img src="public/images/video/video-1.png" >
+                                   <p>职信村夜话.第一期</p>
+                               </div>
+                           </a>
+                       </li>
+                   </ul>
+                </div>
+            </div>
+
+
+        </div>
+     </div>
+
+<!--js部分滚动条监听事件-->
+<script>
+
+    var Main = {
+        data:function(){
+            return {
+                visible: false
+            }
+        },
+        methods: {
+            handleOpen :function() {
+                this.visible = !this.visible;
+            },
+            closeModal:function(){
+                this.visible = false;
+            }
+        }
+    }
+
+    var Component = Vue.extend(Main)
+    new Component().$mount('#app')
+
+
+    var $aside = $("#header>ul>.select").not('.none');
+    var $section_pos = $("#content1,.block-content4,.block-content11,.block-content7,.block-content5");
+    //    $aside.each(function (index) {
+    //        $(this).on("click", function () {
+    //            var pox = $($section_pos[index]);
+    //            $('html,body').stop().animate({scrollTop: pox.position().top-100}, 200);
+    //        })
+    //    });
+
+
+
+
+    /**scroll even**/
+
+    var p1 = $("#content1");
+    var p2 = $(".block-content4");
+    var p11 = $(".block-content11");
+    var p3 = $(".block-content7");
+    var p4 = $(".block-content5");
+
+
+
+    $(window).scroll(function () {
+
+        if ($(window).scrollTop() >= p1.position().top-10 && $(window).scrollTop() < p2.position().top) {
+            $($aside[0]).addClass("cur");
+
+            $($aside[0]).siblings().removeClass("cur");
+
+
+        }
+        if ($(window).scrollTop() >= p2.position().top-150 && $(window).scrollTop() < p11.position().top) {
+            $($aside[1]).addClass("cur");
+
+            $($aside[1]).siblings().stop().removeClass("cur");
+        }
+        if ($(window).scrollTop() >= p11.position().top-150 && $(window).scrollTop() < p3.position().top) {
+            $($aside[2]).addClass("cur");
+
+            $($aside[2]).siblings().stop().removeClass("cur");
+        }
+
+        if ($(window).scrollTop() >= p3.position().top-150 && $(window).scrollTop() < p4.position().top) {
+            $($aside[3]).addClass("cur");
+
+            $($aside[3]).siblings().stop().removeClass("cur");
+        }
+        if ($(window).scrollTop() >= p4.position().top-150) {
+            $($aside[4]).addClass("cur");
+
+            $($aside[4]).siblings().stop().removeClass("cur");
+        }
+    });
+
+</script>
+
+<script>
+    //    .Swiper2
+    var swiper = new Swiper('.swiper-container', {
+//        direction: 'vertical',
+//        mousewheel:true,
+//        loop : true,
+        mode : 'vertical',
+        mousewheelControl : true,
+        pagination : '.pagination',
+        paginationClickable :true,
+//        pagination: {
+//            el: '.swiper-pagination',
+//            clickable: true,
+//        },
+    });
+
+    //    classname=以下值
+    //        #content1,.block-content4,.block-content7,.block-content5
+
+    //function scrollToPositionBlock(className){
+    //    var pox = $('.'+className+',#'+className);
+    //    if(className=='block-content7'||className=='block-content5'){
+    //        $('html,body').stop().animate({scrollTop: pox.position().top-100}, 200);
+    //
+    //    }else{
+    //        $('html,body').stop().animate({scrollTop: pox.position().top}, 200);
+    //    }
+    //}
+    //if(location.search.split('=').length==2){
+    //    scrollToPositionBlock(location.search.split('=')[1]);
+    //}
+</script>
+
+    <!--头部轮播js--开始-->
+    <script src="public/js/flexslider/2.6.1/jquery.flexslider.min.js"></script>
+    <script>
+        $(function () {
+            $(".flexslider").flexslider({
+                slideshowSpeed: 4000, //展示时间间隔ms
+                animationSpeed: 400, //滚动时间ms
+//            touch: true //是否支持触屏滑动
+            });
+        });
+    </script>
+    <!--头部轮播js--结束-->
+
+</body>
+</html>
