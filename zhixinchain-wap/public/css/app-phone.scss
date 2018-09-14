@@ -1,5 +1,6 @@
 @import "common/common";
 @import "find-index";
+@import "investors-fuli";
 
 html{
   font-size: 100px;
@@ -29,4 +30,40 @@ img{
 
 li{
   list-style:none;
+}
+button{
+  border:0;
+  background: none;
+}
+input{
+  background:none;
+  outline:none;
+  border:0;
+}
+textarea{
+  resize:none;
+  overflow:hidden;
+  outline:none;
+  background:none;
+  border: none;
+}
+select{
+  background: none;
+  //清除select的边框样式
+  border: none;
+  //清除select聚焦时候的边框颜色
+  outline: none;
+  //将select的宽高等于div的宽高
+  //隐藏select的下拉图标
+  appearance: none !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+select::-ms-expand{display:none;}
+option::-ms-expand{display: none;}
+option{
+  background: none;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari 和 Chrome */
+  appearance:none !important;
 }

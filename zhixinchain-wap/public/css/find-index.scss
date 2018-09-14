@@ -1,4 +1,5 @@
 .component-find-index{
+  //index页面
   .list-content ul{
     padding-top: 0.15rem;
   }
@@ -23,6 +24,252 @@
     }
   }
 
+//  list页面
+  @mixin bg-wihte{
+    background-color: #FFFFFF;
+  }
+  .list-banner{
+    padding-top: 0.15rem;
+    padding-bottom: 0.16rem;
+    text-align: center;
+    @include bg-wihte;
+    img{
+      width: 3.4rem;
+      max-width: 3.4rem;
+      height: 1.24rem;
+      margin: 0 auto;
+    }
+  }
+  //数据显示
+  .model-data{
+    position: relative;
+    height: 0.7rem;
+    @include bg-wihte;
+  }
+  //定义一个混入
+  @mixin blockmodel($colorp1,$colorp2){
+    p:nth-of-type(1){
+      font-size: 0.22rem;
+      text-align: center;
+      color:$colorp1;
+    }
+    p:nth-of-type(2){
+      margin-top: 0.08rem;
+      font-size: 0.12rem;
+      text-align: center;
+      color: $colorp2;
+    }
+  }
+  // 定义一个map，作为混入参数
+  $tolist:(
+          colorp1:#298cff,
+          colorp2: #9b9b9b
+  );
+  .content-data{
+    width:1.8745rem;
+    height: 0.48rem;
+    float: left;
+    // 通过map类型作为参数，引用混入。
+    @include blockmodel($tolist...);
+  }
+
+  .blank-space{
+    width: 3.75rem;
+    height: 0.1rem;
+    background-color: #f2f2f2;
+  }
+  .list-btn{
+    text-align: center;
+    @include bg-wihte;
+  }
+  .btn-invite{
+    width: 3.4rem;
+    height: 0.48rem;
+    color: #FFFFFF;
+    font-size: 0.2rem;
+    margin: 0.15rem auto;
+    border-radius: 0.28rem;
+    background-image: linear-gradient(rgba(254, 112, 92, 0.5), rgba(254, 112, 92, 0.5)), linear-gradient(96deg, #fe705c, #ffc565);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
+  }
+  .list-title{
+    width: 3.75rem;
+    height: 0.51rem;
+    border-bottom: 0.0005rem solid #d2d2d2;
+    @include bg-wihte;
+    .title-inner{
+      width: 3.4rem;
+      position: relative;
+      margin: 0 auto;
+      padding-top: 0.15rem;
+      p{
+        color: #888888;
+        font-size: 0.14rem;
+        float: left;
+      }
+      img{
+        width: 0.22rem;
+        height: 0.22rem;
+        float: right;
+      }
+    }
+  }
+  .list-list{
+    @include bg-wihte;
+    width: 3.75rem;
+    margin-bottom: 0.6rem;
+    .list-li{
+      width: 3.4rem;
+      margin: 0 auto;
+      border-bottom: 0.0005rem solid #d2d2d2;
+      font-size: 0.13rem;
+      line-height: 0.26rem;
+      padding: 0.1rem 0;
+      .li-l{
+        height: 0.26rem;
+        position: relative;
+        p:nth-of-type(1){
+          color: #9b9b9b;
+          float: left;
+        }
+        p:nth-of-type(2){
+          color: #4a4a4a;
+          float: right;
+        }
+      }
+    }
+  }
+
+
+//  邀请有奖
+  .yaoqing-c1{
+    width: 3.75rem;
+    height: 1.515rem;
+  }
+  .yaoqing-c2{
+    width: 3.75rem;
+    height: 1.265rem;
+    .btn{
+      text-align: center;
+      padding-top: 0.4rem;
+    }
+  }
+  .outer{
+    position: relative; /* or absolute */
+    /* unnecessary styling properties */
+    width: 3.75rem;
+    p{
+      font-size: 0.16rem;
+      width: 3.75rem;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      /* unnecessary styling properties */
+      text-align: center;
+    }
+    .p-money{
+      top: 1.2rem;
+      span{
+        color: #fe8159;
+      }
+    }
+    .p-id{
+      font-size: 0.18rem;
+      top:0.2rem;
+      span{
+        color: #298cff;
+      }
+    }
+
+  }
+  .title{
+    width: 100%;
+    margin: 0.15rem auto;
+    img{
+      width: 1.73rem;
+      height: 100%;
+      margin: 0 auto;
+    }
+    p{
+      font-size: 0.15rem;
+      color: #fb9002;
+      text-align: center;
+      margin-top: -0.08rem;
+    }
+  }
+  .text-content{
+    .text-one{
+      position: relative;
+      width: 3.2rem;
+      margin: 0 auto;
+    }
+    .dot{
+      width: 0.05rem;
+      height:0.05rem;
+      background-color: #fb9002;
+      position: absolute;
+      top: 0.07rem;
+      left: 0
+    }
+    p{
+      width: 3rem;
+      font-size:0.12rem;
+      line-height: 1.67;
+      color: #8d5000;
+      margin: 0 auto;
+      padding-left: 0.1rem;
+    }
+  }
+  .form-content{
+    width: 3.75rem;
+    height: 0.6rem;
+    background-color: #FFFFFF;
+    position: relative;
+    .form-title{
+      width: 1rem;
+      float: left;
+      .title{
+        width: 0.56rem;
+        height: 0.6rem;
+        font-size: 0.14rem;
+        line-height: 0.6rem;
+        color: #4a4a4a;
+        text-align: justify;
+        text-align-last:justify;
+        margin: 0 0.2rem;
+      }
+    }
+    .form-input{
+      width:2.75rem;
+      height: 0.6rem;
+      border-bottom: 0.0005rem solid #d2d2d2;
+      float: right;
+      position: relative;
+      vertical-align: middle;
+      input,textarea{
+        width:2.75rem;
+        height: 0.6rem;
+        font-size: 0.14rem;
+        line-height: 0.2rem;
+        vertical-align: middle;
+      }
+
+    }
+
+  }
+  .btn-tijiao{
+    width: 3.4rem;
+    height: 0.45rem;
+    border-radius: 0.04rem;
+    background-color: #298cff;
+    font-size: 0.18rem;
+    color: #FFFFFF;
+    margin: 0.15rem auto;
+  }
+}
+.ivu-select-single .ivu-select-selection {
+  height: 0.6rem;
+  width: 2.75rem;
 }
 
 
