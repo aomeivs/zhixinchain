@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app-phone.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="public/js/rem.js"></script>
+    <!-- import Vue.js -->
+    <script src="//vuejs.org/js/vue.min.js"></script>
+    <!-- import stylesheet -->
+    <link rel="stylesheet" href="//unpkg.com/iview/dist/styles/iview.css">
+    <!-- import iView -->
+    <script src="//unpkg.com/iview/dist/iview.min.js"></script>
+
+    <style>
+        html,body{background-color: #f2f2f2;}
+        .ivu-select-single .ivu-select-selection {
+            height: 0.6rem;
+            width: 2.75rem;
+        }
+        .ivu-select-single .ivu-select-selection .ivu-select-placeholder, .ivu-select-single .ivu-select-selection .ivu-select-selected-value{
+            height: 0.6rem;
+            font-size: 0.14rem;
+            line-height: 0.6rem;
+        }
+        .ivu-select-selection{
+            border: 0;
+            background: none;
+        }
+        .ivu-select-dropdown{
+            width: 2.75rem !important;
+            left:0 !important;
+        }
+        .ivu-select-item {
+            font-size: 0.14rem !important;
+            line-height: 0.4rem;
+            left:0;
+        }
+        #text1::-webkit-input-placeholder::after {
+            display:block;
+            content:"Line 2\A Line 3";
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap" id="app">
+        <div class="component-find-index">
+            <div class="blank-space"></div>
+            <div class="form-content">
+                <div class="form-title"><p class="title">手 机 号</p></div>
+                <div class="form-input">
+                    <input type="text" v-model="value1" placeholder="准确填写，防止后期联系不上">
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="form-title"><p class="title" >钱包地址</p></div>
+                <div class="form-input">
+                    <textarea  id="text1" v-model="value2"  placeholder="非常重要，一定准确填写,例如这样的：1Lkfp4CcaRUEbLQT56Z8bttt5jPweggsai" style= "overflow:hidden; resize:none; padding-top: 0.1rem;" ></textarea>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="form-title"><p class="title" >福利等级</p></div>
+                <div class="form-input">
+                    <i-select v-model="value3" style="width: 2.75rem;height: 0.6rem;">
+                        <i-option v-for="item in dengji" :value="item.value" :key="item.value">{{ item.name }}</i-option>
+                    </i-select>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="form-title"><p class="title">关 系</p></div>
+                <div class="form-input">
+                    <i-select v-model="value4" style="width: 2.75rem;height: 0.6rem;">
+                        <i-option v-for="item2 in guanxi" :value="item2.value" :key="item2.value">{{ item2.name }}</i-option>
+                    </i-select>
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="form-title"><p class="title" >身 份 证</p></div>
+                <div class="form-input">
+                    <input type="text" v-model="value5" placeholder="为谁加入，请输入TA的身份证号">
+                </div>
+            </div>
+            <div class="form-content">
+                <div class="form-title"><p class="title">邀 请 码</p></div>
+                <div class="form-input">
+                    <input type="text" v-model="value6" placeholder="如没有，可以不填">
+                </div>
+            </div>
+            <div class="list-btn"  style="background:#f2f2f2; ">
+                <a href=""><button class="btn-tijiao">提交</button></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        new Vue({
+            data: function () {
+                return {
+                    value1: '',
+                    value2: '',
+                    value3:0,//默认选中第一项
+                    dengji:[
+                        {
+                            name:'福利等级 A',
+                            value:0
+                        },
+                        {
+                            name:'福利等级 B',
+                            value:1
+                        }
+                    ],
+                    value4:0,
+                    guanxi:[
+                        {
+                            name:'本人',
+                            value:0
+                        },
+                        {
+                            name:'本人亲属',
+                            value:1
+                        },
+                        {
+                            name:'好友',
+                            value:2
+                        },
+                        {
+                            name:'员工',
+                            value:3
+                        }
+                    ],
+                    value5: '',
+                    value6: ''
+                }
+            },
+            methods: {
+
+            }
+        }).$mount('#app')
+    </script>
+</body>
+</html>
