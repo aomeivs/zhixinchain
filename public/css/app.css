@@ -1649,6 +1649,24 @@ html, body {
     bottom: 0; }
   .wrap.login .getBackPwd {
     margin-top: 80px; }
+  .wrap.login .yanzheng {
+    font-size: 15px;
+    color: #298CFF;
+    line-height: 44px;
+    height: 44px;
+    width: 130px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: -130px; }
+  .wrap.login .yanzheng.disabled {
+    background: #F4F5F9;
+    color: #BBBBBB;
+    border-radius: 4px; }
 
 .wrap.index-lt {
   /*
@@ -3420,6 +3438,7 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
   position: relative; }
   .video-content video {
     width: 100%;
+    height: auto;
     display: block; }
 
 /*# sourceMappingURL=app.css.map */
