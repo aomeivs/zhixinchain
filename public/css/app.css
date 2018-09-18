@@ -2096,7 +2096,7 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       position: fixed;
       width: 100%;
       height: 131px;
-      z-index: 3;
+      z-index: 9;
       background: #ffffff;
       border-bottom: 1px solid #EEEEEE; }
     .wrap .component-index .head-note {
@@ -2201,6 +2201,30 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
           padding-bottom: 15px;
           color: white;
           cursor: pointer; }
+    .wrap .component-index .searchspace.banner-2 {
+      width: 840px;
+      height: 60px;
+      background-color: #62aeed;
+      border-radius: 2px;
+      position: absolute;
+      z-index: 3;
+      top: 350px;
+      left: 50%;
+      margin-left: -420px; }
+      .wrap .component-index .searchspace.banner-2 .banner-2-1 {
+        display: inline-block;
+        height: 60px;
+        border: none;
+        width: 696px;
+        padding-left: 8px; }
+      .wrap .component-index .searchspace.banner-2 .banner-2-2 {
+        display: inline-block;
+        width: 134px;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: white;
+        cursor: pointer; }
     .wrap .component-index .zi48 {
       font-size: 36px;
       color: #40BEFF;
@@ -2539,7 +2563,7 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
         border-right: 1px solid #979797; }
     .wrap .component-index #text_lt .block-content2 {
       position: relative;
-      z-index: 5; }
+      z-index: 3; }
     .wrap .component-index #text_lt .block-content4 {
       padding-top: 60px;
       background-color: #fbfbfb; }

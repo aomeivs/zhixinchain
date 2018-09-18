@@ -31,7 +31,7 @@
       position: fixed;
       width: 100%;
       height: 131px;
-      z-index: 3;
+      z-index: 9;
       background: #ffffff;
       border-bottom: 1px solid #EEEEEE;
     }
@@ -168,6 +168,34 @@
         }
       }
 
+    }
+
+    .searchspace.banner-2{
+      width: 840px;
+      height: 60px;
+      background-color: #62aeed;
+      border-radius: 2px;
+      position: absolute;
+      z-index: 3;
+      top: 350px;
+      left: 50%;
+      margin-left: -420px;
+      .banner-2-1{
+        display: inline-block;
+        height: 60px;
+        border: none;
+        width: 696px;
+        padding-left: 8px;
+      }
+      .banner-2-2{
+        display: inline-block;
+        width: 134px;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        color: white;
+        cursor: pointer;
+      }
     }
     .zi48{
       font-size: 36px;
@@ -671,7 +699,7 @@
     #text_lt{
       .block-content2{
         position: relative;
-        z-index: 5;
+        z-index: 3;
       }
       .block-content4{
         padding-top: 60px;
@@ -754,9 +782,6 @@
           padding:15px 40px;
         }
       }
-
-
-
     }
   }
 
@@ -772,5 +797,5 @@
     right: $width;
     z-index: 7;
   }
-
+  
 }
