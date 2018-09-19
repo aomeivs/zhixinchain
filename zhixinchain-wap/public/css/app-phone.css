@@ -111,7 +111,7 @@ html, body {
   height: 0.7rem;
   background-color: #FFFFFF; }
 .component-find-index .content-data {
-  width: 1.6rem;
+  width: 1.8rem;
   height: 0.48rem;
   float: left;
   overflow: hidden; }
@@ -744,5 +744,8 @@ option {
   -webkit-appearance: none;
   /* Safari 和 Chrome */
   appearance: none !important; }
+
+button {
+  outline: none; }
 
 /*# sourceMappingURL=app-phone.css.map */
