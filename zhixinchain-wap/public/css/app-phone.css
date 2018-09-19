@@ -106,14 +106,15 @@ html, body {
     max-width: 3.4rem;
     height: 1.24rem;
     margin: 0 auto; }
-.component-find-index .model-data {
+.component-find-index .list.model-data {
   position: relative;
   height: 0.7rem;
   background-color: #FFFFFF; }
 .component-find-index .content-data {
-  width: 1.86rem;
+  width: 1.85rem;
   height: 0.48rem;
-  float: left; }
+  float: left;
+  overflow: hidden; }
   .component-find-index .content-data p:nth-of-type(1) {
     font-size: 0.22rem;
     text-align: center;

@@ -41,7 +41,7 @@
     }
   }
   //数据显示
-  .model-data{
+  .list.model-data{
     position: relative;
     height: 0.7rem;
     @include bg-wihte;
@@ -66,11 +66,12 @@
           colorp2: #9b9b9b
   );
   .content-data{
-    width:1.86rem;
+    width:1.85rem;
     height: 0.48rem;
     float: left;
     // 通过map类型作为参数，引用混入。
     @include blockmodel($tolist...);
+    overflow: hidden;
   }
   .blank-space{
     width: 3.75rem;
