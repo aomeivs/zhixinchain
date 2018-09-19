@@ -66,13 +66,12 @@
           colorp2: #9b9b9b
   );
   .content-data{
-    width:1.8745rem;
+    width:1.86rem;
     height: 0.48rem;
     float: left;
     // 通过map类型作为参数，引用混入。
     @include blockmodel($tolist...);
   }
-
   .blank-space{
     width: 3.75rem;
     height: 0.1rem;
@@ -180,7 +179,6 @@
         color: #298cff;
       }
     }
-
   }
   .title{
     width: 100%;
@@ -271,5 +269,6 @@
   height: 0.6rem;
   width: 2.75rem;
 }
+
 
 

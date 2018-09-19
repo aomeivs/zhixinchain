@@ -49,12 +49,8 @@ textarea{
 }
 select{
   background: none;
-  //清除select的边框样式
   border: none;
-  //清除select聚焦时候的边框颜色
   outline: none;
-  //将select的宽高等于div的宽高
-  //隐藏select的下拉图标
   appearance: none !important;
   -webkit-appearance: none;
   -moz-appearance: none;
