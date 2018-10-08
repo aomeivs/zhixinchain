@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app-phone.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="public/js/rem.js"></script>
+</head>
+<body>
+    <div class="wrap" id="app">
+        <div class="component-find-index">
+            <div class="yaoqing-c1" style="background: url('public/images/find/yaoqing-1.png') center top no-repeat;background-size: 100% 100%;">
+                <div class="outer">
+                    <p class="p-money">
+                        邀请好友加入福利保障，获得 <span>{{invite_money}}ZXT奖励</span>
+                    </p>
+                    <div class="outer">
+                        <p class="p-uninvite" style="font-size: 0.13rem;top:1.4rem;line-height: 0.2rem;">
+                            奖励数量：<span style="color: #fe8159;">个人合伙人10% 机构合伙人25%</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="yaoqing-c2" style="background: url('public/images/find/yaoqing-2.png') center top no-repeat;background-size: 100% 100%;">
+                <div style="display:block;">
+                    <div class="outer">
+                        <p class="p-id">
+                            我的邀请码: <span>{{invite_id}}</span>
+                        </p>
+                    </div>
+                    <div class="btn">
+                        <a href=""><button class="btn-invite" style="width: 2.7rem;">邀请有奖</button></a>
+                    </div>
+                </div>
+                <div style="display: none;">
+                    <div class="outer">
+                        <p class="p-uninvite" style="font-size: 0.13rem;top:0.14rem;line-height: 0.2rem;">
+                            成为个人合伙人即可拥有邀请权限
+                            <br>
+                            如何成为个人合伙人：<span style="color: #fe8159;">2万ZXT，锁仓6个月</span>
+                        </p>
+                    </div>
+                    <div class="btn">
+                        <a href="" ><button class="btn-invite" style="width: 2.7rem; margin-top: 0.26rem;">成为个人合伙人</button></a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="yaoqing-c3">
+                <div class="btn">
+                    <a href="" ><button class="btn-yeji" style="width: 2.7rem; ">我的业绩</button></a>
+                </div>
+            </div>
+
+            <div>
+                <img src="public/images/find/yaoqing-3.png" style="width: 3.75rem;height: 1.36rem;max-width: 3.75rem;">
+            </div>
+
+            <div class="title">
+                <img src="public/images/find/title.png">
+                <p>活动规则</p>
+            </div>
+            <div class="text-content">
+                <div class="text-one">
+                    <div class="dot"></div>
+                    <p>每邀请1名新用户加入健康保障，可获得相应数量ZXT奖励；</p>
+                </div>
+                <div class="text-one">
+                    <div class="dot"></div>
+                    <p>邀请奖励的ZXT，个人即时奖励，锁仓期3个月；机构每月1~3日结算，锁仓3个月，3个月到期后按照30%：30%：40%分3个月释放；</p>
+                </div>
+                <div class="text-one">
+                    <div class="dot"></div>
+                    <p>被邀请人加入福利保障时的信息如存在重复情况，不给予邀请人奖励；</p>
+                </div>
+                <div class="text-one">
+                    <div class="dot"></div>
+                    <p>若发现骗取奖励行为，职信链有权取消、收回奖励金额并取消相关用户的用户资格；</p>
+                </div>
+                <div class="text-one">
+                    <div class="dot"></div>
+                    <p>职信链基金会保留对此活动的最终解释权。</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            data: function () {
+                return {
+                    invite_money: '',
+                    invite_id: '1234'
+                }
+            }
+        }).$mount('#app')
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app-phone.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="public/js/rem.js"></script>
+    <style>
+        /*html,body{background-color: #f2f2f2;}*/
+    </style>
+</head>
+<body>
+    <div class="wrap" id="app">
+        <div class="component-find-index ">
+            <!--业绩列表-->
+            <div class="blank-space"></div>
+            <div class="yeji-content" >
+                <table class="yeji-list" style="width: 3.75rem;">
+                    <div class="yeji-title">
+                        <tr style="color: #888888;">
+                            <td style="padding-left: 0.15rem;">业绩额(ZXT)</td>
+                            <td>奖励数量(ZXT)</td>
+                            <td>时间</td>
+                        </tr>
+                    </div>
+                </table>
+                <table class="yeji-list" >
+                    <div class="yeji-body" >
+                        <tr v-for="item in yeji">
+                            <td style="font-size: 0.15rem;">{{item.KPI}}</td>
+                            <td style="font-size: 0.15rem;">{{item.reward}}</td>
+                            <td style="font-size: 0.11rem;color: #495060;">{{item.time}}</td>
+                        </tr>
+                    </div>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            data: function () {
+                return {
+                    yeji:[
+                        {
+                            KPI:'10000',
+                            reward:'10000',
+                            time:'2018-09-30'
+                        },
+                        {
+                            KPI:'10000',
+                            reward:'10000',
+                            time:'2018-09-30'
+                        }
+                    ]
+                }
+            },
+            methods: {
+
+            }
+        }).$mount('#app')
+    </script>
+
+</body>
+</html>
