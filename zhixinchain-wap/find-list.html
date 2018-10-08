@@ -11,7 +11,7 @@
     <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
     <script src="public/js/rem.js"></script>
     <style>
-        html,body{background-color: #f2f2f2;}
+        /*html,body{background-color: #f2f2f2;}*/
     </style>
 </head>
 <body>
@@ -22,13 +22,8 @@
                 <img src="public/images/find/b1-b.png" >
             </div>
             <div class="list model-data">
-                <div class="content-data" style="border-right: 1px solid #d2d2d2;">
-                    <p>{{people}}</p>
-                    <p>已加入人数(人)</p>
-                </div>
-                <div class="content-data ">
-                    <p>{{allot_money}}</p>
-                    <p>已划拨保障金额(ZXT)</p>
+                <div class="list-data" >
+                    <p> 已加入人数(人) <span class="content_people">{{people}}</span></p>
                 </div>
             </div>
             <div class="blank-space"></div>
@@ -42,34 +37,99 @@
                     <img src="public/images/find/add.png" @onclick="" >
                 </div>
             </div>
-            <div class="list-list">
+            <div class="list-order">
                 <ul>
-                    <li class="list-li" v-for="item in items">
-                        <ul>
-                            <li class="li-l">
-                                <P>受益人身份证号：</P>
-                                <P>{{item.id_card}}</P>
-                            </li>
-                            <li class="li-l">
-                                <P>福利等级：</P>
-                                <P>{{item.grade}}</P>
-                            </li>
-                            <li class="li-l" style="height: 0.39rem">
-                                <P>钱包地址：</P>
-                                <P style="width: 2.4rem;text-align: right;word-break: break-all;line-height: 0.16rem;padding-top: 0.05rem;">{{item.wallet}}</P>
-                            </li>
-                            <li class="li-l">
-                                <P>生效日期：</P>
-                                <P>{{item.effective_dates}}</P>
-                            </li>
-                            <li class="li-l">
-                                <P>状态：</P>
-                                <P>{{item.state}}</P>
-                            </li>
-                        </ul>
+                    <li v-for="item in orders">
+                        <div class="order-content">
+                            <div class="push" style="top:0.1rem; right: 0.2rem;">
+                                <img src="public/images/find/btn-b.png" id="hide">
+                                <img src="public/images/find/btn-p.png" class="show" style="display: none;">
+                            </div>
+                            <table class="order-con-1">
+                                <div class="order-title">
+                                    <tr>
+                                        <td>订单编号：</td>
+                                        <td>{{item.id_card}}</td>
+                                    </tr>
+                                </div>
+                                <div class="order-body" >
+                                    <tr>
+                                        <td>支付数量：</td>
+                                        <td>{{item.eth}}ETH</td>
+                                    </tr>
+                                    <tr >
+                                        <td>收款地址：</td>
+                                        <td>{{item.collection_add}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>支付地址：</td>
+                                        <td>{{item.wallet}}</td>
+                                    </tr>
+                                </div>
+                            </table>
+                        </div>
+
+                        <div class="list-list" >
+                            <ul>
+                                <li class="list-li" v-for="item in items">
+                                    <ul>
+                                        <div class="push" style="top:0.1rem;right: 0.1rem;">
+                                            <img src="public/images/find/btn-p.png" >
+                                            <img src="public/images/find/btn-b.png"  style="display: none;">
+                                        </div>
+                                        <div >
+                                            <li class="li-l li-l-right">
+                                                <P>受益人身份证号：</P>
+                                                <P>{{item.id_card}}</P>
+                                            </li>
+                                            <li class="li-l li-l-right">
+                                                <P>福利等级：</P>
+                                                <P>{{item.grade}}</P>
+                                            </li>
+                                            <li class="li-l li-l-right">
+                                                <P>生效日期：</P>
+                                                <P>{{item.effective_dates}}</P>
+                                            </li>
+                                            <li class="li-l li-l-right">
+                                                <P>状态：</P>
+                                                <P>{{item.state}}</P>
+                                            </li>
+                                        </div>
+                                        <div >
+                                            <li class="li-l li-l-right">
+                                                <P>手机号：</P>
+                                                <P>{{item.phone}}</P>
+                                            </li>
+                                            <li class="li-l li-l-right">
+                                                <P>关系：</P>
+                                                <P>{{item.relation}}</P>
+                                            </li>
+                                            <li class="li-l li-l-right">
+                                                <P>锁仓数量：</P>
+                                                <P>{{item.lock_money}}ZXT</P>
+                                            </li>
+                                            <li class="li-l li-l-right">
+                                                <P>锁仓日期：</P>
+                                                <P>{{item.lock_dates}}</P>
+                                            </li>
+                                        </div>
+
+                                        <div class="list-fangqi">
+                                            <li class="li-fangqi">
+                                                放弃保障
+                                            </li>
+                                        </div>
+
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
             </div>
+
+            <div style="height: 0.6rem;"></div>
+
         </div>
     </div>
 
@@ -83,24 +143,54 @@
                         {
                             id_card:'370202198508288888',
                             grade:'福利保障A',
-                            wallet:'17Xm82bBmaZEJ7UaEXo2SBdTVf9EPFhvG2',
-                            effective_dates:'2018-09-03',
-                            state:'生效'
+                            effective_dates:'2019-03-03',
+                            state:'生效',
+                            phone:'370202198508288888',
+                            relation:'本人',
+                            lock_money:'30000',
+                            lock_dates:'2018-09-03',
                         },
                         {
                             id_card:'370202198508288888',
                             grade:'福利保障A',
-                            wallet:'17Xm82bBmaZEJ7UaEXo2SBdTVf9EPFhvG2',
-                            effective_dates:'2018-09-03',
-                            state:'生效'
+                            effective_dates:'2019-03-03',
+                            state:'生效',
+                            phone:'370202198508288888',
+                            relation:'本人',
+                            lock_money:'30000',
+                            lock_dates:'2018-09-03',
                         }
-                        ]
+                        ],
+                    orders:[
+                        {
+                            id_card:'370202198508288888',
+                            eth:'5',
+                            collection_add:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a',
+                            wallet:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a'
+                        },
+                        {
+                            id_card:'370202198508288888',
+                            eth:'5',
+                            collection_add:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a',
+                            wallet:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a'
+                        }
+                    ]
                 }
             },
             methods: {
 
             }
         }).$mount('#app')
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $(".order-body").hide();
+            });
+            $(".show").click(function(){
+                $("p").show();
+            });
+        });
     </script>
 </body>
 </html>
