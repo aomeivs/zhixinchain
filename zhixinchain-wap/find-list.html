@@ -65,6 +65,10 @@
                                         <td>支付地址：</td>
                                         <td>{{item.wallet}}</td>
                                     </tr>
+                                    <tr>
+                                        <td>订单状态：</td>
+                                        <td>{{item.state}}</td>
+                                    </tr>
                                 </div>
                             </table>
                         </div>
@@ -139,6 +143,22 @@
                 return {
                     people:'68,088,888',
                     allot_money:'8,888,088,888',
+                    orders:[
+                        {
+                            id_card:'370202198508288888',
+                            eth:'5',
+                            collection_add:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a',
+                            wallet:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a',
+                            state:'审核中'
+                        },
+                        {
+                            id_card:'370202198508288888',
+                            eth:'5',
+                            collection_add:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a',
+                            wallet:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a',
+                            state:'审核成功'
+                        }
+                    ],
                     items:[
                         {
                             id_card:'370202198508288888',
@@ -160,21 +180,7 @@
                             lock_money:'30000',
                             lock_dates:'2018-09-03',
                         }
-                        ],
-                    orders:[
-                        {
-                            id_card:'370202198508288888',
-                            eth:'5',
-                            collection_add:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a',
-                            wallet:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a'
-                        },
-                        {
-                            id_card:'370202198508288888',
-                            eth:'5',
-                            collection_add:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a',
-                            wallet:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a'
-                        }
-                    ]
+                        ]
                 }
             },
             methods: {
