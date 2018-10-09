@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app-phone.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="public/js/rem.js"></script>
+    <style>
+        /*html,body{background-color: #f2f2f2;}*/
+    </style>
+</head>
+<body>
+    <div class="wrap" id="app">
+        <div class="component-find-index ">
+
+            <div class="list-order">
+
+                        <div class="list-list" >
+                            <ul>
+                                <li class="list-li" v-for="item in items">
+                                    <ul>
+                                        <div >
+                                            <li class="li-l">
+                                                <P>受益人姓名：</P>
+                                                <P>{{item.name}}</P>
+                                            </li>
+                                            <li class="li-l">
+                                                <P>受益人身份证号：</P>
+                                                <P>{{item.id_card}}</P>
+                                            </li>
+                                            <li class="li-l">
+                                                <P>福利等级：</P>
+                                                <P>{{item.grade}}</P>
+                                            </li>
+                                            <li class="li-l">
+                                                <P>生效日期：</P>
+                                                <P>{{item.effective_dates}}</P>
+                                            </li>
+                                            <li class="li-l">
+                                                <P>状态：</P>
+                                                <P>{{item.state}}</P>
+                                            </li>
+                                            <li class="li-l">
+                                                <P>手机号：</P>
+                                                <P>{{item.phone}}</P>
+                                            </li>
+                                            <li class="li-l">
+                                                <P>锁仓数量：</P>
+                                                <P>{{item.lock_money}}ZXT</P>
+                                            </li>
+                                            <li class="li-l">
+                                                <P>锁仓日期：</P>
+                                                <P>{{item.lock_dates}}</P>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+            </div>
+
+            <div style="height: 0.6rem;"></div>
+
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            data: function () {
+                return {
+                    people:'68,088,888',
+                    allot_money:'8,888,088,888',
+                    items:[
+                        {
+                            name:'董先生',
+                            id_card:'370202******288888',
+                            grade:'福利保障A',
+                            effective_dates:'2019-03-03',
+                            state:'生效',
+                            phone:'186****8526',
+                            lock_money:'30000',
+                            lock_dates:'2018-09-03',
+                        },
+                        {
+                            name:'董先生',
+                            id_card:'370202******288888',
+                            grade:'福利保障A',
+                            effective_dates:'2019-03-03',
+                            state:'生效',
+                            phone:'186****8526',
+                            lock_money:'30000',
+                            lock_dates:'2018-09-03',
+                        }
+                        ]
+                }
+            },
+            methods: {
+
+            }
+        }).$mount('#app')
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("#hide").click(function(){
+                $(".order-body").hide();
+            });
+            $(".show").click(function(){
+                $("p").show();
+            });
+        });
+    </script>
+</body>
+</html>
