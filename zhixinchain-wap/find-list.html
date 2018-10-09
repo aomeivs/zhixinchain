@@ -26,6 +26,17 @@
                     <p> 已加入人数(人) <span class="content_people">{{people}}</span></p>
                 </div>
             </div>
+            <!--查询-->
+            <div class="list-search">
+                <div class="search-content-1">
+                    <img src="public/images/find/search.png" >
+                    <input type="text" placeholder="请输入身份证号、手机号、姓名查询">
+                </div>
+                <div class="search-content-2">
+                    <a href=""><button >查询</button></a>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
             <div class="blank-space"></div>
             <div class="list-btn">
                 <a href=""><button class="btn-invite">邀请有奖</button></a>
@@ -78,10 +89,14 @@
                                 <li class="list-li" v-for="item in items">
                                     <ul>
                                         <div class="push" style="top:0.1rem;right: 0.1rem;">
-                                            <img src="public/images/find/btn-p.png" >
+                                            <img src="public/images/find/btn-p.png">
                                             <img src="public/images/find/btn-b.png"  style="display: none;">
                                         </div>
                                         <div >
+                                            <li class="li-l li-l-right">
+                                                <P>受益人姓名：</P>
+                                                <P>{{item.name}}</P>
+                                            </li>
                                             <li class="li-l li-l-right">
                                                 <P>受益人身份证号：</P>
                                                 <P>{{item.id_card}}</P>
@@ -161,6 +176,7 @@
                     ],
                     items:[
                         {
+                            name:'董先生',
                             id_card:'370202198508288888',
                             grade:'福利保障A',
                             effective_dates:'2019-03-03',
@@ -171,6 +187,7 @@
                             lock_dates:'2018-09-03',
                         },
                         {
+                            name:'董先生',
                             id_card:'370202198508288888',
                             grade:'福利保障A',
                             effective_dates:'2019-03-03',
