@@ -282,8 +282,7 @@ html, body {
   width: 3.75rem;
   height: 1.265rem; }
   .component-find-index .yaoqing-c2 .btn {
-    text-align: center;
-    padding-top: 0.4rem; }
+    text-align: center; }
 .component-find-index .yaoqing-c3 {
   text-align: center;
   margin-top: -0.1rem; }
@@ -301,22 +300,20 @@ html, body {
   position: relative;
   /* or absolute */
   /* unnecessary styling properties */
-  width: 3.75rem; }
+  width: 3.75rem;
+  text-align: center;
+  margin: 0 auto; }
   .component-find-index .outer p {
     font-size: 0.16rem;
     width: 3.75rem;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
-    /* unnecessary styling properties */
     text-align: center; }
   .component-find-index .outer .p-money {
-    top: 1.2rem; }
+    padding-top: 1.2rem; }
     .component-find-index .outer .p-money span {
       color: #fe8159; }
   .component-find-index .outer .p-id {
     font-size: 0.18rem;
-    top: 0.2rem; }
+    padding-top: 0.2rem; }
     .component-find-index .outer .p-id span {
       color: #298cff; }
 .component-find-index .title {
