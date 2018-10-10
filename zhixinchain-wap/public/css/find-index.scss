@@ -91,6 +91,7 @@
     height: 0.64rem;
     border-top: 1px solid #d2d2d2;
     position: relative;
+    background: #FFFFFF;
     .search-content-1{
       width: 2.8rem;
       height: 0.4rem;
@@ -569,14 +570,98 @@
         text-align: center;
       }
     }
+  }
+
+  //健康保障分享下载
+  .find-downlaod{
+    background:#171551 url('../images/find/download-bg.png') no-repeat bottom center;
+    background-size: cover;
+    width: 3.75rem;
+    height: 6.6rem;
+    text-align: center;
+    color: #FFFFFF;
+
+    img{
+      width:1.95rem;
+      height: 0.66rem;
+      margin: 0 auto;
+      padding-top: 0.6rem;
+    }
+    p:nth-of-type(1){
+      font-size: 0.27rem;
+      font-weight: 700;
+      margin-top: 0.4rem;
+    }
+    p:nth-of-type(2){
+      font-size: 0.16rem;
+      margin-top: 0.15rem;
+    }
+    p:nth-of-type(3){
+      font-size: 0.15rem;
+      margin-top: 0.5rem;
+    }
+    .invite-number{
+      font-size: 0.26rem;
+      letter-spacing: 4.3px;
+      color: #298cff;
+      background: #FFFFFF;
+      padding: 0.1rem;
+      border-radius: 0.04rem;
+      width: 1rem;
+      margin: 0 auto;
+      margin-top: 0.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    $height:.5rem;
+    .btn-download{
+      width: 2.7rem;
+      height: $height;
+      background: #1B7DE2;
+      color: #FFFFFF;
+      margin: 0 auto;
+      font-size: .19rem;
+      text-align:center;
+      line-height:$height;
+      border-radius:$height/8;
+      &.btn-ios{
+        background: #74B4FF;
+      }
+    }
+
+    #window-download{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      background-color:rgba(0,0,0,0.5);
+      z-index: 3;
+      top: 0;
+      .content{
+        width: 3rem;
+        height: 2rem;
+        margin: 0 auto;
+        padding-top: .4rem;
+        #close{
+          width: .17rem;
+          height: .17rem;
+          position: absolute;
+          top:.4rem;
+          left: .4rem;
+        }
+      }
+    }
 
   }
+
 }
 
 .ivu-select-single .ivu-select-selection {
   height: 0.6rem;
   width: 2.75rem;
 }
+
+
 
 
 
