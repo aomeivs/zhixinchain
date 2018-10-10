@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app-phone.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="public/js/rem.js"></script>
+    <style>
+        html,body{background-color: #171551;}
+    </style>
+</head>
+<body>
+     <div class="wrap">
+         <div class="component-find-index ">
+             <div class="find-downlaod">
+                 <img src="public/images/find/download-logo.png" >
+                 <p>“好人无忧”终身健康保障</p>
+                 <p>持币3万枚，即可终身享有<span style="color:#FB5C71;">10万元</span>健康保障！</p>
+                 <p>用我的邀请码马上加入</p>
+                 <div class="invite-number">1234</div>
+
+                 <!--安卓直接下载-->
+                 <div class="btn-download">
+                     安装下载
+                 </div>
+
+                 <!--iOS 开发中-->
+                 <div class="btn-download btn-ios" style="display: none">
+                     应用开发中， 尽情期待...
+                 </div>
+
+                 <div id="window-download" style="display: none">
+
+                     <div class="content">
+
+                         <img src="public/images/open.png" width="100%">
+
+                         <img src="public/images/close.png" width="100%" id="close">
+                     </div>
+                 </div>
+
+             </div>
+         </div>
+     </div>
+
+     <script>
+         function htmlFontSize(){
+             var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+             var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+             var width = w > h ? h : w;
+             width = width > 720 ? 720 : width
+             var fz = ~~(width*100000/36)/10000
+             document.getElementsByTagName("html")[0].style.cssText = 'font-size: ' + fz +"px";
+             var realfz = ~~(+window.getComputedStyle(document.getElementsByTagName("html")[0]).fontSize.replace('px','')*10000)/10000
+             if (fz !== realfz) {
+                 document.getElementsByTagName("html")[0].style.cssText = 'font-size: ' + fz * (fz / realfz) +"px";
+             }
+         }
+         htmlFontSize();
+     </script>
+
+</body>
+</html>
