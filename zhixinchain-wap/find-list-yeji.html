@@ -31,6 +31,15 @@
                 </table>
                 <table class="yeji-list" >
                     <div class="yeji-body" >
+
+                        <!--空提示-->
+                        <div class="order-space">
+                            <div class="order-space-none" style="display: block;">
+                                <img src="public/images/find/none.png" style="width: 1.12rem;height:0.91rem;">
+                                <p>暂无业绩</p>
+                            </div>
+                        </div>
+
                         <tr v-for="item in yeji">
                             <td style="font-size: 0.15rem;">{{item.KPI}}</td>
                             <td style="font-size: 0.15rem;">{{item.reward}}</td>
