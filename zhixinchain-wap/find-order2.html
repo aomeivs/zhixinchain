@@ -11,74 +11,213 @@
     <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
     <script src="public/js/rem.js"></script>
     <style>
-        /*html,body{background-color: #f2f2f2;}*/
+        /*提示样式*/
+        .formtips{
+            background-color: rgba(0,0,0,0.5);
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 8;
+        }
+        .tips-bg{
+            width:2.6rem;
+            height:2.7rem;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            z-index:9;
+            margin:0 auto;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        .tips-close{
+            width: 0.2rem;
+            height: 0.2rem;
+            position: relative;
+            top: 0.1rem;
+            left: 2.25rem;
+        }
+        .tips-imgSuccess{
+            width: 0.54rem;
+            margin: 0.15rem auto;
+        }
+        .tips-title{
+            font-size: 0.2rem;
+            color: #000000;
+        }
+        .tips-title2{
+            font-size: 0.14rem;
+            color: #666666;
+            padding-top: 0.2rem;
+        }
+
+        input, textarea, select, button {
+            width: 2.2rem;
+            height: 0.6rem;
+            font-size: 0.16rem;
+            line-height: 0.6rem;
+        }
+        select{
+            background: none;
+            border: none;
+            outline: none;
+            appearance: none !important;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+        select::-ms-expand{display:none;}
+        option::-ms-expand{display: none;}
+        option{
+            background: none;
+            -moz-appearance:none; /* Firefox */
+            -webkit-appearance:none; /* Safari 和 Chrome */
+            appearance:none !important;
+        }
     </style>
 </head>
+
 <body>
     <div class="wrap" id="app">
         <div class="component-find-index ">
             <!--订单提交地址页-->
             <div class="blank-space"></div>
             <div class="order-content" style="background: #ffffff;">
-                <div class="btn-copy" style="top: 0.05rem;">复制</div>
-                <div class="btn-copy" style="top: 0.65rem;">复制</div>
+                <div class="btn-copy" style="top: 0.1rem;">复制</div>
                 <table class="order-con-1">
-                    <div class="order-title">
-                        <tr>
-                            <td>订单编号：</td>
-                            <td>{{id_card}}</td>
-                        </tr>
-                    </div>
-                    <div class="order-body" >
-                        <tr>
-                            <td>支付数量：</td>
-                            <td>{{eth}}ETH</td>
-                        </tr>
-                        <tr >
-                            <td>收款地址：</td>
-                            <td>{{collection_add}}</td>
-                        </tr>
-                    </div>
+                    <tr>
+                        <td>订单编号：</td>
+                        <td>{{id_card}}</td>
+                    </tr>
                 </table>
+                <div class="order-con-1 floatleft">
+                    <p>支付方式：</p>
+                    <div class="btn-pay-eth chose">ETH支付</div>
+                    <div class="btn-pay-rmb">人民币支付</div>
+                </div>
+                <div style="clear: both;"></div>
             </div>
             <div class="blank-space"></div>
-            <div class="order-tips" >
-                <p>友情提示：</p>
-                <div class="tips-content">
-                    <p>*</p>
-                    <p>请用您的支付钱包地址手动转账至收款地址；</p>
-                    <div style="clear:both"></div>
+
+            <div class="pay-eth" style="display: block;">
+                <div class="order-content" style="background: #ffffff;">
+                    <table class="order-con-1">
+                        <div class="btn-copy" style="top: 0.45rem;">复制</div>
+                        <div class="order-body" >
+                            <tr>
+                                <td>支付数量：</td>
+                                <td style="font-size: 0.16rem;">{{eth}}ETH</td>
+                            </tr>
+                            <tr >
+                                <td>收款地址：</td>
+                                <td>{{collection_add}}</td>
+                            </tr>
+                        </div>
+                    </table>
                 </div>
-                <div class="tips-content" >
-                    <p>*</p>
-                    <p>转账时请务必备注订单号;</p>
-                    <div style="clear:both"></div>
+                <div class="order-tips" >
+                    <p>友情提示：</p>
+                    <div class="tips-content">
+                        <p>*</p>
+                        <p>请用您的支付钱包地址手动转账至收款地址；</p>
+                        <div style="clear:both"></div>
+                    </div>
+                    <div class="tips-content" >
+                        <p>*</p>
+                        <p>转账时请务必备注订单号;</p>
+                        <div style="clear:both"></div>
+                    </div>
+                    <div class="tips-content">
+                        <p>*</p>
+                        <p>请于1天内完成支付，超时失效</p>
+                        <div style="clear:both"></div>
+                    </div>
                 </div>
-                <div class="tips-content">
-                    <p>*</p>
-                    <p>请于1天内完成支付，超时失效</p>
-                    <div style="clear:both"></div>
+
+                <div class="input-wallet">
+                    <div class="input-title">
+                        <p>*</p>
+                        <p>支付钱包地址：</p>
+                        <div style="clear:both"></div>
+                    </div>
+                    <div class="input-content" >
+                        <textarea rows="2">请输入您的支付钱包地址，非常重要</textarea>
+                    </div>
+                    <div class="btn-input">
+                        <a href="">
+                            <button>完成</button>
+                        </a>
+                    </div>
                 </div>
+
             </div>
 
-            <div class="input-wallet">
-                <div class="input-title">
-                    <p>*</p>
-                    <p>支付钱包地址：</p>
-                    <div style="clear:both"></div>
+            <div class="pay-rmb" style="display: none;">
+                <div class="order-content" style="background: #ffffff;">
+                    <table class="order-con-1">
+                        <div class="order-body" >
+                            <tr>
+                                <td>支付数量：</td>
+                                <td style="font-size: 0.16rem;">¥{{rmb}}</td>
+                            </tr>
+                        </div>
+                    </table>
                 </div>
-                <div class="input-content" >
-                    <textarea rows="2">请输入您的支付钱包地址，非常重要</textarea>
+                <div class="order-tips"  style="height:0.7rem;">
+                    <p>友情提示：</p>
+                    <div class="tips-content" >
+                        <p>*</p>
+                        <p>转账时请务必备注订单号;</p>
+                        <div style="clear:both"></div>
+                    </div>
+                    <div class="tips-content">
+                        <p>*</p>
+                        <p>请于1天内完成支付，超时失效</p>
+                        <div style="clear:both"></div>
+                    </div>
                 </div>
-                <div class="btn-input">
-                    <a href="">
-                        <button>完成</button>
-                    </a>
-                </div>
-            </div>
 
+                <div class="order-content" style="background: #ffffff;">
+                    <div class="btn-copy" style="top: 0.1rem;right: 0.3rem;">复制</div>
+                    <table class="order-con-2">
+                        <tr style="border:1px solid #f1f1f1;">
+                            <td style=" padding-bottom: 0.1rem;">收款人卡号</td>
+                            <td>6226661001077746</td>
+                        </tr>
+                        <tr>
+                            <td>收款人姓名</td>
+                            <td>李文超</td>
+                        </tr>
+                        <tr>
+                            <td style=" padding-bottom: 0.1rem;">银行</td>
+                            <td>光大银行青岛宁夏路支行</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+                <div class="input-wallet">
+                    <div class="btn-input">
+                        <a href="">
+                            <button>完成</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
 
         </div>
+
+        <!--成功提示--start-->
+        <div class="formtips" style="display: none;">
+            <div class="tips-bg" style="height: 2rem;">
+                <img src="public/images/tips-close.png" class="tips-close" >
+                <img src="public/images/tips1.png" class="tips-imgSuccess">
+                <p class="tips-title">提交成功</p>
+                <!--<p class="tips-title2">您已提交职信链社区“好人无忧”<br>健康福利登记表</p>-->
+            </div>
+        </div>
+        <!--提示-成功--end-->
     </div>
 
     <script>
@@ -87,7 +226,8 @@
                 return {
                     id_card:'370202198508288888',
                     eth:'5',
-                    collection_add:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a'
+                    collection_add:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a',
+                    rmb:'1500'
                 }
             },
             methods: {
@@ -95,6 +235,26 @@
             }
         }).$mount('#app')
     </script>
+    <script src="https://img2.news18a.com/js/jquery-1.7.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $(".btn-pay-eth").click(function(){
+                $('.btn-pay-rmb').removeClass("chose");
+                $(this).addClass("chose");
+                $('.pay-eth').show();
+                $('.pay-rmb').hide();
+            });
+            $(".btn-pay-rmb").click(function(){
+                $('.btn-pay-eth').removeClass("chose");
+                $(this).addClass("chose");
+                $('.pay-eth').hide();
+                $('.pay-rmb').show();
+            });
+
+        });
+    </script>
+
 
 </body>
 </html>
