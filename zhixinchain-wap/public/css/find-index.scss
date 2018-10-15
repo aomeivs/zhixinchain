@@ -86,17 +86,38 @@
     @include blockmodel($tolist...);
     overflow: hidden;
   }
+
+  //价格显示
+  .list-price{
+    font-size: 0.12rem;
+    color: #4a4a4a;
+    text-align: center;
+    position: relative;
+    border-top: 1px solid #f3f3f3;
+    .list-price-1{
+      float: left;
+      width: 1.85rem;
+      height: 0.55rem;
+      p:nth-of-type(1){
+        margin-top: 0.1rem;
+        line-height: 0.2rem;
+      }
+    }
+  }
+
+
+
   //查询
   .list-search{
     height: 0.64rem;
-    border-top: 1px solid #d2d2d2;
+    border-top: 1px solid #f3f3f3;
     position: relative;
     background: #FFFFFF;
     .search-content-1{
       width: 2.8rem;
       height: 0.4rem;
       box-sizing: border-box;
-      border:1px solid #d2d2d2;
+      border:1px solid #e5e5e5;
       border-radius:0.04rem 0 0 0.04rem;
       float: left;
       margin-left: 0.15rem;
@@ -150,7 +171,7 @@
   .list-title{
     width: 3.75rem;
     height: 0.51rem;
-    border-bottom: 1px solid #d2d2d2;
+    border-bottom: 1px solid #e5e5e5;
     @include bg-wihte;
     .title-inner{
       width: 3.4rem;
@@ -187,6 +208,7 @@
     position: relative;
     background-color: #f2f2f2;
     padding-bottom: 0.05rem;
+    //border-bottom: 1px solid #d2d2d2;
     .order-con-1{
       width:2.8rem;
       font-size: 0.13rem;
@@ -198,13 +220,55 @@
       vertical-align: top;
       td:nth-of-type(1){
         width: 25%;
-        padding-top: 0.1rem;
+        padding-top: 0.15rem;
       }
       td:nth-of-type(2){
         width: 75%;
-        padding-top: 0.1rem;
+        padding-top: 0.15rem;
         color: #4a4a4a;
       }
+    }
+
+    .floatleft{
+      position: relative;
+      width: 3.55rem;
+      text-align: center;
+      color: #9b9b9b;
+      line-height: 0.33rem;
+      padding-top: 0.15rem;
+      padding-bottom: 0.45rem;
+      p{
+        float: left;
+      }
+      div{
+        float: left;
+        width: 1.2rem;
+        height: 0.33rem;
+        border: solid 1px #dcdcdc;
+        background: #f9f9f9;
+        margin-left: 0.1rem;
+        margin-right: 0.05rem;
+      }
+      .chose{
+        background: #298cff;
+        color: #FFFFFF;
+      }
+    }
+
+    .order-con-2{
+      width:3.42rem;
+      font-size: 0.13rem;
+      color: #9b9b9b;
+      line-height: 0.2rem;
+      margin: 0 auto;
+      margin-top: 0.2rem;
+      box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12);
+      border:1px solid #f1f1f1;
+      border-radius: 0.04rem;
+      td{
+        padding-left: 0.1rem;
+      }
+
     }
   }
   .push{
@@ -376,10 +440,12 @@
         margin: 0 0.2rem;
       }
     }
+
     .form-input{
       width:2.75rem;
       height: 0.6rem;
-      border-bottom: 0.0005rem solid #d2d2d2;
+      border-bottom: 1px solid #d2d2d2;
+      box-sizing: border-box;
       float: right;
       position: relative;
       vertical-align: middle;
@@ -390,9 +456,7 @@
         line-height: 0.2rem;
         vertical-align: middle;
       }
-
     }
-
   }
   .btn-tijiao{
     width: 3.4rem;
@@ -468,6 +532,7 @@
     line-height: 0.24rem;
     position: absolute;
     right: 0.2rem;
+    z-index: 2;
   }
   .order-tips{
     width: 3.1rem;

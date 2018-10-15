@@ -10,9 +10,7 @@
     <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
     <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
     <script src="public/js/rem.js"></script>
-    <style>
-        /*html,body{background-color: #f2f2f2;}*/
-    </style>
+    <script src="https://img2.news18a.com/js/jquery-1.7.2.min.js"></script>
 </head>
 <body>
     <div class="wrap" id="app">
@@ -21,11 +19,26 @@
                 <img src="public/images/find/btn-rule.png" style="width:0.95rem;height: 0.26rem; position: absolute;top: 1rem;left: 50%;margin-left: -0.47rem;">
                 <img src="public/images/find/b1-b.png" >
             </div>
+
             <div class="list model-data">
                 <div class="list-data" >
                     <p> 已加入人数(人) <span class="content_people">{{people}}</span></p>
                 </div>
             </div>
+
+            <!--价格显示-->
+            <div class="list-price">
+                <div class="list-price-1" style="border-right: 1px solid #f3f3f3;">
+                    <p>10万元健康保障（ETH）</p>
+                    <p>1.1154 ≈ ¥1500</p>
+                </div>
+                <div class="list-price-1">
+                    <p>30万元健康保障（ETH）</p>
+                    <p>3.3462 ≈ ¥4500</p>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+
             <!--查询-->
             <div class="list-search">
                 <div class="search-content-1">
@@ -53,18 +66,18 @@
                     <li v-for="item in orders">
                         <div class="order-content">
                             <div class="push" style="top:0.1rem; right: 0.2rem;">
-                                <img src="public/images/find/btn-b.png" id="hide">
-                                <img src="public/images/find/btn-p.png" class="show" style="display: none;">
+                                <img src="public/images/find/btn-p.png" class="show" >
+                                <img src="public/images/find/btn-b.png" class="hide" style="display: none;">
+
                             </div>
                             <table class="order-con-1">
-                                <div class="order-title">
                                     <tr>
                                         <td>订单编号：</td>
                                         <td>{{item.id_card}}</td>
                                     </tr>
-                                </div>
-                                <div class="order-body" >
-                                    <tr>
+                            </table>
+                            <table class="tables order-con-1" style="display: none;">
+                                    <tr >
                                         <td>支付数量：</td>
                                         <td>{{item.eth}}ETH</td>
                                     </tr>
@@ -72,73 +85,72 @@
                                         <td>收款地址：</td>
                                         <td>{{item.collection_add}}</td>
                                     </tr>
-                                    <tr>
+                                    <tr >
                                         <td>支付地址：</td>
                                         <td>{{item.wallet}}</td>
                                     </tr>
-                                    <tr>
+                                    <tr >
                                         <td>订单状态：</td>
                                         <td>{{item.state}}</td>
                                     </tr>
-                                </div>
                             </table>
                         </div>
 
-                        <div class="list-list" >
+                        <div class="list-list" style="display: none;">
                             <ul>
                                 <li class="list-li" v-for="item in items">
                                     <ul>
                                         <div class="push" style="top:0.1rem;right: 0.1rem;">
-                                            <img src="public/images/find/btn-p.png">
-                                            <img src="public/images/find/btn-b.png"  style="display: none;">
+                                            <img src="public/images/find/btn-p.png" class="show-bz" >
+                                            <img src="public/images/find/btn-b.png" class="hide-bz" style="display: none;">
                                         </div>
                                         <div >
-                                            <li class="li-l li-l-right">
+                                            <li class="li-l li-l-right" >
                                                 <P>受益人姓名：</P>
                                                 <P>{{item.name}}</P>
                                             </li>
-                                            <li class="li-l li-l-right">
+                                        </div>
+                                        <div class="list-li-hide" style="display: none;">
+                                            <li class="li-l li-l-right" >
                                                 <P>受益人身份证号：</P>
                                                 <P>{{item.id_card}}</P>
                                             </li>
-                                            <li class="li-l li-l-right">
+                                            <li class="li-l li-l-right" >
                                                 <P>福利等级：</P>
                                                 <P>{{item.grade}}</P>
                                             </li>
-                                            <li class="li-l li-l-right">
+                                            <li class="li-l li-l-right" >
                                                 <P>生效日期：</P>
                                                 <P>{{item.effective_dates}}</P>
                                             </li>
-                                            <li class="li-l li-l-right">
+                                            <li class="li-l li-l-right" >
                                                 <P>状态：</P>
                                                 <P>{{item.state}}</P>
                                             </li>
-                                        </div>
-                                        <div >
-                                            <li class="li-l li-l-right">
+                                            <li class="li-l li-l-right" >
                                                 <P>手机号：</P>
                                                 <P>{{item.phone}}</P>
                                             </li>
-                                            <li class="li-l li-l-right">
+                                            <li class="li-l li-l-right" >
                                                 <P>关系：</P>
                                                 <P>{{item.relation}}</P>
                                             </li>
-                                            <li class="li-l li-l-right">
+                                            <li class="li-l li-l-right" >
                                                 <P>锁仓数量：</P>
                                                 <P>{{item.lock_money}}ZXT</P>
                                             </li>
-                                            <li class="li-l li-l-right">
+                                            <li class="li-l li-l-right" >
                                                 <P>锁仓日期：</P>
                                                 <P>{{item.lock_dates}}</P>
                                             </li>
-                                        </div>
 
-                                        <div class="list-fangqi">
-                                            <li class="li-fangqi">
+
+                                            <div class="list-fangqi" style="display: none;">
+                                                <li class="li-fangqi">
                                                 放弃保障
-                                            </li>
+                                                </li>
+                                            </div>
                                         </div>
-
                                     </ul>
                                 </li>
                             </ul>
@@ -205,14 +217,69 @@
             }
         }).$mount('#app')
     </script>
-    <script type="text/javascript">
+    <script>
         $(document).ready(function(){
-            $("#hide").click(function(){
-                $(".order-body").hide();
+
+//            方法一
+//            订单收起
+            $(".hide").click(function(){
+                $(this).parent().parent().find('.tables').hide();
+                $(this).hide();
+                $(this).parent().find('.show').show();
+                $(this).parent().parent().parent().find('.list-list').hide();
             });
+//            订单展开
             $(".show").click(function(){
-                $("p").show();
+                $(this).parent().parent().find('.tables').show();
+                $(this).hide();
+                $(this).parent().find('.hide').show();
+                $(this).parent().parent().parent().find('.list-list').show();
             });
+
+//          保障信息收起
+            $(".hide-bz").click(function(){
+                $(this).parent().parent().find('.list-li-hide').hide();
+                $(this).hide();
+                $(this).parent().find('.show-bz').show();
+            });
+
+//            保障信息展开
+            $(".show-bz").click(function(){
+                $(this).parent().parent().find('.list-li-hide').show();
+                $(this).hide();
+                $(this).parent().find('.hide-bz').show();
+            });
+
+
+//            方法二
+//            订单收起
+//            $(".order-content").toggle(
+//                function(){
+//                    $(this).find('.tables').show();
+//                    $(this).find('.hide').show();
+//                    $(this).find('.show').hide();
+//                    $(this).parent().parent().find('.list-list').show();},
+//                function(){
+//                    $(this).find('.tables').hide();
+//                    $(this).find('.hide').hide();
+//                    $(this).find('.show').show();
+//                    $(this).parent().parent().find('.list-list').hide();}
+//            );
+//
+////          保障信息收起
+//            $(".hide-bz").click(function(){
+//                $(this).parent().parent().find('.list-li-hide').hide();
+//                $(this).hide();
+//                $(this).parent().find('.show-bz').show();
+//            });
+//
+////            保障信息展开
+//            $(".show-bz").click(function(){
+//                $(this).parent().parent().find('.list-li-hide').show();
+//                $(this).hide();
+//                $(this).parent().find('.hide-bz').show();
+//            });
+
         });
     </script>
 </body>
