@@ -545,6 +545,21 @@ html, body {
     line-height: 0.45rem;
     text-align: center;
     color: #ffffff; }
+.component-find-index .yeji-add {
+  position: relative;
+  width: 3.75rem;
+  margin: 0 auto; }
+  .component-find-index .yeji-add p {
+    float: left;
+    font-size: 0.13rem;
+    color: #333d50;
+    margin-left: 0.15rem; }
+  .component-find-index .yeji-add img {
+    width: 0.06rem;
+    height: 0.12rem;
+    float: right;
+    margin-right: 0.15rem;
+    margin-top: 0.02rem; }
 .component-find-index .yeji-content {
   margin-bottom: 0.4rem; }
   .component-find-index .yeji-content .yeji-list {

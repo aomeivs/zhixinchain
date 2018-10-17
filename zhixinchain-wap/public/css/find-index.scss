@@ -612,6 +612,26 @@
       }
     }
   }
+
+  .yeji-add{
+    position: relative;
+    width: 3.75rem;
+    margin: 0 auto;
+    p{
+      float: left;
+      font-size: 0.13rem;
+      color: #333d50;
+      margin-left: 0.15rem;
+    }
+    img{
+      width: 0.06rem;
+      height:0.12rem;
+      float: right;
+      margin-right: 0.15rem;
+      margin-top: 0.02rem;
+    }
+  }
+
   .yeji-content{
     margin-bottom: 0.4rem;
     .yeji-list{
