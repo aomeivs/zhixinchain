@@ -338,7 +338,7 @@
   }
   .yaoqing-c2{
     width: 3.75rem;
-    height: 1.265rem;
+    //height: 1.265rem;
     .btn{
       text-align: center;
     }
@@ -385,9 +385,11 @@
   }
   .title{
     width: 100%;
-    margin: 0.15rem auto;
+    margin:0 auto;
+    margin-top: 0.25rem;
+    margin-bottom: 0.1rem;
     img{
-      width: 1.73rem;
+      width: 2.2rem;
       height: 100%;
       margin: 0 auto;
     }
@@ -395,7 +397,7 @@
       font-size: 0.15rem;
       color: #fb9002;
       text-align: center;
-      margin-top: -0.08rem;
+      margin-top: -0.12rem;
     }
   }
   .text-content{

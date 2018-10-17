@@ -324,8 +324,7 @@ html, body {
   width: 3.75rem;
   height: 1.515rem; }
 .component-find-index .yaoqing-c2 {
-  width: 3.75rem;
-  height: 1.265rem; }
+  width: 3.75rem; }
   .component-find-index .yaoqing-c2 .btn {
     text-align: center; }
 .component-find-index .yaoqing-c3 {
@@ -363,16 +362,18 @@ html, body {
       color: #298cff; }
 .component-find-index .title {
   width: 100%;
-  margin: 0.15rem auto; }
+  margin: 0 auto;
+  margin-top: 0.25rem;
+  margin-bottom: 0.1rem; }
   .component-find-index .title img {
-    width: 1.73rem;
+    width: 2.2rem;
     height: 100%;
     margin: 0 auto; }
   .component-find-index .title p {
     font-size: 0.15rem;
     color: #fb9002;
     text-align: center;
-    margin-top: -0.08rem; }
+    margin-top: -0.12rem; }
 .component-find-index .text-content .text-one {
   position: relative;
   width: 3.2rem;
