@@ -18,7 +18,11 @@
     <div class="wrap" id="app">
         <div class="component-find-index ">
             <!--业绩列表-->
-            <div class="blank-space"></div>
+            <div class="blank-space" style="height:0.5rem;text-align: center;padding-top: 0.1rem;">
+                <button style="width: 3.4rem;height: 0.38rem;border-radius: 0.04rem;border: solid 1px #e4e4e4;background-color: #ffffff;font-size:0.13rem;line-height: 0.38rem;color: #333d50;">
+                    设置收款账户
+                </button>
+            </div>
             <div class="yeji-content" >
                 <table class="yeji-list" style="width: 3.75rem;">
                     <div class="yeji-title">
@@ -40,12 +44,12 @@
                             </div>
                         </div>
 
-                        
                         <tr v-for="item in yeji">
                             <td style="font-size: 0.15rem;">{{item.KPI}}</td>
                             <td style="font-size: 0.15rem;">{{item.reward}}</td>
                             <td style="font-size: 0.11rem;color: #495060;">{{item.time}}</td>
                         </tr>
+
                     </div>
                 </table>
             </div>
