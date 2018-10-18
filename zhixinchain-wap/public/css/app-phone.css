@@ -387,8 +387,8 @@ html, body {
   left: 0; }
 .component-find-index .text-content p {
   width: 3rem;
-  font-size: 0.12rem;
-  line-height: 1.67;
+  font-size: 0.14rem;
+  line-height: 1.8;
   color: #8d5000;
   margin: 0 auto;
   padding-left: 0.1rem; }
@@ -596,7 +596,7 @@ html, body {
   .component-find-index .find-downlaod p:nth-of-type(2) {
     font-size: 0.3rem;
     font-weight: 700;
-    margin-top: 0.05rem;
+    margin-top: 0.2rem;
     letter-spacing: 1.3px; }
   .component-find-index .find-downlaod p:nth-of-type(3) {
     font-size: 0.16rem;
@@ -613,7 +613,7 @@ html, body {
     border-radius: 0.04rem;
     width: 1rem;
     margin: 0 auto;
-    margin-top: 0.2rem;
+    margin-top: 0.1rem;
     margin-bottom: 0.4rem; }
   .component-find-index .find-downlaod .btn-download {
     width: 2.7rem;
