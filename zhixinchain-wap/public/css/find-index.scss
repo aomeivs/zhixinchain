@@ -665,30 +665,30 @@
     text-align: center;
     color: #FFFFFF;
 
-    img{
+    img:nth-of-type(1){
       width:1.95rem;
       height: 0.66rem;
       margin: 0 auto;
-      padding-top: 0.6rem;
+      padding-top: 0.4rem;
     }
     p:nth-of-type(1){
       font-size: 0.2rem;
       font-weight: 700;
-      margin-top: 0.4rem;
+      margin-top: 0.15rem;
     }
     p:nth-of-type(2){
       font-size: 0.3rem;
       font-weight: 700;
-      margin-top: 0.2rem;
-      letter-spacing: 1.3px;
+      letter-spacing: 1.5px;
+      margin-top: 0.02rem;
     }
     p:nth-of-type(3){
       font-size: 0.16rem;
-      margin-top: 0.15rem;
+      margin-top: 0.1rem;
     }
     p:nth-of-type(4){
       font-size: 0.15rem;
-      margin-top: 0.5rem;
+      margin-top: 0.25rem;
     }
     .invite-number{
       font-size: 0.26rem;
@@ -699,8 +699,14 @@
       border-radius: 0.04rem;
       width: 1rem;
       margin: 0 auto;
-      margin-top: 0.1rem;
-      margin-bottom: 0.4rem;
+      margin-top: 0.05rem;
+      margin-bottom: 0.25rem;
+    }
+    .img-download{
+      width: 0.9rem;
+      height: 0.9rem;
+      margin: 0 auto;
+      margin-bottom: 0.25rem;
     }
 
     $height:.5rem;

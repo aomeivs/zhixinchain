@@ -584,26 +584,26 @@ html, body {
   height: 6.6rem;
   text-align: center;
   color: #FFFFFF; }
-  .component-find-index .find-downlaod img {
+  .component-find-index .find-downlaod img:nth-of-type(1) {
     width: 1.95rem;
     height: 0.66rem;
     margin: 0 auto;
-    padding-top: 0.6rem; }
+    padding-top: 0.4rem; }
   .component-find-index .find-downlaod p:nth-of-type(1) {
     font-size: 0.2rem;
     font-weight: 700;
-    margin-top: 0.4rem; }
+    margin-top: 0.15rem; }
   .component-find-index .find-downlaod p:nth-of-type(2) {
     font-size: 0.3rem;
     font-weight: 700;
-    margin-top: 0.2rem;
-    letter-spacing: 1.3px; }
+    letter-spacing: 1.5px;
+    margin-top: 0.02rem; }
   .component-find-index .find-downlaod p:nth-of-type(3) {
     font-size: 0.16rem;
-    margin-top: 0.15rem; }
+    margin-top: 0.1rem; }
   .component-find-index .find-downlaod p:nth-of-type(4) {
     font-size: 0.15rem;
-    margin-top: 0.5rem; }
+    margin-top: 0.25rem; }
   .component-find-index .find-downlaod .invite-number {
     font-size: 0.26rem;
     letter-spacing: 4.3px;
@@ -613,8 +613,13 @@ html, body {
     border-radius: 0.04rem;
     width: 1rem;
     margin: 0 auto;
-    margin-top: 0.1rem;
-    margin-bottom: 0.4rem; }
+    margin-top: 0.05rem;
+    margin-bottom: 0.25rem; }
+  .component-find-index .find-downlaod .img-download {
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: 0 auto;
+    margin-bottom: 0.25rem; }
   .component-find-index .find-downlaod .btn-download {
     width: 2.7rem;
     height: 0.5rem;
