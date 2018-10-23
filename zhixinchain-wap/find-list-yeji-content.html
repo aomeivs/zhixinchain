@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app-phone.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="public/js/rem.js"></script>
+    <style>
+        /*CSS 树结构*/
+        ul.domtree{
+            width: 3.55rem;
+        }
+        ul.domtree>li{
+            padding: 0.15rem 0;
+            padding-left: 0.2rem;
+            border-bottom: 1px solid #e4e4e4;
+        }
+        ul.domtree ul {
+            margin: 0;
+            padding: 0 0 0 2em;
+        }
+        ul.domtree li {
+            list-style: none;
+            position: relative;
+        }
+        ul.domtree>li:before {
+            position: absolute;
+            content: '';
+            top:0.18rem;
+            left: 0;
+            width: 0.16rem;
+            height: 0.16rem;
+            background:url("public/images/find/yeji_icon.png") center center no-repeat;
+            background-size: 100%;
+        }
+        ul.domtree-ul2 li:before {
+            position: absolute;
+            content: '';
+            top: 0 ;
+            left: -0.7em;
+            width: 0.5em;
+            height: 0.615em;
+            border-style: none none solid solid;
+            border-width: 0.05em;
+            border-color: #aaa;
+        }
+        ul.domtree-ul2 li:not(:last-child):after {
+            position: absolute;
+            content: '';
+            top: 0.7em;
+            left: -0.7em;
+            bottom: 0;
+            border-style: none none none solid;
+            border-width: 0.05em;
+            border-color: #aaa;
+        }
+        .yeji-out{
+            padding-left: 0.2rem;
+            font-size:0.16rem;
+            color: #333d50;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrap" id="app">
+        <div class="component-find-index ">
+            <!--我的邀请详情-->
+            <div class="blank-space"></div>
+            <div class="yeji-out">
+                <ul class="domtree" >
+                    <li v-for="item in items">
+                        {{item.message}}
+                        <ul class="domtree-ul2" >
+                            <li v-for="item in items2"> {{item.message}}</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        new Vue({
+            data: function () {
+                return {
+                    items: [
+                        { message: '李1' },
+                        { message: '李2' }
+                    ],
+                    items2: [
+                        { message: '李3' },
+                        { message: '李4' }
+                    ]
+                }
+            },
+            methods: {
+
+            }
+        }).$mount('#app')
+    </script>
+
+</body>
+</html>
