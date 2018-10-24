@@ -39,9 +39,10 @@
                 <table class="yeji-list" style="width: 3.75rem;">
                     <div class="yeji-title">
                         <tr style="color: #888888;">
-                            <td style="padding-left: 0.15rem;">业绩额(ZXT)</td>
-                            <td>奖励数量(ZXT)</td>
-                            <td>时间</td>
+                            <td style="padding-left: 0.15rem;">业绩额</td>
+                            <td>收益</td>
+                            <td>来源</td>
+                            <td  style="padding-right: 0.15rem;">时间</td>
                         </tr>
                     </div>
                 </table>
@@ -49,8 +50,8 @@
                     <div class="yeji-body" >
 
                         <!--空提示-->
-                        <div class="order-space">
-                            <div class="order-space-none" style="display: block;">
+                        <div class="order-space" style="display: none;">
+                            <div class="order-space-none">
                                 <img src="public/images/find/none.png" style="width: 1.12rem;height:0.91rem;">
                                 <p>暂无业绩</p>
                             </div>
@@ -59,6 +60,7 @@
                         <tr v-for="item in yeji">
                             <td style="font-size: 0.15rem;">{{item.KPI}}</td>
                             <td style="font-size: 0.15rem;">{{item.reward}}</td>
+                            <td >{{item.id}}</td>
                             <td style="font-size: 0.11rem;color: #495060;">{{item.time}}</td>
                         </tr>
 
@@ -76,11 +78,13 @@
                         {
                             KPI:'10000',
                             reward:'10000',
+                            id:'88888888',
                             time:'2018-09-30'
                         },
                         {
                             KPI:'10000',
                             reward:'10000',
+                            id:'88888888',
                             time:'2018-09-30'
                         }
                     ]
