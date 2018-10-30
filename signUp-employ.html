@@ -91,7 +91,7 @@
     <div class="login-1">
         <img src="public/images/login/logo.png">
     </div>
-    <div class="login-2">
+    <div class="login-2" style="margin-top: -50px;">
         <span class="login-2-txtBigger">注册</span>
         <span>/Sign Up</span>
     </div>
@@ -107,18 +107,27 @@
                 <input placeholder="身份证号" id="login-company-input1">
             </div>
             <div class="sce_line" id="login-company-sce_line-1"></div>
+
             <div class="login-3-2 bottomLine">
                 <input placeholder="手机号"  id="login-company-input2">
             </div>
             <div class="sce_line" id="login-company-sce_line-2"></div>
+
             <div class="login-3-2 bottomLine">
                 <input placeholder=" 请输入由字母和数字组成的6-16位密码"  id="login-company-input3" type="password">
             </div>
             <div class="sce_line" id="login-company-sce_line-3"></div>
-            <div class="login-3-2 bottomLine" style="position: relative;">
+
+            <div class="login-3-2 bottomLine" >
                 <input placeholder="验证码"  id="login-company-input4" style="width: 260px;">
-                <button type="button" class="sendMsg auth-code">发送验证码</button>
+                <button type="button" class="sendMsg auth-code" style="margin-top:0;">发送验证码</button>
             </div>
+            <div class="sce_line" id="login-company-sce_line-4"></div>
+
+            <div class="login-3-2 bottomLine">
+                <input placeholder=" 合伙人邀请码，非必填，不可补录"  id="login-company-input5">
+            </div>
+            <div class="sce_line" id="login-company-sce_line-5"></div>
 
             <div class="login-3-2" style="height: 0;font-size: 12px; padding: 15px 0;">
                 <input type="checkbox" name="" checked id="checkbox" style="
@@ -140,6 +149,7 @@
                 </tooltip>
             </div>
             <div class="sce_line" id="login-person-sce_line1"></div>
+
             <div class="login-3-2 bottomLine">
                 <tooltip :disabled="visible.cpwd" placement="right" :always='true'>
                     <input placeholder="请输入密码" id="login-person-input2" type="password">
@@ -211,6 +221,25 @@
             $('#login-company-input2').on('blur',function () {
                 $("#login-company-sce_line-2").css("width","0");
             })
+            $('#login-company-input3').on('focus',function () {
+                $("#login-company-sce_line-3").css("width","100%");
+            })
+            $('#login-company-input3').on('blur',function () {
+                $("#login-company-sce_line-3").css("width","0");
+            })
+            $('#login-company-input4').on('focus',function () {
+                $("#login-company-sce_line-4").css("width","100%");
+            })
+            $('#login-company-input4').on('blur',function () {
+                $("#login-company-sce_line-4").css("width","0");
+            })
+            $('#login-company-input5').on('focus',function () {
+                $("#login-company-sce_line-5").css("width","100%");
+            })
+            $('#login-company-input5').on('blur',function () {
+                $("#login-company-sce_line-5").css("width","0");
+            })
+
             $('#login-person-input1').on('focus',function () {
                 $("#login-person-sce_line1").css("width","100%");
             })
@@ -229,24 +258,8 @@
     new component().$mount('#app')
 </script>
 <script>
-    $('#login-company-input1').on('focus',function () {
-        $("#login-company-sce_line-1").css("width","100%");
-    })
-    $('#login-company-input1').on('blur',function () {
-        $("#login-company-sce_line-1").css("width","0");
-    })
-    $('#login-company-input2').on('focus',function () {
-        $("#login-company-sce_line-2").css("width","100%");
-    })
-    $('#login-company-input2').on('blur',function () {
-        $("#login-company-sce_line-2").css("width","0");
-    })
-    $('#login-company-input3').on('focus',function () {
-        $("#login-company-sce_line-3").css("width","100%");
-    })
-    $('#login-company-input3').on('blur',function () {
-        $("#login-company-sce_line-3").css("width","0");
-    })
+
+
 </script>
 </body>
 </html>

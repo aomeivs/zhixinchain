@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-polyfill/6.26.0/polyfill.min.js"></script>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/layout.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+
+
+<!--403-->
+
+
+<!--职信链，样式头为 c (chain小写) 例
+
+头部 c-header
+底部 c-footer
+组件 c-component-组件名（公用部分）
+
+无特别意义的逻辑结构以 相对有意义模块名 后，层级数字标识
+例： c-component-组件名 下
+
+组件名1>组件名1-1.
+
+或
+
+组件名-head>组件名-head-top>（组件名-head-top-1+组件名-head-top-2+组件名-head-top-3）
+
+ -->
+
+<div class="wrap" id="app">
+    <Modal v-model="modal1" :footer-hide="true" width="900">
+        <div class="component-modal-auth">
+            <div class="modal-1">
+                <div class="add-employ-container">
+                    <div class="add-employ-head">
+                        <div class="add-employ-title">
+                            <span class="e-title-1">领取奖励</span><span class="e-title-2"> / Receive a reward</span>
+                        </div>
+                    </div>
+
+                    <div class="add-employ-body text-center">
+                        <div class="body-1">
+                            <i-input placeholder="Dapp资产钱包地址" size="large" style="width: 360px;"></i-input>
+                        </div>
+                        <div class="body-2">
+                            <i-button type="primary" size="large" style="width: 360px;">确定</i-button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </Modal>
+    <div class="c-header">
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu">
+            <ul class="head-menu-ul">
+                <li>
+                    <a href="">首页</a>
+                </li>
+                <li>
+                    <a href="#"><span class="special">我的资产</span> <span>{{total}} ZXT</span></a>
+                </li>
+                <li>
+                    <div>
+                        <!--badge count代表消息数 默认99封顶-->
+                        <badge count="1">
+                            <a href="#" class="head-message-badge"><img src="public/images/head-mail.png" width="26" alt="消息(0)"></a>
+                        </badge>
+                    </div>
+                </li>
+                <li>
+                    <div class="c-head-user">
+                        <div class="user-photo">
+                            <a href=""><img src="public/images/head-photo.png" width="39" alt="用户头像">
+                                <span>董兴海</span></a>
+                        </div>
+                        <div>
+                            <img src="public/images/head-line.png" width="2" alt="">
+                        </div>
+                        <div class="user-logOut">
+                            <img src="public/images/head-exit.png" style="cursor: pointer;" width="26" alt="退出">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="c-body">
+        <!--保存私钥-->
+        <Alert show-icon style="width: 1080px; margin: 30px auto; display: block;">
+            提醒:
+            <span slot="desc">
+                    * 企业用户从注册起前2个月填写职信记录可以按照每条20ZXT获得系统奖励，当月获得的奖励可以在次月进行领取，领取后奖励
+由系统直接发放至领取人Dapp资产中，奖励锁仓6个月。
+
+                </span>
+
+
+        </Alert>
+        <div class="component-wallet">
+            <div class="wallet-info wallet-exchange-list">
+                <Card class="wallet-exchange-body asset-body">
+                    <div class="wallet-container">
+                        <!--基础信息-->
+                        <div class="wallet-title">
+                            <span class="wallet-title-1-txtBigger">系统奖励 </span>
+                            <span> / System Reward</span>
+                        </div>
+                        <div>
+                            <table align="center">
+                                <tr>
+                                    <td width="150">月份</td>
+                                    <td width="180">职信数据（条）</td>
+                                    <td width="180">奖励ZXT</td>
+                                    <td width="200">接收方</td>
+                                    <td width="150"> </td>
+                                </tr>
+                                <tr v-for="item in items">
+                                    <td align="center">{{item.time}}</td>
+                                    <td align="center">{{item.entry}}</td>
+                                    <td align="center">{{item.reward}}</td>
+                                    <td >{{item.resive}}</td>
+                                    <td align="center"><i-button type="text">已领取</i-button> <i-button type="primary"  v-on:click="modalAuth">领取</i-button></td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!--分页--start-->
+                        <div style="text-align: center;padding-top: 30px;">
+                            <page :total="100" show-elevator />
+                        </div>
+                        <!--分页--end-->
+
+                    </div>
+                </Card>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.bootcss.com/clipboard.js/1.7.1/clipboard.min.js"></script>
+<script src="https://cdn.bootcss.com/layer/3.0.3/layer.min.js"></script>
+<script>
+
+//    <!--分页js--start-->
+    var Main = {
+
+    }
+
+    var Component = Vue.extend(Main)
+//    <!--分页js--end-->
+
+    new Vue({
+        data: function () {
+            const validatePassCheck = (rule, value, callback) => {
+                if (value === '') {
+                    callback(new Error('密码不能为空'));
+                } else if (value !== this.form.password) {
+                    callback(new Error('两次密码不相同'));
+                } else {
+                    callback();
+                }
+            };
+            return {
+                form:{
+                    password:'',
+                    password2:'',
+                },
+                rules:{
+                    password: [
+                        { required: true, message: '密码不能为空', trigger: 'blur' },
+                        { type: 'string', min: 8, message: '长度不能少于8位', trigger: 'blur' }
+                    ],
+                    password2: [
+                        { validator: validatePassCheck, trigger: 'blur' }
+                    ]
+                },
+                password:'0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4',
+                add:'0x1A62e58e9a4f41b70E0e1B56bA1128d8a72b83B4',
+                showEye:true,
+                btnType:'password',
+                addActive:2,
+                password:'',
+                password2:'',
+                model1: '',
+                modal1:true,
+                items:[
+                    {
+                        time:'2018年10月',
+                        entry:'58',
+                        reward:'1160',
+                        resive:'0x86fa049857e0209aa7d9e616f7eb3b3b78ecfdb0',
+                        state:'已领取'
+                    },
+                    {
+                        time:'2018年10月',
+                        entry:'58',
+                        reward:'1160',
+                        resive:'0x86fa049857e0209aa7d9e616f7eb3b3b78ecfdb0',
+                        state:'已领取'
+                    },
+                    {
+                        time:'2018年10月',
+                        entry:'58',
+                        reward:'1160',
+                        resive:'0x86fa049857e0209aa7d9e616f7eb3b3b78ecfdb0',
+                        state:'已领取'
+                    }
+                ]
+            }
+        },
+        methods: {
+            showEyeHandler(){
+                if(!this.showEye){
+                    this.btnType='password'
+                }else{
+                    this.btnType='text'
+                }
+                this.showEye=!this.showEye;
+            },
+            copyCode(v){
+                if(v===1){
+                    var clipboard = new Clipboard('.wallet-key-copy.add');
+                    clipboard.on('success', function(e) {
+                        console.log(0)
+                        layer.msg('复制成功！')
+                        console.info('Action:', e.action);
+                        console.info('Text:', e.text);
+                        console.info('Trigger:', e.trigger);
+
+                        e.clearSelection();
+                        clipboard.destroy();
+                    });
+
+                    clipboard.on('error', function(e) {
+                        layer.msg('复制失败，请手动复制！')
+                        console.error('Action:', e.action);
+                        console.error('Trigger:', e.trigger);
+                        clipboard.destroy();
+                    });
+                }else{
+                    var clipboard = new Clipboard('.wallet-key-copy.key');
+                    clipboard.on('success', function(e) {
+                        layer.msg('复制成功！')
+                        console.info('Action:', e.action);
+                        console.info('Text:', e.text);
+                        console.info('Trigger:', e.trigger);
+
+                        e.clearSelection();
+                        clipboard.destroy();
+                    });
+
+                    clipboard.on('error', function(e) {
+                        layer.msg('复制失败，请手动复制！')
+                        console.error('Action:', e.action);
+                        console.error('Trigger:', e.trigger);
+                        clipboard.destroy();
+                    });
+                }
+            },
+            download(){
+                window.location.href='d.zip'
+            },
+            downloadValidate(){
+                if(this.password==123456789){
+                    this.download()
+                }else{
+                    this.password='';
+                    this.password2='';
+                    this.$Message.warning('密码不正确');
+                }
+            },
+            addClass(v){
+                this.addActive=v;
+
+            }
+        },
+        mouted:function () {
+
+        },
+        modalAuth:function () {
+            this.modal1=!this.modal1
+        }
+
+    }).$mount('#app')
+</script>
+
+
+</body>
+</html>
