@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在线搜索</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/layout.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+<div class="wrap search-online gongyi" id="app">
+    <!--添加公益成员-->
+    <Modal v-model="modal1" :footer-hide="true" width="900">
+        <div class="component-modal-auth">
+            <div class="modal-1">
+                <div class="add-employ-container">
+                    <div class="add-employ-head">
+                        <div class="add-employ-title">
+                            <span class="e-title-1">添加公益成员</span><span class="e-title-2"> / Add Members Of Public Welfare</span>
+                        </div>
+                    </div>
+
+                    <div class="add-employ-body text-center">
+                        <div class="body-1">
+                            <i-input placeholder="请输入公益成员姓名" size="large" style="width: 360px;"></i-input>
+                        </div>
+                        <div class="body-1">
+                            <i-input placeholder="请输入公益成员电话" size="large" style="width: 360px;"></i-input>
+                        </div>
+                        <div class="body-2">
+                            <i-button type="primary" size="large" style="width: 360px;">确定</i-button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </Modal>
+
+    <!--编辑公益成员-->
+    <Modal v-model="modal4" :footer-hide="true" width="900">
+        <div class="component-modal-auth">
+            <div class="modal-1">
+                <div class="add-employ-container">
+                    <div class="add-employ-head">
+                        <div class="add-employ-title">
+                            <span class="e-title-1">编辑公益成员</span><span class="e-title-2"> / Editorial Members Of Public Welfare</span>
+                        </div>
+                    </div>
+
+                    <div class="add-employ-body text-center">
+                        <div class="body-1">
+                            <i-input placeholder="请输入公益成员姓名" size="large" style="width: 360px;" v-model="gongyiname" ></i-input>
+                        </div>
+                        <div class="body-1">
+                            <i-input placeholder="请输入公益成员电话" size="large" style="width: 360px;" v-model="gongyiphone"></i-input>
+                        </div>
+                        <div class="body-2">
+                            <i-button type="primary" size="large" style="width: 360px;">保存</i-button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </Modal>
+
+    <div class="c-header">
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu">
+            <ul class="head-menu-ul">
+                <li>
+                    <span>成员</span>
+                </li>
+                <li>
+                    <span>公益</span>
+                </li>
+
+                <li>
+                    <div>
+                        <!--badge count代表消息数 默认99封顶-->
+                        <badge count="1">
+                            <a href="#" class="head-message-badge"><img src="public/images/head-mail.png" width="26" alt="消息(0)"></a>
+                        </badge>
+                    </div>
+                </li>
+                <li>
+                    <div class="c-head-user">
+                        <div class="user-photo">
+                            <img src="public/images/head-photo.png" width="39" alt="用户头像">
+                            <span>董兴海</span>
+                        </div>
+                        <div>
+                            <img src="public/images/head-line.png" width="2" alt="">
+                        </div>
+                        <div class="user-logOut">
+                            <img src="public/images/head-exit.png" width="26" alt="退出">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="c-body">
+
+        <!--添加添加公益成员-->
+        <div class="content-add">
+
+            <div class="btn-add" >
+                <div class="addGroup">
+                    <icon type="plus-round" ></icon><span style="margin-left: 10px;" v-on:click="modalAuth1">添加公益成员</span>
+                </div>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+
+        <!--查询成员-->
+        <div class="search-online-2" style="margin-top: 60px;width: 1111px;">
+            <div class="search-online-2-1">
+                <i-input v-model="value" size="large" placeholder="请输入公益成员姓名或手机号" style="width: 912px"></i-input>
+            </div>
+            <div class="search-online-2-2">
+                <i-button type="primary" icon="ios-search">搜索</i-button>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+
+        <!--成员列表-->
+        <div id="search-result-content">
+            <div class="search-result-2">
+                <card  style="width:1111px;height: 134px;">
+                    <div>
+                        <span class="result-name name">丁畅</span>
+                        <span class="result-other mobile">手机号：15868888888</span>
+                        <span class="result-shouquan">邀请</span>
+                        <span class="result-state">未加入职信链</span>
+                        <div style="clear: both;"></div>
+                    </div>
+                </card>
+            </div>
+
+            <div class="search-result-2">
+                <card  style="width:1111px;height: 134px;">
+                    <div>
+                        <span class="result-name name">庞丁美子</span>
+                        <span class="result-other mobile">手机号：158xxxx2430</span>
+                        <div class="result-ope">
+                            <ul>
+                                <li v-on:click="assessInfoShow(name)">记录公益</li>
+                                <li>查看公益</li>
+                                <li v-on:click="modalAuth4">编辑</li>
+                                <li style="color: #495060;">删除</li>
+                            </ul>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+                </card>
+            </div>
+
+            <!--记录公益-->
+            <div v-show="!assessInfoBase"  class="edit-assess-info-base">
+                <Card style="width: 100%;">
+                    <div class="edit-info edit-3">
+                        <div>公益形式：</div>
+                        <div>
+                            <i-select v-model="model1" class="form-el" placeholder="捐款">
+                                <i-option v-for="item in gongyixingshi" :value="item.value" :key="item.value">{{ item.label }}</i-option>
+                            </i-select>
+                            <div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="edit-info edit-6">
+                        <div>公益内容：</div>
+                        <div>
+                            <i-input type="textarea" :rows="10" style="width: 520px;" placeholder="请填写数量或公益内容，简单描述" :maxlength="500"></i-input>
+                        </div>
+                    </div>
+                    <div class="edit-7">
+                        <div>
+                            <i-button type="ghost" class="edit-7-cancel" v-on:click="assessInfoShow(name)">取消</i-button>
+                            <i-button type="primary" class="edit-7-ok">保存</i-button>
+                        </div>
+                    </div>
+
+                </Card>
+            </div>
+        </div>
+
+        <!--无结果提示-->
+        <div class="search-noResult">
+            <img src="public/images/no-searchResult.png">
+            <div class="search-noResult-1">
+                没有找到与搜索条件匹配的结果！
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    var Main = {
+        data () {
+            return {
+                value: '',
+                gongyixingshi: [
+                    {
+                        value: 'juankuan',
+                        label: '捐款'
+                    },
+                    {
+                        value: 'juanwu',
+                        label: '捐物'
+                    },
+                    {
+                        value: 'yigong',
+                        label: '义工'
+                    },
+                    {
+                        value: 'other',
+                        label: '其他'
+                    }
+                ],
+                modal1:false,
+                modal4:false,
+                gongyiname:'李丽',
+                gongyiphone:'15888888888',
+                name:"1",
+                assessInfoBase:true
+            }
+        },
+        methods: {
+            assessInfoShow(name){
+
+                switch(name){
+                    case '1':
+                        this.assessInfoBase=!this.assessInfoBase;
+                        break;
+                    default:
+                        break;
+                }
+
+            },
+            modalAuth1:function () {
+                this.modal1=!this.modal1
+            },
+            modalAuth4:function () {
+                this.modal4=!this.modal4
+            },
+            validata(vform){
+                this.$refs['formValidate'].validate(valid=>{
+                    if (valid) {
+//                        this.$Message.success('验证成功!');
+                    } else {
+//                        this.$Message.error('验证失败');
+                    }
+                })
+            }
+
+        }
+    }
+
+    var Component = Vue.extend(Main)
+    new Component().$mount('#app')
+</script>
+
+</body>
+</html>

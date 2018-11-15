@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在线搜索</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/layout.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+<div class="wrap search-online gongyi" id="app">
+    <div class="c-header">
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu">
+            <ul class="head-menu-ul">
+                <li>
+                    <span>成员</span>
+                </li>
+                <li>
+                    <span>公益</span>
+                </li>
+
+                <li>
+                    <div>
+                        <!--badge count代表消息数 默认99封顶-->
+                        <badge count="1">
+                            <a href="#" class="head-message-badge"><img src="public/images/head-mail.png" width="26" alt="消息(0)"></a>
+                        </badge>
+                    </div>
+                </li>
+                <li>
+                    <div class="c-head-user">
+                        <div class="user-photo">
+                            <img src="public/images/head-photo.png" width="39" alt="用户头像">
+                            <span>董兴海</span>
+                        </div>
+                        <div>
+                            <img src="public/images/head-line.png" width="2" alt="">
+                        </div>
+                        <div class="user-logOut">
+                            <img src="public/images/head-exit.png" width="26" alt="退出">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="c-body">
+        <div class="content-add">
+            <!--添加添加公益成员-->
+            <div class="btn-add" >
+                <tooltip content="认证通过才能使用该功能" placement="top">
+                    <div class="addGroup unGroup">
+                        <icon type="plus-round" ></icon><span style="margin-left: 10px;">添加公益成员</span>
+                    </div>
+                </tooltip>
+            </div>
+
+            <div class="btn-rz"><a href="">去认证</a></div>
+            <div style="clear: both;"></div>
+        </div>
+
+        <div class="search-online-2" style="margin-top: 60px;width: 1111px;">
+            <div class="search-online-2-1">
+                <i-input v-model="value" size="large" placeholder="请输入公益成员姓名或手机号" style="width: 912px"></i-input>
+            </div>
+            <div class="search-online-2-2">
+                <i-button type="primary" icon="ios-search">搜索</i-button>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+
+        <!--空提示-->
+        <div class="search-noResult">
+            <img src="public/images/no-group.png">
+            <div class="search-noResult-1">
+                您还没有公益成员，快去添加吧！
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+<script>
+    var Main = {
+        data () {
+            return {
+                value: ''
+            }
+        }
+    }
+
+    var Component = Vue.extend(Main)
+    new Component().$mount('#app')
+</script>
+</body>
+</html>

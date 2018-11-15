@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在线搜索</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/layout.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+<div class="wrap search-online gongyi" id="app">
+
+    <div class="c-header">
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu">
+            <ul class="head-menu-ul">
+                <li>
+                    <span>成员</span>
+                </li>
+                <li>
+                    <span>公益</span>
+                </li>
+
+                <li>
+                    <div>
+                        <!--badge count代表消息数 默认99封顶-->
+                        <badge count="1">
+                            <a href="#" class="head-message-badge"><img src="public/images/head-mail.png" width="26" alt="消息(0)"></a>
+                        </badge>
+                    </div>
+                </li>
+                <li>
+                    <div class="c-head-user">
+                        <div class="user-photo">
+                            <img src="public/images/head-photo.png" width="39" alt="用户头像">
+                            <span>董兴海</span>
+                        </div>
+                        <div>
+                            <img src="public/images/head-line.png" width="2" alt="">
+                        </div>
+                        <div class="user-logOut">
+                            <img src="public/images/head-exit.png" width="26" alt="退出">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="c-body">
+        <!--查询成员-->
+        <div class="search-online-2" style="margin-top: 60px;width: 1111px;">
+            <div class="search-online-2-1">
+                <i-input v-model="value" size="large" placeholder="请输入公益成员姓名或手机号" style="width: 912px"></i-input>
+            </div>
+            <div class="search-online-2-2">
+                <i-button type="primary" icon="ios-search">搜索</i-button>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+
+        <!--成员列表-->
+        <div class="message-box">
+            <card style="width:1111px;height: 162px;margin-bottom: 30px;" v-for="item in gongyilist">
+                <div class="box1-1">
+                    <p class="p1">{{item.name}}</p>
+                    <p class="p2">{{item.time}}</p>
+                </div>
+
+                <div class="box1-2">
+                    <p ><span>公益形式：</span>{{item.xingshi}}</p>
+                    <p ><span>公益内容：</span>{{item.content}}</p>
+                </div>
+            </card>
+        </div>
+
+        <!--无结果提示-->
+        <div class="search-noResult">
+            <img src="public/images/no-searchResult.png">
+            <div class="search-noResult-1">
+                没有找到与搜索条件匹配的结果！
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    var Main = {
+        data () {
+            return {
+                value: '',
+                gongyilist: [
+                    {
+                        name: '李丽',
+                        time: '2017-10-26',
+                        xingshi:'捐款',
+                        content:'8000元。'
+                    },
+                    {
+                        name: '李丽丽',
+                        time: '2017-10-26',
+                        xingshi:'捐款',
+                        content:'8000元。'
+                    }
+                ]
+            }
+        }
+    }
+
+    var Component = Vue.extend(Main)
+    new Component().$mount('#app')
+</script>
+
+</body>
+</html>

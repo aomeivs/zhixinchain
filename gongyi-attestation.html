@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在线搜索</title>
+    <link href="https://cdn.bootcss.com/iview/2.4.0/styles/iview.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/vue/2.4.4/vue.js"></script>
+    <script src="https://cdn.bootcss.com/iview/2.4.0/iview.min.js"></script>
+    <script src="https://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="public/js/layout.js"></script>
+    <link rel="stylesheet" href="public/css/app.css">
+</head>
+<body>
+
+<div class="wrap search-online gongyi" id="app">
+    <Modal v-model="modal2" :footer-hide="true" width="900">
+        <div class="component-modal-auth">
+            <div class="modal-2">
+                <div class="add-employ-container">
+                    <div class="add-employ-head">
+                        <div class="add-employ-title">
+                            <div class="e-title-1">
+                                <Icon type="android-checkmark-circle"></Icon>
+                            </div>
+                            <div class="e-title-2">认证申请发送成功！</div>
+                        </div>
+                    </div>
+
+                    <div class="add-employ-body text-center">
+                        <div class="body-1">
+                            <span>
+                                认证申请已发送，请等待处理。处理完毕后，您可以在消息中看到结果。
+                            </span>
+                        </div>
+                        <div class="body-2">
+                            <i-button type="primary" size="large" style="width: 360px;">确定</i-button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </Modal>
+    <Modal v-model="modal3" :footer-hide="true" width="900">
+        <div class="component-modal-auth">
+            <div class="modal-3">
+                <div class="add-employ-container">
+                    <div class="add-employ-head">
+                        <div class="add-employ-title">
+                            <div class="e-title-1">
+                                <Icon type="android-alert"></Icon>
+                            </div>
+                            <div class="e-title-2">认证申请发送失败！</div>
+                        </div>
+                    </div>
+
+                    <div class="add-employ-body text-center">
+                        <div class="body-1">
+                            <span>
+                                请重新填写信息后提交。
+                            </span>
+                        </div>
+                        <div class="body-2">
+                            <i-button type="primary" size="large" style="width: 360px;">确定</i-button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </Modal>
+    <div class="c-header">
+        <div class="c-head-logo">
+            <img src="public/images/logo.png" width="334" alt="职信链LOGO">
+        </div>
+        <div class="c-head-menu">
+            <ul class="head-menu-ul">
+                <li>
+                    <span>成员</span>
+                </li>
+                <li>
+                    <span>公益</span>
+                </li>
+
+                <li>
+                    <div>
+                        <!--badge count代表消息数 默认99封顶-->
+                        <badge count="1">
+                            <a href="#" class="head-message-badge"><img src="public/images/head-mail.png" width="26" alt="消息(0)"></a>
+                        </badge>
+                    </div>
+                </li>
+                <li>
+                    <div class="c-head-user">
+                        <div class="user-photo">
+                            <img src="public/images/head-photo.png" width="39" alt="用户头像">
+                            <span>董兴海</span>
+                        </div>
+                        <div>
+                            <img src="public/images/head-line.png" width="2" alt="">
+                        </div>
+                        <div class="user-logOut">
+                            <img src="public/images/head-exit.png" width="26" alt="退出">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="c-body">
+        <!--申请认证-->
+        <div class="component-wallet">
+            <div class="wallet-info">
+
+                <Card class="wallet-exchange-body attestation-card" >
+                    <div class="wallet-container">
+                        <!--基础信息-->
+                        <div class="wallet-title">
+                            <span class="wallet-title-1-txtBigger">申请认证 </span>
+                            <span> / System Reward</span>
+                        </div>
+
+                        <div class="text-center">
+                            <div class="body-title">公益机构名称</div>
+                            <div class="body-1">
+                                <i-input placeholder="请输入公益机构地址" size="large" style="width: 360px;"></i-input>
+                            </div>
+                            <div class="body-1">
+                                <i-input placeholder="请输入公益机构电话" size="large" style="width: 360px;"></i-input>
+                            </div>
+
+                            <div class="edit-info">
+                                <div class="add-body-title">
+                                    添加机构凭证：
+                                </div>
+                                <div style="display: inline-block;vertical-align: top;margin-top: -15px;">
+                                    <upload
+                                            multiple
+                                            type="drag"
+                                            max-size="1"
+                                            :on-exceeded-size="sizeError"
+                                            action="//jsonplaceholder.typicode.com/posts/">
+                                        <div style="padding: 20px 0">
+                                            <icon type="ios-cloud-upload" size="52" style="color: #3399ff"></icon>
+                                            <p>点击添加</p>
+                                        </div>
+                                    </upload>
+                                    <div style="font-size: 12px;padding-right: 12px;color: rgb(138, 138, 138);text-align: center;padding-bottom: 12px;">
+                                        ( 附件大小限10M以内 )
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="body-2">
+                                <i-button type="primary" size="large" style="width: 360px;">立即申请</i-button>
+                            </div>
+                        </div>
+                    </div>
+                </Card>
+
+            </div>
+    </div>
+</div>
+</div>
+<script>
+    var Main = {
+        data () {
+            return {
+                value: '',
+                modal2:true,
+                modal3:true
+            }
+        }
+    }
+
+    var Component = Vue.extend(Main)
+    new Component(
+    ).$mount('#app')
+</script>
+</body>
+</html>

@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "//cdn.bootcss.com/normalize/7.0.0/normalize.min.css";
 .colorFF3C54 {
   color: #ff3c54; }
 
@@ -1392,7 +1391,7 @@ html, body {
             float: left; }
           html .wrap .c-body .component-employ-leave .employ-leave-table .search-result-1-1 input, body .wrap .c-body .component-employ-leave .employ-leave-table .search-result-1-1 input {
             height: 54px;
-            border-radius: 0px;
+            border-radius: 0;
             font-size: 16px; }
           html .wrap .c-body .component-employ-leave .employ-leave-table .search-result-1-2, body .wrap .c-body .component-employ-leave .employ-leave-table .search-result-1-2 {
             float: left; }
@@ -1400,7 +1399,7 @@ html, body {
             width: 210px;
             height: 54px;
             font-size: 18px;
-            border-radius: 0px; }
+            border-radius: 0; }
           html .wrap .c-body .component-employ-leave .employ-leave-table .table-title, body .wrap .c-body .component-employ-leave .employ-leave-table .table-title {
             color: #1c2438;
             font-size: 18px;
@@ -1478,7 +1477,6 @@ html, body {
       html .wrap .c-body .c-component-message .p3, body .wrap .c-body .c-component-message .p3 {
         color: #444C61;
         font-size: 16px;
-        line-height: 16px;
         padding-left: 50px;
         padding-top: 50px;
         line-height: 1.5; }
@@ -1587,6 +1585,13 @@ html, body {
       width: 90px;
       cursor: pointer; }
     .wrap.login .login-3-1 .span2 {
+      display: inline-block;
+      line-height: 84px;
+      margin-left: 40px;
+      width: 90px;
+      cursor: pointer;
+      margin-right: 40px; }
+    .wrap.login .login-3-1 .span3 {
       display: inline-block;
       line-height: 84px;
       margin-left: 40px;
@@ -2273,7 +2278,7 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       .wrap .component-index .part-2-1 .zi24 {
         width: 460px;
         text-align: left;
-        margin-bottom: 0px;
+        margin-bottom: 0;
         line-height: 40px; }
     .wrap .component-index .zi24 {
       font-size: 24px;
@@ -2339,7 +2344,7 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       height: 850px; }
     .wrap .component-index .part-8 {
       text-align: center;
-      margin: 0px auto;
+      margin: 0 auto;
       margin-bottom: 50px; }
       .wrap .component-index .part-8 .part-8-1 {
         margin: 20px auto;
@@ -2412,7 +2417,7 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       font-size: 14px;
       font-weight: bold;
       color: white;
-      padding-top: 0px;
+      padding-top: 0;
       padding-left: 115px; }
     .wrap .component-index .tabOne .textSpace {
       padding-top: 6px;
@@ -2438,7 +2443,7 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       vertical-align: middle;
       margin-right: 8px; }
     .wrap .component-index .textSpace p {
-      padding: 0px;
+      padding: 0;
       margin: 2px;
       width: 70%; }
     .wrap .component-index .tabTwo {
@@ -2478,7 +2483,6 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       border-radius: 6px;
       color: white;
       cursor: pointer;
-      margin-left: 65%;
       display: inline-block;
       margin-left: 50px; }
     .wrap .component-index #index {
@@ -2554,7 +2558,7 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
             color: #40beff; }
     .wrap .component-index .loginAndSignIn {
       position: absolute;
-      top: 0px;
+      top: 0;
       right: 400px; }
       .wrap .component-index .loginAndSignIn span {
         cursor: pointer; }
@@ -3406,7 +3410,7 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
       position: relative; }
     .asset-body .asset-content .asset-content-2 .wallet-key-copy2 {
       position: absolute;
-      right: 0px;
+      right: 0;
       top: 35%; }
       .asset-body .asset-content .asset-content-2 .wallet-key-copy2 img {
         cursor: pointer; }
@@ -3464,5 +3468,190 @@ html .wrap .c-body .c-component-vouchers .vouchers-3, body .wrap .c-body .c-comp
     width: 100%;
     height: auto;
     display: block; }
+
+.wrap.gongyi .content-add {
+  width: 1111px;
+  margin: 0 auto;
+  margin-top: 80px;
+  position: relative; }
+  .wrap.gongyi .content-add .btn-add {
+    float: left; }
+    .wrap.gongyi .content-add .btn-add .addGroup {
+      cursor: pointer;
+      width: 230px;
+      height: 48px;
+      line-height: 48px;
+      border-radius: 24px;
+      border: 1px solid #298CFF;
+      color: #298CFF;
+      text-align: center; }
+      .wrap.gongyi .content-add .btn-add .addGroup.unGroup {
+        border: 1px solid #9b9b9b;
+        color: #9b9b9b;
+        background-color: #f1f1f1; }
+  .wrap.gongyi .content-add .btn-rz {
+    font-size: 16px;
+    color: #298cff;
+    float: left;
+    line-height: 48px;
+    margin-left: 45px; }
+.wrap.gongyi .search-noResult {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 18px; }
+  .wrap.gongyi .search-noResult .search-noResult-1 {
+    margin-top: 27px; }
+.wrap.gongyi .attestation-card {
+  margin-top: 80px; }
+  .wrap.gongyi .attestation-card .body-title {
+    font-size: 18px;
+    color: #1c2438;
+    margin-top: 50px; }
+  .wrap.gongyi .attestation-card .body-1, .wrap.gongyi .attestation-card .body-2 {
+    margin-top: 30px; }
+  .wrap.gongyi .attestation-card .edit-info {
+    width: 360px;
+    margin: 0 auto;
+    margin-top: 30px; }
+    .wrap.gongyi .attestation-card .edit-info .add-body-title {
+      text-align: left; }
+.wrap.gongyi .search-result-2 {
+  width: 1111px;
+  margin: 0 auto;
+  margin-top: 30px; }
+  .wrap.gongyi .search-result-2 .result-name {
+    float: left;
+    text-align: center;
+    line-height: 102px;
+    font-size: 28px;
+    color: #1c2438; }
+  .wrap.gongyi .search-result-2 .name {
+    width: 220px; }
+  .wrap.gongyi .search-result-2 .mobile {
+    width: 230px; }
+  .wrap.gongyi .search-result-2 .result-other {
+    float: left;
+    text-align: left;
+    line-height: 102px;
+    font-size: 16px;
+    color: #495060; }
+  .wrap.gongyi .search-result-2 .result-state {
+    float: right;
+    text-align: center;
+    line-height: 102px;
+    font-size: 16px;
+    color: #495060; }
+  .wrap.gongyi .search-result-2 .result-shouquan {
+    float: right;
+    text-align: center;
+    line-height: 102px;
+    font-size: 16px;
+    color: #298cff;
+    cursor: pointer;
+    padding: 0 50px; }
+  .wrap.gongyi .search-result-2 .result-ope {
+    float: right;
+    text-align: center;
+    line-height: 102px;
+    font-size: 16px;
+    color: #298cff;
+    cursor: pointer;
+    padding: 0 50px; }
+    .wrap.gongyi .search-result-2 .result-ope ul li {
+      float: left;
+      padding-left: 50px; }
+.wrap.gongyi .edit-assess-info-base {
+  width: 1111px;
+  margin: 0 auto;
+  margin-top: 30px; }
+  .wrap.gongyi .edit-assess-info-base .edit-info {
+    margin-left: 240px;
+    margin-top: 40px; }
+    .wrap.gongyi .edit-assess-info-base .edit-info > div {
+      display: inline-block;
+      vertical-align: top; }
+      .wrap.gongyi .edit-assess-info-base .edit-info > div:first-child {
+        white-space: nowrap;
+        width: 200px;
+        padding-top: 8px;
+        text-align: right;
+        color: #1c2438;
+        font-size: 16px; }
+      .wrap.gongyi .edit-assess-info-base .edit-info > div .form-el {
+        width: 260px;
+        height: 40px; }
+        .wrap.gongyi .edit-assess-info-base .edit-info > div .form-el .ivu-input, .wrap.gongyi .edit-assess-info-base .edit-info > div .form-el .ivu-select-selection, .wrap.gongyi .edit-assess-info-base .edit-info > div .form-el .ivu-select-selected-value {
+          height: 40px; }
+        .wrap.gongyi .edit-assess-info-base .edit-info > div .form-el .ivu-select-placeholder, .wrap.gongyi .edit-assess-info-base .edit-info > div .form-el .ivu-select-selected-value {
+          height: 40px;
+          line-height: 40px; }
+  .wrap.gongyi .edit-assess-info-base .edit-1 {
+    text-align: center;
+    padding-top: 40px;
+    vertical-align: middle; }
+  .wrap.gongyi .edit-assess-info-base .edit-7 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-align: center; }
+    .wrap.gongyi .edit-assess-info-base .edit-7 .edit-7-cancel, .wrap.gongyi .edit-assess-info-base .edit-7 .edit-7-ok {
+      width: 160px;
+      height: 40px; }
+      .wrap.gongyi .edit-assess-info-base .edit-7 .edit-7-cancel span, .wrap.gongyi .edit-assess-info-base .edit-7 .edit-7-ok span {
+        font-size: 16px; }
+    .wrap.gongyi .edit-assess-info-base .edit-7 .edit-7-cancel {
+      margin-right: 20px; }
+.wrap.gongyi .message-box {
+  width: 1111px;
+  margin: 0 auto;
+  margin-top: 30px; }
+  .wrap.gongyi .message-box .box1-1 {
+    border-right: 1px solid #E8E8E8;
+    width: 195px;
+    height: 130px;
+    text-align: center;
+    margin-left: -16px;
+    float: left; }
+  .wrap.gongyi .message-box .p1 {
+    color: #444C61;
+    font-size: 30px;
+    line-height: 20px;
+    padding-top: 34px;
+    text-align: center;
+    margin: 0 auto; }
+    .wrap.gongyi .message-box .p1:after {
+      content: " ";
+      display: inline-block;
+      width: 100%; }
+  .wrap.gongyi .message-box .p2 {
+    color: #444C61;
+    font-size: 16px;
+    line-height: 16px; }
+  .wrap.gongyi .message-box .p3 {
+    color: #444C61;
+    font-size: 16px;
+    line-height: 16px;
+    padding-top: 52px; }
+  .wrap.gongyi .message-box .box1-2 {
+    width: 865px;
+    text-align: left;
+    float: left;
+    padding: 40px 0; }
+    .wrap.gongyi .message-box .box1-2 p {
+      color: #444C61;
+      font-size: 16px;
+      line-height: 20px;
+      padding-left: 50px; }
+      .wrap.gongyi .message-box .box1-2 p:nth-of-type(2) {
+        padding-top: 10px; }
+      .wrap.gongyi .message-box .box1-2 p > span {
+        color: #9b9b9b; }
+.wrap.gongyi .personal-name {
+  width: 1111px;
+  height: 60px;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-bottom: 1px solid #dddee1;
+  font-size: 28px;
+  color: #1c2438; }
 
 /*# sourceMappingURL=app.css.map */
