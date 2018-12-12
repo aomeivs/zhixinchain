@@ -84,6 +84,9 @@
                 <ul>
                     <li v-for="item in orders">
                         <div class="order-content">
+                            <div style="position: absolute;z-index: 2;top:0.1rem; right: 0.5rem;">
+                                <img src="public/images/find/delete.png" class="order-del" style="width: 0.16rem;height: 0.16rem;">
+                            </div>
                             <div class="push" style="top:0.1rem; right: 0.2rem;">
                                 <img src="public/images/find/btn-p.png" class="show" >
                                 <img src="public/images/find/btn-b.png" class="hide" style="display: none;">
@@ -190,14 +193,14 @@
                     allot_money:'8,888,088,888',
                     orders:[
                         {
-                            id_card:'370202198508288888',
+                            id_card:'370202198508288881',
                             eth:'5',
                             collection_add:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a',
                             wallet:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a',
                             state:'审核中'
                         },
                         {
-                            id_card:'370202198508288888',
+                            id_card:'370202198508288882',
                             eth:'5',
                             collection_add:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a',
                             wallet:'0xf756EB5fEd054aA907ca16931e4b1Ffb2AaE476a',
@@ -207,7 +210,7 @@
                     items:[
                         {
                             name:'董先生',
-                            id_card:'370202198508288888',
+                            id_card:'370202198508288883',
                             grade:'福利保障A',
                             effective_dates:'2019-03-03',
                             state:'生效',
@@ -218,7 +221,7 @@
                         },
                         {
                             name:'董先生',
-                            id_card:'370202198508288888',
+                            id_card:'370202198508288884',
                             grade:'福利保障A',
                             effective_dates:'2019-03-03',
                             state:'生效',
@@ -296,7 +299,15 @@
 //                $(this).parent().parent().find('.list-li-hide').show();
 //                $(this).hide();
 //                $(this).parent().find('.hide-bz').show();
-//            });
+//            })
+
+
+            //订单删除
+
+            $(".order-del").click(function(){
+                $(this).parent().parent().parent().remove();
+            });
+
 
         });
     </script>
