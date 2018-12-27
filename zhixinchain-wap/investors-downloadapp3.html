@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1"/>
+    <meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+    <link rel="stylesheet" href="public/css/app-phone.css">
+    <title>职信链，基于区块链技术的职业信用数字资产平台</title>
+    <meta name="Keywords" content="职信链,职信,职业履历,区块链,管人工具,阅人工具,数字资产">
+    <meta name="Description" content="职信链，基于区块链技术的职业信用数字资产平台。职信是一个人的职场行为客观记录仪，记录例如担任职位、劳动合同起止时间、薪水情况、每月考勤情况等。在职信链中，用人企业可记录每位员工的职信情况，且一旦发布，永不可更改或删除。使用职信链可以能增强员工的自我驱动力，极大节省了企业的培训成本和管理成本，使工作效率大大提高。">
+    <script src="public/js/rem.js"></script>
+    <script>
+
+        //         微信内阻止页面缩放
+        (function() {
+            if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+                handleFontSize();
+            } else {
+                if (document.addEventListener) {
+                    document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+                } else if (document.attachEvent) {
+                    document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+                    document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+                }
+            }
+            function handleFontSize() {
+                WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+                WeixinJSBridge.on('menu:setfont', function() {
+                    WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+                });
+            }
+        })();
+
+    </script>
+    <style>
+        /*阻止页面缩放*/
+        body {
+            -webkit-text-size-adjust: 100% !important;
+        }
+        html,body{background-color: #000000;}
+    </style>
+</head>
+<body>
+     <div class="wrap">
+         <div class="component-find-index ">
+             <div class="find-downlaod" style="background: #000000 url(public/images/find/download-bg2.png) no-repeat bottom center;">
+                 <img src="public/images/find/download-logo.png" >
+                 <p >ZXT：全球首个币值保障数字资产</p>
+                 <p style="font-size: 0.22rem;">邀您体验只涨不跌的投资乐趣！</p>
+                 <p style="color: #5dfbff;">  </p>
+                 <p >用我的邀请码马上加入</p>
+                 <div class="invite-number">1234</div>
+
+                 <img src="public/images/find/downloadapp.png" >
+
+                 <!--安卓直接下载-->
+
+                 <div class="btn-download" style="display: none;">
+                     安装下载
+                 </div>
+
+                 <!--iOS 开发中-->
+                 <div class="btn-download btn-ios" style="display: none">
+                     应用开发中， 尽情期待...
+                 </div>
+
+                 <p style="font-size: 0.13rem;padding-top: 0.1rem;">
+                     识别二维码下载安装Dapp
+                     <br>下载后点击发现栏目
+                 </p>
+
+                 <div id="window-download" style="display: none;">
+                     <div class="content">
+                         <img src="public/images/open.png" width="100%" style="width: 3.12rem;height: 2.02rem;">
+                         <img src="public/images/close.png" width="100%" id="close">
+                     </div>
+                 </div>
+
+             </div>
+         </div>
+     </div>
+
+
+
+</body>
+</html>
